@@ -1,166 +1,289 @@
-bela = beautiful
-bela lomas = beautiful trees (plural)
-da = conditional particle
-de = of / from
-dela = gift / present
-des furas = some fruits (plural)
-dora = open
-dova = bring / deliver
-fena = fire / flame
-fera = cut / slice
-fira = fiery
-fura = fruit / food / sweet (adj)
+béla = beautiful
+béla lomas = beautiful trees (plural)
+da = conditional particle (if)
+dé = of
+dé = from
+déla = gift
+déla = present
+dés furas = some fruits (plural)
+dora = open (verb)
+dova = bring
+dova = deliver
+féna = fire
+féna = flame
+féra = cut (verb)
+féra = slice (verb)
+fira = fiery (adj)
+fura = fruit
+fura = food
+fura = sweet (adj)
 furas = fruits
-geva = give
+géva = give
 gino = girl
 ginos = girls
 bino = boy
 binos = boys
-hena = see / watch
-hesa = hide / conceal / shadow / dark area
-hula = sky / air / high / tall (adj)
+héna = see
+héna = watch
+hésa = hide (verb)
+hésa = conceal
+hésa = shadow (noun)
+hésa = dark area
+hula = sky
+hula = air
+hula = high (adj)
+hula = tall (adj)
 ha = habitual particle
-hura = fly / glide
-jera = path / journey / long / extended (adj)
-jesa = sit / rest
-jiva = jump / act
-juma = jump / act of moving up
-kema = know / understand / wise / knowing (adj)
-kela = key
-kiva = use / tool
-kora = chest / box / beat / hit (verb)
+hura = fly (verb)
+hura = glide
+jéra = path (noun)
+jéra = journey (noun)
+jéra = long (adj)
+jéra = extended (adj)
+jésa = sit
+jésa = rest
+jiva = jump (verb)
+jiva = act (verb)
+juma = jump (act of moving up)
+kéma = know
+kéma = understand
+kéma = wise (adj)
+kéma = knowing (adj)
+kéla = key
+kiva = use (verb)
+kiva = tool (noun)
+kora = chest
+kora = box
+kora = beat (verb)
+kora = hit (verb)
 kwa = what
-kwas = whats / what's
-lira = song / tune
-lika = like
-le = the (singular definite article)
-les = the (plural definite article)
-liso = stone / rock / hard / solid (adj)
-liva = leave / go away
-loma = tree / plant / green / fresh (adj)
-lomet = small moon (derived diminutive)
+kwas = whats
+kwas = what's
+lira = song
+lira = tune
+lika = like (verb)
+lé = the (singular definite article)
+lés = the (plural definite article)
+liso = stone
+liso = rock
+liso = hard (adj)
+liso = solid (adj)
+liva = leave
+liva = go away
+loma = tree
+loma = plant
+loma = green (adj)
+loma = fresh (adj)
+lomét = small moon (derived diminutive)
 lomas = trees (plural)
-luma = shine / lamp / light source
+luma = shine (verb)
+luma = lamp (noun)
+luma = light source
 lumata = past: shone
-mis = we
 mi = I
+mis = we
 mu = me
-mela = honey / sweet
-meva = vehicle / object
+mima = I'm / I am / im
+mévla = mine
+tus = yours
+tés = your
+méla = honey
+méla = sweet
+méva = vehicle
+méva = object
 miva = move
-misi = child / person
-mises = children (plural)
-nela = water
-nelo = water
-nira = small / little / tiny object
+misi = child
+misi = person
+misés = children (plural)
+néla = water
+nélo = water
+nira = small (adj)
+nira = little (adj)
 nivas = swimmers (plural)
 niva = swim
-nula = fog / mist / foggy / misty (adj)
-nesa = nest / home
-ni = against / opposite (preposition)
-pira = hand / tool / take (verb)
-pivas = takes / hand tools (plural)
-piva = push / press
+nula = fog (noun)
+nésa = home
+ni = opposite (preposition)
+pira = tool
+pira = take (verb)
+pivas = takes
+pivas = hand tools (plural)
+piva = push
+piva = press
 po = to (preposition)
-pusa = button / knob / round / knob-like (adj)
-pusas = buttons / knobs (plural)
-re- = again (prefix)
-reruma = shine again
-ra = near / next to (preposition)
-riva = live / reside / place of life / grow / develop
-rivas = lives / residences (plural)
-rali = road / path
-ralis = roads / paths (plural)
-rina = flower / red (adj)
+pusa = button
+pusa = knob
+pusa = round (adj)
+pusa = knob-like (adj)
+pusas = buttons (plural)
+pusas = knobs (plural)
+ré- = again (prefix)
+réruma = shine again
+ra = near (preposition)
+ra = next to (preposition)
+riva = live
+riva = reside
+riva = place of life
+riva = grow
+riva = develop
+rivas = lives (plural)
+rivas = residences (plural)
+rali = road
+rali = path
+ralis = roads (plural)
+ralis = paths (plural)
+rina = flower (noun)
+rina = red (adj)
 rinas = flowers (plural)
-risa = laugh
+risa = laugh (verb)
 risas = laughs (plural)
 rumor = shiner (agent / doer)
-ruma = light / shine / glowing / shining (adj)
+ruma = light (noun)
+ruma = shine (verb)
+ruma = glowing (adj)
+ruma = shining (adj)
 rumas = lights (plural)
-saro = bright (adj) / star (noun)
-sa = say / said
-sela = select / choose
-siva = sound / noise / noisy / loud (adj)
-sira = shine / emit
-sola = play / fun / fun / playful (adj)
-sulas = covers / protects (plural / verb)
-su- = above / on (prefix)
-su = on / above (preposition)
-sula = big / large / cover / protect (verb)
-sova = speak / talk / speech / voice (noun)
-sovas = talks / speeches (plural)
-tavi = table / platform / soft / gentle (adj)
-tavas = tables / platforms (plural)
-tava = platform / ground
+saro = bright (adj)
+saro = star (noun)
+sa = say
+sa = said
+séla = select
+séla = choose
+siva = sound (noun)
+siva = noise (noun)
+siva = noisy (adj)
+siva = loud (adj)
+sira = shine
+sira = emit
+sola = play (verb)
+sola = fun (noun)
+sola = playful (adj)
+sulas = covers (plural / verb)
+sulas = protects (plural / verb)
+su- = above (prefix)
+su- = on (prefix)
+su = on (preposition)
+su = above (preposition)
+sula = big (adj)
+sula = large (adj)
+sula = cover (verb)
+sula = protect (verb)
+sova = speak (verb)
+sova = talk (verb)
+sova = speech (noun)
+sova = voice (noun)
+sovas = talks (plural)
+sovas = speeches (plural)
+tavi = table
+tavi = platform (noun)
+tavi = soft (adj)
+tavi = gentle (adj)
+tavas = tables (plural)
+tavas = platforms (plural)
+tava = platform
+tava = ground
 ta = that
-tas = thats / that's
-tesa = close / cloth / fabric
-tesas = cloths / fabrics (plural)
-tura = door / gate
-turas = doors / gates (plural)
-tuma = touch / feel
+tas = thats
+tas = that's
+tésa = close (verb)
+tésa = cloth (noun)
+tésa = fabric (noun)
+tésas = cloths (plural)
+tésas = fabrics (plural)
+tura = door
+tura = gate
+turas = doors (plural)
+turas = gates (plural)
+tuma = touch
+tuma = feel
 un- = opposite (prefix)
-unrisa = frown / not laugh
+unrisa = frown
+unrisa = not laugh
 va = present particle
-vesa = build / make / building / structure / new (adj)
-vesas = buildings / structures (plural)
-veno = flowing / moving (adj) / river (noun)
-venos = rivers (plural)
-vima = carry / bring
-vora = run / river flow (noun)
-voras = rivers / flows (plural)
-vira = wind / breeze / fast motion (verb)
+vésa = build
+vésa = make
+vésa = building (noun)
+vésa = structure (noun)
+vésa = new (adj)
+vésas = buildings (plural)
+vésas = structures (plural)
+véno = flowing (adj)
+véno = moving (adj)
+véno = river (noun)
+vénos = rivers (plural)
+vira = run (verb)
+viras = runs
+vora = river flow (noun)
+voras = rivers (plural)
+voras = flows (plural)
+vira = wind (noun)
+vira = breeze (noun)
+vira = fast motion (verb)
 
---- Swears / Exclamations / Insults ---
+--- Swears / exclamations / Insults ---
 bish = bitch
 faka = fuck
-bluma = damn! / curse
-frola = idiot / fool
-nibra = annoying person / jerk
-sura = bad / evil thing
-tivra = heck / mild curse
-krova = angry / expletive
+bluma = damn! (exclamation)
+bluma = curse (noun/verb)
+frola = idiot
+frola = fool
+nibra = annoying person
+nibra = jerk
+sura = bad thing
+sura = evil thing
+tivra = heck
+tivra = mild curse
+krova = angry (expletive)
 linta = stupid
-pumra = nonsense / bullshit
-vurna = rude insult / jerk
-ruga = damn it / frustration
-suna = curse / misfortune
-neta = fool / silly person
-bira = bastard / strong insult
-fina = hell / negative exclamation
-rima = annoying / pest
-trola = mocking insult / tease
-hura! = wow! / shock / surprise
+pumra = nonsense
+pumra = bullshit
+vurna = rude insult
+vurna = jerk
+ruga = damn it (exclamation)
+ruga = frustration
+suna = curse
+suna = misfortune
+néta = fool
+néta = silly person
+bira = bastard (strong insult)
+fina = hell
+fina = negative exclamation
+rima = annoying
+rima = pest
+trola = mocking insult
+trola = tease
+hura! = wow! (exclamation)
+hura! = shock
+hura! = surprise
 
 --- animals ---
 
-dela = deer
-delas = deer (plural)
-delaet = fawn
-delaos = herd of deer
-delaan = deer habitat
-delaor = deer hunter
-delaik = deer-like
+déla = deer
+délas = deer (plural)
+délaét = fawn
+délaos = herd of deer
+délaan = deer habitat
+délaor = deer hunter
+délaik = deer-like
 
 dravos = dragon
-dravoset = small dragon
+dravosét = small dragon
 dravosos = brood of dragons
 dravosan = dragon cave
 dravosor = dragon rider
 dravosik = dragon-like
 
-feno = frog
-fenos = frogs
-fenoet = tadpole
-fenoos = swarm of frogs
-fenoan = swamp
-fenoor = frog catcher
-fenoik = frog-like
+féno = frog
+fénos = frogs
+fénoét = tadpole
+fénoos = swarm of frogs
+fénoan = swamp
+fénoor = frog catcher
+fénoik = frog-like
 
 fira = bird
 firas = birds
-firaet = chick
+firaét = chick
 firaos = flock of birds
 firaan = bird nest
 firaor = bird keeper
@@ -168,7 +291,7 @@ firaik = bird-like
 
 firo = seal
 firos = seals
-firoet = pup (seal)
+firoét = pup (seal)
 firoos = colony of seals
 firoan = seal cove
 firoor = seal trainer
@@ -184,31 +307,31 @@ firiik = fairy-like
 
 guro = turtle/tortoise
 guros = turtles
-guroet = hatchling turtle
+guroét = hatchling turtle
 guroos = group of turtles
 guroan = turtle pond
 guroor = turtle breeder
 guroik = turtle-like
 
-hena = hawk
-henas = hawks
-henaet = fledgling hawk
-henaos = pair of hawks
-henaan = hawk nest
-henaor = hawk trainer
-henaik = hawk-like
+héna = hawk
+hénas = hawks
+hénaét = fledgling hawk
+hénaos = pair of hawks
+hénaan = hawk nest
+hénaor = hawk trainer
+hénaik = hawk-like
 
 hulo = lion
 hulos = lions
-huloet = cub
+huloét = cub
 huloos = pride of lions
 huloan = lion den
 huloor = lion tamer
 huloik = lion-like
 
 hurox = griffin
-huroxes = griffins
-huroxet = small griffin
+huroxés = griffins
+huroxét = small griffin
 huroxos = pride of griffins
 huroxan = griffin nest
 huroxor = griffin rider
@@ -216,7 +339,7 @@ huroxik = griffin-like
 
 jara = owl
 jaras = owls
-jaraet = owlet
+jaraét = owlet
 jaraos = parliament of owls
 jaraan = owl tree
 jaraor = owl keeper
@@ -224,7 +347,7 @@ jaraik = owl-like
 
 jami = beetle
 jamis = beetles
-jamiet = beetle larva
+jamiét = beetle larva
 jamios = swarm of beetles
 jamian = beetle nest
 jamior = beetle collector
@@ -232,7 +355,7 @@ jamiik = beetle-like
 
 javo = jellyfish
 javos = jellyfish (plural)
-javoet = baby jellyfish
+javoét = baby jellyfish
 javoos = bloom of jellyfish
 javoan = jellyfish lagoon
 javoor = jellyfish handler
@@ -240,7 +363,7 @@ javoik = jellyfish-like
 
 jumo = rabbit
 jumos = rabbits
-jumoet = bunny
+jumoét = bunny
 jumoos = warren of rabbits
 jumoan = rabbit burrow
 jumoor = rabbit keeper
@@ -248,7 +371,7 @@ jumoik = rabbit-like
 
 kilo = lizard
 kilos = lizards
-kiloet = hatchling lizard
+kiloét = hatchling lizard
 kiloos = group of lizards
 kiloan = lizard den
 kiloor = lizard keeper
@@ -256,7 +379,7 @@ kiloik = lizard-like
 
 koro = bear
 koros = bears
-koroet = bear cub
+koroét = bear cub
 koroos = family of bears
 koroan = bear cave
 koroor = bear trainer
@@ -264,7 +387,7 @@ koroik = bear-like
 
 lami = fly
 lamis = flies
-lamiet = fly larva
+lamiét = fly larva
 lamios = swarm of flies
 lamian = fly nest
 lamior = fly trapper
@@ -272,7 +395,7 @@ lamiik = fly-like
 
 lavo = dog
 lavos = dogs
-lavoet = puppy
+lavoét = puppy
 lavoos = pack of dogs
 lavoan = doghouse
 lavor = dog trainer
@@ -280,7 +403,7 @@ lavoik = dog-like
 
 lino = dolphin
 linos = dolphins
-linoet = calf
+linoét = calf
 linoos = pod of dolphins
 linoan = dolphin bay
 linoor = dolphin trainer
@@ -288,14 +411,14 @@ linoik = dolphin-like
 
 lira = duck
 liras = ducks
-liraet = duckling
+liraét = duckling
 liraos = flock of ducks
 liraan = duck pond
 liraor = duck keeper
 liraik = duck-like
 
 lunos = cat
-lunoset = kitten
+lunosét = kitten
 lunosos = colony of cats
 lunosan = cattery
 lunosor = cat keeper
@@ -303,31 +426,31 @@ lunosik = cat-like
 
 mavi = ant
 mavis = ants
-maviet = ant larva
+maviét = ant larva
 mavios = colony of ants
 mavian = anthill
 mavior = ant keeper
 maviik = ant-like
 
-melo = fish
-melos = fish (plural)
-meloet = small fish
-meloos = school of fish
-meloan = fish pond
-meloor = fish breeder
-meloik = fish-like
+mélo = fish
+mélos = fish (plural)
+méloét = small fish
+méloos = school of fish
+méloan = fish pond
+méloor = fish breeder
+méloik = fish-like
 
-mero = crocodile
-meros = crocodiles
-meroet = hatchling croc
-meroos = bask of crocs
-meroan = crocodile swamp
-meroor = crocodile hunter
-meroik = crocodile-like
+méro = crocodile
+méros = crocodiles
+méroét = hatchling croc
+méroos = bask of crocs
+méroan = crocodile swamp
+méroor = crocodile hunter
+méroik = crocodile-like
 
 mira = pigeon/dove
 miras = pigeons
-miraet = squab
+miraét = squab
 miraos = flock of pigeons
 miraan = dovecote
 miraor = pigeon keeper
@@ -335,7 +458,7 @@ miraik = pigeon-like
 
 muro = donkey
 muros = donkeys
-muroet = foal
+muroét = foal
 muroos = group of donkeys
 muroan = donkey stable
 muroor = donkey handler
@@ -343,7 +466,7 @@ muroik = donkey-like
 
 naro = crow
 naros = crows
-naroet = fledgling crow
+naroét = fledgling crow
 naroos = murder of crows
 naroan = crow nest
 naro or = crow trainer
@@ -351,469 +474,505 @@ naroik = crow-like
 
 navi = bee
 navis = bees
-naviet = larva bee
+naviét = larva bee
 navios = swarm of bees
 navian = beehive
 navior = beekeeper
 naviik = bee-like
 
-nemo = whale
-nemos = whales
-nemoet = calf
-nemoos = pod of whales
-nemoan = whale bay
-nemoor = whale trainer
-nemoik = whale-like
+némo = whale
+némos = whales
+némoét = calf
+némoos = pod of whales
+némoan = whale bay
+némoor = whale trainer
+némoik = whale-like
 
-neta = sheep
-netas = sheep (plural)
-netaet = lamb
-netaos = flock of sheep
-netaan = sheep pen
-netaor = shepherd
-netaik = sheep-like
+néta = sheep
+nétas = sheep (plural)
+nétaét = lamb
+nétaos = flock of sheep
+nétaan = sheep pen
+nétaor = shepherd
+nétaik = sheep-like
 
 pavi = fox
 pavis = foxes
-paviet = kit
+paviét = kit
 pavios = skulk of foxes
 pavian = fox den
 pavior = fox keeper
 paviik = fox-like
 
-pemo = squid/octopus
-pemos = squid/octopi
-pemoet = baby squid
-pemoos = shoal of squid
-pemoan = squid cave
-pemoor = squid fisher
-pemoik = squid-like
+pémo = squid/octopus
+pémos = squid/octopi
+pémoét = baby squid
+pémoos = shoal of squid
+pémoan = squid cave
+pémoor = squid fisher
+pémoik = pémoik-like
 
 pula = chicken
 pulas = chickens
-pulaet = chick
+pulaét = chick
 pulaos = flock of chickens
 pulaan = chicken coop
 pulaor = chicken farmer
-pulaik = chicken-like
+pulaik = pulaik-like
 
 puro = monkey
 puros = monkeys
-puroet = baby monkey
+puroét = baby monkey
 puroos = troop of monkeys
 puroan = monkey forest
 puroor = monkey keeper
-puroik = monkey-like
+puroik = puroik-like
 
 rava = elephant
 ravas = elephants
-ravaet = calf
+ravaét = calf
 ravaos = herd of elephants
 ravaan = elephant savanna
 ravaor = elephant keeper
-ravaik = elephant-like
+ravaik = ravaik-like
 
 rimi = spider
 rimis = spiders
-rimiet = spiderling
+rimiét = spiderling
 rimios = swarm of spiders
 rimian = spiderweb
 rimior = spider keeper
-rimiik = spider-like
+rimiik = rimiik-like
 
 rino = goat
 rinos = goats
-rinoet = kid
+rinoét = kid
 rinoos = herd of goats
 rinoan = goat pen
 rinoor = goat keeper
-rinoik = goat-like
+rinoik = rinoik-like
 
 salo = shark
 salos = sharks
-saloet = baby shark
+saloét = baby shark
 saloos = school of sharks
 saloan = shark bay
 saloor = shark fisher
-saloik = shark-like
+saloik = saloik-like
 
 sano = goose
 sanos = geese
-sanoet = gosling
+sanoét = gosling
 sanoos = flock of geese
 sanoan = goose pond
 sanoor = goose keeper
-sanoik = goose-like
+sanoik = sanoik-like
 
 savi = cow
 savis = cows
-saviet = calf
+saviét = calf
 savios = herd of cows
 savian = cowshed
 savior = cowherd
-saviik = cow-like
+saviik = saviik-like
 
 saviros = unicorn
-saviroset = foal
+savirosét = foal
 savirosos = herd of unicorns
 savirosan = unicorn forest
 savirosor = unicorn rider
-savirosik = unicorn-like
+savirosik = savirosik-like
 
-selo = wolf
-selos = wolves
-seloet = pup
-seloos = pack of wolves
-seloan = wolf den
-seloor = wolf trainer
-seloik = wolf-like
+sélo = wolf
+sélos = wolves
+séloét = pup
+séloos = pack of wolves
+séloan = wolf den
+séloor = wolf trainer
+séloik = séloik-like
 
 sira = songbird
 siras = songbirds
-siraet = chick
+siraét = chick
 siraos = flock of songbirds
 siraan = birdhouse
 siraor = songbird keeper
-siraik = songbird-like
+siraik = siraik-like
 
 somi = butterfly
 somis = butterflies
-somiet = caterpillar
+somiét = caterpillar
 somios = swarm of butterflies
 somian = butterfly meadow
 somior = butterfly keeper
-somiik = butterfly-like
+somiik = somiik-like
 
 suno = snake
 sunos = snakes
-sunoet = hatchling snake
+sunoét = hatchling snake
 sunoos = nest of snakes
 sunoan = snake pit
 sunoor = snake handler
-sunoik = snake-like
+sunoik = sunoik-like
 
 tavo = crab
 tavos = crabs
-tavoet = baby crab
+tavoét = baby crab
 tavoos = group of crabs
 tavoan = crab beach
 tavoor = crab fisher
-tavoik = crab-like
+tavoik = tavoik-like
 
 taviros = phoenix
-taviroset = chick
+tavirosét = chick
 tavirosos = flock of phoenixes
 tavirosan = phoenix nest
 tavirosor = phoenix keeper
-tavirosik = phoenix-like
+tavirosik = tavirosik-like
 
-tero = turkey
-teros = turkeys
-teroet = chick
-teroos = flock of turkeys
-teroan = turkey farm
-teroor = turkey farmer
-teroik = turkey-like
+téro = turkey
+téros = turkeys
+téroét = chick
+téroos = flock of turkeys
+téroan = turkey farm
+téroor = turkey farmer
+téroik = téroik-like
 
 tima = tiger
 timas = tigers
-timaet = cub
+timaét = cub
 timaos = streak of tigers
 timaan = tiger jungle
 timaor = tiger keeper
-timaik = tiger-like
+timaik = timaik-like
 
 turo = horse
 turos = horses
-turoet = foal
+turoét = foal
 turoos = herd of horses
 turoan = stable
 turoor = horse trainer
-turoik = horse-like
+turoik = turoik-like
 
-vena = camel
-venas = camels
-venaet = calf
-venaos = caravan of camels
-venaan = camel pen
-venaor = camel handler
-venaik = camel-like
+véna = camel
+vénas = camels
+vénaét = calf
+vénaos = caravan of camels
+vénaan = camel pen
+vénaor = camel handler
+vénaik = vénaik-like
 
 viro = pig
 viros = pigs
-viroet = piglet
+viroét = piglet
 viroos = herd of pigs
 viroan = pigsty
 viroor = pig farmer
-viroik = pig-like
+viroik = viroik-like
 
 --- fmaily/extended family ---
 
-mava = mother / mom / mum
-pava = father  
-movo = parent (neutral)  
-mavos = mothers  
-pavos = fathers  
-movos = parents  
+mava = mother
+mava = mom
+mava = mum
+pava = father
+movo = parent (neutral)
+mavos = mothers
+pavos = fathers
+movos = parents
 
-lina = daughter  
-lino = son  
-lini = child (neutral)  
-linos = sons  
-linas = daughters  
-linis = children  
+lina = daughter
+lino = son
+lini = child (neutral)
+linos = sons
+linas = daughters
+linis = children
 
-vava = baby / infant  
-vavos = babies  
-vavaet = little baby (extra diminutive)  
+vava = baby
+vava = infant
+vavos = babies
+vavaét = little baby (extra diminutive)
 
-sava = sibling (neutral)  
-savas = siblings  
-savik = sibling-like / close as family  
-brovo = brother  
-brovos = brothers  
-siro = sister  
-siros = sisters  
+sava = sibling (neutral)
+savas = siblings
+savik = sibling-like
+savik = close as family
+brovo = brother
+brovos = brothers
+siro = sister
+siros = sisters
 
-nelo = nephew  
-nela = niece  
-nelos = nephews  
-nelas = nieces  
+nélo = nephew
+néla = niece
+nélos = nephews
+nélas = nieces
 
-nina = child (generic young person)  
-ninas = children  
-ninaet = little child (affectionate)  
+nina = child (generic young person)
+ninas = children
+ninaét = little child (affectionate)
 
-namo = family  
-namos = families  
-namoos = clan / extended family (collective)  
+namo = family
+namos = families
+namoos = clan (collective)
+namoos = extended family (collective)
 
-mavoet = little mother (affectionate)  
-pavoet = little father (affectionate)  
-movor = caretaker / parental figure (agent noun)  
+mavoét = little mother (affectionate)
+pavoét = little father (affectionate)
+movor = caretaker
+movor = parental figure (agent noun)
 
-tavo = grandparent (neutral)  
-tavos = grandparents  
-tava = grandmother  
-tavoa = grandfather  
-tavina = granddaughter  
-tavino = grandson  
-tavinis = grandchildren  
+tavo = grandparent (neutral)
+tavos = grandparents
+tava = grandmother
+tavoa = grandfather
+tavina = granddaughter
+tavino = grandson
+tavinis = grandchildren
 
-cavo = cousin (neutral)  
-cavos = cousins  
-cavoet = little cousin  
+cavo = cousin (neutral)
+cavos = cousins
+cavoét = little cousin
 
-lavo = uncle  
-lava = aunt  
-lavos = uncles  
-lavas = aunts  
+lavo = uncle
+lava = aunt
+lavos = uncles
+lavas = aunts
 
-havo = husband  
-hava = wife  
-havos = husbands  
-havas = wives  
-havik = spouse-like partner  
+havo = husband
+hava = wife
+havos = husbands
+havas = wives
+havik = spouse-like partner
 
-ravo = relative (neutral)  
-ravos = relatives  
-ravoset = distant relative (diminutive)  
+ravo = relative (neutral)
+ravos = relatives
+ravosét = distant relative (diminutive)
 
-javo = ancestor  
-javos = ancestors  
-javoor = elder (respected ancestor figure)  
+javo = ancestor
+javos = ancestors
+javoor = elder (respected ancestor figure)
 
-davo = descendant  
-davos = descendants  
+davo = descendant
+davos = descendants
 
-pamo = step-parent  
-pamos = step-parents  
-pama = stepmother  
-pamoa = stepfather  
+pamo = step-parent
+pamos = step-parents
+pama = stepmother
+pamoa = stepfather
 
-limo = stepchild  
-limos = stepchildren  
-lima = stepdaughter  
-limoa = stepson  
+limo = stepchild
+limos = stepchildren
+lima = stepdaughter
+limoa = stepson
 
-samo = in-law (neutral)  
-samos = in-laws  
-sama = sister-in-law  
-samoa = brother-in-law  
-savam = sibling-in-law (neutral)  
+samo = in-law (neutral)
+samos = in-laws
+sama = sister-in-law
+samoa = brother-in-law
+savam = sibling-in-law (neutral)
 
-kavo = foster-parent  
-kavos = foster-parents  
-kava = foster-mother  
-kavoa = foster-father  
+kavo = foster-parent
+kavos = foster-parents
+kava = foster-mother
+kavoa = foster-father
 
-nimo = guardian  
-nimos = guardians  
-nimoor = legal guardian (formal agent form)  
+nimo = guardian
+nimos = guardians
+nimoor = legal guardian (formal agent form)
 
-favo = godparent  
-favos = godparents  
-fava = godmother  
-favoa = godfather  
-favoet = godchild  
-favoes = godchildren  
+favo = godparent
+favos = godparents
+fava = godmother
+favoa = godfather
+favoét = godchild
+favoés = godchildren
 
-pravin = great-grandparent (neutral)  
-pravinos = great-grandparents  
-pravina = great-grandmother  
-pravino = great-grandfather  
-pravini = great-grandchild (neutral)  
-pravinis = great-grandchildren  
+pravin = great-grandparent (neutral)
+pravinos = great-grandparents
+pravina = great-grandmother
+pravino = great-grandfather
+pravini = great-grandchild (neutral)
+pravinis = great-grandchildren
 
---- HALF-RELATIVES (prefix "he-") ---  
-hebrovo = half-brother  
-hesiro = half-sister  
-helina = half-daughter  
-helino = half-son  
-hesava = half-sibling (neutral)  
+--- HALF-RELATIVES (prefix "hé-") ---
+hébrovo = half-brother
+hésiro = half-sister
+hélina = half-daughter
+hélino = half-son
+hésava = half-sibling (neutral)
 
---- ADOPTED RELATIVES (prefix "ad-") ---  
-admava = adoptive mother  
-adpava = adoptive father  
-admovo = adoptive parent (neutral)  
-adlina = adopted daughter  
-adlino = adopted son  
-adlini = adopted child  
-adsava = adopted sibling  
-adcavo = adopted cousin  
+--- ADOPTED RELATIVES (prefix "ad-") ---
+admava = adoptive mother
+adpava = adoptive father
+admovo = adoptive parent (neutral)
+adlina = adopted daughter
+adlino = adopted son
+adlini = adopted child
+adsava = adopted sibling
+adcavo = adopted cousin
 
---- EXTENDED TERMS ---  
-fravo = family friend (close like family)  
-fravos = family friends  
-ravoor = blood relative (formal agent form)  
-namoor = household head / leader of family  
+--- EXTENDED TERMS ---
+fravo = family friend (close like family)
+fravos = family friends
+ravoor = blood relative (formal agent form)
+namoor = household head
+namoor = leader of family
 tavor = grandparental figure (non-blood, honorary)
 
 --- greetings (morning and afternoon)/ time ---
 
-sala = hello (general greeting)  
-salo = hi (casual)  
-salos = hello to multiple people / group greeting  
-salet = little hello / playful greeting  
+sala = hello (general greeting)
+salo = hi (casual)
+salos = hello to multiple people (group greeting)
+salét = little hello (playful greeting)
 
-vavi = good morning
-vavos = good morning to multiple people
-vavaet = little morning greeting / casual
-vaviaf = good afternoon
-vavaafs = good afternoon to all
-vavo = good evening
-vavoso = good evening to multiple people
+vavi = morning
 
-nava = good night / farewell at night
-navos = good night to multiple people
+Noita = night (farewell at night)
 
 kala = welcome
-kalos = welcome all / group welcome
-kalet = small or informal welcome
+kalos = welcome all (group welcome)
+kalét = small welcome (informal)
 
-ravi = goodbye / farewell
-ravos = goodbye to many
+ravi = goodbye
+ravi = farewell
 ravik = see you later (informal, playful)
 
-havi = how are you (polite)
-havos = how are you all
-havet = how’s it going (informal, friendly)
+havi = how (polite)
 
-fava = nice to meet you
-fivos = nice to meet you all  
-fivet = glad to meet you (informal)  
+fava = nice
 
-teva = please / polite request  
-tevos = please all (polite to group)  
+méta = meet
 
-nako = thank you  
-nakos = thanks to multiple people  
-nakoet = little thanks / casual thanks  
-nakik = thanks in playful or informal tone  
+téva = please (polite request)
+tévos = please all (polite to group)
 
-noha = sorry / excuse me  
-nohas = sorry to many / formal apology  
-nohaet = little apology / “oops”  
+nako = thank
+nakos = thanks to multiple people
+nakoét = little thanks (casual)
+nakik = thanks (playful/informal)
 
-kek = yes (response)  
-non = no / not (response)
+noha = sorry
+noha = excuse me
+nohas = sorry to many (formal apology)
+nohaét = little apology (“oops”)
+
+kék = yes (response)
+non = no (response)
+non = not (response)
 
 ta = past particle
-ge = future particle
+gé = future particle
 ha = habitual particle
 sofa = today
 sova = tomorrow
 safa = yesterday
-su-sofa = later / afterward
-un-sofa = earlier / before
-ha-ge = always
-ha-no = never
+su-sofa = later
+suso = years
+su-sofa = afterward
+un-sofa = earlier
+un-sofa = before
+ha-gé = always
+ha-non = never
 suma = sometimes
 
 --- actions ---
 
-fema = eat
-neva = drink
+féma = eat
+néva = drink
 soma = sleep
-jesa = rest
+jésa = rest
 vima = walk
 vora = run
 jiva = jump
-jumo = hop / leap
-kema = think
-kema da = plan
-kema va = dream
-vesa = make / create
+jumo = hop
+jumo = leap
+kéma = think
+kéma da = plan
+kéma va = dream
+vésa = make
+vésa = create
 tora = fight
 tora sa = attack
-tesra = defend
+tésra = defend
 dora = open
-tesa = close
-tesa sa = lock
-re-dora = unlock
+tésa = close
+tésa sa = lock
+ré-dora = unlock
 fira = cry
 risa = laugh
 siva = listen
-hena va = hear
-kema sa = learn
-vesa kema = teach
-kema va = study
-jesa = sit
+héna va = hear
+kéma sa = learn
+vésa kéma = teach
+kéma va = study
+jésa = sit
 misa = stand
+diva = do (verb)
+diva-va = doing (present participle)
+divas = action / doings (noun)
+péra = ask (verb) / request (noun)
 
 --- qualities---
 
-sula = big / large
-nira = small / little
+sula = big (adj)
+sula = large (adj)
+nira = small (adj)
+nira = little (adj)
 mida = medium
 saro = bright
-hesa = dark / shadowed
-tavi = soft / gentle
-liso = hard / solid
-vira = fast / swift
-ruma = light / shining
-hula = high / tall
+hésa = dark (adj)
+hésa = shadowed (adj)
+tavi = soft (adj)
+tavi = gentle (adj)
+liso = hard (adj)
+liso = solid (adj)
+vira = fast
+vira = swift
+ruma = light (adj)
+ruma = shining (adj)
+hula = high (adj)
+hula = tall (adj)
 fina = hot
-nula = cold / foggy
-sola = fun / playful
-sela = select / chosen
-rina = red
-mela = sweet
-siva = noisy / loud
-un-siva = quiet / silent
-sulo = strong / powerful
+nula = cold (adj)
+nula = foggy (adj)
+sola = fun (adj)
+sola = playful (adj)
+séla = select (adj)
+séla = chosen (adj)
+méla = sweet
+siva = noisy (adj)
+siva = loud (adj)
+un-siva = quiet (adj)
+un-siva = silent (adj)
+sulo = strong
+sulo = powerful
 
-et = it / it's / its
+ét = it (pronoun)
+ét = it's
+ét = its (possessive)
 
-preto = pretty 
-gavo = good 
-pretaet = little pretty / diminutive  
-gavoet = little good / diminutive
+préto = pretty
+gavo = good
+prétaét = little pretty (diminutive)
+gavoét = little good (diminutive)
 
-du = dont / don't / do not, doesnt / doesn't / does not
-thera = there
-theras = theres / there is / there's
-navie = their / theirs
+wé = will
+wés = will not
+wés = won't
+wés = wont
+du = dont
+du = don't
+du = do not
+du = doesn't
+du = does not
+dus = do
+dus = does
+théra = there
+théras = there's
+théras = there is
+navié = their
+navié = theirs
 s = is
 
 vi = morning
@@ -823,34 +982,36 @@ afs = afternoons
 vo = evening
 vos = evenings
 
-dova = translation 
+dova = translation
 dovas = translations
 
 na = in
 
 --- meals ---
-Breva = breakfast
-Brevas = breakfasts
-Leva = lunch
-Levas = lunches
-Deva = dinner
-Devas = dinners
-   
+Bréva = breakfast
+Brévas = breakfasts
+Léva = lunch
+Lévas = lunches
+Déva = dinner
+Dévas = dinners
+
 sud = should
-unsud = shouldnt / shouldn't / should not
+unsud = shouldnt
+unsud = shouldn't
+unsud = should not
 gai = go
 fao = for
-kemas = knows
+kémas = knows
 fi = if
-sena = sense
+séna = sense
 
 tu = you
 ariv = are
 triva = trying
 hixa = heard
-exas = exist
-    
-beza = because 
+éxas = exist
+
+béza = because
 cas = cause
 
 un = a
@@ -860,20 +1021,352 @@ obus = about
 tis = this
 coah = chat
 olys = only
-jes = just
+jés = just
 dus = do
 tas = at
 lus = all
 sak = ask
-lera = really
-leva = love
-sunes = so
+léra = really
+léva = love
+sunés = so
 mus = my
 namo = name
 namos = names
-    
+
 --- seasons ---
 spira = spring
-summer = summer
-auta = autumn / fall
-winta = winter 
+summér = summer
+auta = autumn
+auta = fall
+winta = winter
+
+--- numbers ---
+Zéra = zero
+Ona = one
+Tuo = two
+Tro = three
+Fóra = four
+Liva = five
+Sixa = six
+Sita = seven
+Oita = eight
+Noa = nine
+Diza = ten
+Unésa = eleven
+Duésa = twelve
+Trésa = thirteen
+Quésa = fourteen
+Quinsa = fifteen
+Séza = sixteen
+Diza-é-Sita = 17
+Diza-é-Oita = 18
+Diza-é-Noa = 19
+Vinta = twenty
+Triga = thirty
+Forga = forty
+Livga = fifty
+Sixga = sixty
+Sitga = seventy
+Oitga = eighty
+Noga = ninety
+Cénta = hundred
+Mila = thousand
+Miliona = million
+
+éla = old
+
+-- colours --
+bélu = colour
+bélo = color
+rina = red
+fénura = orange
+saru = yellow
+loma = green
+hulo = blue
+hulésa = indigo
+rinésa = violet
+
+vévlo = very
+mavé = much
+lingua = language
+spéka = speak
+
+--- NEW: Abstract Concepts and Adjectives ---
+
+féni = feeling (noun)
+fénis = feelings
+léva = love (noun/verb)
+fíra = fear (noun/verb)
+ríva = hope (noun/verb)
+néna = truth / clear (adj)
+unnéna = lie / unclear
+méra = art / creation
+méra = to create (verb)
+méro = artist / creator (noun)
+kéro = mind / soul
+kéro = spiritual
+kéras = minds / souls
+unméla = sour / not sweet (adj)
+sora = salty / salt (noun)
+fála = bitter / harsh (adj)
+séna = smell / scent (noun/verb)
+séna = fragrant (adj)
+náva = rough / coarse (adj)
+túra = smooth (adj)
+kéla = useful
+unkéla = broken / useless
+kima = possible (adj)
+kima = possibility (noun)
+unkima = impossible
+gida = must / need (modal)
+gida = necessity (noun)
+jula = big size / measurement
+bira = thing (general object, distinct from méva)
+sumés = time (conceptual duration)
+réna = reason / cause
+féta = way / method
+
+--- NEW: Emotions and States ---
+réva = happy / joy (noun/adj)
+unréva = sad / sorrow (noun/adj)
+ésa = tired / weary (adj)
+zira = fine / okay / neutral state (adj)
+mira = amazing / wonderful (adj)
+
+--- NEW: Time Units and Calendar ---
+
+séli = second (time unit)
+sélis = seconds
+mída = minute
+mídas = minutes
+vóra = hour
+vóras = hours
+díva = day (unit)
+dívas = days
+sóma = week
+sómas = weeks
+máva = month
+mávas = months
+élas = age / years of life
+navás = calendar / date (noun)
+
+--- NEW: Geography and Weather ---
+
+téra = earth (planet/ground)
+téras = lands
+méta = mountain / high ground
+métas = mountains
+vóra = forest / wild plants
+vóras = forests
+nélo-sula = ocean (big water)
+nélo-sulas = oceans
+pira = island (from tool/separate)
+piras = islands
+sána = desert / dry land
+sánas = deserts
+víma = rain (noun/verb)
+néva = snow (noun/verb)
+torva = storm
+torvas = storms
+saru-féna = sunlight (yellow fire)
+saru-féna = sun (noun)
+nula-sula = ice (big cold)
+liva = place (general location)
+
+--- NEW: Occupations and Titles (Human) ---
+
+dovés = doctor / healer
+dovésa = medicine / healing
+kivor = worker / employee
+kivas = works 
+kiva = job / work (noun)
+kémor = teacher (knower agent)
+kémas = teaching (noun)
+hulor = leader / chief / king
+hulor = president
+nésor = guard / protector
+nésas = protection (noun)
+firo-sora = fisher (seal-salt)
+firo-sora = sailor (seal-salt)
+tésor = writer (cloth agent)
+tésas = writing / text
+
+--- NEW: Punctuation and Writing ---
+
+fota = letter (alphabet unit)
+fotas = letters
+mota = word (lexical unit)
+motas = words
+télora = to write (verb)
+morka = punctuation / mark
+dota = dot / period (.)
+kama = comma (,)
+kwamorka = question mark (?)
+fimorka = exclamation mark (!)
+mota-sulo = paragraph (big word/text unit)
+
+--- NEW: Deeper Pronouns and Interrogatives ---
+
+nivo = he / him
+nivo-la = his / his (possessive)
+siva = she / her
+siva-la = her / hers (possessive)
+misu = they / them (plural)
+kvasi = who (kwa-misi = what person)
+kwaras = where (kwa-rivas = what residence/place)
+kvado = when (kwa-díva = what day/time)
+kvaso = why (kwa-réna = what reason)
+kvalo = how (kwa-féta = what way/method)
+
+--- NEW: Conjunctions and Modals ---
+
+néka = but / however (contrastive)
+ora = or (alternative)
+béra = although / even though
+tóla = then (sequential)
+gida = must / need (modal)
+néma = may / permission (modal)
+da-va = would / could (conditional/hypothetical auxiliary)
+ha-kima = always can (ability)
+
+--- NEW: Positional Prepositions (Deep Location) ---
+
+un-su = under / below
+tera = through
+lóma = inside (of/within)
+cíva = around
+trima = between
+tava-su = on the ground
+hula-su = up high / above (opposite of un-su)
+
+--- NEW: Adverb of Manner Suffix ---
+
+-lé = adverb of manner suffix (turn adjective into adverb)
+gavo-lé = well / goodly (from gavo=good)
+vira-lé = quickly / swiftly (from vira=fast)
+sulo-lé = strongly / powerfully (from sulo=strong)
+hésa-lé = darkly / secretly (from hése=dark)
+kéma-lé = wisely / knowingly (from kéma=wise)
+
+--- A1. Body Parts and Health ---
+vosa = body / flesh (general term)
+kúna = head
+sira = eye
+siras = eyes
+kuma = mouth / opening
+sóva = nose / scent organ
+misa = ear / hearing organ
+fola = hair / fur
+nila = skin / surface
+tuma-pira = finger (touch-tool)
+tuma-piras = fingers
+nima = hand (base for pira is too common)
+nimas = hands
+tuma-vima = foot (touch-walk)
+tuma-vimas = feet
+vora-misa = leg / running limb
+vora-misas = legs
+kora = heart (center/chest)
+lóma-fura = stomach / belly (inside-food)
+kúna-sulo = brain / mind (head-strong)
+
+--- A2. Health and Sickness ---
+dovésa = medicine / healing (noun)
+fala = sick / illness (adj)
+un-fala = healthy / well (adj)
+fala-sula = pain / great sickness
+fala-nira = ache / small pain
+soma-fala = sleep-sickness (insomnia/fatigue)
+néva-gida = thirsty (drink-need)
+féma-gida = hungry (eat-need)
+dova-ésa = recovery (bring-tiredness-opposite)
+
+--- B1. Dwelling and Daily Objects ---
+tiva = room / chamber
+tivas = rooms
+tiva-soma = bedroom
+tiva-fura = kitchen (food room)
+tavi-jésa = chair (platform-sit)
+tavi-jésas = chairs
+kiva-tavi = desk (tool-table)
+luma-bira = window (light-thing)
+tésa-bira = book / paper (cloth-thing)
+télora-lésa = library (write-select-place)
+dora-kora = shelf / storage (open-box)
+
+--- B2. Simple Materials ---
+tira = metal / hard material
+rova = wood / timber
+lúna = glass / clear material
+kuma = opening / hole
+un-kuma = solid wall / non-opening
+
+--- C1. Modern Communication and Technology ---
+kéva = computer / calculation machine
+kéva-la = digital / computing (adj)
+kéva-nira = phone / mobile (small computer)
+ruma-kéva = screen / monitor (light-computer)
+siva-kéva = speaker / microphone (sound-computer)
+víno = net / network / internet (web-like)
+kosa = call / conversation (noun/verb)
+kosa-tés = message / text (call-your)
+déra = read / decode (verb)
+
+--- C2. Transport and Movement ---
+méva = vehicle (general)
+méva-tura = car / wheeled vehicle (vehicle-door)
+méva-vira = plane / aircraft (vehicle-wind)
+méva-nélo = boat / ship (vehicle-water)
+vora-méva = bicycle (run-vehicle)
+
+--- D1. Advanced Adjectives and Opposites ---
+kula = heavy (adj)
+un-kula = light (weight) (adj)
+fama = full (adj)
+nila = empty (adj) / nothing (noun)
+tira = clean (adj)
+un-tira = dirty (adj)
+jora = slow (adj)
+un-jora = fast (adj)
+kima-sula = important / necessary (possible-big)
+un-kima-sula = unimportant / unnecessary
+séna = smell / scent (noun/verb)
+un-séna = odorless
+tuma-sula = smooth (feel-big)
+tuma-náva = rough (feel-rough)
+fina-nira = warm (small hot)
+nula-nira = cool (small cold)
+
+--- E1. Quantifiers and Comparison ---
+mésa = more (quantity)
+nisa = less (quantity)
+susa = most (quantity)
+gola = best (adj)
+un-gola = worst (adj)
+tóra = many / much (large quantity)
+nira-tóra = few (small many)
+véta = every / each
+lóma-lus = all / whole (inside-all)
+lóma-nila = none / zero (inside-nothing)
+kima-ta = same (possible-that)
+un-kima-ta = different (not-possible-that)
+
+--- E2. Commerce and Economy ---
+gava = money / wealth
+gava-pira = buy (money-take)
+gava-géva = sell (money-give)
+riva-gava = bank / treasury (live-money-place)
+nésa-gava = shop / store (home-money-place)
+hulor-gava = tax / ruler-money
+kiva-nisa = cheap (use-less)
+kiva-mésa = expensive (use-more)
+
+-- Abilities: ---
+
+kima = can / able to (modal verb of ability)
+kimas = ability / possibility (noun)
+unkima = cannot / unable to (modal verb of inability)
+unkimas = inability / impossibility (noun)
+ha = always / habitually 
+musé = mean
+musés = means
