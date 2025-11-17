@@ -3,993 +3,431 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sala Beluma</title>
+<title>Beluma Translator (Dova Lingvo)</title>
 <style>
+    /* --- General Reset & Layout --- */
     body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background: #121212; /* Dark background */
-    color: #e0e0e0;      /* Light text for contrast */
-}
+        font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+        background: #f8f9fa; /* Light background */
+        color: #3c4043; /* Dark gray text */
+    }
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        font-size: 1.8rem;
+        color: #1a73e8; /* Google blue */
+        margin-bottom: 20px;
+        border-bottom: 1px solid #dadce0;
+        padding-bottom: 10px;
+    }
 
-input, button {
-    padding: 10px;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    width: 80%;
-    background: #1e1e1e;   /* Dark input/button background */
-    color: #e0e0e0;        /* Light text */
-    border: 1px solid #333; /* Subtle border */
-}
+    /* --- Dictionary Status --- */
+    #status {
+        color: #1a73e8; 
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        background: #e8f0fe; /* Light blue hint background */
+    }
 
-button {
-    margin-right: 10px;
-    cursor: pointer;
-}
+    /* --- Translator Interface (Google Translate Look) --- */
+    .translator-area {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .input-pane, .output-pane {
+        flex: 1;
+        position: relative;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        padding: 15px;
+        padding-bottom: 50px; /* Added space for new controls */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        min-height: 200px; /* Ensure visual height */
+        display: flex;
+        flex-direction: column;
+    }
+    .language-header {
+        font-weight: 500;
+        color: #5f6368;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #dadce0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-button:hover {
-    background: #333; /* Slightly lighter on hover */
-}
+    /* --- Text Areas --- */
+    #tekstoInput, #output {
+        flex-grow: 1; /* Take up remaining height */
+        border: none;
+        resize: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent;
+        color: #202124;
+    }
+    #tekstoInput:focus {
+        outline: none;
+    }
+    
+    /* Output area styling (text-only, non-editable) */
+    #output {
+        white-space: pre-wrap; /* Ensure all spaces are preserved */
+        font-weight: normal; 
+    }
+    .output-pane {
+        background: #f1f3f4; /* Subtle gray background for output */
+    }
 
-#output {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    word-wrap: break-word;
-    color: #f0f0f0; /* Make sure output text is clearly visible */
-}
+    /* --- Controls (Swap Button) --- */
+    .controls {
+        text-align: center;
+        margin: 10px 0;
+    }
+    #swapBtn {
+        background: white;
+        border: 1px solid #dadce0;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        color: #1a73e8;
+        cursor: pointer;
+        transition: background 0.3s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    #swapBtn:hover {
+        background: #f8f9fa;
+    }
+    #swapBtn:disabled {
+        color: #bdc1c6;
+        cursor: not-allowed;
+    }
+
+    /* --- Interaction Buttons (Copy & TTS) --- */
+    .interaction-controls {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        gap: 8px;
+    }
+    .interaction-btn {
+        background: none;
+        border: none;
+        color: #5f6368;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 50%;
+        transition: background-color 0.15s, color 0.15s;
+        font-size: 1.1rem;
+        line-height: 1;
+    }
+    .interaction-btn:hover {
+        background-color: #e8f0fe;
+        color: #1a73e8;
+    }
+    .interaction-btn:disabled {
+        color: #bdc1c6;
+        cursor: not-allowed;
+    }
 </style>
 </head>
 <body>
-<h1>Sala Beluma</h1>
-<input type="text" id="tekstoInput" placeholder="Mi te fra (eskriva fra, separat per komas)">
-<br>
-<button id="dovaBelumaBtn">Dova (Angla → Beluma)</button>
-<button id="dovaAnglaBtn">Dova (Beluma → Angla)</button>
-<div id="output"></div>
+
+<div class="container">
+    <h1>Beluma Translator (Auto-Loaded)</h1>
+    <p style="font-size:0.85rem; color:#5f6368;">
+        (The Beluma language uses systematic morphology, prefixes like $ré$- (again) and suffixes like $-s$ (plural). Tense is defined by particles like $ha$ (habitual) and $ta$ (past).)
+    </p>
+
+    <div id="status">Loading dictionary from URL...</div>
+
+    <div class="translator-area">
+        <div class="input-pane">
+            <div id="sourceLanguage" class="language-header">English</div>
+            <textarea id="tekstoInput" placeholder="Type or paste text here (e.g., Hello there!)" disabled></textarea>
+            <div class="interaction-controls">
+                <button id="copyInputBtn" class="interaction-btn" title="Copy Text" disabled>&#x2398;</button> 
+                <button id="speakInputBtn" class="interaction-btn" title="Listen" disabled>&#x1F50A;</button> 
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="swapBtn" title="Swap Languages" disabled>&#8646;</button>
+        </div>
+
+        <div class="output-pane">
+            <div id="targetLanguage" class="language-header">Beluma</div>
+            <div id="output"></div>
+            <div class="interaction-controls">
+                <button id="copyOutputBtn" class="interaction-btn" title="Copy Text" disabled>&#x2398;</button> 
+                <button id="speakOutputBtn" class="interaction-btn" title="Listen" disabled>&#x1F50A;</button> 
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
-// Lexi Beluma
-const lingvoData = `
-bela = beautiful
-bela lomas = beautiful trees (plural)
-da = conditional particle
-de = of / from
-dela = gift / present
-des furas = some fruits (plural)
-dora = open
-dova = bring / deliver
-fena = fire / flame
-fera = cut / slice
-fira = fiery
-fura = fruit / food / sweet (adj)
-furas = fruits
-geva = give
-gino = girl
-ginos = girls
-bino = boy
-binos = boys
-hena = see / watch
-hesa = hide / conceal / shadow / dark area
-hula = sky / air / high / tall (adj)
-ha = habitual particle
-hura = fly / glide
-jera = path / journey / long / extended (adj)
-jesa = sit / rest
-jiva = jump / act
-juma = jump / act of moving up
-kema = know / understand / wise / knowing (adj)
-kela = key
-kiva = use / tool
-kora = chest / box / beat / hit (verb)
-kwa = what
-kwas = whats / what's
-lira = song / tune
-lika = like
-le = the (singular definite article)
-les = the (plural definite article)
-liso = stone / rock / hard / solid (adj)
-liva = leave / go away
-loma = tree / plant / green / fresh (adj)
-lomet = small moon (derived diminutive)
-lomas = trees (plural)
-luma = shine / lamp / light source
-lumata = past: shone
-mis = we
-mi = I
-mu = me
-mela = honey / sweet
-meva = vehicle / object
-miva = move
-misi = child / person
-mises = children (plural)
-nela = water
-nelo = water
-nira = small / little / tiny object
-nivas = swimmers (plural)
-niva = swim
-nula = fog / mist / foggy / misty (adj)
-nesa = nest / home
-ni = against / opposite (preposition)
-pira = hand / tool / take (verb)
-pivas = takes / hand tools (plural)
-piva = push / press
-po = to (preposition)
-pusa = button / knob / round / knob-like (adj)
-pusas = buttons / knobs (plural)
-re- = again (prefix)
-reruma = shine again
-ra = near / next to (preposition)
-riva = live / reside / place of life / grow / develop
-rivas = lives / residences (plural)
-rali = road / path
-ralis = roads / paths (plural)
-rina = flower / red (adj)
-rinas = flowers (plural)
-risa = laugh
-risas = laughs (plural)
-rumor = shiner (agent / doer)
-ruma = light / shine / glowing / shining (adj)
-rumas = lights (plural)
-saro = bright (adj) / star (noun)
-sa = say / said
-sela = select / choose
-siva = sound / noise / noisy / loud (adj)
-sira = shine / emit
-sola = play / fun / fun / playful (adj)
-sulas = covers / protects (plural / verb)
-su- = above / on (prefix)
-su = on / above (preposition)
-sula = big / large / cover / protect (verb)
-sova = speak / talk / speech / voice (noun)
-sovas = talks / speeches (plural)
-tavi = table / platform / soft / gentle (adj)
-tavas = tables / platforms (plural)
-tava = platform / ground
-ta = that
-tas = thats / that's
-tesa = close / cloth / fabric
-tesas = cloths / fabrics (plural)
-tura = door / gate
-turas = doors / gates (plural)
-tuma = touch / feel
-un- = opposite (prefix)
-unrisa = frown / not laugh
-va = present particle
-vesa = build / make / building / structure / new (adj)
-vesas = buildings / structures (plural)
-veno = flowing / moving (adj) / river (noun)
-venos = rivers (plural)
-vima = carry / bring
-vora = run / river flow (noun)
-voras = rivers / flows (plural)
-vira = wind / breeze / fast motion (verb)
+// --- Configuration ---
+const DICTIONARY_URL = 'https://xpdevs.github.io/Beluma/h.txt';
 
---- Swears / Exclamations / Insults ---
-bish = bitch
-faka = fuck
-bluma = damn! / curse
-frola = idiot / fool
-nibra = annoying person / jerk
-sura = bad / evil thing
-tivra = heck / mild curse
-krova = angry / expletive
-linta = stupid
-pumra = nonsense / bullshit
-vurna = rude insult / jerk
-ruga = damn it / frustration
-suna = curse / misfortune
-neta = fool / silly person
-bira = bastard / strong insult
-fina = hell / negative exclamation
-rima = annoying / pest
-trola = mocking insult / tease
-hura! = wow! / shock / surprise
-
---- animals ---
-
-dela = deer
-delas = deer (plural)
-delaet = fawn
-delaos = herd of deer
-delaan = deer habitat
-delaor = deer hunter
-delaik = deer-like
-
-dravos = dragon
-dravoset = small dragon
-dravosos = brood of dragons
-dravosan = dragon cave
-dravosor = dragon rider
-dravosik = dragon-like
-
-feno = frog
-fenos = frogs
-fenoet = tadpole
-fenoos = swarm of frogs
-fenoan = swamp
-fenoor = frog catcher
-fenoik = frog-like
-
-fira = bird
-firas = birds
-firaet = chick
-firaos = flock of birds
-firaan = bird nest
-firaor = bird keeper
-firaik = bird-like
-
-firo = seal
-firos = seals
-firoet = pup (seal)
-firoos = colony of seals
-firoan = seal cove
-firoor = seal trainer
-firoik = seal-like
-
-firi = fairy
-firis = fairies
-firiot = little fairy
-firios = swarm of fairies
-firian = fairy glade
-firior = fairy keeper
-firiik = fairy-like
-
-guro = turtle/tortoise
-guros = turtles
-guroet = hatchling turtle
-guroos = group of turtles
-guroan = turtle pond
-guroor = turtle breeder
-guroik = turtle-like
-
-hena = hawk
-henas = hawks
-henaet = fledgling hawk
-henaos = pair of hawks
-henaan = hawk nest
-henaor = hawk trainer
-henaik = hawk-like
-
-hulo = lion
-hulos = lions
-huloet = cub
-huloos = pride of lions
-huloan = lion den
-huloor = lion tamer
-huloik = lion-like
-
-hurox = griffin
-huroxes = griffins
-huroxet = small griffin
-huroxos = pride of griffins
-huroxan = griffin nest
-huroxor = griffin rider
-huroxik = griffin-like
-
-jara = owl
-jaras = owls
-jaraet = owlet
-jaraos = parliament of owls
-jaraan = owl tree
-jaraor = owl keeper
-jaraik = owl-like
-
-jami = beetle
-jamis = beetles
-jamiet = beetle larva
-jamios = swarm of beetles
-jamian = beetle nest
-jamior = beetle collector
-jamiik = beetle-like
-
-javo = jellyfish
-javos = jellyfish (plural)
-javoet = baby jellyfish
-javoos = bloom of jellyfish
-javoan = jellyfish lagoon
-javoor = jellyfish handler
-javoik = jellyfish-like
-
-jumo = rabbit
-jumos = rabbits
-jumoet = bunny
-jumoos = warren of rabbits
-jumoan = rabbit burrow
-jumoor = rabbit keeper
-jumoik = rabbit-like
-
-kilo = lizard
-kilos = lizards
-kiloet = hatchling lizard
-kiloos = group of lizards
-kiloan = lizard den
-kiloor = lizard keeper
-kiloik = lizard-like
-
-koro = bear
-koros = bears
-koroet = bear cub
-koroos = family of bears
-koroan = bear cave
-koroor = bear trainer
-koroik = bear-like
-
-lami = fly
-lamis = flies
-lamiet = fly larva
-lamios = swarm of flies
-lamian = fly nest
-lamior = fly trapper
-lamiik = fly-like
-
-lavo = dog
-lavos = dogs
-lavoet = puppy
-lavoos = pack of dogs
-lavoan = doghouse
-lavor = dog trainer
-lavoik = dog-like
-
-lino = dolphin
-linos = dolphins
-linoet = calf
-linoos = pod of dolphins
-linoan = dolphin bay
-linoor = dolphin trainer
-linoik = dolphin-like
-
-lira = duck
-liras = ducks
-liraet = duckling
-liraos = flock of ducks
-liraan = duck pond
-liraor = duck keeper
-liraik = duck-like
-
-lunos = cat
-lunoset = kitten
-lunosos = colony of cats
-lunosan = cattery
-lunosor = cat keeper
-lunosik = cat-like
-
-mavi = ant
-mavis = ants
-maviet = ant larva
-mavios = colony of ants
-mavian = anthill
-mavior = ant keeper
-maviik = ant-like
-
-melo = fish
-melos = fish (plural)
-meloet = small fish
-meloos = school of fish
-meloan = fish pond
-meloor = fish breeder
-meloik = fish-like
-
-mero = crocodile
-meros = crocodiles
-meroet = hatchling croc
-meroos = bask of crocs
-meroan = crocodile swamp
-meroor = crocodile hunter
-meroik = crocodile-like
-
-mira = pigeon/dove
-miras = pigeons
-miraet = squab
-miraos = flock of pigeons
-miraan = dovecote
-miraor = pigeon keeper
-miraik = pigeon-like
-
-muro = donkey
-muros = donkeys
-muroet = foal
-muroos = group of donkeys
-muroan = donkey stable
-muroor = donkey handler
-muroik = donkey-like
-
-naro = crow
-naros = crows
-naroet = fledgling crow
-naroos = murder of crows
-naroan = crow nest
-naro or = crow trainer
-naroik = crow-like
-
-navi = bee
-navis = bees
-naviet = larva bee
-navios = swarm of bees
-navian = beehive
-navior = beekeeper
-naviik = bee-like
-
-nemo = whale
-nemos = whales
-nemoet = calf
-nemoos = pod of whales
-nemoan = whale bay
-nemoor = whale trainer
-nemoik = whale-like
-
-neta = sheep
-netas = sheep (plural)
-netaet = lamb
-netaos = flock of sheep
-netaan = sheep pen
-netaor = shepherd
-netaik = sheep-like
-
-pavi = fox
-pavis = foxes
-paviet = kit
-pavios = skulk of foxes
-pavian = fox den
-pavior = fox keeper
-paviik = fox-like
-
-pemo = squid/octopus
-pemos = squid/octopi
-pemoet = baby squid
-pemoos = shoal of squid
-pemoan = squid cave
-pemoor = squid fisher
-pemoik = squid-like
-
-pula = chicken
-pulas = chickens
-pulaet = chick
-pulaos = flock of chickens
-pulaan = chicken coop
-pulaor = chicken farmer
-pulaik = chicken-like
-
-puro = monkey
-puros = monkeys
-puroet = baby monkey
-puroos = troop of monkeys
-puroan = monkey forest
-puroor = monkey keeper
-puroik = monkey-like
-
-rava = elephant
-ravas = elephants
-ravaet = calf
-ravaos = herd of elephants
-ravaan = elephant savanna
-ravaor = elephant keeper
-ravaik = elephant-like
-
-rimi = spider
-rimis = spiders
-rimiet = spiderling
-rimios = swarm of spiders
-rimian = spiderweb
-rimior = spider keeper
-rimiik = spider-like
-
-rino = goat
-rinos = goats
-rinoet = kid
-rinoos = herd of goats
-rinoan = goat pen
-rinoor = goat keeper
-rinoik = goat-like
-
-salo = shark
-salos = sharks
-saloet = baby shark
-saloos = school of sharks
-saloan = shark bay
-saloor = shark fisher
-saloik = shark-like
-
-sano = goose
-sanos = geese
-sanoet = gosling
-sanoos = flock of geese
-sanoan = goose pond
-sanoor = goose keeper
-sanoik = goose-like
-
-savi = cow
-savis = cows
-saviet = calf
-savios = herd of cows
-savian = cowshed
-savior = cowherd
-saviik = cow-like
-
-saviros = unicorn
-saviroset = foal
-savirosos = herd of unicorns
-savirosan = unicorn forest
-savirosor = unicorn rider
-savirosik = unicorn-like
-
-selo = wolf
-selos = wolves
-seloet = pup
-seloos = pack of wolves
-seloan = wolf den
-seloor = wolf trainer
-seloik = wolf-like
-
-sira = songbird
-siras = songbirds
-siraet = chick
-siraos = flock of songbirds
-siraan = birdhouse
-siraor = songbird keeper
-siraik = songbird-like
-
-somi = butterfly
-somis = butterflies
-somiet = caterpillar
-somios = swarm of butterflies
-somian = butterfly meadow
-somior = butterfly keeper
-somiik = butterfly-like
-
-suno = snake
-sunos = snakes
-sunoet = hatchling snake
-sunoos = nest of snakes
-sunoan = snake pit
-sunoor = snake handler
-sunoik = snake-like
-
-tavo = crab
-tavos = crabs
-tavoet = baby crab
-tavoos = group of crabs
-tavoan = crab beach
-tavoor = crab fisher
-tavoik = crab-like
-
-taviros = phoenix
-taviroset = chick
-tavirosos = flock of phoenixes
-tavirosan = phoenix nest
-tavirosor = phoenix keeper
-tavirosik = phoenix-like
-
-tero = turkey
-teros = turkeys
-teroet = chick
-teroos = flock of turkeys
-teroan = turkey farm
-teroor = turkey farmer
-teroik = turkey-like
-
-tima = tiger
-timas = tigers
-timaet = cub
-timaos = streak of tigers
-timaan = tiger jungle
-timaor = tiger keeper
-timaik = tiger-like
-
-turo = horse
-turos = horses
-turoet = foal
-turoos = herd of horses
-turoan = stable
-turoor = horse trainer
-turoik = horse-like
-
-vena = camel
-venas = camels
-venaet = calf
-venaos = caravan of camels
-venaan = camel pen
-venaor = camel handler
-venaik = camel-like
-
-viro = pig
-viros = pigs
-viroet = piglet
-viroos = herd of pigs
-viroan = pigsty
-viroor = pig farmer
-viroik = pig-like
-
---- fmaily/extended family ---
-
-mava = mother / mom / mum
-pava = father  
-movo = parent (neutral)  
-mavos = mothers  
-pavos = fathers  
-movos = parents  
-
-lina = daughter  
-lino = son  
-lini = child (neutral)  
-linos = sons  
-linas = daughters  
-linis = children  
-
-vava = baby / infant  
-vavos = babies  
-vavaet = little baby (extra diminutive)  
-
-sava = sibling (neutral)  
-savas = siblings  
-savik = sibling-like / close as family  
-brovo = brother  
-brovos = brothers  
-siro = sister  
-siros = sisters  
-
-nelo = nephew  
-nela = niece  
-nelos = nephews  
-nelas = nieces  
-
-nina = child (generic young person)  
-ninas = children  
-ninaet = little child (affectionate)  
-
-namo = family  
-namos = families  
-namoos = clan / extended family (collective)  
-
-mavoet = little mother (affectionate)  
-pavoet = little father (affectionate)  
-movor = caretaker / parental figure (agent noun)  
-
-tavo = grandparent (neutral)  
-tavos = grandparents  
-tava = grandmother  
-tavoa = grandfather  
-tavina = granddaughter  
-tavino = grandson  
-tavinis = grandchildren  
-
-cavo = cousin (neutral)  
-cavos = cousins  
-cavoet = little cousin  
-
-lavo = uncle  
-lava = aunt  
-lavos = uncles  
-lavas = aunts  
-
-havo = husband  
-hava = wife  
-havos = husbands  
-havas = wives  
-havik = spouse-like partner  
-
-ravo = relative (neutral)  
-ravos = relatives  
-ravoset = distant relative (diminutive)  
-
-javo = ancestor  
-javos = ancestors  
-javoor = elder (respected ancestor figure)  
-
-davo = descendant  
-davos = descendants  
-
-pamo = step-parent  
-pamos = step-parents  
-pama = stepmother  
-pamoa = stepfather  
-
-limo = stepchild  
-limos = stepchildren  
-lima = stepdaughter  
-limoa = stepson  
-
-samo = in-law (neutral)  
-samos = in-laws  
-sama = sister-in-law  
-samoa = brother-in-law  
-savam = sibling-in-law (neutral)  
-
-kavo = foster-parent  
-kavos = foster-parents  
-kava = foster-mother  
-kavoa = foster-father  
-
-nimo = guardian  
-nimos = guardians  
-nimoor = legal guardian (formal agent form)  
-
-favo = godparent  
-favos = godparents  
-fava = godmother  
-favoa = godfather  
-favoet = godchild  
-favoes = godchildren  
-
-pravin = great-grandparent (neutral)  
-pravinos = great-grandparents  
-pravina = great-grandmother  
-pravino = great-grandfather  
-pravini = great-grandchild (neutral)  
-pravinis = great-grandchildren  
-
---- HALF-RELATIVES (prefix "he-") ---  
-hebrovo = half-brother  
-hesiro = half-sister  
-helina = half-daughter  
-helino = half-son  
-hesava = half-sibling (neutral)  
-
---- ADOPTED RELATIVES (prefix "ad-") ---  
-admava = adoptive mother  
-adpava = adoptive father  
-admovo = adoptive parent (neutral)  
-adlina = adopted daughter  
-adlino = adopted son  
-adlini = adopted child  
-adsava = adopted sibling  
-adcavo = adopted cousin  
-
---- EXTENDED TERMS ---  
-fravo = family friend (close like family)  
-fravos = family friends  
-ravoor = blood relative (formal agent form)  
-namoor = household head / leader of family  
-tavor = grandparental figure (non-blood, honorary)
-
---- greetings (morning and afternoon)/ time ---
-
-sala = hello (general greeting)  
-salo = hi (casual)  
-salos = hello to multiple people / group greeting  
-salet = little hello / playful greeting  
-
-vavi = good morning
-vavos = good morning to multiple people
-vavaet = little morning greeting / casual
-vaviaf = good afternoon
-vavaafs = good afternoon to all
-vavo = good evening
-vavoso = good evening to multiple people
-
-nava = good night / farewell at night
-navos = good night to multiple people
-
-kala = welcome
-kalos = welcome all / group welcome
-kalet = small or informal welcome
-
-ravi = goodbye / farewell
-ravos = goodbye to many
-ravik = see you later (informal, playful)
-
-havi = how are you (polite)
-havos = how are you all
-havet = how’s it going (informal, friendly)
-
-fava = nice to meet you
-fivos = nice to meet you all  
-fivet = glad to meet you (informal)  
-
-teva = please / polite request  
-tevos = please all (polite to group)  
-
-nako = thank you  
-nakos = thanks to multiple people  
-nakoet = little thanks / casual thanks  
-nakik = thanks in playful or informal tone  
-
-noha = sorry / excuse me  
-nohas = sorry to many / formal apology  
-nohaet = little apology / “oops”  
-
-kek = yes (response)  
-non = no / not (response)
-
-ta = past particle
-ge = future particle
-ha = habitual particle
-sofa = today
-sova = tomorrow
-safa = yesterday
-su-sofa = later / afterward
-un-sofa = earlier / before
-ha-ge = always
-ha-no = never
-suma = sometimes
-
---- actions ---
-
-fema = eat
-neva = drink
-soma = sleep
-jesa = rest
-vima = walk
-vora = run
-jiva = jump
-jumo = hop / leap
-kema = think
-kema da = plan
-kema va = dream
-vesa = make / create
-tora = fight
-tora sa = attack
-tesra = defend
-dora = open
-tesa = close
-tesa sa = lock
-re-dora = unlock
-fira = cry
-risa = laugh
-siva = listen
-hena va = hear
-kema sa = learn
-vesa kema = teach
-kema va = study
-jesa = sit
-misa = stand
-
---- qualities---
-
-sula = big / large
-nira = small / little
-mida = medium
-saro = bright
-hesa = dark / shadowed
-tavi = soft / gentle
-liso = hard / solid
-vira = fast / swift
-ruma = light / shining
-hula = high / tall
-fina = hot
-nula = cold / foggy
-sola = fun / playful
-sela = select / chosen
-rina = red
-mela = sweet
-siva = noisy / loud
-un-siva = quiet / silent
-sulo = strong / powerful
-
-et = it / it's / its
-
-preto = pretty 
-gavo = good 
-pretaet = little pretty / diminutive  
-gavoet = little good / diminutive
-
-du = dont / don't / do not, doesnt / doesn't / does not
-thera = there
-theras = theres / there is / there's
-navie = their / theirs
-s = is
-
-vi = morning
-vis = mornings
-af = afternoon
-afs = afternoons
-vo = evening
-vos = evenings
-
-dova = translation 
-dovas = translations
-
-na = in
-
---- meals ---
-Breva = breakfast
-Brevas = breakfasts
-Leva = lunch
-Levas = lunches
-Deva = dinner
-Devas = dinners
-   
-sud = should
-unsud = shouldnt / shouldn't / should not
-gai = go
-fao = for
-kemas = knows
-fi = if
-sena = sense
-
-tu = you
-ariv = are
-triva = trying
-hixa = heard
-exas = exist
-    
-beza = because 
-cas = cause
-
-un = a
-unas = and
-sotas = story
-obus = about
-tis = this
-coah = chat
-olys = only
-jes = just
-dus = do
-tas = at
-lus = all
-sak = ask
-lera = really
-leva = love
-sunes = so
-mus = my
-namo = name
-namos = names
-    
---- seasons ---
-spira = spring
-summer = summer
-auta = autumn / fall
-winta = winter 
-`;
-
-// Parsar lexi
+// Dictionaries and State
 let anglaAlBeluma = {};
 let belumaAlAngla = {};
-const linioj = lingvoData.split('\n');
-for (let linio of linioj) {
-    linio = linio.trim();
-    if (!linio || linio.startsWith('---')) continue;
-    const partoj = linio.split('=');
-    if (partoj.length === 2) {
-        const beluma = partoj[0].trim();
-        let angla = partoj[1].trim();
-        angla = angla.replace(/\(.*?\)/g, '').trim(); // forig parentetoj
-        const opcioj = angla.split('/').map(o => o.trim().toLowerCase());
-        for (let o of opcioj) {
-            anglaAlBeluma[o] = beluma;
+let isEnglishToBeluma = true; // Current direction state
+const synth = window.speechSynthesis; // TTS API
+
+// Elements
+const statusElement = document.getElementById('status');
+const tekstoInput = document.getElementById('tekstoInput');
+const output = document.getElementById('output');
+const swapBtn = document.getElementById('swapBtn');
+const sourceLanguageDisplay = document.getElementById('sourceLanguage');
+const targetLanguageDisplay = document.getElementById('targetLanguage');
+
+// Interaction buttons
+const copyInputBtn = document.getElementById('copyInputBtn');
+const speakInputBtn = document.getElementById('speakInputBtn');
+const copyOutputBtn = document.getElementById('copyOutputBtn');
+const speakOutputBtn = document.getElementById('speakOutputBtn');
+
+// --- Core Translation Functions (Kept the same) ---
+
+function parseLingvoData(lingvoData) {
+    const linioj = lingvoData.split('\n');
+    anglaAlBeluma = {};
+    belumaAlAngla = {};
+
+    for (let linio of linioj) {
+        linio = linio.trim();
+        if (!linio || linio.startsWith('---')) continue;
+        const partoj = linio.split('=');
+        if (partoj.length === 2) {
+            const beluma = partoj[0].trim();
+            let angla = partoj[1].trim();
+            angla = angla.replace(/\(.*?\)/g, '').trim(); 
+            const opcioj = angla.split('/').map(o => o.trim().toLowerCase());
+            
+            for (let o of opcioj) {
+                anglaAlBeluma[o] = beluma;
+            }
+            
+            if (opcioj.length > 0) {
+                belumaAlAngla[beluma] = opcioj[0]; 
+            }
         }
-        belumaAlAngla[beluma] = opcioj[0]; // unua opcio por Beluma → Angla
     }
 }
 
-// Tradukar unu frazo
-function tradukFrazo(frazo, dictionario) {
-    frazo = frazo.trim();
-    if (!frazo) return '';
-    let finPunkto = '';
-    const punktoMatch = frazo.match(/([.,!?]+)$/);
-    if (punktoMatch) {
-        finPunkto = punktoMatch[1];
-        frazo = frazo.replace(/([.,!?]+)$/, '');
+/**
+ * Translates a single word/token, handling punctuation and case, or returns the token untouched if it's whitespace/punctuation.
+ */
+function tradukToken(token, dictionario) {
+    // 1. Check if the token is pure whitespace (space, tab, newline)
+    if (token.match(/^\s+$/)) {
+        return token; // Return whitespace token untouched
     }
 
-    const malgranda = frazo.toLowerCase();
-    // If not found, return original word
-    return dictionario[malgranda] || frazo + finPunkto;
+    // 2. Check if the token is just punctuation or empty after trimming
+    token = token.trim();
+    if (!token || !token.match(/[a-zA-Z0-9]/)) {
+        return token;
+    }
+
+    // 3. Process as a word
+    let antaŭPunkto = token.match(/^([^a-zA-Z0-9]*)/)?.[0] || '';
+    let finPunkto = token.match(/([^a-zA-Z0-9]*)$/)?.[0] || '';
+    
+    let kernaVorto = token.substring(antaŭPunkto.length, token.length - finPunkto.length);
+    
+    const ĉuKapitala = kernaVorto.length > 0 && kernaVorto[0] === kernaVorto[0].toUpperCase();
+
+    const malgranda = kernaVorto.toLowerCase();
+    
+    let tradukitaKerno = dictionario[malgranda] || kernaVorto;
+    
+    if (ĉuKapitala && tradukitaKerno.length > 0) {
+        tradukitaKerno = tradukitaKerno.charAt(0).toUpperCase() + tradukitaKerno.slice(1);
+    }
+    
+    return antaŭPunkto + tradukitaKerno + finPunkto;
 }
 
-// Tradukar komas-separata frazo
-function tradukKomasFrazo(frazo, dictionario) {
-    const partoj = frazo.split(',').map(p => p.trim());
-    const tradukitaj = partoj.map(p => tradukFrazo(p, dictionario));
-    return tradukitaj.join(', ');
+/**
+ * Translates an entire input string word-by-word, preserving all whitespace and punctuation.
+ */
+function tradukFrazo(frazo) {
+    const dictionario = isEnglishToBeluma ? anglaAlBeluma : belumaAlAngla;
+    
+    // Use a regex that captures WORDS, PUNCTUATION BLOCKS, AND WHITESPACE
+    const tokens = frazo.match(/(\s+)|([a-zA-Z0-9]+)|([^\s]+)/g) || [frazo];
+
+    const tradukitaj = tokens.map(tradukTokeni => tradukToken(tradukTokeni, dictionario));
+    
+    // Join the processed tokens without adding any extra spaces.
+    return tradukitaj.join('');
 }
 
-// Angla → Beluma
-document.getElementById('dovaBelumaBtn').addEventListener('click', function() {
-    const eniro = document.getElementById('tekstoInput').value.trim();
-    const output = document.getElementById('output');
-    if (!eniro) { output.textContent = ''; return; }
-    output.textContent = tradukKomasFrazo(eniro, anglaAlBeluma);
+// --- Interaction Functions (Copy & TTS - Kept the same) ---
+
+function copyText(element) {
+    let text = element.tagName === 'TEXTAREA' ? element.value : element.textContent;
+    if (!text) {
+        return;
+    }
+    // Using execCommand as a robust fallback for clipboard operations in iframe environments
+    try {
+        const tempArea = document.createElement('textarea');
+        tempArea.value = text;
+        document.body.appendChild(tempArea);
+        tempArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempArea);
+        console.log('Text copied to clipboard!');
+    } catch (err) {
+        console.error('Copying failed:', err);
+    }
+}
+
+function speakText(text, lang) {
+    if (!synth || !text) return;
+    
+    if (synth.speaking) {
+        synth.cancel(); 
+    }
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    // Use 'en-US' as a neutral voice for the constructed language
+    utterance.lang = lang === 'English' ? 'en-US' : 'en-US'; 
+    
+    synth.speak(utterance);
+}
+
+// --- UI Logic and Event Handlers ---
+
+function updateInteractionButtonState() {
+    const hasInput = tekstoInput.value.trim().length > 0;
+    const hasOutput = output.textContent.trim().length > 0;
+    
+    // Input Box Controls
+    copyInputBtn.disabled = !hasInput;
+    speakInputBtn.disabled = !hasInput;
+
+    // Output Box Controls
+    copyOutputBtn.disabled = !hasOutput;
+    speakOutputBtn.disabled = !hasOutput;
+}
+
+function enableTranslator() {
+    statusElement.textContent = 'Dictionary loaded successfully! Start typing to translate.';
+    statusElement.style.color = 'green';
+    swapBtn.disabled = false;
+    tekstoInput.disabled = false; // Enable input
+    handleTranslation(); 
+    updateInteractionButtonState();
+}
+
+function disableTranslator(message) {
+    statusElement.textContent = message;
+    statusElement.style.color = 'red';
+    swapBtn.disabled = true;
+    tekstoInput.disabled = true; // Disable input on error
+    output.textContent = '';
+    tekstoInput.value = '';
+    updateInteractionButtonState(); 
+}
+
+function updateLanguageDisplays() {
+    if (isEnglishToBeluma) {
+        sourceLanguageDisplay.textContent = 'English';
+        targetLanguageDisplay.textContent = 'Beluma';
+        tekstoInput.placeholder = 'Type English text here (e.g., Hello there!)...';
+    } else {
+        sourceLanguageDisplay.textContent = 'Beluma';
+        targetLanguageDisplay.textContent = 'English';
+        tekstoInput.placeholder = 'Type Beluma text here (e.g., Sala théra!)...';
+    }
+}
+
+function handleTranslation() {
+    const eniro = tekstoInput.value;
+    if (eniro === '') { 
+        output.textContent = '';
+    } else {
+        output.textContent = tradukFrazo(eniro);
+    }
+    updateInteractionButtonState(); 
+}
+
+// --- NEW: Dictionary Loading Function ---
+
+async function loadDictionary() {
+    try {
+        const response = await fetch(DICTIONARY_URL);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const lingvoData = await response.text();
+        parseLingvoData(lingvoData);
+        updateLanguageDisplays();
+        enableTranslator();
+    } catch (error) {
+        disableTranslator(`Error loading dictionary from URL. Please check the network and URL (${DICTIONARY_URL}). Error: ${error.message}`);
+        console.error('Dictionary load error:', error);
+    }
+}
+
+// --- Event Listeners ---
+
+// 1. Input Change (Automatic Translation as you type)
+tekstoInput.addEventListener('input', handleTranslation);
+
+// 2. Swap Languages Button
+swapBtn.addEventListener('click', function() {
+    isEnglishToBeluma = !isEnglishToBeluma; // Toggle state
+    
+    // Swap content of input and output fields
+    const currentInput = tekstoInput.value;
+    const currentOutput = output.textContent;
+    tekstoInput.value = currentOutput;
+    
+    // Update language headers and placeholder
+    updateLanguageDisplays();
+    
+    // Immediately translate the swapped content
+    handleTranslation();
 });
 
-// Beluma → Angla
-document.getElementById('dovaAnglaBtn').addEventListener('click', function() {
-    const eniro = document.getElementById('tekstoInput').value.trim();
-    const output = document.getElementById('output');
-    if (!eniro) { output.textContent = ''; return; }
-    output.textContent = tradukKomasFrazo(eniro, belumaAlAngla);
-});
+// 3. Interaction Button Event Listeners
+copyInputBtn.addEventListener('click', () => copyText(tekstoInput));
+speakInputBtn.addEventListener('click', () => speakText(tekstoInput.value, sourceLanguageDisplay.textContent));
+copyOutputBtn.addEventListener('click', () => copyText(output));
+speakOutputBtn.addEventListener('click', () => speakText(output.textContent, targetLanguageDisplay.textContent));
+
+// 4. Initialization - Load dictionary on startup
+window.onload = function() {
+    updateLanguageDisplays();
+    updateInteractionButtonState();
+    loadDictionary(); 
+};
 </script>
 </body>
 </html>
