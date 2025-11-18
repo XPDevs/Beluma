@@ -1212,11 +1212,11 @@ nivo-la = his / his (possessive)
 siva = she / her
 siva-la = her / hers (possessive)
 misu = they / them (plural)
-kvasi = who (kwa-misi = what person)
-kwaras = where (kwa-rivas = what residence/place)
-kvado = when (kwa-díva = what day/time)
-kvaso = why (kwa-réna = what reason)
-kvalo = how (kwa-féta = what way/method)
+kvasi = who 
+kwaras = where 
+kvado = when 
+kvaso = why 
+kvalo = how 
 
 --- NEW: Conjunctions and Modals ---
 
