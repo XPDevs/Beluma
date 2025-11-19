@@ -153,17 +153,15 @@
 <body>
 
 <div class="container">
-    <h1>Beluma Translator (Auto-Loaded)</h1>
-    <p style="font-size:0.85rem; color:#5f6368;">
-        (The Beluma language uses systematic morphology, prefixes like $ré$- (again) and suffixes like $-s$ (plural). Tense is defined by particles like $ha$ (habitual) and $ta$ (past).)
-    </p>
+    <h1>Beluma Translator (Beluma $\rightarrow$ English Default)</h1>
 
     <div id="status">Loading dictionary from URL...</div>
 
     <div class="translator-area">
         <div class="input-pane">
-            <div id="sourceLanguage" class="language-header">English</div>
-            <textarea id="tekstoInput" placeholder="Type or paste text here (e.g., Hello there!)" disabled></textarea>
+            <!-- Source is Beluma by default -->
+            <div id="sourceLanguage" class="language-header">Beluma</div>
+            <textarea id="tekstoInput" placeholder="Type or paste Beluma text here (e.g., Sala théra!)..." disabled></textarea>
             <div class="interaction-controls">
                 <button id="copyInputBtn" class="interaction-btn" title="Copy Text" disabled>&#x2398;</button> 
                 <button id="speakInputBtn" class="interaction-btn" title="Listen" disabled>&#x1F50A;</button> 
@@ -175,7 +173,8 @@
         </div>
 
         <div class="output-pane">
-            <div id="targetLanguage" class="language-header">Beluma</div>
+            <!-- Target is English by default -->
+            <div id="targetLanguage" class="language-header">English</div>
             <div id="output"></div>
             <div class="interaction-controls">
                 <button id="copyOutputBtn" class="interaction-btn" title="Copy Text" disabled>&#x2398;</button> 
@@ -192,7 +191,8 @@ const DICTIONARY_URL = 'https://xpdevs.github.io/Beluma/h.txt';
 // Dictionaries and State
 let anglaAlBeluma = {};
 let belumaAlAngla = {};
-let isEnglishToBeluma = true; // Current direction state
+// Set default direction to Beluma (Source/Left) -> English (Target/Right)
+let isEnglishToBeluma = false; 
 const synth = window.speechSynthesis; // TTS API
 
 // Elements
@@ -209,7 +209,7 @@ const speakInputBtn = document.getElementById('speakInputBtn');
 const copyOutputBtn = document.getElementById('copyOutputBtn');
 const speakOutputBtn = document.getElementById('speakOutputBtn');
 
-// --- Core Translation Functions (Kept the same) ---
+// --- Core Translation Functions ---
 
 function parseLingvoData(lingvoData) {
     const linioj = lingvoData.split('\n');
@@ -223,13 +223,16 @@ function parseLingvoData(lingvoData) {
         if (partoj.length === 2) {
             const beluma = partoj[0].trim();
             let angla = partoj[1].trim();
+            // Clean up definitions (remove parenthetical info)
             angla = angla.replace(/\(.*?\)/g, '').trim(); 
             const opcioj = angla.split('/').map(o => o.trim().toLowerCase());
             
+            // Populate English -> Beluma map
             for (let o of opcioj) {
                 anglaAlBeluma[o] = beluma;
             }
             
+            // Populate Beluma -> English map (using the first definition as the default)
             if (opcioj.length > 0) {
                 belumaAlAngla[beluma] = opcioj[0]; 
             }
@@ -238,7 +241,7 @@ function parseLingvoData(lingvoData) {
 }
 
 /**
- * Translates a single word/token, handling punctuation and case, or returns the token untouched if it's whitespace/punctuation.
+ * Translates a single word/token, handling punctuation and case.
  */
 function tradukToken(token, dictionario) {
     // 1. Check if the token is pure whitespace (space, tab, newline)
@@ -262,8 +265,10 @@ function tradukToken(token, dictionario) {
 
     const malgranda = kernaVorto.toLowerCase();
     
+    // Look up the word, default to the original word if not found
     let tradukitaKerno = dictionario[malgranda] || kernaVorto;
     
+    // Restore capitalization if the original word was capitalized
     if (ĉuKapitala && tradukitaKerno.length > 0) {
         tradukitaKerno = tradukitaKerno.charAt(0).toUpperCase() + tradukitaKerno.slice(1);
     }
@@ -275,6 +280,7 @@ function tradukToken(token, dictionario) {
  * Translates an entire input string word-by-word, preserving all whitespace and punctuation.
  */
 function tradukFrazo(frazo) {
+    // Select the correct dictionary based on the current direction state
     const dictionario = isEnglishToBeluma ? anglaAlBeluma : belumaAlAngla;
     
     // Use a regex that captures WORDS, PUNCTUATION BLOCKS, AND WHITESPACE
@@ -286,7 +292,7 @@ function tradukFrazo(frazo) {
     return tradukitaj.join('');
 }
 
-// --- Interaction Functions (Copy & TTS - Kept the same) ---
+// --- Interaction Functions (Copy & TTS) ---
 
 function copyText(element) {
     let text = element.tagName === 'TEXTAREA' ? element.value : element.textContent;
@@ -337,7 +343,7 @@ function updateInteractionButtonState() {
 }
 
 function enableTranslator() {
-    statusElement.textContent = 'Dictionary loaded successfully! Start typing to translate.';
+    statusElement.textContent = 'Dictionary loaded successfully!';
     statusElement.style.color = 'green';
     swapBtn.disabled = false;
     tekstoInput.disabled = false; // Enable input
@@ -361,9 +367,9 @@ function updateLanguageDisplays() {
         targetLanguageDisplay.textContent = 'Beluma';
         tekstoInput.placeholder = 'Type English text here (e.g., Hello there!)...';
     } else {
-        sourceLanguageDisplay.textContent = 'Beluma';
+        sourceLanguageDisplay.textContent = 'Beluma'; 
         targetLanguageDisplay.textContent = 'English';
-        tekstoInput.placeholder = 'Type Beluma text here (e.g., Sala théra!)...';
+        tekstoInput.placeholder = 'Type Beluma text here (e.g., Sala théra!)...'; 
     }
 }
 
@@ -377,7 +383,7 @@ function handleTranslation() {
     updateInteractionButtonState(); 
 }
 
-// --- NEW: Dictionary Loading Function ---
+// --- Dictionary Loading Function ---
 
 async function loadDictionary() {
     try {
@@ -404,15 +410,13 @@ tekstoInput.addEventListener('input', handleTranslation);
 swapBtn.addEventListener('click', function() {
     isEnglishToBeluma = !isEnglishToBeluma; // Toggle state
     
-    // Swap content of input and output fields
-    const currentInput = tekstoInput.value;
-    const currentOutput = output.textContent;
-    tekstoInput.value = currentOutput;
+    // The key change: We DO NOT swap the content of the boxes. 
+    // The content stays on the left (source), and the output updates on the right (target).
     
     // Update language headers and placeholder
     updateLanguageDisplays();
     
-    // Immediately translate the swapped content
+    // Immediately translate the original content based on the NEW direction
     handleTranslation();
 });
 
