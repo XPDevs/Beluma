@@ -12,6 +12,7 @@
             --text: #202124;
             --border: #dadce0;
             --radius: 16px;
+            --error: #d93025;
         }
 
         body {
@@ -31,12 +32,46 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
         }
 
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
         h1 {
             font-size: 1.8rem;
             color: var(--primary);
-            margin-bottom: 20px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
+            margin: 0;
+            border: none;
+            padding: 0;
+        }
+
+        .mode-switch {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f1f3f4;
+            padding: 4px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #5f6368;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .mode-option {
+            padding: 6px 14px;
+            border-radius: 16px;
+            transition: all 0.2s;
+        }
+
+        .mode-option.active {
+            background: var(--primary);
+            color: white;
         }
 
         #status {
@@ -94,6 +129,12 @@
         #tekstoInput:focus { outline: none; }
         #output { white-space: pre-wrap; word-break: break-word; }
 
+        .unknown-word {
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: var(--error);
+        }
+
         #swapBtn {
             position: absolute;
             z-index: 10;
@@ -138,6 +179,7 @@
             margin-top: 15px;
             display: flex;
             gap: 8px;
+            flex-wrap: wrap;
         }
 
         .char-btn {
@@ -160,7 +202,14 @@
 <body>
 
 <div class="container">
-    <h1>Beluma Translator</h1>
+    <div class="header-row">
+        <h1>Beluma Translator</h1>
+        <div class="mode-switch" id="modeSwitch" onclick="toggleMode()">
+            <div id="modeClassic" class="mode-option active">Classic</div>
+            <div id="modeNew" class="mode-option">New</div>
+        </div>
+    </div>
+    
     <div id="status">Syncing with XPDevs vocabulary...</div>
 
     <div class="translator-area">
@@ -198,11 +247,20 @@
 </div>
 
 <script>
-// Points directly to your GitHub hosted file
 const DICT_URL = 'https://xpdevs.github.io/Beluma/h.txt';
 let enToBe = {};
 let beToEn = {};
 let isEnToBe = true;
+let isNewMode = false;
+
+const symbolMap = {
+    'a': '⺆', 'b': '⺊', 'c': '⼕', 'd': '⼓', 'e': '⼔', 
+    'f': '⼢', 'g': '⼧', 'h': '⼪', 'i': '⼁', 'j': '⼃', 
+    'k': '⼖', 'l': '⼘', 'm': '⼠', 'n': '⼵', 'o': '⼞', 
+    'p': '⼹', 'q': '⼺', 'r': '⼻', 's': '⼼', 't': '⼽', 
+    'u': '⼿', 'v': '⽀', 'w': '⽁', 'x': '⽂', 'y': '⽃', 
+    'z': '⽄', 'á': '⺆゙', 'é': '⼔゙', 'í': '⼁゙', 'ó': '⼞゙', 'ú': '⼿゙'
+};
 
 const tekstoInput = document.getElementById('tekstoInput');
 const output = document.getElementById('output');
@@ -212,8 +270,15 @@ const targetLabel = document.getElementById('targetLangLabel');
 const charTray = document.getElementById('charTray');
 
 async function loadDictionary() {
+    // Check saved mode on load
+    const savedMode = localStorage.getItem('beluma_script_mode');
+    if (savedMode === 'new') {
+        isNewMode = true;
+        document.getElementById('modeClassic').classList.remove('active');
+        document.getElementById('modeNew').classList.add('active');
+    }
+
     try {
-        // Cache-busting: adds ?t=[timestamp] so the browser always gets a fresh file
         const response = await fetch(`${DICT_URL}?t=${Date.now()}`);
         const text = await response.text();
         const lines = text.split(/\r?\n/);
@@ -223,15 +288,9 @@ async function loadDictionary() {
 
         lines.forEach(line => {
             if (!line.includes('=') || line.startsWith('---')) return;
-            // File format: beluma = english
             let [beluma, english] = line.split('=').map(s => s.trim().toLowerCase());
-            
             const engOptions = english.split('/').map(e => e.trim());
-            
-            engOptions.forEach(opt => {
-                if (!enToBe[opt]) enToBe[opt] = beluma;
-            });
-            
+            engOptions.forEach(opt => { if (!enToBe[opt]) enToBe[opt] = beluma; });
             if (!beToEn[beluma]) beToEn[beluma] = engOptions[0];
         });
 
@@ -239,37 +298,72 @@ async function loadDictionary() {
         status.style.background = "#e6ffed";
         status.style.color = "#1e7e34";
     } catch (e) {
-        status.textContent = "Error loading vocabulary from GitHub.";
-        status.style.background = "#ffeef0";
-        status.style.color = "#d73a49";
+        status.textContent = "Error loading vocabulary.";
     }
+}
+
+function convertToSymbols(text) {
+    if (!isNewMode) return text;
+    return text.split('').map(char => {
+        const lower = char.toLowerCase();
+        return symbolMap[lower] || char;
+    }).join('');
 }
 
 function translate(text) {
     const dict = isEnToBe ? enToBe : beToEn;
-    // Splits by words, including accented characters, while preserving spaces/punctuation
     const tokens = text.split(/([ \t\n\r\f\v]|[.,!?;:()])/);
     
-    return tokens.map(token => {
-        if (!token || /^\s+$/.test(token) || /^[.,!?;:()]$/.test(token)) return token;
+    output.innerHTML = '';
+
+    tokens.forEach(token => {
+        if (!token) return;
+        
+        if (/^\s+$/.test(token) || /^[.,!?;:()]$/.test(token)) {
+            const span = document.createElement('span');
+            span.textContent = token;
+            output.appendChild(span);
+            return;
+        }
         
         const lower = token.toLowerCase();
+        let isUnknown = !dict[lower];
         let translated = dict[lower] || token;
 
-        // Preserve Capitalization
         if (token === token.toUpperCase() && token.length > 1) {
-            return translated.toUpperCase();
+            translated = translated.toUpperCase();
         } else if (token[0] === token[0].toUpperCase()) {
-            return translated.charAt(0).toUpperCase() + translated.slice(1);
+            translated = translated.charAt(0).toUpperCase() + translated.slice(1);
         }
-        return translated;
-    }).join('');
+
+        if (isEnToBe && isNewMode) {
+            translated = convertToSymbols(translated);
+        }
+
+        const span = document.createElement('span');
+        span.textContent = translated;
+        if (isUnknown) {
+            span.className = 'unknown-word';
+        }
+        output.appendChild(span);
+    });
 }
 
 function handleInput() {
     const val = tekstoInput.value;
     document.getElementById('charCount').textContent = `${val.length} / 500`;
-    output.textContent = translate(val);
+    translate(val);
+}
+
+function toggleMode() {
+    isNewMode = !isNewMode;
+    document.getElementById('modeClassic').classList.toggle('active');
+    document.getElementById('modeNew').classList.toggle('active');
+    
+    // Save setting
+    localStorage.setItem('beluma_script_mode', isNewMode ? 'new' : 'classic');
+    
+    handleInput();
 }
 
 function addChar(c) {
@@ -282,10 +376,13 @@ function addChar(c) {
 }
 
 document.getElementById('swapBtn').onclick = () => {
+    const currentTranslation = output.innerText;
     isEnToBe = !isEnToBe;
     srcLabel.textContent = isEnToBe ? 'English' : 'Beluma';
     targetLabel.textContent = isEnToBe ? 'Beluma' : 'English';
     charTray.style.display = isEnToBe ? 'none' : 'flex';
+    
+    tekstoInput.value = currentTranslation;
     handleInput();
 };
 
@@ -295,7 +392,8 @@ document.getElementById('clearBtn').onclick = () => {
 };
 
 document.getElementById('copyBtn').onclick = () => {
-    navigator.clipboard.writeText(output.textContent);
+    const textToCopy = output.innerText;
+    navigator.clipboard.writeText(textToCopy);
 };
 
 tekstoInput.oninput = handleInput;
