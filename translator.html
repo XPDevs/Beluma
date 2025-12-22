@@ -175,20 +175,42 @@
 
         .icon-btn:hover { background: #e8eaed; color: var(--primary); }
 
-        .special-chars {
+        .tray-section {
             margin-top: 15px;
+            padding: 10px;
+            background: #f1f3f4;
+            border-radius: 12px;
+        }
+
+        .tray-label {
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #5f6368;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .special-chars {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
         }
 
         .char-btn {
-            padding: 8px 12px;
+            padding: 6px 10px;
             border: 1px solid var(--border);
             border-radius: 6px;
             background: white;
             cursor: pointer;
             font-weight: bold;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+
+        .char-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
         }
 
         @media (max-width: 700px) {
@@ -237,12 +259,24 @@
         </div>
     </div>
 
-    <div class="special-chars" id="charTray" style="display:none;">
-        <button class="char-btn" onclick="addChar('á')">á</button>
-        <button class="char-btn" onclick="addChar('é')">é</button>
-        <button class="char-btn" onclick="addChar('í')">í</button>
-        <button class="char-btn" onclick="addChar('ó')">ó</button>
-        <button class="char-btn" onclick="addChar('ú')">ú</button>
+    <!-- Always visible tray for standard custom characters -->
+    <div class="tray-section" id="latinTray">
+        <div class="tray-label">Latin Accents</div>
+        <div class="special-chars">
+            <button class="char-btn" onclick="addChar('á')">á</button>
+            <button class="char-btn" onclick="addChar('é')">é</button>
+            <button class="char-btn" onclick="addChar('í')">í</button>
+            <button class="char-btn" onclick="addChar('ó')">ó</button>
+            <button class="char-btn" onclick="addChar('ú')">ú</button>
+        </div>
+    </div>
+
+    <!-- Visible tray for New Beluma symbols when in Beluma input mode -->
+    <div class="tray-section" id="newBelumaTray" style="display:none;">
+        <div class="tray-label">New Beluma Script</div>
+        <div class="special-chars" id="newScriptButtons">
+            <!-- Dynamically populated -->
+        </div>
     </div>
 </div>
 
@@ -253,6 +287,7 @@ let beToEn = {};
 let isEnToBe = true;
 let isNewMode = false;
 
+// New script mapping
 const symbolMap = {
     'a': '⺆', 'b': '⺊', 'c': '⼕', 'd': '⼓', 'e': '⼔', 
     'f': '⼢', 'g': '⼧', 'h': '⼪', 'i': '⼁', 'j': '⼃', 
@@ -262,21 +297,39 @@ const symbolMap = {
     'z': '⽄', 'á': '⺆゙', 'é': '⼔゙', 'í': '⼁゙', 'ó': '⼞゙', 'ú': '⼿゙'
 };
 
+const reverseSymbolMap = {};
+Object.entries(symbolMap).forEach(([key, val]) => {
+    reverseSymbolMap[val] = key;
+});
+
 const tekstoInput = document.getElementById('tekstoInput');
 const output = document.getElementById('output');
 const status = document.getElementById('status');
 const srcLabel = document.getElementById('srcLangLabel');
 const targetLabel = document.getElementById('targetLangLabel');
-const charTray = document.getElementById('charTray');
+const newBelumaTray = document.getElementById('newBelumaTray');
+const newScriptButtons = document.getElementById('newScriptButtons');
+
+// Initialize the New Script tray buttons
+function initNewScriptTray() {
+    newScriptButtons.innerHTML = '';
+    Object.values(symbolMap).forEach(symbol => {
+        const btn = document.createElement('button');
+        btn.className = 'char-btn';
+        btn.textContent = symbol;
+        btn.onclick = () => addChar(symbol);
+        newScriptButtons.appendChild(btn);
+    });
+}
 
 async function loadDictionary() {
-    // Check saved mode on load
     const savedMode = localStorage.getItem('beluma_script_mode');
     if (savedMode === 'new') {
         isNewMode = true;
         document.getElementById('modeClassic').classList.remove('active');
         document.getElementById('modeNew').classList.add('active');
     }
+    initNewScriptTray();
 
     try {
         const response = await fetch(`${DICT_URL}?t=${Date.now()}`);
@@ -310,15 +363,40 @@ function convertToSymbols(text) {
     }).join('');
 }
 
+function normalizeInput(text) {
+    let result = '';
+    let i = 0;
+    while (i < text.length) {
+        let foundTwo = false;
+        if (i + 1 < text.length) {
+            let pair = text.substring(i, i + 2);
+            if (reverseSymbolMap[pair]) {
+                result += reverseSymbolMap[pair];
+                i += 2;
+                foundTwo = true;
+            }
+        }
+        if (!foundTwo) {
+            let char = text[i];
+            result += reverseSymbolMap[char] || char;
+            i++;
+        }
+    }
+    return result;
+}
+
 function translate(text) {
+    let processedInput = text;
+    if (!isEnToBe) {
+        processedInput = normalizeInput(text);
+    }
+
     const dict = isEnToBe ? enToBe : beToEn;
-    const tokens = text.split(/([ \t\n\r\f\v]|[.,!?;:()])/);
-    
+    const tokens = processedInput.split(/([ \t\n\r\f\v]|[.,!?;:()])/);
     output.innerHTML = '';
 
     tokens.forEach(token => {
         if (!token) return;
-        
         if (/^\s+$/.test(token) || /^[.,!?;:()]$/.test(token)) {
             const span = document.createElement('span');
             span.textContent = token;
@@ -342,9 +420,7 @@ function translate(text) {
 
         const span = document.createElement('span');
         span.textContent = translated;
-        if (isUnknown) {
-            span.className = 'unknown-word';
-        }
+        if (isUnknown) span.className = 'unknown-word';
         output.appendChild(span);
     });
 }
@@ -359,10 +435,7 @@ function toggleMode() {
     isNewMode = !isNewMode;
     document.getElementById('modeClassic').classList.toggle('active');
     document.getElementById('modeNew').classList.toggle('active');
-    
-    // Save setting
     localStorage.setItem('beluma_script_mode', isNewMode ? 'new' : 'classic');
-    
     handleInput();
 }
 
@@ -371,18 +444,24 @@ function addChar(c) {
     const end = tekstoInput.selectionEnd;
     tekstoInput.value = tekstoInput.value.substring(0, start) + c + tekstoInput.value.substring(end);
     tekstoInput.focus();
-    tekstoInput.selectionStart = tekstoInput.selectionEnd = start + 1;
+    tekstoInput.selectionStart = tekstoInput.selectionEnd = start + c.length;
     handleInput();
 }
 
 document.getElementById('swapBtn').onclick = () => {
-    const currentTranslation = output.innerText;
+    let currentOut = output.innerText;
+    if (isEnToBe && isNewMode) {
+        currentOut = normalizeInput(currentOut);
+    }
+
     isEnToBe = !isEnToBe;
     srcLabel.textContent = isEnToBe ? 'English' : 'Beluma';
     targetLabel.textContent = isEnToBe ? 'Beluma' : 'English';
-    charTray.style.display = isEnToBe ? 'none' : 'flex';
     
-    tekstoInput.value = currentTranslation;
+    // Show New Beluma Tray only when typing in Beluma
+    newBelumaTray.style.display = isEnToBe ? 'none' : 'block';
+    
+    tekstoInput.value = currentOut;
     handleInput();
 };
 
@@ -393,7 +472,14 @@ document.getElementById('clearBtn').onclick = () => {
 
 document.getElementById('copyBtn').onclick = () => {
     const textToCopy = output.innerText;
-    navigator.clipboard.writeText(textToCopy);
+    const textArea = document.createElement("textarea");
+    textArea.value = textToCopy;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+        document.execCommand('copy');
+    } catch (err) {}
+    document.body.removeChild(textArea);
 };
 
 tekstoInput.oninput = handleInput;
