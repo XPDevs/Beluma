@@ -11,12 +11,12 @@
             --surface: #ffffff;
             --text: #202124;
             --border: #dadce0;
-            --radius: 16px; /* Your preferred rounded UI */
+            --radius: 16px;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            padding: 20px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            padding: 0;
             margin: 0;
             background: var(--bg);
             color: var(--text);
@@ -32,106 +32,128 @@
         }
 
         h1 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--primary);
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
         }
 
         #status {
-            font-size: 0.8rem;
-            padding: 8px 16px;
-            border-radius: 20px;
-            display: inline-block;
+            font-weight: bold;
             margin-bottom: 20px;
+            padding: 12px;
+            border-radius: 8px;
             background: #e8f0fe;
+            color: var(--primary);
+            font-size: 0.9rem;
         }
 
         .translator-area {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            display: flex;
+            flex-direction: row;
             position: relative;
+            margin-top: 20px;
         }
 
         .pane {
+            flex: 1;
+            position: relative; 
             border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 20px;
-            min-height: 200px;
+            padding: 15px;
+            min-height: 250px;
             display: flex;
             flex-direction: column;
-            transition: border-color 0.2s;
         }
 
-        .pane:focus-within {
-            border-color: var(--primary);
-        }
-
-        .output-pane {
-            background: #f1f3f4;
-        }
-
-        .label {
-            font-size: 0.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
+        .input-pane { border-right: none; border-radius: var(--radius) 0 0 var(--radius); }
+        .output-pane { border-radius: 0 var(--radius) var(--radius) 0; background: #f1f3f4; }
+        
+        .language-header {
+            font-weight: 600;
             color: #5f6368;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+        
+        #tekstoInput, #output {
+            flex-grow: 1;
+            border: none;
+            resize: none;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            width: 100%;
+            background: transparent;
+            color: #202124;
         }
 
-        textarea, #output {
-            flex: 1;
-            border: none;
-            background: transparent;
-            font-size: 1.25rem;
-            color: var(--text);
-            resize: none;
-            outline: none;
-            width: 100%;
-            font-family: inherit;
-        }
+        #tekstoInput:focus { outline: none; }
+        #output { white-space: pre-wrap; word-break: break-word; }
 
         #swapBtn {
             position: absolute;
+            z-index: 10;
             left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 5;
-            background: var(--surface);
+            top: 20px;
+            transform: translateX(-50%);
+            background: white;
             border: 1px solid var(--border);
+            border-radius: 50%;
             width: 40px;
             height: 40px;
-            border-radius: 50%;
             cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            color: var(--primary);
+            font-size: 1.2rem;
         }
 
         .controls {
             display: flex;
             justify-content: flex-end;
-            gap: 8px;
-            margin-top: 10px;
+            gap: 10px;
+            padding-top: 10px;
         }
 
-        .btn-round {
+        .icon-btn {
             background: none;
             border: none;
+            cursor: pointer;
             padding: 8px;
             border-radius: 50%;
-            cursor: pointer;
             color: #5f6368;
+            transition: background 0.2s;
+            font-size: 1.2rem;
         }
 
-        .btn-round:hover {
-            background: rgba(0,0,0,0.05);
+        .icon-btn:hover { background: #e8eaed; color: var(--primary); }
+
+        .special-chars {
+            margin-top: 15px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .char-btn {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            font-weight: bold;
         }
 
         @media (max-width: 700px) {
-            .translator-area { grid-template-columns: 1fr; }
-            #swapBtn { transform: translate(-50%, -50%) rotate(90deg); }
+            .translator-area { flex-direction: column; }
+            .input-pane { border-right: 1px solid var(--border); border-bottom: none; border-radius: var(--radius) var(--radius) 0 0; }
+            .output-pane { border-radius: 0 0 var(--radius) var(--radius); }
+            #swapBtn { top: auto; bottom: -20px; left: 50%; transform: translateX(-50%) rotate(90deg); }
         }
     </style>
 </head>
@@ -139,104 +161,145 @@
 
 <div class="container">
     <h1>Beluma Translator</h1>
-    <div id="status">Syncing dictionary...</div>
+    <div id="status">Syncing with XPDevs vocabulary...</div>
 
     <div class="translator-area">
-        <div class="pane">
-            <div class="label" id="srcLabel">English</div>
-            <textarea id="inputBox" placeholder="Enter text..."></textarea>
+        <div class="pane input-pane">
+            <div class="language-header">
+                <span id="srcLangLabel">English</span>
+                <span id="charCount">0 / 500</span>
+            </div>
+            <textarea id="tekstoInput" placeholder="Type text here..." maxlength="500"></textarea>
             <div class="controls">
-                <button class="btn-round" onclick="clearAll()">✕</button>
+                <button class="icon-btn" id="clearBtn" title="Clear text">✕</button>
             </div>
         </div>
 
-        <button id="swapBtn" onclick="swapLanguages()">⇄</button>
+        <button id="swapBtn" title="Switch Languages">⇄</button>
 
         <div class="pane output-pane">
-            <div class="label" id="targetLabel">Beluma</div>
-            <div id="output">...</div>
+            <div class="language-header">
+                <span id="targetLangLabel">Beluma</span>
+            </div>
+            <div id="output"></div>
             <div class="controls">
-                <button class="btn-round" onclick="copyText()">📋</button>
+                <button class="icon-btn" id="copyBtn" title="Copy translation">📋</button>
             </div>
         </div>
+    </div>
+
+    <div class="special-chars" id="charTray" style="display:none;">
+        <button class="char-btn" onclick="addChar('á')">á</button>
+        <button class="char-btn" onclick="addChar('é')">é</button>
+        <button class="char-btn" onclick="addChar('í')">í</button>
+        <button class="char-btn" onclick="addChar('ó')">ó</button>
+        <button class="char-btn" onclick="addChar('ú')">ú</button>
     </div>
 </div>
 
 <script>
-    let dictionary = { enToBe: {}, beToEn: {} };
-    let isEnToBe = true;
+// Points directly to your GitHub hosted file
+const DICT_URL = 'https://xpdevs.github.io/Beluma/h.txt';
+let enToBe = {};
+let beToEn = {};
+let isEnToBe = true;
 
-    async function init() {
-        try {
-            const response = await fetch('h.txt');
-            const data = await response.text();
+const tekstoInput = document.getElementById('tekstoInput');
+const output = document.getElementById('output');
+const status = document.getElementById('status');
+const srcLabel = document.getElementById('srcLangLabel');
+const targetLabel = document.getElementById('targetLangLabel');
+const charTray = document.getElementById('charTray');
+
+async function loadDictionary() {
+    try {
+        // Cache-busting: adds ?t=[timestamp] so the browser always gets a fresh file
+        const response = await fetch(`${DICT_URL}?t=${Date.now()}`);
+        const text = await response.text();
+        const lines = text.split(/\r?\n/);
+        
+        enToBe = {};
+        beToEn = {};
+
+        lines.forEach(line => {
+            if (!line.includes('=') || line.startsWith('---')) return;
+            // File format: beluma = english
+            let [beluma, english] = line.split('=').map(s => s.trim().toLowerCase());
             
-            data.split('\n').forEach(line => {
-                if (line.includes('=') && !line.startsWith('---')) {
-                    const [beluma, english] = line.split('=').map(s => s.trim().toLowerCase());
-                    
-                    // Support multiple synonyms separated by /
-                    const engList = english.split('/');
-                    
-                    engList.forEach(word => {
-                        dictionary.enToBe[word.trim()] = beluma;
-                    });
-                    
-                    if (!dictionary.beToEn[beluma]) {
-                        dictionary.beToEn[beluma] = engList[0].trim();
-                    }
-                }
+            const engOptions = english.split('/').map(e => e.trim());
+            
+            engOptions.forEach(opt => {
+                if (!enToBe[opt]) enToBe[opt] = beluma;
             });
-            document.getElementById('status').innerText = "Dictionary Ready";
-            document.getElementById('status').style.color = "green";
-        } catch (err) {
-            document.getElementById('status').innerText = "Load Error - Check h.txt";
-        }
-    }
-
-    function doTranslate() {
-        const input = document.getElementById('inputBox').value;
-        const dict = isEnToBe ? dictionary.enToBe : dictionary.beToEn;
-        
-        // Regex to split words while keeping punctuation and spaces
-        const words = input.split(/(\s+|[.,!?;:()])/);
-        
-        const result = words.map(word => {
-            if (!word || /^\s+$/.test(word) || /^[.,!?;:()]$/.test(word)) return word;
             
-            const lower = word.toLowerCase();
-            const translated = dict[lower] || word; // Fallback to original if not found
-
-            // Handle Capitalization
-            if (word[0] === word[0].toUpperCase()) {
-                return translated.charAt(0).toUpperCase() + translated.slice(1);
-            }
-            return translated;
+            if (!beToEn[beluma]) beToEn[beluma] = engOptions[0];
         });
 
-        document.getElementById('output').innerText = result.join('');
+        status.textContent = "Dictionary ready (Live Sync)";
+        status.style.background = "#e6ffed";
+        status.style.color = "#1e7e34";
+    } catch (e) {
+        status.textContent = "Error loading vocabulary from GitHub.";
+        status.style.background = "#ffeef0";
+        status.style.color = "#d73a49";
     }
+}
 
-    function swapLanguages() {
-        isEnToBe = !isEnToBe;
-        document.getElementById('srcLabel').innerText = isEnToBe ? 'English' : 'Beluma';
-        document.getElementById('targetLabel').innerText = isEnToBe ? 'Beluma' : 'English';
-        doTranslate();
-    }
+function translate(text) {
+    const dict = isEnToBe ? enToBe : beToEn;
+    // Splits by words, including accented characters, while preserving spaces/punctuation
+    const tokens = text.split(/([ \t\n\r\f\v]|[.,!?;:()])/);
+    
+    return tokens.map(token => {
+        if (!token || /^\s+$/.test(token) || /^[.,!?;:()]$/.test(token)) return token;
+        
+        const lower = token.toLowerCase();
+        let translated = dict[lower] || token;
 
-    function clearAll() {
-        document.getElementById('inputBox').value = '';
-        doTranslate();
-    }
+        // Preserve Capitalization
+        if (token === token.toUpperCase() && token.length > 1) {
+            return translated.toUpperCase();
+        } else if (token[0] === token[0].toUpperCase()) {
+            return translated.charAt(0).toUpperCase() + translated.slice(1);
+        }
+        return translated;
+    }).join('');
+}
 
-    function copyText() {
-        const text = document.getElementById('output').innerText;
-        navigator.clipboard.writeText(text);
-    }
+function handleInput() {
+    const val = tekstoInput.value;
+    document.getElementById('charCount').textContent = `${val.length} / 500`;
+    output.textContent = translate(val);
+}
 
-    document.getElementById('inputBox').addEventListener('input', doTranslate);
-    window.onload = init;
+function addChar(c) {
+    const start = tekstoInput.selectionStart;
+    const end = tekstoInput.selectionEnd;
+    tekstoInput.value = tekstoInput.value.substring(0, start) + c + tekstoInput.value.substring(end);
+    tekstoInput.focus();
+    tekstoInput.selectionStart = tekstoInput.selectionEnd = start + 1;
+    handleInput();
+}
+
+document.getElementById('swapBtn').onclick = () => {
+    isEnToBe = !isEnToBe;
+    srcLabel.textContent = isEnToBe ? 'English' : 'Beluma';
+    targetLabel.textContent = isEnToBe ? 'Beluma' : 'English';
+    charTray.style.display = isEnToBe ? 'none' : 'flex';
+    handleInput();
+};
+
+document.getElementById('clearBtn').onclick = () => {
+    tekstoInput.value = '';
+    handleInput();
+};
+
+document.getElementById('copyBtn').onclick = () => {
+    navigator.clipboard.writeText(output.textContent);
+};
+
+tekstoInput.oninput = handleInput;
+window.onload = loadDictionary;
 </script>
-
 </body>
 </html>
