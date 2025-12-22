@@ -5,13 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beluma Translator (Dova Lingvo)</title>
 <style>
-    /* --- General Reset & Layout --- */
     body {
-        font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         padding: 0;
         margin: 0;
-        background: #f8f9fa; /* Light background */
-        color: #3c4043; /* Dark gray text */
+        background: #f8f9fa;
+        color: #3c4043;
     }
     .container {
         max-width: 900px;
@@ -20,215 +19,124 @@
         background: white;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        position: relative; /* Needed for absolute positioning of the modal */
     }
     h1 {
         font-size: 1.8rem;
-        color: #1a73e8; /* Google blue */
+        color: #1a73e8;
         margin-bottom: 20px;
         border-bottom: 1px solid #dadce0;
         padding-bottom: 10px;
     }
-
-    /* --- Dictionary Status --- */
     #status {
         color: #1a73e8;
         font-weight: bold;
         margin-bottom: 20px;
-        padding: 15px;
-        border: 1px solid #dadce0;
+        padding: 12px;
         border-radius: 8px;
-        background: #e8f0fe; /* Light blue hint background */
+        background: #e8f0fe;
+        font-size: 0.9rem;
     }
-
-    /* --- Translator Interface (Google Translate Look) --- */
     .translator-area {
         display: flex;
-        gap: 0; /* Boxes are now touching */
+        flex-direction: row;
+        gap: 0;
+        position: relative;
         margin-top: 20px;
-        position: relative; /* Positioning context for the swap button */
     }
-    .input-pane, .output-pane {
+    .pane {
         flex: 1;
         position: relative; 
         border: 1px solid #dadce0;
         padding: 15px;
-        padding-bottom: 50px; 
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        min-height: 200px; 
+        min-height: 250px;
         display: flex;
         flex-direction: column;
     }
-    /* Connect the boxes visually by adjusting borders and radii */
-    .input-pane {
-        border-right: none; 
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        border-radius: 8px 0 0 8px;
-    }
-    .output-pane {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-radius: 0 8px 8px 0;
-    }
+    .input-pane { border-right: none; border-radius: 8px 0 0 8px; }
+    .output-pane { border-radius: 0 8px 8px 0; background: #f1f3f4; }
+    
     .language-header {
-        font-weight: 500;
+        font-weight: 600;
         color: #5f6368;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #dadce0;
+        margin-bottom: 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
-    /* --- Character Counter --- */
-    .char-counter {
-        font-size: 0.9rem;
-        color: #9aa0a6;
-    }
-
-    /* --- Text Areas --- */
+    
     #tekstoInput, #output {
-        flex-grow: 1; 
+        flex-grow: 1;
         border: none;
         resize: none;
-        padding: 0;
-        margin: 0;
-        font-size: 1.1rem;
-        line-height: 1.5;
+        font-size: 1.2rem;
+        line-height: 1.6;
         width: 100%;
-        box-sizing: border-box;
         background: transparent;
         color: #202124;
     }
-    #tekstoInput:focus {
-        outline: none;
-    }
-    
-    /* Output area styling (text-only, non-editable) */
-    #output {
-        white-space: pre-wrap; 
-        font-weight: normal; 
-    }
-    .output-pane {
-        background: #f1f3f4; 
-    }
+    #tekstoInput:focus { outline: none; }
+    #output { white-space: pre-wrap; word-break: break-word; }
 
-    /* --- Controls (Swap Button) --- */
     #swapBtn {
-        /* Positioning it over the seam */
         position: absolute;
-        z-index: 5;
-        top: 15px; /* Positioned near the top header */
+        z-index: 10;
         left: 50%;
+        top: 20px;
         transform: translateX(-50%);
-        
         background: white;
         border: 1px solid #dadce0;
         border-radius: 50%;
-        width: 32px; /* Slightly smaller */
-        height: 32px;
-        font-size: 1rem;
-        color: #1a73e8;
+        width: 36px;
+        height: 36px;
         cursor: pointer;
-        transition: background 0.3s;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 0;
-        line-height: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    #swapBtn:hover {
-        background: #f8f9fa;
-    }
-    #swapBtn:disabled {
-        color: #bdc1c6;
-        cursor: not-allowed;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #1a73e8;
     }
 
-    /* --- Interaction Buttons (Copy, TTS, Clear) --- */
-    .interaction-controls {
-        position: absolute;
-        bottom: 10px;
-        right: 15px; 
+    .controls {
         display: flex;
-        gap: 8px;
+        justify-content: flex-end;
+        gap: 10px;
+        padding-top: 10px;
     }
-    .interaction-btn {
+    .icon-btn {
         background: none;
         border: none;
-        color: #5f6368;
         cursor: pointer;
-        padding: 5px;
+        padding: 8px;
         border-radius: 50%;
-        transition: background-color 0.15s, color 0.15s;
-        font-size: 1.1rem;
-        line-height: 1;
+        color: #5f6368;
+        transition: background 0.2s;
+        font-size: 1.2rem;
     }
-    .interaction-btn:hover {
-        background-color: #e8f0fe;
-        color: #1a73e8;
-    }
-    .interaction-btn:disabled {
-        color: #bdc1c6;
-        cursor: not-allowed;
-    }
+    .icon-btn:hover { background: #e8eaed; color: #1a73e8; }
 
-    /* --- Special Characters Tray --- */
-    .special-chars-tray {
-        margin-top: 15px; 
-        padding: 4px 15px; 
+    .special-chars {
+        margin-top: 15px;
         display: flex;
         gap: 8px;
-        align-items: center;
-        background: #f1f3f4; 
-        border: 1px solid #dadce0; 
-        border-radius: 8px;
-        width: fit-content; /* MODIFIED: Set width to fit content */
-        box-sizing: border-box;
     }
-    /* Removed .tray-label styling as the element is removed */
     .char-btn {
-        background: #ffffff;
+        padding: 8px 12px;
         border: 1px solid #dadce0;
         border-radius: 6px;
-        padding: 3px 8px;
+        background: white;
         cursor: pointer;
-        font-size: 1.1rem;
-        color: #3c4043;
-        line-height: 1;
-        transition: background-color 0.15s;
-    }
-    .char-btn:hover {
-        background: #e8f0fe;
-        border-color: #1a73e8;
-        color: #1a73e8;
-    }
-
-    /* --- Quick Definition Modal --- */
-    #quickDefinitionModal {
-        position: absolute;
-        z-index: 10;
-        padding: 15px;
-        background: #ffffff;
-        border: 1px solid #1a73e8;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        max-width: 250px;
-        transition: opacity 0.2s;
-        opacity: 0;
-        pointer-events: none; 
-    }
-    .def-word {
         font-weight: bold;
-        color: #1a73e8;
-        margin-bottom: 5px;
-        font-size: 1.1rem;
     }
-    .def-translation {
-        font-style: italic;
-        color: #3c4043;
+    .char-btn:hover { border-color: #1a73e8; color: #1a73e8; }
+
+    @media (max-width: 600px) {
+        .translator-area { flex-direction: column; }
+        .input-pane { border-right: 1px solid #dadce0; border-bottom: none; border-radius: 8px 8px 0 0; }
+        .output-pane { border-radius: 0 0 8px 8px; }
+        #swapBtn { top: auto; bottom: -18px; left: 50%; transform: translateX(-50%) rotate(90deg); }
     }
 </style>
 </head>
@@ -236,397 +144,155 @@
 
 <div class="container">
     <h1>Beluma Translator</h1>
-
-    <div id="status">Loading dictionary from URL...</div>
-    
-    <div id="quickDefinitionModal" class="quick-def-modal">
-        <div id="quickDefWord" class="def-word"></div>
-        <div id="quickDefTranslation" class="def-translation"></div>
-    </div>
+    <div id="status">Connecting to vocabulary...</div>
 
     <div class="translator-area">
-        <div class="input-pane">
-            <div id="sourceLanguageHeader" class="language-header">
-                <span id="sourceLanguage">English</span>
-                <span id="charCount" class="char-counter">0 / 500 Chars</span> 
+        <div class="pane input-pane">
+            <div class="language-header">
+                <span id="srcLangLabel">English</span>
+                <span id="charCount">0 / 500</span>
             </div>
-            <textarea id="tekstoInput" placeholder="Type English text here (e.g., Hello there!)..." disabled maxlength="500"></textarea>
-            
-            <div class="interaction-controls">
-                <button id="clearInputBtn" class="interaction-btn" title="Clear Text" disabled>&#x2715;</button> 
-                <button id="copyInputBtn" class="interaction-btn" title="Copy Text" disabled>&#x2398;</button> 
-                <button id="speakInputBtn" class="interaction-btn" title="Listen" disabled>&#x1F50A;</button> 
+            <textarea id="tekstoInput" placeholder="Type text here..." maxlength="500"></textarea>
+            <div class="controls">
+                <button class="icon-btn" id="clearBtn" title="Clear text">✕</button>
+                <button class="icon-btn" id="speakSrcBtn" title="Listen">🔊</button>
             </div>
         </div>
-        
-        <!-- NEW: Swap button is now directly in the translator-area for absolute positioning -->
-        <button id="swapBtn" title="Swap Languages" disabled>&#8646;</button>
 
-        <div class="output-pane">
-            <div id="targetLanguage" class="language-header">Beluma</div>
+        <button id="swapBtn" title="Switch Languages">⇄</button>
+
+        <div class="pane output-pane">
+            <div class="language-header">
+                <span id="targetLangLabel">Beluma</span>
+            </div>
             <div id="output"></div>
-            <div class="interaction-controls">
-                <button id="copyOutputBtn" class="interaction-btn" title="Copy Text" disabled>&#x2398;</button> 
-                <button id="speakOutputBtn" class="interaction-btn" title="Listen" disabled>&#x1F50A;</button> 
+            <div class="controls">
+                <button class="icon-btn" id="copyBtn" title="Copy translation">📋</button>
+                <button class="icon-btn" id="speakTargetBtn" title="Listen">🔊</button>
             </div>
         </div>
     </div>
-    
-    <!-- Removed 'Beluma Chars:' label -->
-    <div id="specialChars" class="special-chars-tray" style="display: none;">
-        <button class="char-btn" data-char="á" title="Acute A">á</button>
-        <button class="char-btn" data-char="é" title="Acute E">é</button>
-        <button class="char-btn" data-char="í" title="Acute I">í</button>
-        <button class="char-btn" data-char="ó" title="Acute O">ó</button>
-        <button class="char-btn" data-char="ú" title="Acute U">ú</button>
-    </div>
 
+    <div class="special-chars" id="charTray" style="display:none;">
+        <button class="char-btn" onclick="addChar('á')">á</button>
+        <button class="char-btn" onclick="addChar('é')">é</button>
+        <button class="char-btn" onclick="addChar('í')">í</button>
+        <button class="char-btn" onclick="addChar('ó')">ó</button>
+        <button class="char-btn" onclick="addChar('ú')">ú</button>
+    </div>
 </div>
 
 <script>
-// --- Configuration ---
-const DICTIONARY_URL = 'https://xpdevs.github.io/Beluma/h.txt';
-const MAX_CHARS = 500;
+const DICT_URL = 'h.txt';
+let enToBe = {};
+let beToEn = {};
+let isEnToBe = true;
 
-// Dictionaries and State
-let anglaAlBeluma = {};
-let belumaAlAngla = {};
-let isEnglishToBeluma = true; 
-const synth = window.speechSynthesis; 
-
-// Elements
-const statusElement = document.getElementById('status');
 const tekstoInput = document.getElementById('tekstoInput');
 const output = document.getElementById('output');
-const swapBtn = document.getElementById('swapBtn');
-const sourceLanguageDisplay = document.getElementById('sourceLanguage');
-const targetLanguageDisplay = document.getElementById('targetLanguage');
-const charCountElement = document.getElementById('charCount'); 
-
-// Special characters
-const specialCharsTray = document.getElementById('specialChars');
-const charButtons = specialCharsTray.querySelectorAll('.char-btn');
-
-// Interaction buttons
-const clearInputBtn = document.getElementById('clearInputBtn'); 
-const copyInputBtn = document.getElementById('copyInputBtn');
-const speakInputBtn = document.getElementById('speakInputBtn');
-const copyOutputBtn = document.getElementById('copyOutputBtn');
-const speakOutputBtn = document.getElementById('speakOutputBtn');
-
-// Quick Definition Modal
-const quickDefinitionModal = document.getElementById('quickDefinitionModal');
-const quickDefWord = document.getElementById('quickDefWord');
-const quickDefTranslation = document.getElementById('quickDefTranslation');
-
-// --- Core Translation Functions ---
-
-function parseLingvoData(lingvoData) {
-    const linioj = lingvoData.split('\n');
-    anglaAlBeluma = {};
-    belumaAlAngla = {};
-
-    for (let linio of linioj) {
-        linio = linio.trim();
-        if (!linio || linio.startsWith('---')) continue;
-        const partoj = linio.split('=');
-        if (partoj.length === 2) {
-            const beluma = partoj[0].trim();
-            let angla = partoj[1].trim();
-            
-            // Clean up definitions (remove parenthetical info)
-            const cleanedAngla = angla.replace(/\(.*?\)/g, '').trim(); 
-            const opcioj = cleanedAngla.split('/').map(o => o.trim().toLowerCase());
-            
-            // Populate English -> Beluma map
-            for (let o of opcioj) {
-                anglaAlBeluma[o] = beluma;
-            }
-            
-            // Populate Beluma -> English map
-            if (opcioj.length > 0) {
-                // Store the full, uncleaned definition for the dictionary feature
-                belumaAlAngla[beluma] = opcioj[0]; 
-            }
-        }
-    }
-}
-
-/**
- * Translates a single word/token, handling punctuation and case.
- */
-function tradukToken(token, dictionario) {
-    if (token.match(/^\s+$/)) {
-        return token; 
-    }
-
-    token = token.trim();
-    if (!token || !token.match(/[a-zA-Z0-9áéíóúÁÉÍÓÚ]/)) {
-        return token;
-    }
-
-    let antaŭPunkto = token.match(/^([^a-zA-Z0-9áéíóúÁÉÍÓÚ]*)/)?.[0] || '';
-    let finPunkto = token.match(/([^a-zA-Z0-9áéíóúÁÉÍÓÚ]*)$/)?.[0] || '';
-    
-    let kernaVorto = token.substring(antaŭPunkto.length, token.length - finPunkto.length);
-    
-    const ĉuKapitala = kernaVorto.length > 0 && kernaVorto[0] === kernaVorto[0].toUpperCase();
-
-    const malgranda = kernaVorto.toLowerCase();
-    
-    let tradukitaKerno = dictionario[malgranda] || kernaVorto;
-    
-    if (ĉuKapitala && tradukitaKerno.length > 0) {
-        tradukitaKerno = tradukitaKerno.charAt(0).toUpperCase() + tradukitaKerno.slice(1);
-    }
-    
-    return antaŭPunkto + tradukitaKerno + finPunkto;
-}
-
-/**
- * Translates an entire input string word-by-word.
- */
-function tradukFrazo(frazo) {
-    const dictionario = isEnglishToBeluma ? anglaAlBeluma : belumaAlAngla;
-    
-    // Captures words, punctuation, and whitespace 
-    const tokens = frazo.match(/(\s+)|([a-zA-Z0-9áéíóúÁÉÍÓÚ]+)|([^\s]+)/g) || [frazo];
-
-    const tradukitaj = tokens.map(tradukTokeni => tradukToken(tradukTokeni, dictionario));
-    
-    return tradukitaj.join('');
-}
-
-// --- Interaction Functions (Copy & TTS) ---
-
-function copyText(element) {
-    let text = element.tagName === 'TEXTAREA' ? element.value : element.textContent;
-    if (!text) return;
-    try {
-        const tempArea = document.createElement('textarea');
-        tempArea.value = text;
-        document.body.appendChild(tempArea);
-        tempArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempArea);
-    } catch (err) {
-        console.error('Copying failed:', err);
-    }
-}
-
-function speakText(text, lang) {
-    if (!synth || !text) return;
-    if (synth.speaking) {
-        synth.cancel(); 
-    }
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US'; // Use neutral voice
-    synth.speak(utterance);
-}
-
-/**
- * Inserts text into the textarea at the current cursor position.
- */
-function insertAtCaret(area, text) {
-    const start = area.selectionStart;
-    const end = area.selectionEnd;
-    const value = area.value;
-
-    area.value = value.substring(0, start) + text + value.substring(end);
-    
-    const newCaretPosition = start + text.length;
-    area.selectionStart = newCaretPosition;
-    area.selectionEnd = newCaretPosition;
-    area.focus();
-
-    area.dispatchEvent(new Event('input'));
-}
-
-// --- Quick Definition Lookup ---
-
-/**
- * Finds the whole word under the current cursor/selection position.
- */
-function getWordAtCursor(textarea) {
-    const text = textarea.value;
-    const caretPos = textarea.selectionStart;
-
-    // Find the boundaries of the word containing the caret
-    // (a word is anything between non-word characters)
-    let start = text.substring(0, caretPos).search(/\S+$/);
-    if (start === -1) start = caretPos;
-    
-    let end = text.substring(caretPos).search(/\s/);
-    if (end === -1) end = text.length;
-    else end += caretPos;
-    
-    const word = text.substring(start, end);
-    return word.trim();
-}
-
-/**
- * Handles the double-click event to show the Quick Definition.
- */
-function handleQuickDefinition(event) {
-    if (tekstoInput.disabled) return;
-    
-    const word = getWordAtCursor(tekstoInput).toLowerCase();
-    const dictionary = isEnglishToBeluma ? anglaAlBeluma : belumaAlAngla;
-    
-    const translation = dictionary[word];
-    
-    if (translation) {
-        // Find position relative to the viewport
-        const rect = tekstoInput.getBoundingClientRect();
-        
-        // Position modal near the input box, slightly below the center.
-        quickDefinitionModal.style.top = `${rect.top + window.scrollY + 50}px`;
-        quickDefinitionModal.style.left = `${rect.left + window.scrollX + rect.width / 4}px`;
-
-        quickDefWord.textContent = word;
-        quickDefTranslation.textContent = `-> ${translation}`;
-        
-        // Show the modal with transition
-        quickDefinitionModal.style.opacity = '1';
-        quickDefinitionModal.style.pointerEvents = 'auto';
-
-        // Hide the modal after 3 seconds
-        setTimeout(() => {
-            quickDefinitionModal.style.opacity = '0';
-            quickDefinitionModal.style.pointerEvents = 'none';
-        }, 3000);
-    } else {
-        // If no translation found, ensure modal is hidden
-        quickDefinitionModal.style.opacity = '0';
-        quickDefinitionModal.style.pointerEvents = 'none';
-    }
-}
-
-// --- UI Logic and Event Handlers ---
-
-function updateInteractionButtonState() {
-    const hasInput = tekstoInput.value.length > 0;
-    const hasOutput = output.textContent.length > 0;
-    
-    // Character Counter
-    charCountElement.textContent = `${tekstoInput.value.length} / ${MAX_CHARS} Chars`;
-    charCountElement.style.color = tekstoInput.value.length >= MAX_CHARS ? 'red' : '#9aa0a6';
-
-    // Input Box Controls
-    clearInputBtn.disabled = !hasInput; 
-    copyInputBtn.disabled = !hasInput;
-    speakInputBtn.disabled = !hasInput;
-
-    // Output Box Controls
-    copyOutputBtn.disabled = !hasOutput;
-    speakOutputBtn.disabled = !hasOutput;
-}
-
-function enableTranslator() {
-    statusElement.textContent = 'Dictionary loaded successfully!';
-    statusElement.style.color = 'green';
-    swapBtn.disabled = false;
-    tekstoInput.disabled = false;
-    handleTranslation(); 
-    updateInteractionButtonState();
-}
-
-function disableTranslator(message) {
-    statusElement.textContent = message;
-    statusElement.style.color = 'red';
-    swapBtn.disabled = true;
-    tekstoInput.disabled = true; 
-    output.textContent = '';
-    tekstoInput.value = '';
-    updateInteractionButtonState(); 
-}
-
-function updateLanguageDisplays() {
-    if (isEnglishToBeluma) {
-        sourceLanguageDisplay.textContent = 'English';
-        targetLanguageDisplay.textContent = 'Beluma';
-        tekstoInput.placeholder = 'Type English text here (e.g., Hello there!)...';
-        specialCharsTray.style.display = 'none';
-    } else {
-        sourceLanguageDisplay.textContent = 'Beluma'; 
-        targetLanguageDisplay.textContent = 'English';
-        tekstoInput.placeholder = 'Type Beluma text here (e.g., Sala théra!)...'; 
-        specialCharsTray.style.display = 'flex';
-    }
-}
-
-function handleTranslation() {
-    const eniro = tekstoInput.value;
-    if (eniro === '') { 
-        output.textContent = '';
-    } else {
-        output.textContent = tradukFrazo(eniro);
-    }
-    updateInteractionButtonState(); 
-}
-
-// --- Dictionary Loading Function ---
+const status = document.getElementById('status');
+const srcLabel = document.getElementById('srcLangLabel');
+const targetLabel = document.getElementById('targetLangLabel');
+const charTray = document.getElementById('charTray');
 
 async function loadDictionary() {
     try {
-        const response = await fetch(DICTIONARY_URL);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const lingvoData = await response.text();
-        parseLingvoData(lingvoData);
-        updateLanguageDisplays();
-        enableTranslator();
-    } catch (error) {
-        disableTranslator(`Error loading dictionary from URL. Error: ${error.message}`);
-        console.error('Dictionary load error:', error);
+        const response = await fetch(DICT_URL);
+        const text = await response.text();
+        const lines = text.split('\n');
+        
+        enToBe = {};
+        beToEn = {};
+
+        lines.forEach(line => {
+            if (!line.includes('=') || line.startsWith('---')) return;
+            let [beluma, english] = line.split('=').map(s => s.trim().toLowerCase());
+            
+            // Handle multiple english synonyms (split by /)
+            const engOptions = english.split('/').map(e => e.trim());
+            
+            engOptions.forEach(opt => {
+                if (!enToBe[opt]) enToBe[opt] = beluma;
+            });
+            
+            if (!beToEn[beluma]) beToEn[beluma] = engOptions[0];
+        });
+
+        status.textContent = "Dictionary ready.";
+        status.style.background = "#e6ffed";
+        status.style.color = "#1e7e34";
+    } catch (e) {
+        status.textContent = "Error loading vocabulary file.";
+        status.style.background = "#ffeef0";
+        status.style.color = "#d73a49";
     }
 }
 
-// --- Event Listeners ---
+function translate(text) {
+    const dict = isEnToBe ? enToBe : beToEn;
+    // Match words (including accented chars) or punctuation/whitespace
+    const tokens = text.match(/([a-zA-Z0-9áéíóúÁÉÍÓÚ]+)|([^\w\sáéíóúÁÉÍÓÚ]+)|(\s+)/g) || [];
+    
+    return tokens.map(token => {
+        if (/^\s+$/.test(token) || /^[^\wáéíóúÁÉÍÓÚ]+$/.test(token)) return token;
+        
+        const lower = token.toLowerCase();
+        let translated = dict[lower] || token;
 
-// 1. Input Change (Automatic Translation & Char Count)
-tekstoInput.addEventListener('input', handleTranslation);
+        // Preserve capitalization
+        if (token === token.toUpperCase() && token.length > 1) {
+            return translated.toUpperCase();
+        } else if (token[0] === token[0].toUpperCase()) {
+            return translated.charAt(0).toUpperCase() + translated.slice(1);
+        }
+        return translated;
+    }).join('');
+}
 
-// 2. Double-click for Quick Definition
-tekstoInput.addEventListener('dblclick', handleQuickDefinition);
+function handleInput() {
+    const val = tekstoInput.value;
+    document.getElementById('charCount').textContent = `${val.length} / 500`;
+    output.textContent = translate(val);
+}
 
-// 3. Swap Languages Button
-swapBtn.addEventListener('click', function() {
-    isEnglishToBeluma = !isEnglishToBeluma; 
-    updateLanguageDisplays();
-    handleTranslation();
-});
-
-// 4. Clear Input Button
-clearInputBtn.addEventListener('click', () => {
-    tekstoInput.value = '';
-    handleTranslation(); 
+function addChar(c) {
+    const start = tekstoInput.selectionStart;
+    const end = tekstoInput.selectionEnd;
+    tekstoInput.value = tekstoInput.value.substring(0, start) + c + tekstoInput.value.substring(end);
     tekstoInput.focus();
-});
+    tekstoInput.selectionStart = tekstoInput.selectionEnd = start + 1;
+    handleInput();
+}
 
-// 5. Special Character Buttons 
-charButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const char = button.getAttribute('data-char');
-        insertAtCaret(tekstoInput, char);
-    });
-});
-
-
-// 6. Interaction Button Event Listeners
-copyInputBtn.addEventListener('click', () => copyText(tekstoInput));
-speakInputBtn.addEventListener('click', () => speakText(tekstoInput.value, sourceLanguageDisplay.textContent));
-copyOutputBtn.addEventListener('click', () => copyText(output));
-speakOutputBtn.addEventListener('click', () => speakText(output.textContent, targetLanguageDisplay.textContent));
-
-// 7. Initialization - Load dictionary on startup
-window.onload = function() {
-    updateLanguageDisplays();
-    updateInteractionButtonState();
-    loadDictionary(); 
+document.getElementById('swapBtn').onclick = () => {
+    isEnToBe = !isEnToBe;
+    srcLabel.textContent = isEnToBe ? 'English' : 'Beluma';
+    targetLabel.textContent = isEnToBe ? 'Beluma' : 'English';
+    charTray.style.display = isEnToBe ? 'none' : 'flex';
+    handleInput();
 };
+
+document.getElementById('clearBtn').onclick = () => {
+    tekstoInput.value = '';
+    handleInput();
+};
+
+document.getElementById('copyBtn').onclick = () => {
+    navigator.clipboard.writeText(output.textContent);
+};
+
+document.getElementById('speakSrcBtn').onclick = () => speak(tekstoInput.value);
+document.getElementById('speakTargetBtn').onclick = () => speak(output.textContent);
+
+function speak(text) {
+    if (!text) return;
+    const msg = new SpeechSynthesisUtterance(text);
+    msg.lang = isEnToBe ? 'en-GB' : 'hu-HU'; // Using Hungarian as a phonetic proxy for Beluma accents if needed
+    window.speechSynthesis.speak(msg);
+}
+
+tekstoInput.oninput = handleInput;
+window.onload = loadDictionary;
 </script>
 </body>
 </html>
-
