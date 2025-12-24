@@ -1,3 +1,4 @@
+VTXT=12.3
 béla = beautiful
 béla lomas = beautiful trees
 da = if
