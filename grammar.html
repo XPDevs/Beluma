@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beluma Grammar Reference | Lía Beluma v3</title>
+    <style>
+        :root {
+            --accent: #27ae60;
+            --dark: #1a252f;
+            --text: #2c3e50;
+            --muted: #7f8c8d;
+            --border: #e3e8ec;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f7f9fb; color: var(--text); line-height: 1.75; }
+        header { background: var(--dark); color: white; padding: 16px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; }
+        header .b { font-weight: 800; }
+        header a { color: #dfe9f4; text-decoration: none; margin-left: 16px; font-weight: 600; }
+        main { max-width: 980px; margin: 30px auto; padding: 0 18px 60px; }
+        h1 { color: var(--dark); border-bottom: 4px solid var(--accent); padding-bottom: 10px; }
+        h2 { color: var(--accent); letter-spacing: 1px; text-transform: uppercase; font-size: 1.05rem; margin-top: 40px; border-left: 6px solid var(--accent); padding-left: 12px; }
+        h3 { color: var(--dark); }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        th, td { padding: 9px 12px; border-bottom: 1px solid var(--border); text-align: left; }
+        th { background: #f0f5f2; letter-spacing: 0.4px; font-size: 0.8rem; text-transform: uppercase; }
+        td:first-child { font-weight: 700; color: var(--accent); white-space: nowrap; }
+        code { background: #eaf4ee; color: #1e7d43; padding: 2px 6px; border-radius: 5px; }
+        .ex { background: #f2fbf6; border-left: 5px solid var(--accent); padding: 10px 14px; border-radius: 8px; margin: 12px 0; }
+        .ex b { color: var(--dark); }
+        .note { background: #fbf8ee; border-left: 5px solid #e6b93c; padding: 10px 14px; border-radius: 8px; }
+        .toc { background: white; padding: 18px 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .toc a { color: var(--accent); text-decoration: none; }
+        .toc ul { columns: 2; margin: 0; padding-left: 20px; }
+    </style>
+</head>
+<body>
+<header>
+    <span class="b">Lía Beluma — Grammar Reference</span>
+    <span><a href="index.html">Overview</a><a href="grammar.html">Grammar</a><a href="lessons.html">Course</a><a href="translator.html">Translator</a></span>
+</header>
+<main>
+    <h1>Beluma Grammar (v3)</h1>
+    <p>A complete reference. Beluma is regular: learn the patterns, not rules-with-exceptions.</p>
+    <div class="toc">
+        <strong>Contents</strong>
+        <ul>
+            <li><a href="#sounds">Sounds &amp; writing</a></li>
+            <li><a href="#sentence">Sentence structure</a></li>
+            <li><a href="#nouns">Nouns &amp; plurals</a></li>
+            <li><a href="#pronouns">Pronouns</a></li>
+            <li><a href="#verbs">Verbs &amp; tense</a></li>
+            <li><a href="#adjectives">Adjectives &amp; adverbs</a></li>
+            <li><a href="#affixes">Affixes &amp; word-building</a></li>
+            <li><a href="#prep">Prepositions</a></li>
+            <li><a href="#numbers">Numbers</a></li>
+            <li><a href="#questions">Questions &amp; negation</a></li>
+            <li><a href="#functions">Function words</a></li>
+            <li><a href="#natural">Formal vs Colloquial Beluma</a></li>
+            <li><a href="#relative">Relative clauses &amp; linking ideas</a></li>
+        </ul>
+    </div>
+
+    <h2 id="sounds">1. Sounds &amp; writing</h2>
+    <p>23 letters: <code>a b d e f g h i j k l m n o p r s t u v w z x</code>. Five vowels with one sound each; the remaining letters are always pronounced the same way.</p>
+    <table>
+        <tr><th>Letter</th><th>IPA</th><th>Hint</th></tr>
+        <tr><td>a e i o u</td><td>/a/ /e/ /i/ /o/ /u/</td><td>f<em>a</em>, b<em>e</em>d, s<em>ee</em>, f<em>or</em>, f<em>oo</em>d</td></tr>
+        <tr><td>j</td><td>/j/</td><td><em>y</em>es</td></tr>
+        <tr><td>r</td><td>/r/</td><td>rolled r</td></tr>
+        <tr><td>x</td><td>/ks/</td><td>bo<em>x</em></td></tr>
+        <tr><td>w</td><td>/w/</td><td><em>w</em>et</td></tr>
+        <tr><td>others</td><td>as written</td><td>b d f g h k l m n p s t v z</td></tr>
+    </table>
+    <p>The <strong>acute accent</strong> marks the stressed syllable: <code>béla</code>, <code>nésa</code>. The accent does not change the sound or the meaning — it only tells you where the stress falls. Faster Beluma text often leaves accents out.</p>
+    <p>Syllables are open-favouring: <code>ne-sa</code>, <code>bi-no</code>, <code>fura-nela-sula</code>. No bleeding consonant clusters; words flow.</p>
+    <div class="note">Beluma is written with the 23 Latin letters shown above — one letter, one sound, in speech or in print. The acute accent (béla) is a stress mark only, written to help learners; ordinary text may leave it out and lose nothing but a hint.</div>
+    <div class="note"><strong>Accents &amp; homophones.</strong> Because an accent only marks stress, an accented word and its unaccented twin sound identical. Placement is not always a matter of the accents "being dropped" — Beluma happily lets the same spoken form carry more than one meaning. <code>ra</code> and <code>rá</code> are the same spoken word, meaning both <em>near</em> and (colloquial) <em>was</em>; <code>da</code>/<code>dá</code> cover <em>if</em> and <em>did</em>; <code>mila</code> is at once <em>thousand</em> and <em>my</em>; <code>koro</code> is the bear <em>and</em> the interjection <em>really?</em>. Listener and reader pick the sense from context — the translator shows every listed sense of a homonym in its analysis panel (e.g. <em>thousand / my</em>).</div>
+
+    <h2 id="sentence">2. Sentence structure</h2>
+    <p>Order is <strong>Subject – Verb – Object</strong>, exactly like English:</p>
+    <div class="ex"><b>Siva leva mi.</b> — She loves me.</div>
+    <div class="ex"><b>Mi féma fura.</b> — I eat fruit.</div>
+    <p>The word <code>le</code> = “the”, <code>o</code> = “a/an”. They are optional but normal.</p>
+    <div class="ex"><b>Lé fira hura.</b> — The bird flies.</div>
+    <h3>Noun phrases</h3>
+    <p>Adjectives come <strong>before</strong> the noun; possessors come <strong>before</strong> the noun too:</p>
+    <div class="ex"><b>réva gino</b> — a happy girl &nbsp;·&nbsp; <b>béla lomas</b> — beautiful trees &nbsp;·&nbsp; <b>mi-la nésa</b> — my house &nbsp;·&nbsp; <b>tu-la lavo</b> — your dog</div>
+
+    <h2 id="nouns">3. Nouns &amp; plurals</h2>
+    <table>
+        <tr><th>Form</th><th>Rule</th><th>Example</th></tr>
+        <tr><td>singular</td><td>base word</td><td>lavo (dog)</td></tr>
+        <tr><td>plural (-s)</td><td>add <code>-s</code> after a vowel</td><td>lavos (dogs)</td></tr>
+        <tr><td>plural (-as)</td><td>add <code>-as</code> after a consonant</td><td>fémas → … (roots end in vowels by design)</td></tr>
+        <tr><td>possessive</td><td>add <code>-la</code></td><td>siva-la (her thing), bino-la (the boy's)</td></tr>
+    </table>
+    <p>Gender is not grammatical in Beluma. <code>sélo</code> = wolf, <code>sélo-niva</code> = she-wolf — natural gender is marked only when it matters.</p>
+
+    <h2 id="pronouns">4. Pronouns</h2>
+    <table>
+        <tr><th>Beluma</th><th>English</th></tr>
+        <tr><td>mi</td><td>I / me</td></tr>
+        <tr><td>mu</td><td>me (object), to me</td></tr>
+        <tr><td>tu</td><td>you (singular)</td></tr>
+        <tr><td>nivo</td><td>he / him</td></tr>
+        <tr><td>siva</td><td>she / her</td></tr>
+        <tr><td>ét</td><td>it</td></tr>
+        <tr><td>mis</td><td>we / us</td></tr>
+        <tr><td>tur</td><td>you (plural)</td></tr>
+        <tr><td>misu</td><td>they / them</td></tr>
+    </table>
+    <p>Possessives add <code>-la</code>: mi-la, tu-la, nivo-la, siva-la, ét-la, mis-la, tura-la*, misu-la.</p>
+    <p>Emphatic/reflexive: repeat the pronoun — <code>mi-la mi</code> (myself).</p>
+    <div class="note">* tura-la is more naturally “your (pl)”, from tur + -la; the dictionary also lists tura-la.</div>
+
+    <h2 id="verbs">5. Verbs &amp; tense</h2>
+    <p>Verbs are never conjugated for person or number. Time is the only thing the verb cares about, and it is marked with a small word that comes <strong>before</strong> the verb.</p>
+    <table>
+        <tr><th>Marker</th><th>Meaning</th><th>Example</th></tr>
+        <tr><td>(none)</td><td>present</td><td>mi gai — I go / I am going</td></tr>
+        <tr><td>né</td><td>past</td><td>mi né gai — I went</td></tr>
+        <tr><td>wé</td><td>future</td><td>mi wé gai — I will go</td></tr>
+        <tr><td>wés</td><td>future with “about to”</td><td>mi wés gai — I am about to go</td></tr>
+        <tr><td>un</td><td>negative (not)</td><td>mi un kéma — I don't know</td></tr>
+        <tr><td>un + né/wé</td><td>negative past/future</td><td>mi un né gai — I did not go</td></tr>
+        <tr><td>du</td><td>negative command (Don't!)</td><td>du gai! — Don't go!</td></tr>
+        <tr><td>kvo</td><td>yes/no question</td><td>kvo tu gai? — Are you going?</td></tr>
+    </table>
+    <div class="ex"><b>Mi né féma fura.</b> — I ate fruit. &nbsp;·&nbsp; <b>Lé fira wé hura.</b> — The bird will fly.</div>
+    <p>A verb used without a “name” noun is still a verb. Add <code>-va</code> to make a noun form of a verb (the “doing” form): <code>sola-va</code> = playing (as a noun), <code>lé-tova-va</code> = holding.</p>
+
+    <h2 id="adjectives">6. Adjectives &amp; adverbs</h2>
+    <p>Adjectives sit before the noun. Every adjective can act as the noun of that quality: <code>béla</code> = beautiful (and: beauty), <code>sulo</code> = strong (and: strength).</p>
+    <p>Adverbs are adjectives + <code>-lé</code>:</p>
+    <div class="ex"><b>gavo</b> = good → <b>gavo-lé</b> = well &nbsp;·&nbsp; <b>réva</b> = happy → <b>réva-lé</b> = happily &nbsp;·&nbsp; <b>sulo-lé</b> = strongly</div>
+    <p>Comparison uses <code>mesa</code> (more) and <code>susa</code> (most) before the adjective; “than” is <code>ban</code>:</p>
+    <div class="ex"><b>Nivo s mesa sulo ban mi.</b> — He is stronger than me.</div>
+
+    <h2 id="affixes">7. Affixes &amp; word-building</h2>
+    <p>Beluma word-building is head-first: the main meaning comes first, specifiers after.</p>
+    <table>
+        <tr><th>Affix</th><th>Meaning</th><th>Example</th></tr>
+        <tr><td>-s / -as</td><td>plural</td><td>lavos (dogs)</td></tr>
+        <tr><td>-la</td><td>of / possession</td><td>nela-la (water-of)</td></tr>
+        <tr><td>-nélo</td><td>-water, running X</td><td>siva-nélo (speaking/voice stream)</td></tr>
+        <tr><td>-nira</td><td>small, mild</td><td>luma-nira (little light)</td></tr>
+        <tr><td>-ét</td><td>young of</td><td>lavoét (puppy)</td></tr>
+        <tr><td>-os</td><td>group, herd</td><td>fira-os (flock of birds)</td></tr>
+        <tr><td>-an</td><td>place, habitat</td><td>fira-an (nest)</td></tr>
+        <tr><td>-or</td><td>doer of</td><td>kémor (teacher)</td></tr>
+        <tr><td>-pira</td><td>tool for</td><td>féma-pira (spoon)</td></tr>
+        <tr><td>-tavi</td><td>platform for</td><td>kiva-tavi (desk)</td></tr>
+        <tr><td>-ik</td><td>like, resembling</td><td>fira-ik (birdlike)</td></tr>
+        <tr><td>-lé</td><td>adverb</td><td>gavo-lé (well)</td></tr>
+        <tr><td>-va</td><td>doing / -ing noun</td><td>sola-va (playing)</td></tr>
+        <tr><td>-ji</td><td>ordinal</td><td>ona-ji (first)</td></tr>
+        <tr><td>-sula</td><td>great, big, abstract</td><td>nela-sula (ocean), kúna-sula (mind)</td></tr>
+        <tr><td>un-</td><td>not, lack of</td><td>un-kula (easy), un-sulo (weak)</td></tr>
+        <tr><td>ni-</td><td>opposite / anti-</td><td>ni-kéma (misunderstand)</td></tr>
+        <tr><td>ré-</td><td>again, re-</td><td>ré-dora (re-open)</td></tr>
+    </table>
+    <h3>Real compounds from the dictionary</h3>
+    <div class="ex">
+        <b>nela-sula</b> = water + great = ocean &nbsp;·&nbsp;
+        <b>fura-sulo</b> = fruit + great = root &nbsp;·&nbsp;
+        <b>kiva-nira</b> = work + small = gadget &nbsp;·&nbsp;
+        <b>loma-sulo</b> = tree + great = great forest / brown &nbsp;·&nbsp;
+        <b>luma-saro</b> = light + star = flashlight &nbsp;·&nbsp;
+        <b>kéro-nira</b> = mind + small = idea
+    </div>
+    <h3>Coining new words</h3>
+    <p>Any two roots can be pressed together to make a new word. This is how Beluma grows: the dictionary is the starting set, not a closed list. A new compound is legal the moment its roots are legal.</p>
+    <div class="ex">
+        <b>nela-fura</b> = water + fruit = juice &nbsp;·&nbsp;
+        <b>fira-nira</b> = small bird &nbsp;·&nbsp;
+        <b>luma-pira</b> = light-tool (lamp) &nbsp;·&nbsp;
+        <b>kiva-siva-nira</b> = work + voice + small = phone &nbsp;·&nbsp;
+        <b>néla-fura-pira</b> = water + fruit + -pira tool = watering can &nbsp;·&nbsp;
+        <b>kiva-nira</b> … make your own
+    </div>
+    <p>The translator (<a href="translator.html">translator.html</a>) analyses any root+root compound automatically and shows the word's parts in the analysis panel — coin a word, type it, and see it understood. If you keep using one, add it to <code>h.txt</code> so everyone else can too.</p>
+
+    <h2 id="prep">8. Prepositions</h2>
+    <table>
+        <tr><th>Word</th><th>Meaning</th><th>Word</th><th>Meaning</th></tr>
+        <tr><td>na</td><td>in, at</td><td>su</td><td>on, above</td></tr>
+        <tr><td>po</td><td>to, toward</td><td>un-su</td><td>under, below</td></tr>
+        <tr><td>dé</td><td>from</td><td>ra</td><td>near</td></tr>
+        <tr><td>vél</td><td>with</td><td>tera</td><td>through</td></tr>
+        <tr><td>trima</td><td>between</td><td>un-héna</td><td>behind</td></tr>
+        <tr><td>li</td><td>by (doer)</td><td>un-héna</td><td>behind</td></tr>
+    </table>
+    <div class="ex"><b>Lé fira hura na lé hula.</b> — The bird flies in the sky. &nbsp;·&nbsp; <b>Mi gai po nésa.</b> — I go home.</div>
+
+    <h2 id="numbers">9. Numbers</h2>
+    <table>
+        <tr><th>classic</th><td>zéra 0, ona 1, tuo 2, tro 3, fóra 4, kvín 5, sixa 6, sita 7, oita 8, noa 9, diza 10, vinta 20, cénta 100, mila 1,000, miliona 1,000,000</td></tr>
+        <tr><th>digit-style</th><td>zer, uné, di, tri, kvar, kvin, sis, sep, ok, nof, dek (used on clocks, maths &amp; readouts)</td></tr>
+    </table>
+    <p>Tens and hundreds stack head-first: <code>vinta-kvín</code> = 25, <code>cénta-tuo-tro</code> = 123. Ordinals add <code>-ji</code>: onaji = first.</p>
+
+    <h2 id="questions">10. Questions &amp; negation</h2>
+    <p><strong>Yes/no:</strong> put <code>kvo</code> at the front.</p>
+    <div class="ex"><b>Kvo tu gai po nésa?</b> — Do you go home? &nbsp;·&nbsp; Yes = <b>kék</b>, No = <b>non</b>.</div>
+    <p><strong>Wh-words:</strong> want = kva (which/what), kvasi (who), kwaras (where), kvado (when), kvaso (why), havi (how). They start the sentence.</p>
+    <div class="ex"><b>Kvado tu gai?</b> — When do you go? &nbsp;·&nbsp; <b>Kvasi s ta?</b> — Who is that?</div>
+    <p><strong>Negation:</strong> <code>un</code> before the verb makes it negative; <code>du</code> makes a command negative.</p>
+    <div class="ex"><b>Mi un kéma ta.</b> — I don't know that. &nbsp;·&nbsp; <b>un</b> + <b>réva</b> = <b>un-réva</b> (sad).</div>
+
+    <h2 id="functions">11. Function words</h2>
+    <table>
+        <tr><th>Beluma</th><th>English</th></tr>
+        <tr><td>unas</td><td>and</td></tr>
+        <tr><td>ora</td><td>or</td></tr>
+        <tr><td>neka</td><td>but</td></tr>
+        <tr><td>tola</td><td>then</td></tr>
+        <tr><td>ta</td><td>that</td></tr>
+        <tr><td>ban</td><td>than</td></tr>
+        <tr><td>kima / unkima</td><td>can / cannot</td></tr>
+        <tr><td>gida</td><td>must</td></tr>
+        <tr><td>vévlo</td><td>very</td></tr>
+        <tr><td>sala / ravi</td><td>hello / goodbye</td></tr>
+        <tr><td>nako</td><td>thanks &nbsp;·&nbsp; teva</td><td>please</td></tr>
+    </table>
+
+    <h2 id="natural">12. Formal vs Colloquial Beluma</h2>
+    <p>Beluma has two registers, like many natural languages. Both are correct — you choose based on context.</p>
+    <div class="ex">
+        <b>Formal Beluma</b> (writing, speeches, education):<br>
+        Words kept separate: <b>mi-la nésa na</b> &nbsp;·&nbsp;
+        Regular tense markers: <b>né gai</b>, <b>né s</b> &nbsp;·&nbsp;
+        Full sentences, careful pronunciation.
+    </div>
+    <div class="ex">
+        <b>Colloquial Beluma</b> (daily speech, friends, family):<br>
+        Fused words: <b>mila nésana</b> &nbsp;·&nbsp;
+        Irregular high-frequency verbs: <b>vára</b>, <b>rá</b>, <b>dá</b> &nbsp;·&nbsp;
+        Contractions, faster speech, discourse markers (<b>evi</b>, <b>koro</b>, <b>maka</b>).
+    </div>
+    <p>What follows shows how the colloquial register behaves in detail.</p>
+
+    <h3>Fused words (Grammaticalisation)</h3>
+    <p>In rapid speech, small words stick together. You will often hear natives say:</p>
+    <div class="ex">
+        <b>nésana</b> (at home) instead of <b>nésa na</b> &nbsp;·&nbsp;
+        <b>mila</b> (my) instead of <b>mi la</b> &nbsp;·&nbsp;
+        <b>wégai</b> (will go) instead of <b>wé gai</b>
+    </div>
+    <p>These are perfectly correct in spoken Beluma, though formal writing keeps the words separate.</p>
+
+    <h3>Irregular high-frequency verbs</h3>
+    <p>The most commonly used verbs have developed irregular past tenses because speakers memorise them as single chunks rather than building them with the <code>né</code> marker:</p>
+    <div class="ex">
+        <b>gai</b> (to go) → <b>vára</b> (went) &nbsp;·&nbsp;
+        <b>s</b> (to be) → <b>rá</b> (was/were) &nbsp;·&nbsp;
+        <b>diva</b> (to do/make) → <b>dá</b> (did/made)
+    </div>
+
+    <h3>Topic marking &amp; flexible word order</h3>
+    <p>While the formal rule is Subject-Verb-Object, speakers use the particle <code>ya</code> to move the most important information to the front of the sentence for emphasis:</p>
+    <div class="ex">
+        <b>Formal:</b> Mi né féma fura. (I ate fruit.) &nbsp;·&nbsp;
+        <b>Colloquial:</b> Fura ya, mi né féma. (The fruit, I ate it.)
+    </div>
+
+    <h3>Discourse markers</h3>
+    <p>Conversations include padding and hesitation, just like any natural language:</p>
+    <div class="ex">
+        <b>evi</b> = well... / um (used when thinking) &nbsp;·&nbsp;
+        <b>koro</b> = really? / is that so? (used to show you are listening) &nbsp;·&nbsp;
+        <b>maka</b> = actually / in fact (used to politely correct someone)
+    </div>
+
+    <h3>Idioms &amp; collocations</h3>
+    <p>Much of colloquial Beluma is spoken in fixed chunks that no longer decompose literally (see the idioms at the end of <code>h.txt</code>):</p>
+    <div class="ex">
+        <b>méra-nako</b> = thanks very much (lit. sea of thanks) &nbsp;·&nbsp;
+        <b>luma-kúna</b> = dizzy (lit. light head) &nbsp;·&nbsp;
+        <b>nula-vosa</b> = goosebumps (lit. cold flesh) &nbsp;·&nbsp;
+        <b>tuma-sulo</b> = courage (lit. heart-great)
+    </div>
+
+    <h2 id="relative">13. Relative clauses &amp; linking ideas</h2>
+    <p><strong>Relative clauses</strong> let one sentence carry another. Beluma opens them right after the noun, and the clause keeps perfectly normal SVO order — nothing moves to the front:</p>
+    <ul>
+        <li><code>ka</code> = <em>who / which / that</em> — subject relative (the noun is doing the action)</li>
+        <li><code>ta</code> = <em>that / which</em> — object relative (the noun is the object of the clause); this is the same word as the demonstrative “that”, exactly like English</li>
+        <li><code>ka-la</code> = <em>whose</em> — possessive relative (lit. of-who)</li>
+    </ul>
+    <div class="ex">
+        <b>Lé misi ka s unréva.</b> — The person who is sad.
+    </div>
+    <div class="ex">
+        <b>Lé fura ta mi né féma.</b> — The fruit that I ate.
+    </div>
+    <div class="ex">
+        <b>Lé keran ka-la lavo né rusa s unréva.</b> — The man whose dog ran away is sad.
+    </div>
+    <p><strong>Note:</strong> the question word is a separate, older root — <code>kvasi</code> = <em>who?</em> (<b>Kvasi s ta?</b> — Who is that?). The relative word <code>ka</code> means “who/which” only inside an added clause. Beluma thus tells the two jobs apart, even though English uses the same word for both.</p>
+
+    <h3>Linking ideas</h3>
+    <p>Sentences join up with plain function words — no rearrangement needed:</p>
+    <div class="ex">
+        <b>kausa</b> = because (<em>Mi s esa, kausa mi né rusa.</em> — I am tired because I ran.) &nbsp;·&nbsp;
+        <b>ekse</b> = therefore (<em>Mi s esa, ekse mi we gai nésa.</em> — I am tired, therefore I will go home.) &nbsp;·&nbsp;
+        <b>tamen</b> = however (<em>Lé néla s nula, tamen mi we néva.</em> — The water is cold, however I will drink.) &nbsp;·&nbsp;
+        <b>seke</b> = then / next &nbsp;·&nbsp;
+        <b>kondise</b> = under the condition that
+    </div>
+
+    <p style="margin-top:40px" class="note">Continue with the <a href="lessons.html">beginner course</a> for a guided path, or open the <a href="translator.html">translator</a> and start experimenting.</p>
+</main>
+</body>
+</html>

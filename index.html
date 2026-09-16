@@ -3,286 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beluma: The Complete System Codex - XPDevs</title>
+    <title>Lía Beluma — a complete constructed language | XPDevs</title>
     <style>
         :root {
             --primary: #1a252f;
             --accent: #3498db;
             --bg: #f4f7f6;
             --card: #ffffff;
-            --radius: 25px;
-            --text-main: #2c3e50;
-            --danger: #e74c3c;
+            --text: #2c3e50;
+            --muted: #7f8c8d;
+            --radius: 22px;
         }
+        * { box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.8;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
             margin: 0;
-            padding: 0;
         }
         header {
-            background-color: var(--primary);
+            background: var(--primary);
             color: white;
-            padding: 25px 5%;
+            padding: 22px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            position: sticky; top: 0; z-index: 1000;
             border-bottom: 5px solid var(--accent);
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
         }
-        .nav-btn {
-            background: var(--accent);
-            color: white;
-            padding: 14px 30px;
-            text-decoration: none;
-            border-radius: 15px;
-            font-weight: bold;
-            transition: 0.3s;
+        header .brand { font-size: 1.4rem; font-weight: 800; }
+        header .nav a {
+            color: white; text-decoration: none; margin-left: 18px; font-weight: 600; opacity: 0.9;
         }
-        main {
-            max-width: 1200px;
-            margin: 40px auto;
-            background: var(--card);
-            padding: 80px;
-            border-radius: var(--radius);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.05);
+        header .nav a:hover { opacity: 1; text-decoration: underline; }
+        main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .hero {
+            background: var(--card); padding: 60px 50px; border-radius: var(--radius);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.06); margin-bottom: 40px; text-align: center;
         }
-        h1 { font-size: 3.5rem; color: var(--primary); text-align: center; margin-bottom: 50px; }
-        h2 { border-bottom: 4px solid var(--accent); padding-bottom: 12px; margin-top: 80px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
-        h3 { margin-top: 50px; color: var(--primary); border-left: 8px solid var(--accent); padding-left: 20px; }
-        
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-        
-        .vocab-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        .vocab-table tr:nth-child(even) { background: #fcfcfc; }
-        .vocab-table td { padding: 12px; border-bottom: 1px solid #eee; vertical-align: top; }
-        .vocab-table td:first-child { font-weight: bold; color: var(--accent); width: 35%; }
-        
-        .script-box {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            gap: 15px;
-            margin: 30px 0;
+        .hero h1 { font-size: 3rem; margin: 0 0 10px; color: var(--primary); }
+        .hero .sub { color: var(--muted); font-size: 1.1rem; }
+        .hero .letters-banner { margin: 30px auto 20px; font-size: 2.2rem; color: var(--accent); letter-spacing: 6px; }
+        .cta a {
+            display: inline-block; margin: 10px; padding: 14px 28px; border-radius: 30px;
+            text-decoration: none; font-weight: 700;
         }
-        .char-card {
-            background: #fff;
-            border: 2px solid #f0f0f0;
-            padding: 20px;
-            text-align: center;
-            border-radius: 18px;
-            transition: 0.2s;
+        .cta .primary { background: var(--accent); color: white; }
+        .cta .ghost { border: 2px solid var(--accent); color: var(--accent); }
+        section.card {
+            background: var(--card); padding: 45px 50px; border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 36px;
         }
-        .char-card:hover { border-color: var(--accent); transform: scale(1.05); }
-        .char-card span { font-size: 2.8rem; color: var(--accent); display: block; }
-        
-        .callout {
-            background: #fdf2f2;
-            border-left: 6px solid var(--danger);
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 15px;
+        h2 {
+            border-bottom: 4px solid var(--accent); padding-bottom: 12px; margin: 0 0 24px;
+            color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-size: 1.3rem;
         }
-        .info-box {
-            background: #f0faff;
-            border-left: 6px solid var(--accent);
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 15px;
-        }
-        footer { text-align: center; padding: 60px; color: #95a5a6; }
-        .badge { background: #eee; padding: 2px 8px; border-radius: 5px; font-size: 0.8rem; color: #666; }
+        h3 { color: var(--primary); margin-top: 34px; border-left: 6px solid var(--accent); padding-left: 14px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+        th, td { padding: 10px 12px; border-bottom: 1px solid #eee; text-align: left; }
+        th { background: #f6fafc; color: var(--primary); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; }
+        td:first-child { font-weight: 700; color: var(--accent); }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+        code { background: #eef4f8; padding: 2px 7px; border-radius: 6px; color: #1d6fb8; }
+        .example { background: #f2f9ff; border-left: 6px solid var(--accent); padding: 16px 20px; border-radius: 12px; margin: 14px 0; }
+        .example .be { font-weight: 800; color: var(--primary); font-size: 1.1rem; }
+        .info { background: #fdfaf0; border-left: 6px solid #e6c229; padding: 16px 20px; border-radius: 12px; margin: 20px 0; }
+        footer { text-align: center; padding: 50px 20px; color: var(--muted); }
     </style>
 </head>
 <body>
 
 <header>
-    <div>
-        <h1 style="color: white; margin: 0; font-size: 1.8rem;">Beluma Codex v2.0</h1>
-        <small>Architect: James Turner | XPDevs</small>
+    <div class="brand">Lía Beluma</div>
+    <div class="nav">
+        <a href="index.html">Overview</a>
+        <a href="grammar.html">Grammar</a>
+        <a href="lessons.html">Course</a>
+        <a href="translator.html">Translator</a>
     </div>
-    <a href="translator.html" class="nav-btn">System Translator</a>
 </header>
 
 <main>
-    <section>
-        <h1>Beluma: The Definitive Specification</h1>
-        <p>Beluma is a proprietary technology ecosystem language. It is optimized for high-contrast digital reading and utilizes a modular root system where time, action, and intent are fused into single lexemes.</p>
-    </section>
 
-    <section>
-        <h2>Chapter 1: Writing & Phonology</h2>
-        <p>The New Script uses 31 radicals designed for digital parity. Accents are rendered via the <code>゙</code> diacritic.</p>
-        <div class="script-box">
-            <div class="char-card"><span>⺆</span>A</div>
-            <div class="char-card"><span>⺊</span>B</div>
-            <div class="char-card"><span>⼕</span>C</div>
-            <div class="char-card"><span>⼓</span>D</div>
-            <div class="char-card"><span>⼔</span>E</div>
-            <div class="char-card"><span>⼢</span>F</div>
-            <div class="char-card"><span>⼧</span>G</div>
-            <div class="char-card"><span>⼪</span>H</div>
-            <div class="char-card"><span>⼁</span>I</div>
-            <div class="char-card"><span>⼃</span>J</div>
-            <div class="char-card"><span>⼖</span>K</div>
-            <div class="char-card"><span>⼘</span>L</div>
-            <div class="char-card"><span>⼠</span>M</div>
-            <div class="char-card"><span>⼵</span>N</div>
+    <div class="hero">
+        <h1>Lía Beluma</h1>
+        <div class="letters-banner">a&nbsp;b&nbsp;d&nbsp;e&nbsp;f&nbsp;g&nbsp;h&nbsp;i&nbsp;j&nbsp;k&nbsp;l&nbsp;m&nbsp;n&nbsp;o&nbsp;p&nbsp;r&nbsp;s&nbsp;t&nbsp;u&nbsp;v&nbsp;w&nbsp;z&nbsp;x</div>
+        <p class="sub">A complete, learnable constructed language — with real phonology, regular grammar, and a growing lexicon readers can extend. Read it. Write it. Speak it.</p>
+        <div class="cta">
+            <a class="primary" href="lessons.html">Start the course</a>
+            <a class="ghost" href="translator.html">Open the translator</a>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <h2>Chapter 2: Universal Roots & Tense</h2>
-        <p>Beluma roots are omni-temporal. Tense is inferred from context or embedded in the word itself.</p>
+    <section class="card">
+        <h2>What Beluma is</h2>
+        <p>Beluma is a fully-specified <strong>constructed language</strong> — a real system, not a code or a cipher. Every word has a fixed pronunciation, every sentence has a grammar, and the derivational system lets you build thousands of new words from a few hundred roots.</p>
         <div class="grid-2">
             <div>
-                <h3>Action Roots</h3>
-                <table class="vocab-table">
-                    <tr><td>dova</td><td>bring / deliver / brought / will bring</td></tr>
-                    <tr><td>héna</td><td>see / watch / saw / watched / will see</td></tr>
-                    <tr><td>vira</td><td>run / wind / ran / will run</td></tr>
-                    <tr><td>kéma</td><td>know / understand / knew / understood</td></tr>
-                    <tr><td>jiva</td><td>jump / act / jumped / acted</td></tr>
-                    <tr><td>soma</td><td>sleep / slept / will sleep / week</td></tr>
-                </table>
+                <h3>Design principles</h3>
+                <ul>
+                    <li>Open syllable structure <code>(C)V(C)</code> — easy to pronounce.</li>
+                    <li>Five vowels <code>a e i o u</code>; acute accent marks stress.</li>
+                    <li>Head-first compounds: <code>nela-sula</code> = water-great = <em>ocean</em>.</li>
+                    <li>Regular morphology: one plural, one tense system, one derivation.</li>
+                    <li>Two number systems, like many real languages have.</li>
+                </ul>
             </div>
             <div>
-                <h3>Structural Modifiers</h3>
-                <table class="vocab-table">
-                    <tr><td>un-</td><td>opposite / negation</td></tr>
-                    <tr><td>ré-</td><td>repetition (e.g., <i>ré-dora</i>: unlock)</td></tr>
-                    <tr><td>su-</td><td>above / on</td></tr>
-                    <tr><td>-lé</td><td>adverbial suffix (e.g., <i>vira-lé</i>: quickly)</td></tr>
-                    <tr><td>da</td><td>conditional "if"</td></tr>
-                </table>
+                <h3>A language, not a cipher</h3>
+                <p>Earlier versions of Beluma were a word-for-word substitution cipher of English. That version is retired. This language has its own grammar and its own way of building new words, and it can be learned like any human language — a few minutes a day of study will have you producing Beluma sentences.</p>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Chapter 3: Biological Taxonomy</h2>
-        <p>Beluma uses a logical suffix system to describe life stages, groups, and habitats.</p>
-        <div class="info-box">
-            <strong>Standard Suffixes:</strong><br>
-            <code>-s</code> (Plural) | <code>-ét</code> (Little/Young) | <code>-os</code> (Group/Colony) | <code>-an</code> (Habitat/Den) | <code>-or</code> (Handler/Keeper) | <code>-ik</code> (Like/Similar)
-        </div>
-
+    <section class="card">
+        <h2>The sounds of Beluma</h2>
+        <p>Beluma has 18 consonants and 5 vowels. The letters are always pronounced the same way.</p>
         <div class="grid-2">
             <div>
-                <h3>Avian & Mythical</h3>
-                <table class="vocab-table">
-                    <tr><td>fira / firas</td><td>bird / birds</td></tr>
-                    <tr><td>firaos / firaan</td><td>flock / bird nest</td></tr>
-                    <tr><td>dravos</td><td>dragon</td></tr>
-                    <tr><td>dravosor</td><td>dragon rider</td></tr>
-                    <tr><td>hurox</td><td>griffin</td></tr>
-                    <tr><td>saviros</td><td>unicorn</td></tr>
+                <h3>Consonants</h3>
+                <table>
+                    <tr><th>Letter</th><th>Sound (IPA)</th><th>Like in English</th></tr>
+                    <tr><td>b d f g h j k l m n p r s t v w z</td><td>/b d f g h j k l m n p r s t v w z/</td><td>as written; <code>j</code> = *y*es, <code>r</code> rolled, <code>w</code> = *w*et, <code>x</code> = k+s</td></tr>
                 </table>
             </div>
             <div>
-                <h3>Aquatic & Land</h3>
-                <table class="vocab-table">
-                    <tr><td>lino</td><td>dolphin / son</td></tr>
-                    <tr><td>méloét / méloos</td><td>small fish / school of fish</td></tr>
-                    <tr><td>lunos / lunosét</td><td>cat / kitten</td></tr>
-                    <tr><td>lavo / lavoét</td><td>dog / puppy</td></tr>
-                    <tr><td>guro / guros</td><td>turtle / turtles</td></tr>
+                <h3>Vowels &amp; stress</h3>
+                <table>
+                    <tr><th>Letter</th><th>Sound (IPA)</th><th>Like in</th></tr>
+                    <tr><td>a</td><td>/a/</td><td>f<em>a</em>ther</td></tr>
+                    <tr><td>e</td><td>/e/</td><td>b<em>e</em>d</td></tr>
+                    <tr><td>i</td><td>/i/</td><td>s<em>ee</em></td></tr>
+                    <tr><td>o</td><td>/o/</td><td>f<em>or</em></td></tr>
+                    <tr><td>u</td><td>/u/</td><td>f<em>oo</em>d</td></tr>
+                </table>
+                <div class="info">The acute accent (<code>béla</code>) marks the stressed vowel. The stress never moves when suffixes are added: <code>béla</code> + <code>-s</code> = <code>bélas</code>.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Word-building</h2>
+        <p>Beluma is designed to be <strong>extended by its speakers</strong>. Combine roots head-first and the engine understands the new word automatically — even when it has never been written down before.</p>
+        <div class="grid-2">
+            <div>
+                <h3>Roots are raw material</h3>
+                <ul>
+                    <li><code>néla</code> = water, <code>sula</code> = big → <code>nela-sula</code> = ocean</li>
+                    <li><code>féma</code> = eat, <code>pira</code> = tool → <code>fema-pira</code> = spoon</li>
+                    <li><code>fira</code> = bird, <code>-nira</code> = small → <code>fira-nira</code> = small bird</li>
+                    <li><code>luma</code> = light, <code>saro</code> = star → <code>luma-saro</code> = flashlight</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Any new word is real</h3>
+                <p>Type an unlisted compound — <code>nela-fura-pira</code> (water-fruit-tool = watering can) — and the translator analyses it root by root. Coin it, use it, and it belongs in the dictionary the same day. That is how real languages grow.</p>
+                <div class="example"><div class="be">fura-nira-s s gavo.</div>Small fruits are good.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Grammar at a glance</h2>
+        <div class="grid-2">
+            <div>
+                <h3>Word order</h3>
+                <p>Subject – Verb – Object, like English:</p>
+                <div class="example"><div class="be">Mi leva tu.</div>I love you.</div>
+                <p><strong>Adjectives come first:</strong> <code>béla lomas</code> = beautiful trees.</p>
+                <p><strong>Possessors come first:</strong> <code>mi-la nésa</code> = my house.</p>
+                <p><strong>Prepositions:</strong> <code>na</code> (in), <code>po</code> (to), <code>dé</code> (from), <code>vél</code> (with).</p>
+            </div>
+            <div>
+                <h3>Pronouns</h3>
+                <table>
+                    <tr><th>Beluma</th><th>English</th></tr>
+                    <tr><td>mi</td><td>I / me</td></tr>
+                    <tr><td>tu</td><td>you</td></tr>
+                    <tr><td>nivo / siva</td><td>he / she</td></tr>
+                    <tr><td>ét</td><td>it</td></tr>
+                    <tr><td>mis / tur / misu</td><td>we / you all / they</td></tr>
+                </table>
+                <p>Possessives: add <code>-la</code> — <code>mi-la</code> my, <code>tu-la</code> your…</p>
+            </div>
+        </div>
+        <div class="grid-2">
+            <div>
+                <h3>Tense &amp; negation</h3>
+                <table>
+                    <tr><th>Marking</th><th>Meaning</th></tr>
+                    <tr><td>(nothing)</td><td>present</td></tr>
+                    <tr><td>né + verb</td><td>past (I né féma = I ate)</td></tr>
+                    <tr><td>wé + verb</td><td>future (wé gai = will go)</td></tr>
+                    <tr><td>un + verb</td><td>not (un kéma = don't know)</td></tr>
+                    <tr><td>du + verb</td><td>Don't! (du gai = don't go)</td></tr>
+                    <tr><td>kvo + sentence</td><td>yes/no question</td></tr>
+                </table>
+            </div>
+            <div>
+                <h3>Derivation (make new words)</h3>
+                <table>
+                    <tr><th>Affix</th><th>Job</th><th>Example</th></tr>
+                    <tr><td>-s / -as</td><td>plural</td><td>loma → lomas</td></tr>
+                    <tr><td>-ét</td><td>young</td><td>lavoét = puppy</td></tr>
+                    <tr><td>-os</td><td>group</td><td>firaos = flock</td></tr>
+                    <tr><td>-or</td><td>doer</td><td>kémor = teacher</td></tr>
+                    <tr><td>-la</td><td>of</td><td>siva-la = her</td></tr>
+                    <tr><td>-lé</td><td>adverb</td><td>gavo-lé = well</td></tr>
+                    <tr><td>-va</td><td>doing</td><td>sola-va = playing</td></tr>
+                    <tr><td>un-</td><td>not</td><td>un-kula = easy</td></tr>
+                    <tr><td>ré-</td><td>again</td><td>ré-dora = re-open</td></tr>
+                    <tr><td>ni-</td><td>opposite</td><td>ni-kema = misunderstand</td></tr>
                 </table>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Chapter 4: Platform & Digital Terms</h2>
-        <p>These terms are used for navigating the XPDevs technology ecosystem.</p>
-        <table class="vocab-table">
-            <tr><td>nésa-tésa</td><td>Home / Homepage</td></tr>
-            <tr><td>méro-tavi</td><td>Dashboard / Creator-platform</td></tr>
-            <tr><td>jiva-mota</td><td>Link / Hyperlink</td></tr>
-            <tr><td>kéla-kísa</td><td>Login / Sign-in</td></tr>
-            <tr><td>dova-su / dova-un-su</td><td>Upload / Download</td></tr>
-            <tr><td>tína-kivas</td><td>Settings / Configuration</td></tr>
-            <tr><td>jéra-tésas</td><td>Menu / Navigation</td></tr>
-        </table>
-    </section>
-
-    <section>
-        <h2>Chapter 5: Numerical System</h2>
-        <p>The Beluma base-10 system is entirely regular.</p>
+    <section class="card">
+        <h2>Numbers</h2>
         <div class="grid-3">
             <div>
-                <table class="vocab-table">
-                    <tr><td>Zéra</td><td>0</td></tr>
-                    <tr><td>Ona</td><td>1</td></tr>
-                    <tr><td>Tuo</td><td>2</td></tr>
-                    <tr><td>Tro</td><td>3</td></tr>
+                <table>
+                    <tr><td>zéra</td><td>0</td></tr>
+                    <tr><td>ona</td><td>1</td></tr>
+                    <tr><td>tuo</td><td>2</td></tr>
+                    <tr><td>tro</td><td>3</td></tr>
+                    <tr><td>fóra</td><td>4</td></tr>
+                    <tr><td>kvín</td><td>5</td></tr>
                 </table>
             </div>
             <div>
-                <table class="vocab-table">
-                    <tr><td>Diza</td><td>10</td></tr>
-                    <tr><td>Séza</td><td>16</td></tr>
-                    <tr><td>Vinta</td><td>20</td></tr>
-                    <tr><td>Triga</td><td>30</td></tr>
+                <table>
+                    <tr><td>sixa</td><td>6</td></tr>
+                    <tr><td>sita</td><td>7</td></tr>
+                    <tr><td>oita</td><td>8</td></tr>
+                    <tr><td>noa</td><td>9</td></tr>
+                    <tr><td>diza</td><td>10</td></tr>
+                    <tr><td>vinta</td><td>20</td></tr>
                 </table>
             </div>
             <div>
-                <table class="vocab-table">
-                    <tr><td>Cénta</td><td>100</td></tr>
-                    <tr><td>Mila</td><td>1,000</td></tr>
-                    <tr><td>Miliona</td><td>1,000,000</td></tr>
+                <table>
+                    <tr><td>cénta</td><td>100</td></tr>
+                    <tr><td>mila</td><td>1,000</td></tr>
+                    <tr><td>miliona</td><td>1,000,000</td></tr>
+                    <tr><td>-ji</td><td>ordinal (onaji = first)</td></tr>
                 </table>
             </div>
         </div>
+        <p>Compounds: <code>vinta-é-kvín</code> = 25. A second “digit” system (<code>di tri kvar…</code>) is used on clocks and readouts — the same trick Japanese has for <em>ichi, ni, san</em>.</p>
     </section>
 
-    <section>
-        <h2>Chapter 6: Social & Emotional Lexicon</h2>
-        <div class="grid-2">
-            <div>
-                <h3>Polite Interaction</h3>
-                <table class="vocab-table">
-                    <tr><td>sala / ravi</td><td>hello / goodbye</td></tr>
-                    <tr><td>nako / noha</td><td>thank you / sorry</td></tr>
-                    <tr><td>téva / kék</td><td>please / yes</td></tr>
-                    <tr><td>kalos</td><td>welcome all</td></tr>
-                </table>
-            </div>
-            <div>
-                <h3>Human States</h3>
-                <table class="vocab-table">
-                    <tr><td>réva / unréva</td><td>happy / sad</td></tr>
-                    <tr><td>ésa / zira</td><td>tired / okay</td></tr>
-                    <tr><td>néna / unnéna</td><td>truth / lie</td></tr>
-                    <tr><td>kima / gida</td><td>possible / necessity</td></tr>
-                </table>
-            </div>
-        </div>
+    <section class="card">
+        <h2>Say something</h2>
+        <div class="example"><div class="be">Sala! Havi tu s?</div>Hello! How are you?</div>
+        <div class="example"><div class="be">Mi s réva. Mi né féma fura.</div>I'm happy. I ate fruit.</div>
+        <div class="example"><div class="be">Lé fira wé hura na lé hula.</div>The bird will fly in the sky.</div>
+        <div class="example"><div class="be">Kvo tu gai po nésa?</div>Are you going home?</div>
+        <div class="example"><div class="be">du gai! Du lísa.</div>Don't go! Leave.</div>
     </section>
 
-    <section>
-        <h2>Chapter 7: Emphatic & Emotional Outbursts</h2>
-        <div class="callout">
-            <p>Beluma includes specific roots for strong frustration or emphasis.</p>
-            <table class="vocab-table">
-                <tr><td>bluma</td><td>curse / damn!</td></tr>
-                <tr><td>hura!</td><td>wow! / shock</td></tr>
-                <tr><td>frola</td><td>idiot / fool</td></tr>
-                <tr><td>pumra</td><td>nonsense / bullshit</td></tr>
-                <tr><td>ruga</td><td>damn it (frustration)</td></tr>
-            </table>
-        </div>
-    </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 XPDevs. The Beluma Language Specification is a proprietary technology of James Turner.</p>
+    <p>Lía Beluma v3 · a constructed language by James Turner (XPDevs).</p>
+    <p><a href="grammar.html">Full grammar</a> · <a href="lessons.html">Beginner course</a> · <a href="translator.html">Translator</a></p>
 </footer>
 
 </body>
