@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lía Beluma — Canon 04: Verbs — Tense · Aspect · Voice · Modals | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">Lía Beluma — Canon 04: Verbs — Tense · Aspect · Voice · Modals</span>
+  <span><a href="../index.html">Overview</a><a href="../grammar.html">Grammar</a><a href="../lessons.html">Course</a><a href="../translator.html">Translator</a></span>
+</header>
+<main>
+<h1>Lía Beluma — Canon 04: Verbs — Tense · Aspect · Voice · Modals</h1>
+<p>Rev 1 (Phase 2). Completes <code>grammar.html</code> §5. The verb itself never changes; tense,</p>
+<p>aspect, voice and mood are all built with pre-verbal particles, auxiliary verbs, and</p>
+<p>two participle suffixes — no conjugation, no exceptions.</p>
+<p>Pipeline (extended from Canon 03 §2):</p>
+<pre><code>
+[TOPIC ya] SUBJ (time) un (né|wé|wés) (AUX-ASPECT) (MODAL) VERB(-va|-ké) OBJ (PP)
+</code></pre>
+<hr>
+<h2>1. Tense (as already known, one fix)</h2>
+<table>
+<thead><tr><th>Marker</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>(none)</td><td>present</td><td><code>Mi gai.</code> I go / I am going</td></tr>
+<tr><td><code>né</code></td><td>past</td><td><code>Mi né gai.</code> I went</td></tr>
+<tr><td><code>wé</code></td><td>future</td><td><code>Mi wé gai.</code> I will go</td></tr>
+<tr><td><code>wés</code></td><td>imminent ("about to")</td><td><code>Mi wés gai.</code> I am about to go</td></tr>
+</tbody></table>
+<p><strong>Conflict C1 resolved:</strong> <code>wés</code> = <em>about to</em>. "Won't" is <code>un wé</code></p>
+<p>(<code>Mi un wé gai.</code>). The old <code>wés = won't</code> sense is retired; <code>h.txt</code> now agrees with</p>
+<p><code>grammar.html</code> and the engine renders <code>wés</code> as the subject-aware <em>"I am about to…"</em>.</p>
+<hr>
+<h2>2. Aspect — the efficient system</h2>
+<p>Beluma reuses two things you already own: the copula <code>s</code> and the suffixes</p>
+<p><code>-va</code> (‑ing) and <code>-ké</code> (done). Aspect is therefore compositional, like English</p>
+<p>"be + -ing" and "be + -ed":</p>
+<table>
+<thead><tr><th>Aspect</th><th>Construction</th><th>Example</th><th>Gloss</th></tr></thead>
+<tbody>
+<tr><td>progressive</td><td><code>s</code> + V-<code>-va</code></td><td><code>Mi s gai-va.</code></td><td>I am going</td></tr>
+<tr><td>past progressive</td><td><code>né s</code> + V-<code>-va</code></td><td><code>Mi né s gai-va.</code></td><td>I was going</td></tr>
+<tr><td>perfect (done going)</td><td><code>vóta</code> + V</td><td><code>Mi vóta gai.</code></td><td>I have gone</td></tr>
+<tr><td>past perfect</td><td><code>né vóta</code> + V</td><td><code>Mi né vóta gai.</code></td><td>I had gone</td></tr>
+<tr><td>future perfect</td><td><code>wé vóta</code> + V</td><td><code>Mi wé vóta gai.</code></td><td>I will have gone</td></tr>
+<tr><td>inchoative (begin to)</td><td><code>jála</code> + V</td><td><code>Mi jála gai.</code></td><td>I begin to go</td></tr>
+<tr><td>habitual (customarily)</td><td><code>véta</code> + V</td><td><code>Mi véta gai vavi.</code></td><td>I (usually) go in the morning</td></tr>
+<tr><td>iterative (again)</td><td><code>ré-</code> prefix</td><td><code>Mi ré-gai.</code></td><td>I go again</td></tr>
+</tbody></table>
+<p>Aspect markers are ordinary verbs taking a bare-verb complement — <code>vóta</code> is literally</p>
+<p>"finish", <code>jála</code> "begin", <code>véta</code> "every". This keeps the head-first logic: the aspect</p>
+<p>word owns the clause, the main verb is its object.</p>
+<blockquote><code>Mi né s gai-va, kvado tu siva-dora héna mu.</code> — I was going when you telephoned me.</blockquote>
+<blockquote><code>Lé fira né s hura-va na lé hula.</code> — The bird was flying in the sky.</blockquote>
+<blockquote><code>Mi wé vóta kiva fao vo.</code> — I will have finished work by evening.</blockquote>
+<p>*(-va and -ké stack with the copula; <code>véta</code> before a verb is an aspect adverb, before a</p>
+<p>noun it stays "every". No ambiguity in practice: "vetá misi" = every person, "véta gai"</p>
+<p>= usually go.)*</p>
+<hr>
+<h2>3. The participles (-va, -ké)</h2>
+<table>
+<thead><tr><th>Form</th><th>Meaning</th><th>Use</th></tr></thead>
+<tbody>
+<tr><td>V-<code>-va</code></td><td>-ing, ongoing</td><td>progressive (with <code>s</code>); also the verbal noun</td></tr>
+<tr><td>V-<code>-ké</code></td><td>-ed/-en, completed state</td><td>passive (with <code>s</code>); also "become ADJ"</td></tr>
+</tbody></table>
+<p><code>-ké</code> on an adjective turns the phrase into <em>has become</em>:</p>
+<blockquote><code>Lé néla s nula-ké.</code> — The water has become cold.</blockquote>
+<blockquote><code>Mi s ésa-ké.</code> — I have become tired.</blockquote>
+<blockquote><code>Lé gino s béla-ké.</code> — The girl has become beautiful.</blockquote>
+<hr>
+<h2>4. Voice — active / passive</h2>
+<ul>
+  <li><strong>Active:</strong> normal SVO. <code>Lé bino né féma lé fura.</code> — The boy ate the fruit.</li>
+  <li><strong>Passive:</strong> front the object as subject, verb becomes <code>s</code> + V-<code>-ké</code>; the doer is introduced with <code>li</code> (by, already in the dictionary):</li>
+</ul>
+<blockquote><code>Lé fura s féma-ké li lé bino.</code> — The fruit is eaten by the boy.</blockquote>
+<blockquote><code>Lé fura né s féma-ké li lé bino.</code> — The fruit was eaten by the boy.</blockquote>
+<blockquote><code>Lé nésa wé vésa-ké li mis.</code> — The house will be built by us.</blockquote>
+<ul>
+  <li><strong>Agentless passive:</strong> omit <code>li</code>-phrase. <code>Lé tura s dora-ké.</code> — The door is opened.</li>
+  <li><strong>Perfect passive:</strong> <code>vóta s</code> + V-<code>-ké</code>: <code>Lé fura vóta s féma-ké.</code> — The fruit has been eaten (is in the eaten state).</li>
+  <li>Register: colloquial Beluma prefers active and the generic <code>zava</code> agent (<code>zava né féma lé fura</code>, "one ate the fruit"). Passive is literary / formal / legal / news-register, exactly like French or German formal text.</li>
+</ul>
+<p><strong>Voice mirror:</strong> <code>s</code> + V-<code>-va</code> = progressive (active), <code>s</code> + V-<code>-ké</code> = passive/result.</p>
+<p>Two suffix contrasts = two opposed but parallel constructions.</p>
+<hr>
+<h2>5. Modals — the complete stack</h2>
+<p>All modals take a bare verb. They are not inflected; tense composes leftward.</p>
+<table>
+<thead><tr><th>Modal</th><th>Meaning</th><th>Base example</th></tr></thead>
+<tbody>
+<tr><td><code>kima</code></td><td>can / be able</td><td><code>Mi kima gai.</code> I can go.</td></tr>
+<tr><td><code>unkima</code></td><td>cannot</td><td><code>Mi unkima gai.</code> I cannot go.</td></tr>
+<tr><td><code>néma</code></td><td>may (permission)</td><td><code>Tu néma gai.</code> You may go.</td></tr>
+<tr><td><code>gida</code></td><td>must / have to</td><td><code>Mis gida gai.</code> We must go.</td></tr>
+<tr><td><code>gida-nira</code></td><td>ought to / should (mild)</td><td><code>Tu gida-nira soma.</code> You ought to sleep.</td></tr>
+<tr><td><code>sud</code></td><td>should (advice)</td><td><code>Tu sud gai.</code> You should go.</td></tr>
+<tr><td><code>unsud</code></td><td>shouldn't</td><td><code>Tu unsud gai.</code> You shouldn't go.</td></tr>
+<tr><td><code>da-va</code></td><td>would / could / might</td><td><code>Mi da-va gai.</code> I would/could/might go.</td></tr>
+<tr><td><code>vento</code></td><td>maybe (adverb of likelihood)</td><td><code>Vento nivo gai.</code> Maybe he goes.</td></tr>
+</tbody></table>
+<p><strong>Negation semantics (keys to get right):</strong></p>
+<table>
+<thead><tr><th>Not</th><th>Beluma</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>no obligation</td><td><code>un gida</code></td><td>don't have to</td></tr>
+<tr><td>prohibition</td><td><code>du</code> / <code>un néma</code></td><td>must not / not allowed</td></tr>
+<tr><td>can't</td><td><code>unkima</code> / <code>un kima</code></td><td>cannot</td></tr>
+<tr><td>shouldn't</td><td><code>unsud</code></td><td>shouldn't</td></tr>
+</tbody></table>
+<p><strong>Tense + modal composition (slot order: tense before modal):</strong></p>
+<blockquote><code>Mi né kima gai.</code> — I could go (past ability).</blockquote>
+<blockquote><code>Mi wé gida gai.</code> — I will have to go.</blockquote>
+<blockquote><code>Mi wé kima gai.</code> — I will be able to go.</blockquote>
+<blockquote><code>Mi un wé gida gai.</code> — I won't have to go.</blockquote>
+<blockquote><code>Mi né da-va gai.</code> — I would have gone (counterfactual; see Canon 05).</blockquote>
+<hr>
+<h2>6. Existential ("there is/are")</h2>
+<p>New root <strong><code>esto</code></strong> (from <code>esera</code> = being/existence, h.txt):</p>
+<blockquote><code>Esto o loma ra lé nésa.</code> — There is a tree near the house.</blockquote>
+<blockquote><code>Un esto o misi na lé tiva.</code> — There is no one in the room.</blockquote>
+<blockquote><code>Esto-s misu na lé méra.</code> — There are TU them at the sea?? — mark: <code>Esto kima-s …</code> —</blockquote>
+<p>plural users: <code>Esto mísé-s na lé tiva.</code> — There are people in the room.</p>
+<p>The negation is <code>un esto</code> (there isn't), never <code>zéra esto</code>.</p>
+<blockquote><code>Esto mises na lé tiva.</code> — There are people in the room.</blockquote>
+<hr>
+<h2>7. Colloquial interplay</h2>
+<p>The irregular colloquial pasts still apply, prefixed to the aspect stack:</p>
+<blockquote><code>Mi rá s gai-va.</code> — I was going. (rá = was)</blockquote>
+<blockquote><code>Nivo vára vóta féma.</code> — He had finished eating. (vára = went/finished)</blockquote>
+<blockquote><code>Mis dá jála lérn.</code> — We began to learn. <em>(dá = did; see Canon 07)</em></blockquote>
+<p>Rev 1 — Phase 2. Canon-complete for tense·aspect·voice·modals. Open items pushed to</p>
+<p>Phase 3: perfect‑passive‑progressive stacking rules, subjunctive-style "unsūd" scope,</p>
+<p>and classifier data for the coining framework.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.js</code> · Dictionary VTXT 3.7</p>
+</main>
+</body>
+</html>

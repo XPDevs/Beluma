@@ -87,3 +87,17 @@ beluma-word = English gloss / another gloss
 
 Constructed by James Turner (XPDevs). This is a learning project — fork it and teach Beluma
 however you like.
+## Learn the language directly in your browser
+
+You can learn Beluma without downloading anything. Start here:
+
+- **[index.html](index.html)** — Overview of Beluma (what it is, why)
+- **[grammar.html](grammar.html)** — Complete grammar reference
+- **[lessons.html](lessons.html)** — Quick 8-lesson taster (read and practice)
+- **[lessons/README.html](lessons/README.html)** — Full 40-lesson A1→B1 course (books 01–04) with drills and keys
+- **[translator.html](translator.html)** — Interactive translator (Beluma ↔ English) with word analysis
+- **[exams/README.html](exams/README.html)** — Certification (A1–C2) and sample papers
+- **[literature/corpus/README.html](literature/corpus/README.html)** — Native-speaker corpus (B1+ reading band)
+- **[literature/if/if-01-the-key.html](literature/if/if-01-the-key.html)** — Interactive fiction (dictionary-locked)
+
+All content is dictionary-locked to VTXT 3.9 and works entirely in the browser. Just open `index.html` in any modern browser to get started.

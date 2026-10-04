@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lía Beluma — Canon 08: Education & Examination | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">Lía Beluma — Canon 08: Education & Examination</span>
+  <span><a href="../index.html">Overview</a><a href="../grammar.html">Grammar</a><a href="../lessons.html">Course</a><a href="../translator.html">Translator</a></span>
+</header>
+<main>
+<h1>Lía Beluma — Canon 08: Education &amp; Examination</h1>
+<p>Rev 1 (Phase 5). Defines the official course and certification, and one hard rule:</p>
+<p><strong>the exam never runs ahead of the dictionary.</strong> Every word in any paper must exist in</p>
+<p><code>h.txt</code> at the VTXT the paper is printed against, so a learner can always check the answer</p>
+<p>with the reference translator.</p>
+<hr>
+<h2>1. The course</h2>
+<ul>
+  <li><strong>40 lessons, four books</strong> (A1→B1), housed in <code>lessons/</code>: - book-01 (1–10) A1 · book-02 (11–20) A2 · book-03 (21–30) B1 · book-04 (31–40) B1+ reading &amp; composition.</li>
+  <li>Each lesson: objective → grammar → vocabulary → examples → drills with a key.</li>
+  <li>The 8 legacy quick-lessons in <code>lessons.html</code> remain the "20-minute" taster and overlap book-01; the books are canonical.</li>
+</ul>
+<h2>2. The drill types</h2>
+<table>
+<thead><tr><th>Code</th><th>Name</th><th>Tests</th></tr></thead>
+<tbody>
+<tr><td>D1</td><td>read-aloud</td><td>sounds, stress, rhythm</td></tr>
+<tr><td>D2</td><td>transformation</td><td>one mechanical change (tense/plural/negation/register)</td></tr>
+<tr><td>D3</td><td>gap-fill</td><td>recall of the exact construction</td></tr>
+<tr><td>D4</td><td>translation</td><td>two-way, the core skill</td></tr>
+<tr><td>D5</td><td>free response</td><td>composition / judgment, with model answers</td></tr>
+</tbody></table>
+<h2>3. The examination</h2>
+<ul>
+  <li>Six levels <strong>A1–C2</strong> conforming to the Council scale; ≥60% pass, ≥50% per section.</li>
+  <li>Paper blueprint (six sections, weights 25/25/20/15/10/5): reading → grammar → translation → listening → writing → speaking.</li>
+  <li>Marks: translation 1 pt/item (half-point for grammar-only errors); register fidelity is assessed from B1 up; elegant canon-06-clean alternatives are accepted if the examiner records them.</li>
+</ul>
+<h2>4. The dictionary lock</h2>
+<ul>
+  <li>Papers print <code>VTXT 3.x</code> on the front sheet; the examiner's key cites the same version.</li>
+  <li>Coining for teaching is allowed in the classroom but must clear the coiner (<code>tools/coiner.js</code>, canon 06) before any exam item uses it. A learner's coin that passes V1–V5 verdicts is never marked wrong for novelty.</li>
+</ul>
+<h2>5. Teacher &amp; university</h2>
+<ul>
+  <li>Teacher certificate: three units (methods, practice, assessment); requires ≥B2 in the exam. See <code>teacher/README.md</code>.</li>
+  <li>University: four-semester track (course grammar, corpus &amp; translation, literature, lexicography with a defended coin). 60% written + 20% oral + 20% portfolio.</li>
+</ul>
+<h2>6. Revision policy</h2>
+<p>Education content follows the dictionary lock and may be revised (Review Rev) without</p>
+<p>canon numbers changing; any change to the <em>exam blueprint</em> itself supersedes this section</p>
+<p>and bumps this canon's revision.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.js</code> · Dictionary VTXT 3.7</p>
+</main>
+</body>
+</html>

@@ -24,6 +24,7 @@
     { aff: 'la', en: "'s", kind: 'gen' },
     { aff: 'le', en: '-ly', kind: 'adv' },
     { aff: 'va', en: '-ing', kind: 'part' },
+    { aff: 'ke', en: 'done (past participle) ', kind: 'part' },
     { aff: 'et', en: 'young ', kind: 'dim' },
     { aff: 'os', en: 'group of ', kind: 'col' },
     { aff: 'an', en: 'place of ', kind: 'loc' },
@@ -55,6 +56,7 @@
     eat: 'ate', drink: 'drank', sleep: 'slept', go: 'went', run: 'ran', see: 'saw',
     know: 'knew', bring: 'brought', give: 'gave', take: 'took', make: 'made', do: 'did',
     say: 'said', hear: 'heard', sing: 'sang', swim: 'swam', fly: 'flew', win: 'won',
+    can: 'could',
     understand: 'understood', tell: 'told', speak: 'spoke', feel: 'felt', build: 'built',
     cut: 'cut', sit: 'sat', stand: 'stood', write: 'wrote', buy: 'bought', sell: 'sold',
     grow: 'grew', live: 'lived', play: 'played', wait: 'waited', open: 'opened',
@@ -86,7 +88,7 @@
     am: 's', is: 's', are: 's', be: 's', will: 'we', would: 'da-va', can: 'kima',
     could: 'da-va', may: 'nema', might: 'da-va', must: 'gida', should: 'sud',
     won: 'we un', cant: 'unkima', cannot: 'unkima', then: 'tola', that: 'ta',
-    love: 'leva', lingua: 'lingua', one: 'ona', two: 'tuo', three: 'tro', four: 'fora',
+    love: 'leva', one: 'ona', two: 'tuo', three: 'tro', four: 'fora',
     five: 'kvin', six: 'sixa', seven: 'sita', eight: 'oita', nine: 'noa', ten: 'diza',
     zero: 'zera', hundred: 'centa', thousand: 'mila', million: 'miliona',
     ate: 'ne fema', drank: 'ne neva', went: 'ne gai', ran: 'ne vira', saw: 'ne hena',
@@ -140,7 +142,6 @@
     // Fixed function words (added only if the dictionary has none).
     Object.keys(FIXED_EN).forEach(k => { if (enToBe[k] === undefined) enToBe[k] = FIXED_EN[k]; });
     if (beToEn['beluma'] === undefined) beToEn['beluma'] = 'Beluma (the language)';
-    if (beToEn['lingua'] === undefined) beToEn['lingua'] = 'language';
     dictReady = true;
   }
 
@@ -317,14 +318,14 @@
   }
 
   /* ---------- Beluma -> English ---------- */
-  const TENSE_MARKERS = { 'ne': 'PAST', 'we': 'FUT', 'wés': 'FUT-NEG' };
+  const TENSE_MARKERS = { 'ne': 'PAST', 'we': 'FUT', 'wes': 'IMM' };
   const VERB_ROOTS = new Set([
     'gai','fema','neva','hena','kema','sova','tela','dova','geva','losa','vasa',
     'vesa','fera','tora','jiva','jesa','niva','vira','hura','roma','mora','kisa',
     'lisa','tita','ziva','leva','nima','soma','diva','sira','loma','sola','dera',
     'tuna','puma','zura','rala','gava','pavra','rola','nikas','tina','vota','jala',
-    'lora','zanva','fola','pera','sak','triva','kosa','dali','hasenge','tusa','ruana',
-    'tita','morwa','dasa','davo','lida','sova','tusa','rova','rava','soma','sijan'
+    'lora','zanva','fola','pera','sak','triva','kosa','tusa','ruana',
+    'tita','dasa','davo','lida','sova','tusa','rova','rava','soma','esto'
   ]);
 
   function beToEnToken(token) {
@@ -332,7 +333,7 @@
     const analysis = analyzeBeluma(lower);
     if (!analysis) return { text: token, root: lower, unknown: true };
 
-    if (TENSE_MARKERS[lower]) return { text: '', root: lower, tense: TENSE_MARKERS[lower], unknown: false };
+    if (TENSE_MARKERS[normalizeAccents(lower)]) return { text: '', root: lower, tense: TENSE_MARKERS[normalizeAccents(lower)], unknown: false };
     if (lower === 'kvo') return { text: 'Do', root: lower, qmark: true, unknown: false };
     if (lower === 'du') return { text: '', root: lower, negImp: true, unknown: false };
     if (lower === 'un') return { text: '', root: lower, neg: true, unknown: false };
@@ -384,6 +385,8 @@
     }
     if (tense === 'FUT') return futureEN(w);
     if (tense === 'FUT-NEG') return 'will not ' + w.split(' ')[0];
+    if (tense === 'NEG-FUT') return 'will not ' + w.split(' ')[0];
+    if (tense === 'NEG-PAST') return 'did not ' + w.split(' ')[0];
     return w;
   }
 
@@ -434,7 +437,7 @@
     tokenize(text).forEach((tok, i, arr) => {
       if (/^\s+$/.test(tok) || /^[.,!?;:'"()]$/.test(tok)) { out.push({ text: tok, unknown: false, raw: tok }); return; }
       const r = beToEnToken(tok);
-      if (r.tense) { pendingTense = r.tense; out.push({ text: '', unknown: false, raw: tok }); return; }
+      if (r.tense) { pendingTense = pendingTense === 'NEG' ? 'NEG-' + r.tense : r.tense; out.push({ text: '', unknown: false, raw: tok }); return; }
       if (r.qmark) { pendingQ = true; if (!capDone) { out.push({ text: 'Do', unknown: false, raw: tok }); capDone = true; } else { out.push({ text: 'do', unknown: false, raw: tok }); } return; }
       if (r.negImp) { pendingImp = true; out.push({ text: '', unknown: false, raw: tok }); return; }
       if (r.neg) { pendingTense = 'NEG'; out.push({ text: '', unknown: false, raw: tok }); return; }
@@ -451,10 +454,18 @@
       if (pendingImp) {
         t = "Don't " + (t || ''); pendingImp = false;
       } else if (pendingTense === 'NEG') {
-        const isVerb = VERB_ROOTS.has(r.root);
-        t = prefixNeg(t, isVerb); pendingTense = '';
+        if (r.root === 'esto') { t = 'There is no'; pendingTense = ''; }
+        else { const isVerb = VERB_ROOTS.has(r.root); t = prefixNeg(t, isVerb); pendingTense = ''; }
       } else if (pendingTense && t) {
-        t = applyTenseToWord(r, pendingTense); pendingTense = '';
+        if (pendingTense === 'IMM') {
+          // "about to": subject conjugation only (the subject word already printed)
+          const subj = { mi: 'am ', tu: 'are ', nivo: 'is ', siva: 'is ', et: 'is ',
+            mis: 'are ', tur: 'are ', misu: 'are ', miro: 'are ', zava: 'is ' };
+          t = (subj[lastRoot] || 'is ') + 'about to ' + t;
+        } else {
+          t = applyTenseToWord(r, pendingTense);
+        }
+        pendingTense = '';
         if (t.startsWith('will') && t === 'will not ') pendingTense = '';
       }
       if (r.root) { lastRoot = r.root; lastRaw = tok; }

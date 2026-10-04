@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lía Beluma — Canon 03: Word Order & Sentence Structure | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">Lía Beluma — Canon 03: Word Order & Sentence Structure</span>
+  <span><a href="../index.html">Overview</a><a href="../grammar.html">Grammar</a><a href="../lessons.html">Course</a><a href="../translator.html">Translator</a></span>
+</header>
+<main>
+<h1>Lía Beluma — Canon 03: Word Order &amp; Sentence Structure</h1>
+<p>Rev 1 (Phase 1). Formalizes and completes the SVO sketch in <code>grammar.html</code> §2 and §12.</p>
+<p>Applies to formal Beluma; colloquial fusions (Canon 09) keep the same order, only</p>
+<p>compressed.</p>
+<hr>
+<h2>1. Core order: SVO</h2>
+<p><strong>Subject – Verb – Object.</strong> Nothing else is required:</p>
+<blockquote><code>Siva leva mu.</code> — She loves me.   (S = siva, V = leva, O = mu)</blockquote>
+<blockquote><code>Mi féma fura.</code> — I eat fruit.</blockquote>
+<p>Every clause places these three first; everything else attaches around them.</p>
+<p>The verb is never inflected for person/number/tense-form — time lives in a pre-verbal</p>
+<p>particle, so V is lexically constant.</p>
+<hr>
+<h2>2. The full particle pipeline</h2>
+<p>A finite Beluma clause in formal register:</p>
+<pre><code>
+[TOPIC ya]  SUBJECT  (time-word)  (un)  (né | wé)  (MODAL)  VERB  (OBJECT)  (PP house)
+</code></pre>
+<p>Order among pre-verbal particles is fixed:</p>
+<table>
+<thead><tr><th>Position</th><th>Slot</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>0</td><td>topic <code>ya</code></td><td><code>Fura ya, mi né féma.</code> — The fruit, I ate it.</td></tr>
+<tr><td>1</td><td>subject</td><td><code>mi</code>, <code>lé bino</code>, <code>eka misi</code></td></tr>
+<tr><td>2</td><td>time adverb (optional)</td><td><code>safa</code> (yesterday), <code>vo</code> (in the evening)</td></tr>
+<tr><td>3</td><td>negation <code>un</code></td><td>must precede tense marker</td></tr>
+<tr><td>4</td><td>tense <code>né</code> / <code>wé</code></td><td><code>né</code> past · <code>wé</code> future · (none) present</td></tr>
+<tr><td>5</td><td>modal</td><td><code>kima</code> can · <code>gida</code> must · <code>sud</code> should · <code>néma</code> may · <code>da-va</code> would</td></tr>
+<tr><td>6</td><td>verb</td><td>head-truth of the clause</td></tr>
+</tbody></table>
+<blockquote><code>Mi safa un né kima gai.</code> — Yesterday I could not go.</blockquote>
+<p>(S = mi, TIME = safa, NEG = un, TENSE = né, MODAL = kima, V = gai)</p>
+<p><strong>Rule:</strong> <code>un</code> never sits after the tense marker. <code>wé un</code> is non-canonical (use <code>un wé</code>).</p>
+<p><code>un</code> + <code>né</code> → "didn't"; <code>un</code> + <code>wé</code> → "won't" (this supersedes the old <code>wés</code> = won't,</p>
+<p>resolving conflict C1: <code>wés</code> = <em>about to</em>).</p>
+<hr>
+<h2>3. Noun phrase internal order</h2>
+<pre><code>
+(DEMONSTRATIVE) (POSSESSOR) (NUMBER) (ADJECTIVE*) NOUN (RELATIVE CLAUSE)
+</code></pre>
+<ul>
+  <li>Demonstratives before possessor: <code>eka mi-la nésa</code> = this my home / this home of mine.</li>
+  <li>Possessor before adjective: <code>mi-la béla nésa</code> = my beautiful home.</li>
+  <li>Adjectives stack before the noun, nothing after except the relative clause: <code>ona réva nira lavo</code> = one happy small dog.</li>
+  <li><code>lé</code> (the) and <code>o</code> (a) are optional determiners that lead the phrase: <code>lé mi-la béla nésa</code> (the my beautiful home) — allowed in formal writing; colloquially speakers drop <code>lé</code> with possessives (see Canon 01).</li>
+</ul>
+<hr>
+<h2>4. Copular (be) and existence</h2>
+<ul>
+  <li>Identity/quality: <code>NP1 s NP2 / ADJ</code>: <code>Mi s kémor.</code> I am a teacher. <code>Lé hula s bélu.</code> The sky is blue.</li>
+  <li><code>zava</code> impersonality: <code>Zava s gavo ki ...</code> — It is good that…</li>
+  <li>Location uses <code>s</code> + preposition: <code>Lé fira s na lé loma.</code> The bird is in the tree.</li>
+  <li><strong>Existence ("there is")</strong> is the verb <strong><code>esto</code></strong> (Phase 2, VTXT 3.3): <code>Esto o loma ra lé nésa.</code> — There is a tree near the house. <code>Un esto o misi na lé tiva.</code> — There is no one in the room. Full treatment in Canon 04 §6 (<code>esera</code> = being/existence stays as the noun).</li>
+</ul>
+<hr>
+<h2>5. Questions</h2>
+<ul>
+  <li><strong>Yes/no:</strong> front <code>kvo</code>, keep SVO: <code>Kvo tu gai po nésa?</code> — Do you go home? <code>Kvo siva leva mu?</code> — Does she love me? (auxiliary is not translated; <code>kvo</code> owns the job)</li>
+  <li><strong>Wh-words:</strong> front the wh-word, keep SVO after it — no inversion: <code>Kvado tu gai?</code> When do you go? · <code>Kwasi s ta?</code> Who is that? · <code>Kwaras s lé lavo?</code> Where is the dog?</li>
+  <li><strong>Embedded questions</strong> (Canon 05 §3): introduced by the same wh-words after <code>kéma</code>/<code>péra</code>/<code>téla</code>; no <code>kvo</code>, no inversion.</li>
+  <li><strong>Tag questions</strong> (informal): fallback intonation + <code>koro?</code> = "…, right?/isn't it?": <code>Tu s ésa, koro?</code> You're tired, aren't you?</li>
+  <li><strong>Alternative (or-) questions:</strong> front <code>kvo</code>, present options with <code>ora</code>: <code>Kvo tu nima néla ora fura?</code> Do you want water or fruit?</li>
+</ul>
+<hr>
+<h2>6. Imperatives</h2>
+<ul>
+  <li><strong>Basic:</strong> verb-initial, subject implicit 2sg: <code>Gai!</code> Go! · <code>Féma!</code> Eat! · <code>Sova po mi!</code> Speak to me!</li>
+  <li><strong>Plural / polite:</strong> explicit <code>tur</code> after the verb (or before — both heard; formal puts it first): <code>Gai tur!</code> You all go! / Go, please.</li>
+  <li><strong>Negative:</strong> front <code>du</code>, no <code>un</code> needed: <code>Du gai!</code> Don't go! · <code>Du féma ta!</code> Don't eat that!</li>
+  <li><strong>Polite request:</strong> verb-initial + <code>téva</code> (please): <code>Dora tura, téva.</code> Open the door, please.</li>
+  <li><strong>Let's:</strong> <code>mis</code> + verb-initial sense, or <code>sova ... po mis</code> patterns; formal coinage is <code>V-mis</code> in Phase 2. Interim: <code>Mis gai!</code> We go! (used as "let's go").</li>
+</ul>
+<hr>
+<h2>7. Adverbs &amp; adjuncts</h2>
+<ul>
+  <li><strong>Manner (+ <code>-lé</code>):</strong> after the verb, after the object if present: <code>Mi féma gavo-lé.</code> I eat well. <code>Nivo né vésa lé nésa sulo-lé.</code> He built the house strongly.</li>
+  <li><strong>Time words:</strong> pre-verbal slot (pipeline slot 2) by default: <code>Mi safa né gai.</code> Yesterday I went. Emphasis → clause-final: <code>Mi né gai safa.</code></li>
+  <li><strong>Place phrases (PP):</strong> after the object: <code>Lé fira hura na lé hula.</code> The bird flies in the sky. <code>Mi vása lé bira su lé tavi.</code> I put the thing on the table.</li>
+  <li><strong>Adverb scope:</strong> a clause-initial adverb or PP may precede the whole clause; when it does, no <code>ya</code> needed and SVO follows intact: <code>Safa, mi né gai.</code> Yesterday, I went.</li>
+</ul>
+<hr>
+<h2>8. Ditransitives ("give")</h2>
+<p>Two canonical frames, both in use:</p>
+<ol>
+  <li><strong>Recipient-first:</strong> <code>Géva mu lé fura.</code> Give me the fruit. (recipient before theme)</li>
+  <li><strong>Theme-first:</strong> <code>Géva lé fura po mi.</code> Give the fruit to me. (<code>po</code> = to)</li>
+</ol>
+<p>Frame 1 is more verbal/daily; frame 2 is narrative/formal. <code>mu</code> fills the recipient slot</p>
+<p>in frame 1; other recipients use the full noun/pronoun: <code>Géva lé bino lé fura.</code></p>
+<p>Give the boy the fruit. <code>Nivo né géva lé gino lé firos.</code> He gave the girl the birds.</p>
+<hr>
+<h2>9. Prepositions</h2>
+<p>Prepositions precede their noun phrase (head-initial, matching compound order is only in</p>
+<p>compounds; phrases are prepositional):</p>
+<p><code>na</code> in/at · <code>po</code> to/toward · <code>dé</code> from · <code>su</code> on/above · <code>un-su</code> under · <code>vél</code> with ·</p>
+<p><code>li</code> by (agent, passive — see Canon 04) · <code>ra</code> near · <code>tera</code> through · <code>trima</code> between ·</p>
+<p><code>fao</code> for · etc. (full registry in <code>h.txt</code>).</p>
+<hr>
+<h2>10. Comparison</h2>
+<p>Adjective → comparative <code>mesa … ban</code>, superlative <code>susa…</code>:</p>
+<blockquote><code>Nivo s mesa sulo ban mi.</code> He is stronger than me.</blockquote>
+<blockquote><code>Susa béla gino na lé tiva s siva.</code> The most beautiful girl in the room is her.</blockquote>
+<p><em>(Colloquial alternative: <code>mesa sulo ban</code> → fused <code>mesasulo-ban</code> in fast speech.)</em></p>
+<hr>
+<h2>11. Subordinate &amp; relative clauses</h2>
+<ul>
+  <li><strong>Relative clauses are postnominal</strong>, opened by <code>ka</code> (subject), <code>ta</code> (object), <code>ka-la</code> (possessive); no movement inside the clause (see grammar §13, extended in Canon 05): <code>Lé misi ka s unréva.</code> The person who is sad. · <code>Lé fura ta mi né féma.</code> The fruit that I ate.</li>
+  <li><strong>Adverbial subordinators head their own clause</strong>, order free (clause-final is unmarked): <code>kausa</code> because · <code>béza</code> since · <code>da</code> if · <code>béra</code> although · <code>sunés</code> so/therefore · <code>ekse</code> thus · <code>seke</code> then · <code>kondise</code> provided that. <code>Mi un gai, kausa mi s ésa.</code> I'm not going, because I'm tired.</li>
+</ul>
+<hr>
+<h2>12. Register summary (word order differences)</h2>
+<table>
+<thead><tr><th>Feature</th><th>Formal</th><th>Colloquial</th></tr></thead>
+<tbody>
+<tr><td>Word order</td><td>strict SVO, particles separate</td><td>SVO kept; topicalization with <code>ya</code> common</td></tr>
+<tr><td>Pronouns</td><td>full forms</td><td>fusions: <code>mila</code>, <code>nésana</code>, <code>wégai</code></td></tr>
+<tr><td>Personals</td><td><code>né</code>/<code>wé</code> markers</td><td>irregular <code>vára</code> (went), <code>rá</code> (was), <code>dá</code> (did)</td></tr>
+<tr><td>Politeness</td><td><code>tur</code> explicit</td><td><code>tu</code> + intonation, discourse markers</td></tr>
+</tbody></table>
+<hr>
+<h2>Checklist (learners can test against the translator)</h2>
+<ol>
+  <li>Subject before verb, object after. ✓</li>
+  <li>Time before verb, manner after verb. ✓</li>
+  <li>Negation + tense + modal, in that order, all before the verb. ✓</li>
+  <li>Demonstrative → possessor → number → adjective → noun. ✓</li>
+  <li>Question marker or wh-word first; nothing else moves. ✓</li>
+  <li>Imperative = verb first. Simple. Rinse. Speak.</li>
+</ol>
+<p>Rev 1. Open items → Phase 2: existential verb, embedded questions, passive agents (<code>li</code>).</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.js</code> · Dictionary VTXT 3.7</p>
+</main>
+</body>
+</html>

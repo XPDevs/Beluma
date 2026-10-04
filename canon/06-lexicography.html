@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lía Beluma — Canon 06: Lexicography — Coining, Phonotactics & Loanword Policy | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">Lía Beluma — Canon 06: Lexicography — Coining, Phonotactics & Loanword Policy</span>
+  <span><a href="../index.html">Overview</a><a href="../grammar.html">Grammar</a><a href="../lessons.html">Course</a><a href="../translator.html">Translator</a></span>
+</header>
+<main>
+<h1>Lía Beluma — Canon 06: Lexicography — Coining, Phonotactics &amp; Loanword Policy</h1>
+<p>Rev 1 (Phase 3). The rulebook for growing the dictionary from 779 entries toward 50,000+.</p>
+<p>Every entry added by the machine or by hand must be validated against this canon and</p>
+<p>against <code>tools/coiner.js</code>.</p>
+<hr>
+<h2>1. Goals &amp; targets</h2>
+<table>
+<thead><tr><th>Tier</th><th>Count</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>core (now)</td><td>779</td><td>done</td></tr>
+<tr><td>semantic-field seed (this phase)</td><td>+~200</td><td>being generated</td></tr>
+<tr><td>macro-batches (this phase)</td><td>10,000</td><td>machine + community</td></tr>
+<tr><td>serious competitor</td><td>100,000+</td><td>compounding is generative</td></tr>
+<tr><td>long-term</td><td>250,000+</td><td><em>any two roots legally coin</em></td></tr>
+</tbody></table>
+<p>The dictionary is a <em>catalog of attested words</em>, not a closed list. The compounding</p>
+<p>engine already understands any root+root word; entering a word in <code>h.txt</code> just fixes its</p>
+<p>reading and gloss. Two engines therefore grow the language:</p>
+<ol>
+  <li>the <strong>grammar engine</strong> (compounding + affixes) which is infinite;</li>
+  <li>the <strong>lexicon engine</strong> (this canon + <code>tools/coiner.js</code>) which attests the frequent words.</li>
+</ol>
+<hr>
+<h2>2. Phonotactics (hard constraints)</h2>
+<p>Words must be sayable under the 23-letter system — one letter, one sound (<code>j=y</code>, <code>r</code> rolled,</p>
+<p><code>x=ks</code>, <code>w=w</code>).</p>
+<ul>
+  <li><strong>Vowels:</strong> <code>a e i o u</code>. Five, one sound each.</li>
+  <li><strong>No letters</strong> <code>c</code>, <code>q</code>, <code>y</code> — use <code>k</code>, <code>w/v</code>.</li>
+  <li><strong>Syllable shape:</strong> <code>(C)V(C)</code>, open-favouring. <code>ne-sa</code>, <code>li-sa</code>, <code>fu-ra</code>.</li>
+  <li><strong>Allowed onset clusters</strong> (codex-observed, exhaustive): - stop/r: <code>pr tr kr br gr dr fr vr sr</code> - stop/l: <code>pl tl kl bl gl fl vl sl</code> - <code>kv</code> (and the read-out <code>tv</code>? no — only <code>kv</code>), <code>st</code>.</li>
+  <li><strong>Allowed word-final codas:</strong> <code>s n r m l k</code> (and <code>x</code> = /ks/).</li>
+  <li><strong>No tri-consonant clusters; no clusters across a syllable break</strong> except the allowed coda + allowed onset (<code>in-ves-ta</code>, <code>im-por-ta</code>).</li>
+  <li><strong>Default stress:</strong> penultimate; the acute accent marks any other stress and is always optional in writing.</li>
+</ul>
+<table>
+<thead><tr><th><strong>Validator check (permitted):</strong> `/^(?:[abdefghijklmnoprstuvwxz]</th><th>pr</th><th>tr</th><th>kr</th><th>br</th><th>gr</th><th>dr</th><th>fr</th><th>vr</th><th>sr</th><th>pl</th><th>tl</th><th>kl</th><th>bl</th><th>gl</th><th>fl</th><th>vl</th><th>sl</th><th>kv</th><th>st)(?:[aeiou](?:[snrmlk]</th><th>x)?(?:[aeiou]</th><th>(?:pr</th><th>tr</th><th>kr</th><th>br</th><th>gr</th><th>dr</th><th>fr</th><th>vr</th><th>sr</th><th>pl</th><th>tl</th><th>kl</th><th>bl</th><th>gl</th><th>fl</th><th>vl</th><th>sl</th><th>kv</th><th>st))?)*$/<code>-ish — enforced in code, simpler to trust </code>tools/coiner.js`.</th></tr></thead>
+<tbody>
+</tbody></table>
+<hr>
+<h2>3. The four coining tiers</h2>
+<p><strong>Tier 1 — transparent compound (never skip it).</strong> Head-first: main meaning first,</p>
+<p>specifier(s) after. This is home territory and supplies ~80% of future words.</p>
+<p><code>vosa-zanva</code> = body+defense = <em>immune system</em>; <code>koma-meda</code> = pain+medicine = <em>painkiller</em>;</p>
+<p><code>saro-kémor</code> = star+knower = <em>astronomer</em>; <code>gava-kora</code> = money+box = <em>wallet</em>.</p>
+<p>Rules:</p>
+<ul>
+  <li>existing root(s) only, joined with <code>-</code>;</li>
+  <li>the head root determines category (noun head → noun),</li>
+  <li>listed entries win over generated ones when both exist (the listing fixes the reading).</li>
+</ul>
+<p><strong>Tier 2 — affix-regular derivation (do NOT list).</strong> The glosser handles</p>
+<p><code>-s -as -la -nira -sula -va -ké -or -os -ét -an -lek -ik -lé -ji</code>, prefixes</p>
+<p><code>un- ni- ré-</code>, tool <code>-pira</code>, platform <code>-tavi</code>. Listing them is redundant — except where</p>
+<p>the form has taken on an unpredictable sense (e.g. <code>nela-sula</code> = ocean, not just "big</p>
+<p>water"), which is exactly when it should be listed.</p>
+<p><strong>Tier 3 — dedicated root (for non-compositional concepts).</strong> When no transparent</p>
+<p>compound says it. Must be collision-free against <code>h.txt</code>, respect phonotactics, and avoid</p>
+<p>near-clone of an existing root (e.g. don't add <code>mune</code> next to <code>muna/existing</code>). One</p>
+<p>meaning duty — no two new roots that mean the same thing.</p>
+<p><strong>Tier 4 — international loan (academic/technical register).</strong> Respelled to (C)V(C),</p>
+<p>open syllables preferred, then glossed with <code>(loanword)</code> tag. Permitted where the concept</p>
+<p>is genuinely international and the everyday tier is too heavy (Comet, galaxy, robot,</p>
+<p>atom). Everyday synonyms keep Tier 1 forms:</p>
+<p><code>kometa</code> (comet) but <code>nela-gaza</code> (steam = water-gas); <code>planeta</code> but <code>hula-gai-or</code></p>
+<p>(astronaut = sky-goer).</p>
+<hr>
+<h2>4. Semantic-field taxonomy (the catalog of the world)</h2>
+<p>Each field is a working set of head concepts, documented with a template line per</p>
+<p>high-frequency seed. Language must cover: astronomy, biology, chemistry, physics,</p>
+<p>mathematics, computing, economics, law, politics, medicine, engineering, military,</p>
+<p>emotions/psychology, religion/philosophy, music, sports, food/everyday, slang.</p>
+<p>The machine batches are keyed by these fields (<code>tools/domain-data.js</code>).</p>
+<p><strong>Engineering template for compounds:</strong></p>
+<table>
+<thead><tr><th>Concept</th><th>Beluma pattern</th></tr></thead>
+<tbody>
+<tr><td>market</td><td><code>marketa</code> (loan) — or <code>gava-tava</code> (money-ground)</td></tr>
+<tr><td>-field/study of X</td><td>X + <code>-sula</code>/<code>-kéma</code> (knowledge)</td></tr>
+<tr><td>profession</td><td>X + <code>-kivor</code>/<code>-or</code> (worker/doer)</td></tr>
+<tr><td>place for X</td><td>X + <code>-tava</code>/<code>-lek</code> (ground/place)</td></tr>
+<tr><td>tool for X</td><td>X + <code>-pira</code></td></tr>
+<tr><td>container of X</td><td>X + <code>-kora</code> (chest/box)</td></tr>
+<tr><td>substance of X</td><td>X + <code>-nélo</code> (stream) or <code>-gaza</code> (gas)</td></tr>
+<tr><td>great/small X</td><td>X + <code>-sula</code>/<code>-nira</code></td></tr>
+</tbody></table>
+<hr>
+<h2>5. Homonym policy (documented; they exist)</h2>
+<p>Beluma tolerates homonyms by design (<code>mila</code> thousand/my, <code>koro</code> bear/really?, <code>rá</code> near/was).</p>
+<p>New coinages must NOT introduce homonyms with core grammar words (<code>s</code> <code>vóta</code> <code>kéma</code> …) —</p>
+<p>the machine rejects those. Register/context disambiguates the rest.</p>
+<hr>
+<h2>6. Loanword respelling table</h2>
+<table>
+<thead><tr><th>English</th><th>Respelled Beluma</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>planet</td><td><code>planeta</code></td><td></td></tr>
+<tr><td>comet</td><td><code>kometa</code></td><td></td></tr>
+<tr><td>galaxy</td><td><code>galaksia</code></td><td>preserve <code>ks</code></td></tr>
+<tr><td>robot</td><td><code>robota</code></td><td></td></tr>
+<tr><td>atom</td><td><code>atoma</code></td><td></td></tr>
+<tr><td>program</td><td><code>programa</code></td><td><code>pr</code> onset OK; keep open</td></tr>
+<tr><td>algebra</td><td><code>aljebra</code> ✖ → <code>algeba</code></td><td><code>j</code>=/y/ so avoid; keep <code>g</code></td></tr>
+<tr><td>data</td><td><code>data</code></td><td>avoid <code>dá</code>/<code>ta</code> ambiguity in context only</td></tr>
+<tr><td>market</td><td><code>marketa</code></td><td></td></tr>
+</tbody></table>
+<p>Rule: transliterate from spelling, replace <code>c</code>→<code>k</code>, <code>q</code>→<code>k</code>/<code>w</code>, <code>y</code>→<code>i</code>,</p>
+<p><code>ph</code>→<code>f</code>, drop silent letters, split clusters.</p>
+<hr>
+<h2>7. Validation checklist (enforced by <code>tools/coiner.js</code>)</h2>
+<ol>
+  <li>phonotactic regex passes;</li>
+  <li>no exact collision with <code>h.txt</code> or a pending entry;</li>
+  <li>not a core-grammar homonym (<code>wés</code>, <code>vóta</code>, <code>s</code>, <code>un</code>, <code>gida</code>, …);</li>
+  <li>no suffix/prefix trap (a new word must not parse as an existing stem + affix with a contradictory meaning — the generator warns);</li>
+  <li>gloss is in English, primary sense first, alternatives after <code>/</code>;</li>
+  <li>field batch header matches the taxonomy key.</li>
+</ol>
+<p>Run: <code>node tools/coiner.js</code> (dry-run to <code>out/</code>) then merge validated lines into <code>h.txt</code>.</p>
+<hr>
+<p>Rev 1 — Phase 3. Open items: full loanword gazetteer (tier 4 table to 500 terms),</p>
+<p>further expansion strategy for macro-batches, community contribution process.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.js</code> · Dictionary VTXT 3.7</p>
+</main>
+</body>
+</html>

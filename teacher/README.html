@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lía Beluma — Teacher Program & University Syllabus (Phase 5) | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">Lía Beluma — Teacher Program & University Syllabus (Phase 5)</span>
+  <span><a href="../index.html">Overview</a><a href="../grammar.html">Grammar</a><a href="../lessons.html">Course</a><a href="../translator.html">Translator</a></span>
+</header>
+<main>
+<h1>Lía Beluma — Teacher Program &amp; University Syllabus (Phase 5)</h1>
+<p>The official teacher-training and tertiary plan for the Sova-Nésa education system.</p>
+<hr>
+<h2>1. The teacher program</h2>
+<p><strong>Who it is for:</strong> speakers ≥ B2 in the Beluma exam who want to teach.</p>
+<p><strong>Structure (three units, one academic year):</strong></p>
+<ol>
+  <li><strong>The machine (methods).</strong> Learn the corpus tooling: how to read <code>h.txt</code>, how the coiner (<code>../tools/coiner.js</code>) validates new words, how the <a href="../translator.html">translator</a> glosses. Teachers are expected to <em>demonstrate</em> translations in class rather than improvise vocabulary.</li>
+  <li><strong>The classroom (practice).</strong> Teach book-01 twice under supervision; mark the A1 paper with the examiner's key; record and critique your own register (colloquial vs formal).</li>
+  <li><strong>The canon (assessment).</strong> Certify on exam construction: write two A2 exam items that only use words in the VTXT-locked dictionary, and coin one new compound defensibly under canon 06.</li>
+</ol>
+<p><strong>Teacher book-standard:</strong> a certified teacher upholds these rules —</p>
+<ul>
+  <li>teach compounds before words: <code>néla-sula</code> is learned as <em>water-great</em>, one idea.</li>
+  <li>never mark a learner's coin wrong <em>if it is canon-06 clean</em>; teach it with the coiner.</li>
+  <li>keep the four registers visible: one sentence, taught four ways (lesson 32).</li>
+</ul>
+<h2>2. The university syllabus (four semesters)</h2>
+<table>
+<thead><tr><th>Sem</th><th>Course</th><th>Grounds it in</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Beluma I — A1→A2</td><td>book-01, book-02, A1/A2 papers</td></tr>
+<tr><td>2</td><td>Beluma II — Grammar &amp; corpus</td><td>canon 01–05, <code>h.txt</code> structure, translator reverse-engineering</td></tr>
+<tr><td>3</td><td>Beluma III — Literature</td><td>story episodes, poetry, the Sova-Néla paper, comparative registers</td></tr>
+<tr><td>4</td><td>Beluma IV — Lexicography</td><td>canon 06–07, run the coiner, propose a 20-word theme field, defend it to the board</td></tr>
+</tbody></table>
+<p><strong>Assessment:</strong> 60% written (exam-blueprint papers), 20% oral (role cards), 20% portfolio</p>
+<p>(one glossary addition + one composition, both glossed).</p>
+<h2>3. Translator integration in teaching</h2>
+<p>The <a href="../translator.html">translator</a> is the textbook's answer key. Classroom patterns:</p>
+<ul>
+  <li><strong>Self-correction:</strong> after a D4 translation drill, run each sentence through the translator and compare glosses.</li>
+  <li><strong>Discovery:</strong> ask "does the machine accept <code>wégai</code>?" — then use the <code>wégai</code> entry to teach that fusions are spoken-only (canon 07) and must not appear in formal writing.</li>
+  <li><strong>Coining lab:</strong> a learner proposes <code>luma-tiva</code> (light-room?); the class checks the dictionary, runs the coiner in dry-run (<code>node ../tools/coiner.js --dict ../h.txt</code>), and sees the V1–V5 verdicts. That is the whole lexicography grade in one activity.</li>
+</ul>
+<h2>4. Admin</h2>
+<ul>
+  <li>Session sizes: ≤ 12 for oral work; the exam oral is 1:1.</li>
+  <li>Materials live in <code>../lessons/</code>, <code>../exams/</code>, <code>../literature/</code>; keep local copies to the current commit so learners always sit the same vocabulary set (the dictionary is version-locked by <code>VTXT</code>).</li>
+</ul>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.js</code> · Dictionary VTXT 3.7</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lía Beluma — The Course (Phase 5) | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">Lía Beluma — The Course (Phase 5)</span>
+  <span><a href="../index.html">Overview</a><a href="../grammar.html">Grammar</a><a href="../lessons.html">Course</a><a href="../translator.html">Translator</a></span>
+</header>
+<main>
+<h1>Lía Beluma — The Course (Phase 5)</h1>
+<p>The official Beluma course: <strong>40 lessons from A1 to B1</strong>, in four books, built on the</p>
+<p>canon (01–08=07) and the live dictionary (VTXT 3.6, ~1030 entries). Every lesson follows</p>
+<p>the same textbook format so that drills and answer keys are predictable for learners and</p>
+<p>teachers alike.</p>
+<hr>
+<h2>How the course is organized</h2>
+<table>
+<thead><tr><th>Book</th><th>Lessons</th><th>Level</th><th>Themes</th><th>Grammar core</th></tr></thead>
+<tbody>
+<tr><td><code>book-01.md</code></td><td>1–10</td><td>A1</td><td>self, family, town, food</td><td>alphabet, SVO, copula, tense markers, plural, possession, compounds, questions, negation, numbers</td></tr>
+<tr><td><code>book-02.md</code></td><td>11–20</td><td>A2</td><td>market, daily cycle, health, weather, travel</td><td>aspect, comparatives, adjectives/adverbs, wh-clauses, want/purpose, imperatives, modals</td></tr>
+<tr><td><code>book-03.md</code></td><td>21–30</td><td>B1</td><td>work, money, law, arts, science</td><td>relative clauses, conditionals, passive, evidentials, speech reports, discourse particles</td></tr>
+<tr><td><code>book-04.md</code></td><td>31–40</td><td>B1+ read</td><td>literature dossier</td><td>reading gradio, stylistics (register), idiom bank, composition</td></tr>
+</tbody></table>
+<p>Each lesson = **objective → grammar → vocabulary (new) → examples → drills (with a hidden</p>
+<p>answer key)**. Lesson 40 is the end-of-course project: read the paper, retell the story,</p>
+<p>and write a letter to the Sova-Néla newspaper.</p>
+<h2>The drill format</h2>
+<p>Every drill has a label, a question area, and a key. Keys open with <code>&lt;details&gt;</code>-style</p>
+<p>blocks in the HTML edition; in print they live on the facing page column.</p>
+<table>
+<thead><tr><th>Drill type</th><th>What it trains</th><th>Key format</th></tr></thead>
+<tbody>
+<tr><td><code>D1 read-aloud</code></td><td>sounds, stress, rhythm</td><td>the gloss + translation</td></tr>
+<tr><td><code>D2 transformation</code></td><td>one mechanical change (tense / plural / negation)</td><td>the transformed sentence</td></tr>
+<tr><td><code>D3 gap-fill</code></td><td>recall of the exact construction</td><td>the completed sentence</td></tr>
+<tr><td><code>D4 translation</code></td><td>two-way (en ↔ be), the core skill</td><td>literal gloss + target sentence</td></tr>
+<tr><td><code>D5 free response</code></td><td>composition, judgment</td><td>model answer(s)</td></tr>
+</tbody></table>
+<p>The answer key always shows the <strong>glossed</strong> Beluma and an <strong>English rendering</strong> — the same</p>
+<p>format the translator machine uses, so a learner can check their answers with the machine</p>
+<p>(<a href="../translator.html">translator.html</a>) when studying alone.</p>
+<h2>Using the course</h2>
+<ul>
+  <li><strong>Self-study:</strong> do the drills aloud; cover the key, answer, then reveal.</li>
+  <li><strong>Classroom:</strong> each lesson is one 60–90 min session; <code>D5</code> items are homework.</li>
+  <li><strong>Certification:</strong> sit the sample exam at <a href="../exams/">../exams/</a> after completing book-01 (targets A1), book-02 (targets A2), book-03 (targets B1).</li>
+  <li><strong>Reading practice:</strong> every lesson points at a text in the literature dossier: dialogue bank, story episodes, the Sova-Néla paper, the encyclopedia.</li>
+</ul>
+<p>Course vocabulary is additive: the 8 legacy quick-lessons in <code>lessons.html</code> cover the same</p>
+<p>ground as book-01 and remain a valid "20-minute" taster, but the books are the canonical</p>
+<p>path.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.js</code> · Dictionary VTXT 3.7</p>
+</main>
+</body>
+</html>
