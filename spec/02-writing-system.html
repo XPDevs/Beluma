@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§02 Writing System — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§02 Writing System — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§02 Writing System — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong> Beluma is written with a 23-letter Latin alphabet. One</p>
+<p>script, one spelling, one set of punctuation conventions, in print and on screens.</p>
+<h2>2.1 The alphabet</h2>
+<p>The canonical alphabet, in canonical order:</p>
+<pre><code>
+a  b  d  e  f  g  h  i  j  k  l  m  n  o  p  r  s  t  u  v  w  z  x
+</code></pre>
+<ul>
+  <li>23 letters: 5 vowels (<code>a e i o u</code>), 18 consonants.</li>
+  <li><strong>There is no <code>c</code>, <code>q</code>, or <code>y</code>.</strong> A <code>c</code> in text is an error (write <code>k</code> or <code>s</code> per §1.3); loanwords are respelled (§15.6).</li>
+  <li>The <strong>acute accent</strong> (<code>á é í ó ú</code>) is a stress mark (§1.5), <strong>not a letter</strong>. The alphabet has 23 letters in uppercase and lowercase alike.</li>
+  <li>Letter names (§1.9.6): vowels are named by themselves; consonants as <code>C+a</code> (<code>ba</code>, <code>da</code>, <code>fa</code>, <code>ga</code>, <code>ha</code>, <code>ja</code>, <code>ka</code>, <code>la</code>, <code>ma</code>, <code>na</code>, <code>pa</code>, <code>ra</code>, <code>sa</code>, <code>ta</code>, <code>va</code>, <code>wa</code>, <code>za</code>); <code>x</code> is named <code>ksa</code>.</li>
+</ul>
+<h2>2.2 Capitalisation</h2>
+<ol>
+  <li>The first word of a sentence starts with a capital letter.</li>
+  <li>Proper nouns start with a capital letter: personal names, place names, names of languages and peoples, months, and weekdays (<code>Méra-Tava</code>, <code>Beluma</code>, <code>Soma</code>).</li>
+  <li>The language name <code>Beluma</code> and the adjective <code>beluma</code> (about the language) are capitalised when they name the language: <code>Mi parla Beluma.</code> / <code>beluma sova</code> ("a Beluma sentence" — lowercase when used attributively inside a phrase describing components, e.g. <code>beluma nira</code>).</li>
+  <li>Nothing else is capitalised — including the pronoun <code>mi</code> and the word <code>I</code> equivalent.</li>
+  <li>Acronyms are written in capitals without points: <code>UN</code> (not <code>U.N.</code>), pronounced letter by letter using §2.1 letter names, or as a word if a reading is registered in the dictionary.</li>
+</ol>
+<h2>2.3 Punctuation</h2>
+<table>
+<thead><tr><th>Glyph</th><th>Beluma name</th><th>Usage</th></tr></thead>
+<tbody>
+<tr><td><code>.</code></td><td><code>dota</code></td><td>end of declarative sentence; decimal point (§13)</td></tr>
+<tr><td><code>,</code></td><td><code>kama</code></td><td>clause separation, listing</td></tr>
+<tr><td><code>?</code></td><td><code>kwamorka</code></td><td>end of question (§07)</td></tr>
+<tr><td><code>!</code></td><td><code>fimorka</code></td><td>end of exclamative; never doubled</td></tr>
+<tr><td><code>:</code></td><td><code>tuo-dota</code></td><td>introduction of a list or explanation</td></tr>
+<tr><td><code>;</code></td><td><code>dota-kama</code></td><td>separation of closely related clauses</td></tr>
+<tr><td><code>"</code> <code>"</code></td><td><code>sa-morka</code></td><td>quotation (speech-mark)</td></tr>
+<tr><td><code>'</code></td><td><code>morka-nira</code></td><td>apostrophe in elisions of informal speech (§23); never in possessives (possession is <code>-la</code>, §05)</td></tr>
+<tr><td><code>-</code></td><td><code>linya-nira</code></td><td>inside compounds; never at line end</td></tr>
+<tr><td><code>–</code> <code>—</code></td><td><code>linya-sula</code></td><td>parenthetical break (en dash/em dash); never doubled</td></tr>
+<tr><td><code>...</code></td><td><code>dota-tro</code></td><td>ellipsis; replaces the final <code>dota</code> of the sentence</td></tr>
+<tr><td><code>(...)</code></td><td><code>parentesa</code></td><td>parenthetical aside (loanword, respelled)</td></tr>
+<tr><td><code>/</code></td><td><code>linya-ora</code></td><td>alternation ("and/or")</td></tr>
+<tr><td><code>@</code></td><td><code>na-morka</code></td><td>at-address (electronic addresses)</td></tr>
+<tr><td><code>#</code></td><td><code>linya-dis</code></td><td>number/cross mark (labels)</td></tr>
+<tr><td><code>%</code></td><td><code>porsenta-morka</code></td><td>percent; also written <code>porsenta</code> after a number</td></tr>
+</tbody></table>
+<p>Rules:</p>
+<ul>
+  <li><strong>One space</strong> between words; <strong>one space</strong> after <code>,</code> <code>:</code> <code>;</code> and before <code>?</code> <code>!</code> is not used (the marks attach to the preceding word: <code>suna?</code>, never <code>suna ?</code>).</li>
+  <li>Quotation: the opening <code>"</code> sits outside the following punctuation; full stop goes inside when the quote is a full sentence.</li>
+  <li>A compound is written as one word (§15.1); the hyphen <code>-</code> is reserved for deliberate disambiguation and for compounds written open in the dictionary (<code>tuma-pira</code>, <code>diza-é-sita</code>). Dictionary spelling is authoritative: if the dictionary writes a compound closed, write it closed.</li>
+</ul>
+<h2>2.4 Numerals</h2>
+<ul>
+  <li>Prose and general writing use <strong>number words</strong>: <code>tro diva</code>, <code>kvín cénta</code>.</li>
+  <li>Technical, scientific, and financial writing MAY use Arabic numerals <code>0 1 2 3 4 5 6 7 8 9</code> in the ASCII forms. Group thousands with a <strong>space</strong> (<code>3 000</code>), decimals with <code>dota</code> (<code>3.5</code>), read digit by digit after the point (§13).</li>
+  <li>Ordinals in numerals take <code>-ji</code> (<code>1.-ji</code> = first) — preferred form remains the word <code>onaji</code>.</li>
+</ul>
+<h2>2.5 The acute accent in text</h2>
+<ul>
+  <li>Encoding: NFC precomposed characters — <code>á</code> is U+00E1, not <code>a</code> + U+0301 (§2.8).</li>
+  <li>Mandatory: accent-pair entries (§1.5.4).</li>
+  <li>Recommended: dictionaries, textbooks, poetry, any text for learners.</li>
+  <li>Optional: everyday prose and informal registers (§23).</li>
+  <li>The accent never carries meaning beyond stress marking or accent-pair identity.</li>
+</ul>
+<h2>2.6 Compound spelling</h2>
+<ol>
+  <li>Dictionary compounds are written as recorded in §20 — closed (<code>kora</code> + <code>jula</code> → <code>kora-jula</code> when the dictionary hyphenates, <code>beluma</code> closed when it does not).</li>
+  <li>The general rule is <strong>closed, no space</strong>; a hyphen appears when the dictionary shows one or when disambiguation requires it (<code>diza-é-sita</code> "seventeen" vs a hypothetical <code>dizaésita</code>).</li>
+  <li>A compound keeps its internal spelling unchanged — no assimilation, no vowel harmony, no truncation.</li>
+</ol>
+<h2>2.7 Line breaking</h2>
+<ul>
+  <li>Break lines <strong>after</strong> a compound hyphen, never before one.</li>
+  <li>Never split a single word: Beluma syllables are short enough that hyphenation within a word is unnecessary in ordinary text; where a layout engine must hyphenate, it MAY break after any syllable boundary (§1.4), preserving one hyphen at line end.</li>
+  <li>Never break between a number and its unit (<code>kvín porsenta</code> stays together).</li>
+</ul>
+<h2>2.8 Digital encoding</h2>
+<ul>
+  <li><strong>UTF-8</strong> is the required encoding for all files and transports.</li>
+  <li>Text MUST be normalised to <strong>NFC</strong> (canonical composition): <code>á</code> = U+00E1. Decomposed input (<code>a</code> + U+0301) MUST be composed on ingestion.</li>
+  <li>The complete Beluma character inventory is:</li>
+</ul>
+<pre><code>
+lowercase:  a b d e f g h i j k l m n o p r s t u v w z x
+            á é í ó ú
+uppercase:  A B D E F G H I J K L M N O P R S T U V W Z X
+            Á É Í Ó Ú
+digits:     0 1 2 3 4 5 6 7 8 9
+punctuation: . , ? ! : ; " ' - – — ... ( ) / @ # %
+space, tab, newline
+</code></pre>
+<ul>
+  <li>Text containing <code>c</code>, <code>q</code>, <code>y</code>, or any other character outside this inventory is non-conformant (quoted foreign material excepted and marked).</li>
+</ul>
+<h2>2.9 Keyboarding</h2>
+<p>On a US-QWERTY keyboard with a US-International or compose configuration:</p>
+<table>
+<thead><tr><th>Beluma</th><th>US-International</th><th>Compose</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>á é í ó ú</code></td><td><code>'a 'e 'i 'o 'u</code></td><td><code>Compose ' a</code></td><td>acute (dead key)</td></tr>
+<tr><td><code>Á É Í Ó Ú</code></td><td><code>'A 'E 'I 'O 'U</code></td><td><code>Compose ' A</code></td><td></td></tr>
+<tr><td><code>? ! : ; "</code></td><td>direct</td><td>direct</td><td></td></tr>
+<tr><td><code>– —</code></td><td><code>Ctrl+-</code> / <code>Ctrl+Shift+-</code></td><td><code>Compose - -</code> / <code>Compose - - -</code></td><td></td></tr>
+<tr><td><code>...</code></td><td><code>.</code> <code>.</code> <code>.</code></td><td><code>Compose . .</code></td><td></td></tr>
+</tbody></table>
+<p>Accented letters may be omitted only where §1.5 allows it. A conformant text MUST</p>
+<p>be recoverable to its dictionary spelling — writers of informal unaccented text</p>
+<p>MUST still distinguish accent-pair words (write <code>ra</code> and <code>rá</code> distinctly).</p>
+<h2>2.10 Handwriting (informative)</h2>
+<p>Print and cursive forms follow the same shapes as the Latin models:</p>
+<p>single-storey <code>a</code>, open-tailed <code>g</code>, uncrossed <code>t</code> with a short bar; <code>l</code> and <code>I</code></p>
+<p>(capital i) are never confusable because capital <code>I</code> occurs only at sentence</p>
+<p>start and in names. The acute is a single stroke rising to the right above the</p>
+<p>vowel. Speed conventions (looping <code>e</code>, merged <code>in</code>/<code>im</code>) are permitted provided</p>
+<p>the letter identities remain recoverable — legibility, not style, is the constraint.</p>
+<h2>2.11 Historical note: the radical script (out of scope)</h2>
+<p>Earlier drafts of this project described a stroke-based "radical" writing system.</p>
+<p>It was never implemented, has no font, no keyboard, and no corpus. **It is not part</p>
+<p>of Beluma v1.0.** The Latin alphabet of this section is the one and only Beluma</p>
+<p>script. Any future script proposal requires a major version of this Standard.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§16 Technology and Computing — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§16 Technology and Computing — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§16 Technology and Computing — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative</strong> for the naming patterns; <strong>Informative</strong> for the word list</p>
+<p>(the living list is <code>lexicon/h.txt</code>, tag <code>[technical]</code>).</p>
+<h2>16.1 Principle</h2>
+<p>Technical Beluma prefers <strong>built</strong> words (§15.8) over loans; a loan is used when it</p>
+<p>is already international and short (<code>komputa</code>, <code>programa</code>, <code>koda</code>, <code>aplika</code>).</p>
+<p>Every device, process, or concept is named by head + specifier so its meaning is</p>
+<p>inferable: <code>kiva-siva-nira</code> <em>phone</em> = work-voice-small.</p>
+<h2>16.2 Core devices</h2>
+<table>
+<thead><tr><th>Concept</th><th>Beluma</th><th>Literal</th></tr></thead>
+<tbody>
+<tr><td>computer</td><td><code>komputa</code> / <code>komputa-pira</code></td><td>compute(-tool)</td></tr>
+<tr><td>smartphone</td><td><code>kiva-siva-nira</code></td><td>work-voice-small</td></tr>
+<tr><td>phone</td><td><code>telefona</code> / <code>siva-dora</code></td><td>— / voice-carrier</td></tr>
+<tr><td>screen</td><td><code>ekrano</code> / <code>lóra-tésa</code></td><td>— / show-surface</td></tr>
+<tr><td>keyboard</td><td><code>klavaro</code> / <code>fota-tavi</code></td><td>— / letter-table</td></tr>
+<tr><td>mouse</td><td><code>muso</code></td><td>—</td></tr>
+<tr><td>printer</td><td><code>printilo</code></td><td>—</td></tr>
+<tr><td>server</td><td><code>servilo</code> / <code>kora-dora</code></td><td>server / box-carrier</td></tr>
+<tr><td>network</td><td><code>reto</code></td><td>net</td></tr>
+<tr><td>internet</td><td><code>retaro</code> / <code>reto-reto</code></td><td>net-collective</td></tr>
+<tr><td>website</td><td><code>retejo</code></td><td>net-place</td></tr>
+<tr><td>browser</td><td><code>retumilo</code></td><td>net-roam-tool</td></tr>
+<tr><td>file</td><td><code>dosiero</code></td><td>dossier</td></tr>
+<tr><td>database</td><td><code>datumbazo</code> / <code>datumaro</code></td><td>data-base</td></tr>
+</tbody></table>
+<h2>16.3 Software and programming</h2>
+<table>
+<thead><tr><th>Concept</th><th>Beluma</th></tr></thead>
+<tbody>
+<tr><td>software</td><td><code>programaro</code></td></tr>
+<tr><td>hardware</td><td><code>aparataro</code></td></tr>
+<tr><td>program / app</td><td><code>programa</code> / <code>aplika</code></td></tr>
+<tr><td>code</td><td><code>koda</code></td></tr>
+<tr><td>bug</td><td><code>eraro</code> / <code>simo</code> (colloq.)</td></tr>
+<tr><td>algorithm</td><td><code>algoritmo</code></td></tr>
+<tr><td>function</td><td><code>fuksio</code></td></tr>
+<tr><td>variable</td><td><code>variablo</code></td></tr>
+<tr><td>loop</td><td><code>buklo</code></td></tr>
+<tr><td>compiler</td><td><code>kompililo</code></td></tr>
+<tr><td>interpreter</td><td><code>interpretilo</code></td></tr>
+<tr><td>version</td><td><code>versio</code></td></tr>
+<tr><td>update</td><td><code>ĝisdatigo</code></td></tr>
+<tr><td>password</td><td><code>pasvorto</code> / <code>salutvorto</code></td></tr>
+<tr><td>username</td><td><code>uzanto-nomo</code></td></tr>
+<tr><td>user</td><td><code>uzanto</code></td></tr>
+<tr><td>administrator</td><td><code>administranto</code></td></tr>
+</tbody></table>
+<p>A program is named by purpose: <code>lora-redaktilo</code> <em>image editor</em>,</p>
+<p><code>sova-tradukilo</code> <em>speech translator</em>. New APIs and file formats take the</p>
+<p><code>-formo</code>/<code>-tipo</code> heads: <code>PDF-formo</code>, <code>datum-tipo</code>.</p>
+<h2>16.4 Artificial intelligence</h2>
+<table>
+<thead><tr><th>Concept</th><th>Beluma</th></tr></thead>
+<tbody>
+<tr><td>artificial intelligence</td><td><code>artefarita inteligento</code> (AI)</td></tr>
+<tr><td>machine learning</td><td><code>maŝinlernado</code></td></tr>
+<tr><td>neural network</td><td><code>neŭra reto</code></td></tr>
+<tr><td>model</td><td><code>modelo</code></td></tr>
+<tr><td>training</td><td><code>trejnado</code></td></tr>
+<tr><td>dataset</td><td><code>datumaro</code></td></tr>
+<tr><td>prediction</td><td><code>prognozo</code></td></tr>
+<tr><td>generation</td><td><code>generado</code></td></tr>
+<tr><td>language model</td><td><code>lingvomodelo</code></td></tr>
+<tr><td>prompt</td><td><code>prompto</code></td></tr>
+<tr><td>reinforcement learning</td><td><code>plifortiga lernado</code></td></tr>
+<tr><td>autonomous</td><td><code>aŭtonoma</code></td></tr>
+<tr><td>robot</td><td><code>roboto</code></td></tr>
+</tbody></table>
+<h2>16.5 Internet and social media</h2>
+<p><code>afiŝo</code> post, <code>komento</code> comment, <code>ŝatato</code> like, <code>abonanto</code> follower/subscriber,</p>
+<p><code>kunhavigo</code> share, <code>memeo</code> meme, <code>tendencо</code> trend, <code>blogo</code>, <code>vlogo</code>,</p>
+<p><code>podkasto</code>, <code>elsendo</code> stream, <code>reto influanto</code> influencer, <code>novaĵo</code> news,</p>
+<p><code>falsaj novaĵoj</code> fake news, <code>privata mesaĝo</code> direct message, <code>kaŝnomo</code></p>
+<p>pseudonym, <code>trolo</code> troll.</p>
+<h2>16.6 Cybersecurity</h2>
+<p><code>kibersekureko</code> cybersecurity, <code>hakado</code> hacking, <code>malica programo</code> malware,</p>
+<p><code>fajroŝirmilo</code> firewall, <code>ŝifrado</code>/<code>malŝifrado</code> encryption/decryption,</p>
+<p><code>ŝlosilo</code> key, <code>aŭtentigo</code> authentication, <code>permesilo</code> token/permission,</p>
+<p><code>vundebleko</code> vulnerability, <code>korektaĵo</code> patch, <code>anonimigo</code> anonymization.</p>
+<h2>16.7 Space exploration</h2>
+<p><code>kosmoŝipo</code> spaceship, <code>kosmostasio</code> space station, <code>satelito</code>, <code>sondilo</code> probe,</p>
+<p><code>lanĉo</code> launch, <code>astronaŭto</code>, <code>kosmokostumo</code> spacesuit, <code>orbitо</code> orbit,</p>
+<p><code>lumsemojaro</code> light-year, <code>raketo</code> rocket, <code>kosmopordo</code> spaceport.</p>
+<h2>16.8 Register</h2>
+<p>All of §16 is <strong>Technical</strong> register (§23.1): digit-forms for numbers (§13.2),</p>
+<p>loans respelled, abbreviations allowed (<code>AI</code>, <code>PDF</code>, <code>HTTP</code>). Terms are promoted</p>
+<p>to Standard as they enter daily use, via a VTXT change (§15.12).</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

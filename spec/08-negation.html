@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§08 Negation — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§08 Negation — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§08 Negation — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong> One clitic negates the clause; one prefix negates a word;</p>
+<p>one particle negates a command. The three never mix inside a Standard clause.</p>
+<h2>8.1 The clitic <code>un</code></h2>
+<p><code>un</code> is a free word meaning <em>not</em>. Position: after the subject and time adverb,</p>
+<p><strong>before</strong> tense, aspect, and modals:</p>
+<pre><code>
+SUBJECT (TIME) un (né|wé|wés) (ASPECT) (MODAL) VERB …
+</code></pre>
+<table>
+<thead><tr><th>Example</th><th>Gloss</th></tr></thead>
+<tbody>
+<tr><td><code>Mi un gai.</code></td><td>I do not go</td></tr>
+<tr><td><code>Mi un né gai.</code></td><td>I did not go</td></tr>
+<tr><td><code>Mi un wé gai.</code></td><td>I will not go</td></tr>
+<tr><td><code>Mi un s esa.</code></td><td>I am not tired</td></tr>
+<tr><td><code>Mi un kima gai.</code></td><td>I cannot go (same as <code>unkima gai</code>)</td></tr>
+<tr><td><code>Lé fira un s hura-va.</code></td><td>The bird is not flying</td></tr>
+</tbody></table>
+<p><strong>Scope:</strong> <code>un</code> negates the first tense/aspect/modal/verb after it. One <code>un</code> per</p>
+<p>clause in Standard and Formal; two negatives in one clause cancel (§8.4).</p>
+<h2>8.2 Negating each verb class</h2>
+<table>
+<thead><tr><th>Class</th><th>Negation</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>lexical verb</td><td><code>un</code> + (tense) + V</td><td><code>Mi un né féra.</code> — I did not cut</td></tr>
+<tr><td>copula</td><td><code>un</code> + <code>s</code></td><td><code>Nivo un s esa.</code> — He is not tired</td></tr>
+<tr><td>aspectual <code>vóta</code> etc.</td><td><code>un</code> before the tense/aspect group</td><td><code>Mi un né vóta kiva.</code> — I had not finished work</td></tr>
+<tr><td>modal</td><td><code>un</code> + modal, or the negative modal</td><td><code>Tu un gida gai.</code> = <code>Tu unsud gai.</code> (shouldn't — see below)</td></tr>
+<tr><td>existential <code>esto</code></td><td><code>un esto</code></td><td><code>Un esto o misi na lé tiva.</code> — There is no one</td></tr>
+</tbody></table>
+<p>Fixed modal readings (normative, from §6.6): <code>un gida</code> = <em>don't have to</em>;</p>
+<p><code>un néma</code> = <em>must not / not allowed</em>; <code>unkima</code>/<code>un kima</code> = <em>cannot</em>;</p>
+<p><code>unsud</code>/<code>un sud</code> = <em>shouldn't</em>; <code>un wé gida</code> = <em>won't have to</em>.</p>
+<h2>8.3 Negative imperative: <code>du</code></h2>
+<p><code>du</code> replaces <code>un</code> before an imperative verb — it is the only negative allowed in</p>
+<p>slot 3 of a command:</p>
+<ul>
+  <li><code>Du gai!</code> — <em>Don't go!</em></li>
+  <li><code>Du féra lé fura!</code> — <em>Don't cut the fruit!</em></li>
+  <li><code>Du un …</code> never occurs: commands have no tense, so there is nothing for <code>un</code> to attach to.</li>
+  <li>Polite negative request: <code>Téva du gai.</code> — <em>Please don't go.</em> (Informal/Standard; Formal prefers <code>Tu unsud gai.</code> — <em>You shouldn't go.</em>)</li>
+</ul>
+<h2>8.4 Double negatives</h2>
+<ul>
+  <li><strong>Standard, Formal, Technical:</strong> two negatives in one clause <strong>cancel</strong>; a clause carries exactly one negative word. <code>Mi un né kima gai.</code> is *I could not go* — do not write <code>Mi un né un kima …</code>.</li>
+  <li><strong>Informal:</strong> reinforcing double negatives are permitted and stay negative (the dictionary's attested reinforcing items govern — §23). When unsure, write one negative.</li>
+  <li>A negative inside a relative clause belongs to that clause: <code>Lé misi ka un s gavo</code> — <em>the person who is not good</em> (the main clause keeps its own polarity).</li>
+</ul>
+<h2>8.5 Derivational <code>un-</code> vs clitic <code>un</code></h2>
+<table>
+<thead><tr><th></th><th>clitic <code>un</code></th><th>prefix <code>un-</code></th></tr></thead>
+<tbody>
+<tr><td>form</td><td>separate word</td><td>hyphen-bound to the word</td></tr>
+<tr><td>scope</td><td>whole clause</td><td>one word</td></tr>
+<tr><td>part of speech</td><td>particle</td><td>creates adjectives/nouns</td></tr>
+<tr><td>example</td><td><code>Mi un réva.</code> — I am not happy</td><td><code>un-réva</code> — unhappy</td></tr>
+<tr><td>plural/negation</td><td>takes none</td><td>inflects like its base: <code>un-réva s</code>, <code>un-révas</code></td></tr>
+</tbody></table>
+<ul>
+  <li>Derivations are dictionary entries or regular §15 forms: <code>un-kula</code> <em>easy</em> (lit. not-hard), <code>un-sulo</code> <em>weak</em>, <code>un-gavo</code> <em>bad</em>, <code>unkima</code> <em>cannot</em> (lexicalised).</li>
+  <li><code>un gida</code> (clitic + modal = <em>don't have to</em>) vs <code>un-gida</code> does <strong>not</strong> exist as a lexical adjective — modals are not adjectives; always write <code>un gida</code> apart.</li>
+</ul>
+<h2>8.6 <code>non</code> and negative answers</h2>
+<ul>
+  <li><code>non</code> = <em>no</em> — an interjection/answer only (§7.1); it never appears inside a clause.</li>
+  <li><code>un</code> never stands alone as an answer.</li>
+</ul>
+<h2>8.7 Negative polarity (informative)</h2>
+<p>Indefinite <em>any/ever</em> items live in the negative environment:</p>
+<p><code>véta-mída</code> <em>any</em> (<code>Tu kéma véta-mída loma?</code> — <em>Do you know any tree?</em> —</p>
+<p>answerable <code>non</code>). Positive sentences use <em>some</em>-forms instead</p>
+<p>(<code>o véta-mída</code> → prefer <code>o loma</code> <em>a tree</em>).</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

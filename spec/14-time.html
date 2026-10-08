@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§14 Time, Dates, and the Calendar — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§14 Time, Dates, and the Calendar — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§14 Time, Dates, and the Calendar — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong></p>
+<h2>14.1 Units of time</h2>
+<table>
+<thead><tr><th>Unit</th><th>Beluma</th></tr></thead>
+<tbody>
+<tr><td>second</td><td><code>séli</code></td></tr>
+<tr><td>minute</td><td><code>mída</code> (60 <code>séli</code>)</td></tr>
+<tr><td>hour</td><td><code>vora</code> (60 <code>mída</code>)</td></tr>
+<tr><td>day</td><td><code>diva</code></td></tr>
+<tr><td>week</td><td><code>soma</code> (7 <code>diva</code>)</td></tr>
+<tr><td>month</td><td><code>mava</code></td></tr>
+<tr><td>year</td><td><code>suso</code> (12 <code>mava</code>)</td></tr>
+</tbody></table>
+<p>A clock or watch is <code>vora-pira</code>. These are ordinary count nouns (§5.2):</p>
+<p><code>kvín vora</code> <em>five hours</em>, <code>tuo mída</code> <em>two minutes</em>.</p>
+<h2>14.2 Telling the time</h2>
+<p>The hour is counted with <code>vora</code>; the minute follows with <code>e</code> (and):</p>
+<ul>
+  <li><code>Ona vora.</code> — <em>One o'clock.</em> (01:00)</li>
+  <li><code>Tro vora e trósa.</code> — <em>3:13.</em> (three hours and thirteen)</li>
+  <li><code>Diza vora e vinta-ona.</code> — <em>10:21.</em></li>
+  <li>Half past: <code>tro vora e duon</code> <em>3:30</em>; quarter: <code>tro vora e kvarparta</code> <em>3:15</em>.</li>
+  <li><code>ante</code> <em>to</em>, <code>pos</code> <em>past</em>: <code>tiza vora pos trósa</code>? — preferred form is <code>H e M</code> only; use <code>mísa trósa na tro vora</code> <em>thirteen to three</em> for "to" times.</li>
+  <li>24-hour clock is used in Technical and Formal ($17:30$ = <code>diza-sita e triga</code>).</li>
+</ul>
+<h2>14.3 Days of the week</h2>
+<p>Regular numeral-based names (<code>soma</code> = week):</p>
+<table>
+<thead><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead>
+<tbody>
+<tr><td><code>soma-ona</code> Mon</td><td><code>soma-tuo</code> Tue</td><td><code>soma-tro</code> Wed</td><td><code>soma-fóra</code> Thu</td><td><code>soma-kvín</code> Fri</td><td><code>soma-sixa</code> Sat</td><td><code>soma-sita</code> Sun</td></tr>
+</tbody></table>
+<p>The weekend is <code>véta-soma</code> (<em>end-week</em>). Formal texts may add a nature byname</p>
+<p>where culturally fixed (<code>séra-soma</code> <em>Sunday, sun-day</em>).</p>
+<h2>14.4 Months</h2>
+<p>Regular numeral-based names (<code>mava</code> = month):</p>
+<p><code>mava-ona</code> Jan, <code>mava-tuo</code> Feb, <code>mava-tro</code> Mar, <code>mava-fóra</code> Apr, <code>mava-kvín</code> May,</p>
+<p><code>mava-sixa</code> Jun, <code>mava-sita</code> Jul, <code>mava-oita</code> Aug, <code>mava-noa</code> Sep, <code>mava-diza</code> Oct,</p>
+<p><code>mava-unésa</code> Nov, <code>mava-dósa</code> Dec.</p>
+<h2>14.5 Seasons</h2>
+<p><code>spira</code> spring, <code>súmmer</code> summer <em>(attested <code>summér</code>)</em>, <code>auta</code> autumn, <code>winta</code></p>
+<p>winter. A season is a normal noun: <code>na spira</code> <em>in spring</em>.</p>
+<h2>14.6 Writing the date</h2>
+<p>Three formats are standard; the register chooses:</p>
+<table>
+<thead><tr><th>Register</th><th>Format</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Standard</td><td><code>D mava-suso</code></td><td><code>13 mava-tro 2026</code> <em>13 March 2026</em></td></tr>
+<tr><td>Formal</td><td><code>D de M de SU</code></td><td><code>díza-trósa de mava-tro de díza-tuo</code></td></tr>
+<tr><td>Technical (ISO)</td><td><code>SU-MM-DD</code></td><td><code>2026-03-13</code></td></tr>
+</tbody></table>
+<ul>
+  <li>Years are cardinal: <code>tuo mila dizas-sita</code> <em>2026</em>; read digit-pairs in Technical with digit-forms (<code>tuo-zer-tuo-sis</code>).</li>
+  <li>A weekday precedes the date: <code>soma-kvín, 13 mava-tro</code> <em>Friday, 13 March</em>.</li>
+  <li>Decades: use <code>na lé X-jaj susos</code> (<em>in the X-th years</em>), e.g. `na lé vintaj susos<code> <em>in the twenties</em>; centuries </code>X sentsuso<code>, e.g. </code>vinta-ona sentsuso` <em>the 21st century</em>.</li>
+  <li><code>dúva</code> <em>date</em> (calendar day), <code>navás</code> <em>calendar/almanac</em>.</li>
+</ul>
+<h2>14.7 Relative and calendar time</h2>
+<table>
+<thead><tr><th>Beluma</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><code>sofa</code></td><td>today</td></tr>
+<tr><td><code>safa</code></td><td>yesterday</td></tr>
+<tr><td><code>sova</code></td><td>tomorrow</td></tr>
+<tr><td><code>sofa-vo</code> / <code>safa-vo</code></td><td>this evening / last evening</td></tr>
+<tr><td><code>sova-vavi</code></td><td>tomorrow morning</td></tr>
+<tr><td><code>suro</code></td><td>a year ago / last year</td></tr>
+<tr><td><code>nira-suso</code></td><td>new year</td></tr>
+<tr><td><code>ante X</code></td><td>X ago</td></tr>
+<tr><td><code>pos X</code></td><td>in X (time)</td></tr>
+<tr><td><code>dum X</code></td><td>during X</td></tr>
+</tbody></table>
+<blockquote><code>To né tála pos tro divas.</code> — <em>It happened three days ago/later</em> (§6 tense).</blockquote>
+<h2>14.8 Duration vs. point</h2>
+<p><code>por</code> + time = duration (<em>for</em>): <code>Mi né kiva por tro vora.</code> *I worked for three</p>
+<p>hours.<em> A bare time phrase is a point or frequency: <code>Mi kiva tro vora.</code> </em>I work</p>
+<p>three hours (each time).* Frequency uses the habitual aspect <code>véta</code> or the</p>
+<p>frequency adverbs of §10.3.</p>
+<h2>14.9 Time in this Standard</h2>
+<p>Documents of the Standard carry the date in Standard format (§14.6); the virtual</p>
+<p>reference date is <strong>2026</strong>. Time zones are Technical-term territory</p>
+<p>(<code>zóna-vora</code> <em>time zone</em>, <code>UTV</code> <em>UTC</em>) and are not normative in v1.x.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§07 Questions — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§07 Questions — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§07 Questions — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong> Questions are formed by fronting a question word. There is</p>
+<p>no subject–verb inversion anywhere in the language.</p>
+<h2>7.1 Yes/no questions</h2>
+<p>Put <code>kvo</code> in slot 3 (before tense, after <code>un</code> and the time adverb); everything else</p>
+<p>stays exactly where it is:</p>
+<table>
+<thead><tr><th>Statement</th><th>Question</th><th>Gloss</th></tr></thead>
+<tbody>
+<tr><td><code>Tu gai.</code></td><td><code>Kvo tu gai?</code></td><td>Do you go?</td></tr>
+<tr><td><code>Siva s na nésa.</code></td><td><code>Kvo siva s na nésa?</code></td><td>Is Siva at home?</td></tr>
+<tr><td><code>Tu wé gai.</code></td><td><code>Kvo tu wé gai?</code></td><td>Will you go?</td></tr>
+<tr><td><code>Tu un né gai.</code></td><td><code>Kvo tu un né gai?</code></td><td>Did you not go?</td></tr>
+<tr><td><code>Tu kima gai.</code></td><td><code>Kvo tu kima gai?</code></td><td>Can you go?</td></tr>
+</tbody></table>
+<ul>
+  <li>Final mark: <code>kwamorka</code>.</li>
+  <li>Answers: <code>kék</code> = yes, <code>non</code> = no. Full-sentence answers are preferred in Formal: <code>Kék, mi wé gai.</code> / <code>Non, mi un wé gai.</code></li>
+  <li><code>kvo</code> never appears in statements; a declarative containing <code>kvo</code> is non-conformant.</li>
+</ul>
+<h2>7.2 Content (wh-) questions</h2>
+<p>The question word fronts the clause in slot 0/1 position — before the subject,</p>
+<p>before <code>un</code> and tense. No other change.</p>
+<table>
+<thead><tr><th>Word</th><th>Meaning</th><th>Example</th><th>Gloss</th></tr></thead>
+<tbody>
+<tr><td><code>kwa</code></td><td>what</td><td><code>Kwa tu féma?</code></td><td>What do you eat?</td></tr>
+<tr><td><code>kva</code></td><td>which / that (choice)</td><td><code>Kva loma tu léva?</code></td><td>Which tree do you love?</td></tr>
+<tr><td><code>kvasi</code></td><td>who</td><td><code>Kvasi s ta?</code></td><td>Who is that?</td></tr>
+<tr><td><code>kwaras</code></td><td>where</td><td><code>Kwaras tu gai?</code></td><td>Where do you go?</td></tr>
+<tr><td><code>kvado</code></td><td>when</td><td><code>Kvado lé fira wé hura?</code></td><td>When will the bird fly?</td></tr>
+<tr><td><code>kvaso</code></td><td>why</td><td><code>Kvaso tu un gai?</code></td><td>Why don't you go?</td></tr>
+<tr><td><code>havi</code></td><td>how</td><td><code>Havi tu diva ta?</code></td><td>How do you do that?</td></tr>
+</tbody></table>
+<ul>
+  <li><code>kwa</code> = <em>what</em> (thing), <code>kva</code> = <em>which</em> (selection from a set). Both are dictionary words; do not interchange them.</li>
+  <li>Question words front; if the answer is a prepositional place, the question still uses <code>kwaras</code> alone (no preposition doubling): <code>Kwaras tu s?</code> <em>Where are you?</em></li>
+  <li>With negation and tense, order is unchanged: <code>Kvaso tu un né gai?</code> — <em>Why didn't you go?</em></li>
+</ul>
+<h2>7.3 Alternative and tag questions</h2>
+<ul>
+  <li>Alternative: <code>ora</code> between options: <code>Kvo tu gai ora tu suda?</code> — *Do you go or do you call?* — answers name the option: <code>Tu gai.</code></li>
+  <li>Tag questions: <strong>Informal only</strong>, trailing <code>koro?</code> (lit. <em>really?</em>): <code>Siva s gavo, koro?</code> — <em>Siva is good, isn't she?</em> Formal text SHOULD end with a plain declarative or a <code>kvo</code> question instead (§6.9).</li>
+  <li>Echo/rhetorical questions repeat the other speaker's fronted word; this is a discourse feature of Informal speech (informative): <code>Kwaras? Na lé tiva!</code> <em>Where? In the room!</em></li>
+</ul>
+<h2>7.4 Embedded questions</h2>
+<p>An embedded (indirect) question keeps <strong>ordinary statement order</strong> and takes</p>
+<p><strong>no <code>kvo</code></strong>; the wh-word alone marks it:</p>
+<ul>
+  <li><code>Mi kéma kwaras tu gai.</code> — <em>I know where you go.</em></li>
+  <li><code>Mi un kéma kwa tu féma.</code> — <em>I don't know what you eat.</em></li>
+  <li>The embedded clause takes statement punctuation inside a larger sentence and a final <code>dota</code> at the end of the whole.</li>
+</ul>
+<h2>7.5 Question words vs relative words</h2>
+<p>English uses <em>who/which/that</em> for both jobs; Beluma keeps separate series:</p>
+<table>
+<thead><tr><th>Job</th><th>Series</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Question</td><td><code>kvasi</code>, <code>kwa</code>, <code>kva</code> …</td><td><code>Kvasi s ta?</code> — <em>Who is that?</em></td></tr>
+<tr><td>Relative</td><td><code>ka</code>, <code>ta</code>, <code>ka-la</code></td><td><code>Lé misi ka s unréva.</code> — <em>The person who is sad.</em></td></tr>
+</tbody></table>
+<p>A question word always fronts its clause; a relative word always follows its</p>
+<p>noun (§03.5). Neither can do the other's job.</p>
+<h2>7.6 Interrogative intonation (informative)</h2>
+<p>Yes/no questions rise at <code>kwamorka</code>; content questions fall. Echo questions rise.</p>
+<p>Stress never moves to mark a question — the fronted particle does all the work.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

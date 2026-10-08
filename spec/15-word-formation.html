@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§15 Word Formation — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§15 Word Formation — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§15 Word Formation — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong> Beluma grows by <strong>compounding</strong> existing roots and by a</p>
+<p><strong>closed, fully productive set of affixes</strong>. Every word is built, never invented</p>
+<p>from nothing, and becomes part of the language only when it is registered in the</p>
+<p>dictionary (§0.4). Because the rules are regular, a speaker can build and parse</p>
+<p>words never heard before, and a defined core of a few thousand roots supports a</p>
+<p>usable lexicon of hundreds of thousands of words.</p>
+<h2>15.1 The growth model</h2>
+<p>Beluma's lexicon has three layers:</p>
+<table>
+<thead><tr><th>Layer</th><th>Size (v1.0 target)</th><th>How it is made</th></tr></thead>
+<tbody>
+<tr><td><strong>Roots</strong></td><td>2,000–3,000</td><td>simple, monomorphemic words (§15.9)</td></tr>
+<tr><td><strong>Derived words</strong></td><td>20,000+</td><td>one to three affixes on a root (§15.2–§15.6)</td></tr>
+<tr><td><strong>Compounds &amp; terms</strong></td><td>250,000+</td><td>head-first combination of registered words (§15.7–§15.8)</td></tr>
+</tbody></table>
+<p>Because derivation and compounding are regular, the <em>reachable</em> vocabulary is the</p>
+<p>product of the layers, not their sum (§15.11).</p>
+<h2>15.2 The affix inventory (normative)</h2>
+<p>Every affix below is <strong>productive</strong>: it may be added to any semantically</p>
+<p>compatible root and the result is grammatical and inferable without a dictionary.</p>
+<h3>15.2.1 Prefixes</h3>
+<table>
+<thead><tr><th>Prefix</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>un-</code></td><td>not, negation, privation</td><td><code>un-kula</code> light/easy (not-heavy)</td></tr>
+<tr><td><code>ni-</code></td><td>opposite, contrary, anti-</td><td><code>ni-kéma</code> misunderstand</td></tr>
+<tr><td><code>ré-</code></td><td>again, re-, back</td><td><code>ré-dora</code> reopen</td></tr>
+<tr><td><code>né-</code></td><td>before, pre-, ex-</td><td><code>né-vista</code> preview (before-see)</td></tr>
+<tr><td><code>wé-</code></td><td>after, post-, future</td><td><code>wé-kiva</code> postscript, follow-up</td></tr>
+<tr><td><code>mi-</code></td><td>mid-, inter-, between</td><td><code>mi-tiva</code> corridor (between-room)</td></tr>
+<tr><td><code>hi-</code></td><td>over-, super-, hyper-</td><td><code>hi-méra</code> open ocean (above-sea)</td></tr>
+<tr><td><code>lu-</code></td><td>under-, sub-, infra-</td><td><code>lu-méra</code> seabed, submarine zone</td></tr>
+<tr><td><code>ko-</code></td><td>with, co-, joint</td><td><code>ko-kivor</code> colleague</td></tr>
+<tr><td><code>dis-</code></td><td>across, trans-, through</td><td><code>dis-sova</code> translation</td></tr>
+<tr><td><code>zu-</code></td><td>bad, mal-, mis- (pejorative)</td><td><code>zu-viva</code> misfire, foul (bad-shoot)</td></tr>
+<tr><td><code>gavo-</code></td><td>good, well-, eu-</td><td><code>gavo-gai</code> welcome (well-come)</td></tr>
+</tbody></table>
+<h3>15.2.2 Noun-forming suffixes</h3>
+<table>
+<thead><tr><th>Suffix</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>-or</code></td><td>doer, agent</td><td><code>kémor</code> teacher (know-er)</td></tr>
+<tr><td><code>-pira</code></td><td>tool, instrument</td><td><code>fóra-pira</code> knife (cut-tool)</td></tr>
+<tr><td><code>-tavi</code></td><td>platform, surface, table</td><td><code>kiva-tavi</code> desk</td></tr>
+<tr><td><code>-tiva</code></td><td>room, chamber, container</td><td><code>livo-tiva</code> classroom</td></tr>
+<tr><td><code>-nása</code></td><td>house, building, institution</td><td><code>kéma-nása</code> school</td></tr>
+<tr><td><code>-an</code></td><td>place, habitat, natural site</td><td><code>fira-an</code> nest</td></tr>
+<tr><td><code>-os</code></td><td>group, collective, corps</td><td><code>fira-os</code> flock</td></tr>
+<tr><td><code>-ét</code></td><td>young, offspring</td><td><code>lavo-ét</code> puppy</td></tr>
+<tr><td><code>-ik</code></td><td>one resembling, -like (also adj)</td><td><code>fira-ik</code> birdlike</td></tr>
+<tr><td><code>-va</code></td><td>act, process (verbal noun)</td><td><code>sola-va</code> playing</td></tr>
+<tr><td><code>-ké</code></td><td>result, product, completed state</td><td><code>féma-ké</code> a meal eaten</td></tr>
+<tr><td><code>-sula</code></td><td>great form; abstract quality when on a noun</td><td><code>sulo-sula</code> greatness</td></tr>
+<tr><td><code>-nira</code></td><td>small form; endearment</td><td><code>kora-nira</code> bucket</td></tr>
+<tr><td><code>-moka</code></td><td>outward location, out-</td><td><code>tiva-moka</code> outdoors</td></tr>
+<tr><td><code>-nilo</code></td><td>inner location, in-</td><td><code>tiva-nilo</code> indoors</td></tr>
+<tr><td><code>-síka</code></td><td>piece, fragment, -let</td><td><code>fura-síka</code> fruit-piece</td></tr>
+<tr><td><code>-kosa</code></td><td>-ness, -ity (state noun, on adjectives)</td><td><code>béla-kosa</code> beauty</td></tr>
+</tbody></table>
+<h3>15.2.3 Adjective-forming suffixes</h3>
+<table>
+<thead><tr><th>Suffix</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>-ik</code></td><td>having the quality of, -y</td><td><code>koma-ik</code> painful</td></tr>
+<tr><td><code>-oka</code></td><td>having (possessive adjective)</td><td><code>vosa-oka</code> fleshy</td></tr>
+<tr><td><code>-uma</code></td><td>lacking, -less (privative)</td><td><code>fola-uma</code> hairless</td></tr>
+<tr><td><code>-vela</code></td><td>full of, rich in</td><td><code>riva-vela</code> joyful, joy-filled</td></tr>
+<tr><td><code>-sama</code></td><td>like, similar to</td><td><code>luno-sama</code> catlike</td></tr>
+<tr><td><code>-ona</code></td><td>made of, material</td><td><code>luma-ona</code> light-made</td></tr>
+<tr><td><code>-jan</code></td><td>able to be, -able</td><td><code>kiva-jan</code> doable</td></tr>
+<tr><td><code>-jira</code></td><td>needing to be, -worthy</td><td><code>nava-jira</code> wash-needing</td></tr>
+</tbody></table>
+<h3>15.2.4 Verb-forming suffixes</h3>
+<table>
+<thead><tr><th>Suffix</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>-ka</code></td><td>causative: make, cause to</td><td><code>kiva-ka</code> employ, set to work</td></tr>
+<tr><td><code>-ta</code></td><td>inchoative: become</td><td><code>nula-ta</code> get cold</td></tr>
+<tr><td><code>-sa</code></td><td>factitive: produce, emit</td><td><code>luma-sa</code> shine, give light</td></tr>
+<tr><td><code>-ni</code></td><td>instrumental: do with</td><td><code>fóra-ni</code> cut with a knife</td></tr>
+<tr><td><code>-ruka</code></td><td>repetitive / habitual</td><td><code>kosa-ruka</code> chatter</td></tr>
+<tr><td><code>-ski</code></td><td>attempt, try to</td><td><code>tora-ski</code> attempt an attack</td></tr>
+<tr><td><code>-bira</code></td><td>malefactive: do to harm</td><td><code>kosa-bira</code> talk behind someone's back</td></tr>
+</tbody></table>
+<h3>15.2.5 Inflectional suffixes (obligatory, outermost)</h3>
+<table>
+<thead><tr><th>Suffix</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>-s</code> / <code>-as</code></td><td>plural (-s after vowel, -as after consonant)</td><td><code>lavos</code> dogs</td></tr>
+<tr><td><code>-la</code></td><td>possession</td><td><code>mi-la</code> my</td></tr>
+<tr><td><code>-ji</code></td><td>ordinal</td><td><code>ona-ji</code> first</td></tr>
+<tr><td><code>-lé</code></td><td>adverb (manner)</td><td><code>gavo-lé</code> well</td></tr>
+</tbody></table>
+<h2>15.3 Derivation pipeline (normative)</h2>
+<p>Derivation is strictly ordered; the slots are applied left to right.</p>
+<pre><code>
+PREFIX  +  ROOT  +  DERIVATION SUFFIX  +  INFLECTION
+(gavo|un|ni|ré|…)   (kiva)  (-or|-pira|-tiva|-ka|-ik…)  (-s|-la|-ji|-lé)
+</code></pre>
+<p>Examples: <code>un-kiva-jan-lé</code> "unemployably"; <code>ré-kosa-ruka-va</code> "chattering</p>
+<p>again"; <code>lu-méra-pira</code> "deep-sea tool". At most <strong>three</strong> derivational affixes</p>
+<p>per word in Standard prose (§15.7); more must be registered as a term (§15.8).</p>
+<h2>15.4 Deriving each word class (normative)</h2>
+<p><strong>Noun → verb.</strong> <code>-ka</code> causative, <code>-ta</code> become, <code>-sa</code> produce, <code>-ni</code> use:</p>
+<p><code>kora</code> heart → <code>kora-ka</code> encourage, <code>kora-ta</code> take courage, <code>kora-ni</code> do by heart.</p>
+<p><strong>Verb → noun.</strong> <code>-or</code> agent, <code>-pira</code> instrument, <code>-tiva</code> room, <code>-va</code> act,</p>
+<p><code>-ké</code> result, <code>-an</code> place: <code>sola</code> play → <code>sola-or</code> player, <code>sola-pira</code> toy,</p>
+<p><code>sola-tiva</code> playroom, <code>sola-va</code> playing, <code>sola-ké</code> a finished game.</p>
+<p><strong>Verb/adjective → adjective.</strong> <code>-ik</code> quality, <code>-jan</code> able, <code>-jira</code> worthy,</p>
+<p><code>-akta</code> past-participial: <code>sola-ik</code> playful, <code>sola-jan</code> playable, <code>sola-jira</code></p>
+<p>worth playing, <code>sola-akta</code> played-out.</p>
+<p><strong>Adjective → adverb.</strong> <code>-lé</code>: <code>sulo-lé</code> strongly; <code>-nira-lé</code> mildly.</p>
+<p><strong>Adjective → abstract noun.</strong> <code>-kosa</code> or <code>-sula</code>: <code>béla</code> beautiful → <code>béla-kosa</code></p>
+<p>beauty; <code>sulo</code> strong → <code>sulo-sula</code> strength (great).</p>
+<p><strong>Noun → adjective of material/origin.</strong> <code>-ona</code> made of, <code>-vela</code> full of,</p>
+<p><code>-uma</code> without: <code>tira-ona</code> metal-made, <code>riva-vela</code> joyful, <code>fola-uma</code> hairless.</p>
+<p><strong>Noun → diminutive / augmentative.</strong> <code>-nira</code> small/endearing, <code>-sula</code> large,</p>
+<p><code>-ét</code> young: <code>luno-nira</code> kitten, <code>luno-sula</code> a great cat, <code>lavo-ét</code> puppy.</p>
+<p><strong>Abstract / collective.</strong> <code>-sula</code> (quality), <code>-os</code> (group), <code>-kosa</code> (state):</p>
+<p><code>misi-os</code> a people, <code>liso-kosa</code> hardness.</p>
+<h2>15.5 Zero derivation</h2>
+<p>Any adjective may be used as a noun, and vice versa, with no suffix:</p>
+<p><code>béla</code> <em>beautiful / beauty</em>, <code>sulo</code> <em>strong / strength</em>, <code>koma</code> <em>pain / hurt</em>.</p>
+<p>The dictionary records both readings. Prefer zero derivation over coining an</p>
+<p><code>-sula</code> form when the dictionary already has the adjective.</p>
+<h2>15.6 Reduplication</h2>
+<p>Whole-word repetition marks reciprocal or distributive meaning: <code>ona-ona</code></p>
+<p><em>each other</em>. Only dictionary-recorded reduplications are lexemes; a new one is</p>
+<p>understandable but enters the dictionary only with a registered gloss.</p>
+<p>Reduplication never marks plurality (<code>-s</code> does).</p>
+<h2>15.7 Compounding</h2>
+<ul>
+  <li><strong>Head-first:</strong> the first element is the semantic head; every later element specifies it: <code>nela-sula</code> water+great = <em>ocean</em>; <code>kiva-nira</code> work+small = <em>gadget</em>; <code>kora-jula</code> chest+serving = <em>server</em>; <code>sova-nela</code> speech+stream = <em>language</em>; <code>luma-saro</code> light+star = <em>flashlight</em>.</li>
+  <li>Any two (or three) dictionary words may combine; the compound is grammatical at once. Three elements are the prose limit; four only in Technical names.</li>
+  <li>Writing: closed unless the dictionary hyphenates the compound (§2.6).</li>
+  <li><strong>Transparent nesting</strong> is required for parsing: <code>luma-kora-pira</code> is read <code>(luma-kora)-pira</code> (battery-tool), never ambiguously.</li>
+  <li>A compound is licensed by <em>meaning</em>: the head must denote a real class the modifier restricts (<code>kéma-nása</code> know-house = school, not "a knowledgeable building").</li>
+</ul>
+<h2>15.8 Terminology (how Technical Beluma is coined)</h2>
+<p>New scientific and technical words MUST be built from existing roots where</p>
+<p>possible; loans (§15.10) are the fallback. Standard patterns:</p>
+<table>
+<thead><tr><th>Concept</th><th>Beluma pattern</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>discipline</td><td><code>X-kéma</code> (knowledge of X)</td><td><code>saro-kéma</code> astronomy</td></tr>
+<tr><td>instrument</td><td><code>X-pira</code></td><td><code>hurox-pira</code> microscope</td></tr>
+<tr><td>process</td><td><code>X-va</code></td><td><code>fosa-va</code> fusion</td></tr>
+<tr><td>person in field</td><td><code>X-or</code> / <code>X-kivor</code></td><td><code>kimia-kivor</code> chemist</td></tr>
+<tr><td>theory / system</td><td><code>X-sula</code></td><td><code>gravita-sula</code> theory of gravity</td></tr>
+<tr><td>measurement</td><td><code>X-méra</code></td><td><code>sumés-méra</code> chronometry</td></tr>
+<tr><td>small/particle</td><td><code>X-nira</code></td><td><code>luma-nira</code> photon-let</td></tr>
+<tr><td>device/network</td><td><code>X-nása</code></td><td><code>kêve-nása</code> server-hub</td></tr>
+</tbody></table>
+<p>A term is legitimate when a Beluma speaker who knows the roots could infer its</p>
+<p>meaning. Terms are registered with a <code>[technical]</code> tag (§23).</p>
+<h2>15.9 Root coining rules (normative)</h2>
+<p>New <strong>roots</strong> are the rarest addition. A candidate root MUST:</p>
+<ol>
+  <li>obey the alphabet (no <code>c</code>, <code>q</code>, <code>y</code>; write <code>k</code>, <code>s</code>/<code>kv</code>, <code>i</code>) and §1 phonotactics (legal onsets, penult stress);</li>
+  <li>not collide with an existing entry (§15.10);</li>
+  <li>not be a synonym of an existing root unless it adds a needed distinction (avoid synonym surplus);</li>
+  <li>be short (1–3 syllables) and end in a vowel for easy compounding;</li>
+  <li>be built from the semantic-field primitives where one already exists.</li>
+</ol>
+<p>Roots are proposed by the Academy (§25), validated (§24), and registered with a</p>
+<p>VTXT bump.</p>
+<h2>15.10 Collision rules and loanwords</h2>
+<p>A candidate word is rejected if it: differs from an entry only by accent; equals</p>
+<p>an entry after stripping plural/possessive marking; is a near-homophone (§1.9.4);</p>
+<p>or violates §1 phonotactics.</p>
+<p><strong>Loans</strong> enter by respelling: no <code>c/q/y</code>, §1 phonotactics, penult stress, noun</p>
+<p>final vowel. Attested: <code>komputa</code> &lt; computer, <code>programa</code> &lt; program, <code>porsenta</code> &lt;</p>
+<p>percent, <code>muzika</code> &lt; music, <code>telefona</code> &lt; telephone, <code>foto</code> &lt; photo. When a loan</p>
+<p>collides with a native root, <strong>the native word wins</strong> and the loan is reshaped or</p>
+<p>rejected.</p>
+<h2>15.11 Capacity (why 250,000+ is reachable)</h2>
+<p>The reachable lexicon is combinatorial:</p>
+<pre><code>
+reachable  ≈  R × (1 + A)  +  R × M  +  H × M
+             └ derived ┘      └ 2-part ┘  └ heads × modifiers ┘
+</code></pre>
+<p>With <code>R = 2,000</code> roots, <code>A = 30</code> derivation affixes, <code>M = 2,000</code> modifiers and</p>
+<p><code>H = 500</code> classifier heads:</p>
+<ul>
+  <li>derived words: <code>R × A</code> = <strong>60,000</strong></li>
+  <li>two-part compounds: essentially unbounded; even 5% registration = <strong>&gt;200,000</strong></li>
+  <li>registered core (roots + common derivations + named terms): <strong>&gt;20,000</strong></li>
+</ul>
+<p>The Academy registers only words in actual use; the <em>capacity</em> above is what any</p>
+<p>speaker can produce correctly on demand, which is what makes Beluma scalable.</p>
+<p><code>tools/grow.py</code> computes and reports this capacity from the live dictionary.</p>
+<h2>15.12 Registration</h2>
+<ol>
+  <li>Build the form by §15.2–§15.10.</li>
+  <li>Check with <code>tools/validate_dict.py</code> (§24).</li>
+  <li>Add the entry to <code>lexicon/h.txt</code> with gloss(es) and register tag; bump <code>VTXT</code>.</li>
+  <li>Until registered, a form is a transparent derived word or compound — still grammatical and parseable, just not yet "official".</li>
+</ol>
+<p><strong>Register of coinage:</strong> roots enter as <strong>Standard</strong>; domain terms as</p>
+<p><strong>Technical</strong> (§23) and are promoted by usage via a VTXT change. Words only for</p>
+<p>Informal use are tagged <code>colloquial</code> and must still obey §15.10 rules 1–4.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

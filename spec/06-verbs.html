@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§06 Verbs and Tense — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§06 Verbs and Tense — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§06 Verbs and Tense — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong> Verbs never conjugate. Person, number, and gender never</p>
+<p>touch the verb; tense, aspect, mood, and voice are carried by pre-verbal particles,</p>
+<p>auxiliaries, and two participle suffixes.</p>
+<h2>6.1 The bare verb</h2>
+<ul>
+  <li>The unmarked verb is present tense, any person, any number: <code>Mi gai.</code> <em>I go.</em> — <code>Misu gai.</code> <em>They go.</em></li>
+  <li>The verb form is the dictionary form; there is no infinitive marker. A verb used as a noun takes <code>-va</code> (§6.8): <code>lé sola-va</code> <em>the playing</em>.</li>
+</ul>
+<h2>6.2 Tense particles</h2>
+<table>
+<thead><tr><th>Particle</th><th>Meaning</th><th>Example</th><th>Gloss</th></tr></thead>
+<tbody>
+<tr><td>(none)</td><td>present</td><td><code>Mi gai.</code></td><td>I go / I am going</td></tr>
+<tr><td><code>né</code></td><td>past</td><td><code>Mi né gai.</code></td><td>I went</td></tr>
+<tr><td><code>wé</code></td><td>future</td><td><code>Mi wé gai.</code></td><td>I will go</td></tr>
+<tr><td><code>wés</code></td><td>imminent (<em>about to</em>)</td><td><code>Mi wés gai.</code></td><td>I am about to go</td></tr>
+</tbody></table>
+<p>Position rules:</p>
+<ol>
+  <li>The tense particle sits after the subject (and any time adverb), after <code>un</code> when negated, before aspect and modals: <code>Mi un né gai.</code> — <em>I did not go.</em> (<code>un</code> precedes <code>né</code>)</li>
+  <li><code>wés</code> is <strong>not</strong> a negative future: <em>will not</em> is <code>un wé</code> (<code>Mi un wé gai.</code> — <em>I will not go.</em>). The retired reading <em>won't</em> for <code>wés</code> is obsolete; texts using it are non-conformant.</li>
+  <li>Only one tense particle per clause.</li>
+</ol>
+<h2>6.3 Aspect</h2>
+<p>Aspect reuses two items every speaker already has — the copula <code>s</code> and the</p>
+<p>suffixes <code>-va</code> (-ing) and <code>-ké</code> (-ed) — plus three auxiliary verbs.</p>
+<table>
+<thead><tr><th>Aspect</th><th>Construction</th><th>Example</th><th>Gloss</th></tr></thead>
+<tbody>
+<tr><td>progressive</td><td><code>s</code> + V-<code>va</code></td><td><code>Mi s gai-va.</code></td><td>I am going</td></tr>
+<tr><td>past progressive</td><td><code>né s</code> + V-<code>va</code></td><td><code>Mi né s gai-va.</code></td><td>I was going</td></tr>
+<tr><td>perfect</td><td><code>vóta</code> + V</td><td><code>Mi vóta gai.</code></td><td>I have gone</td></tr>
+<tr><td>past perfect</td><td><code>né vóta</code> + V</td><td><code>Mi né vóta gai.</code></td><td>I had gone</td></tr>
+<tr><td>future perfect</td><td><code>wé vóta</code> + V</td><td><code>Mi wé vóta gai.</code></td><td>I will have gone</td></tr>
+<tr><td>inchoative</td><td><code>jála</code> + V</td><td><code>Mi jála gai.</code></td><td>I begin to go</td></tr>
+<tr><td>habitual</td><td><code>véta</code> + V</td><td><code>Mi véta gai vavi.</code></td><td>I usually go in the morning</td></tr>
+<tr><td>iterative</td><td><code>ré-</code> + V</td><td><code>Mi ré-gai.</code></td><td>I go again</td></tr>
+</tbody></table>
+<ul>
+  <li>The aspect words are ordinary words: <code>vóta</code> = <em>finish</em>, <code>jála</code> = <em>begin</em>, <code>véta</code> = <em>every</em> — the aspect word owns the clause and the main verb is its object (head-first, §15).</li>
+  <li><code>véta</code> before a verb = <em>usually/each time</em>; before a noun = <em>every</em>: <code>véta misi</code> <em>every person</em>. No ambiguity in practice.</li>
+  <li>Stacking: tense &gt; aspect &gt; modal. At most <strong>one</strong> aspect word and <strong>one</strong> modal per clause: <code>Mi né vóta gida kiva.</code> — <em>I had to finish work.</em> (lit. I past finish must work). More deeply layered meanings use two clauses.</li>
+  <li><code>ré-</code> is the only bound aspect; it attaches directly to the verb, hyphenated: <code>ré-gai</code>, <code>ré-féma</code>.</li>
+</ul>
+<h2>6.4 The participles</h2>
+<table>
+<thead><tr><th>Form</th><th>Meaning</th><th>Uses</th></tr></thead>
+<tbody>
+<tr><td>V-<code>va</code></td><td>-ing, ongoing</td><td>progressive with <code>s</code>; verbal noun</td></tr>
+<tr><td>V-<code>ké</code></td><td>-ed/-en, completed state</td><td>passive with <code>s</code>; <em>become ADJ</em></td></tr>
+</tbody></table>
+<ul>
+  <li><code>-ké</code> on an adjective phrases <em>have become</em>: <code>Lé néla s nula-ké.</code> — *The water has become cold.<em> <code>Mi s ésa-ké.</code> — </em>I have become tired.*</li>
+  <li>The verbal noun: <code>Lé sola-va s réva.</code> — <em>The playing is fun.</em></li>
+</ul>
+<h2>6.5 Voice — active and passive</h2>
+<ul>
+  <li>Active: ordinary SVO. <code>Lé bino né féma lé fura.</code> — <em>The boy ate the fruit.</em></li>
+  <li>Passive: front the object as subject, verb = <code>s</code> + V-<code>ké</code>, doer with <code>li</code>:</li>
+</ul>
+<table>
+<thead><tr><th>Active</th><th>Passive</th></tr></thead>
+<tbody>
+<tr><td><code>Lé bino né féma lé fura.</code></td><td><code>Lé fura né s féma-ké li lé bino.</code></td></tr>
+<tr><td><em>The boy ate the fruit.</em></td><td><em>The fruit was eaten by the boy.</em></td></tr>
+</tbody></table>
+<ul>
+  <li>Agentless passive: omit the <code>li</code> phrase: <code>Lé tura s dora-ké.</code> — <em>The door is opened.</em></li>
+  <li>Perfect passive: <code>vóta s</code> + V-<code>ké</code>: <code>Lé fura vóta s féma-ké.</code> — *The fruit has been eaten.*</li>
+  <li>Register: passive is Formal/Standard (law, news, academic); Informal prefers active or the generic agent <code>zava</code> (<em>one</em>): <code>Zava né féma lé fura.</code></li>
+</ul>
+<h2>6.6 Modals</h2>
+<p>All modals take a bare verb; tense composes to their left.</p>
+<table>
+<thead><tr><th>Modal</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>kima</code></td><td>can, be able</td><td><code>Mi kima gai.</code> — I can go</td></tr>
+<tr><td><code>unkima</code></td><td>cannot</td><td><code>Mi unkima gai.</code> — I cannot go</td></tr>
+<tr><td><code>néma</code></td><td>may (permission)</td><td><code>Tu néma gai.</code> — You may go</td></tr>
+<tr><td><code>gida</code></td><td>must, have to</td><td><code>Mis gida gai.</code> — We must go</td></tr>
+<tr><td><code>gida-nira</code></td><td>ought to (mild)</td><td><code>Tu gida-nira soma.</code> — You ought to sleep</td></tr>
+<tr><td><code>sud</code></td><td>should (advice)</td><td><code>Tu sud gai.</code> — You should go</td></tr>
+<tr><td><code>unsud</code></td><td>shouldn't</td><td><code>Tu unsud gai.</code> — You shouldn't go</td></tr>
+<tr><td><code>da-va</code></td><td>would, could, might</td><td><code>Mi da-va gai.</code> — I would go</td></tr>
+<tr><td><code>vento</code></td><td>maybe (likelihood adverb, verb-final scope)</td><td><code>Vento nivo gai.</code> — Maybe he goes</td></tr>
+</tbody></table>
+<p>Negation of modals — use the modal's own form or <code>un</code>, with these fixed readings:</p>
+<table>
+<thead><tr><th>Reading</th><th>Beluma</th></tr></thead>
+<tbody>
+<tr><td>don't have to</td><td><code>un gida</code></td></tr>
+<tr><td>must not / not allowed</td><td><code>du</code> (command) or <code>un néma</code></td></tr>
+<tr><td>cannot</td><td><code>unkima</code> (or <code>un kima</code>)</td></tr>
+<tr><td>shouldn't</td><td><code>unsud</code> (or <code>un sud</code>)</td></tr>
+<tr><td>won't have to</td><td><code>un wé gida</code></td></tr>
+</tbody></table>
+<p>Tense + modal examples: <code>Mi né kima gai.</code> — <em>I could go.</em> — <code>Mi wé gida gai.</code> —</p>
+<p><em>I will have to go.</em> — <code>Mi un wé gida gai.</code> — <em>I won't have to go.</em></p>
+<h2>6.7 Conditionals</h2>
+<ul>
+  <li>Open/likely condition: <code>da</code> clause + main clause: <code>Da tu suda, mi wé gai.</code> — <em>If you call, I will go.</em> (verify <code>suda</code> = call; else rephrase in your text)</li>
+  <li>Hypothetical/counterfactual: <code>da</code> clause + <code>da-va</code> main clause: <code>Da mi né suda, mi da-va gai.</code> — <em>If I had called, I would have gone.</em></li>
+  <li><code>né da-va</code> + verb = <em>would have</em>: <code>Mi né da-va gai.</code> — <em>I would have gone.</em></li>
+  <li><code>da</code> always opens the condition clause; the result clause follows in normal order. Conjunction cross-reference: §12.</li>
+</ul>
+<h2>6.8 Imperatives</h2>
+<ul>
+  <li>Affirmative: bare verb, subject omitted: <code>Gai!</code> <em>Go!</em> — <code>Féra lé fura!</code> <em>Cut the fruit!</em></li>
+  <li>Subject emphasis (rare, Standard): <code>Tu gai!</code> — <em>You go!</em></li>
+  <li>Negative: <code>du</code> + verb: <code>Du gai!</code> — <em>Don't go!</em> — <code>Du féra lé fura!</code> <em>Don't cut the fruit!</em> (<code>du</code> replaces <code>un</code>; §08)</li>
+  <li>Politeness: sentence-initial <code>téva</code> (<em>please</em>): <code>Téva gai po ra.</code> — *Please come near.* — or the idiom <code>téva-gavo</code> style requests per §23.</li>
+  <li>There is no imperative inflection and no vocative requirement.</li>
+</ul>
+<h2>6.9 The copula <code>s</code></h2>
+<ul>
+  <li>Equational: <code>Mi s misi.</code> — <em>I am a person.</em></li>
+  <li>Locative: <code>Mi s na nésa.</code> — <em>I am in the house.</em></li>
+  <li>With adjectives (no <em>-ly</em> verb needed): <code>La loma s béla.</code> — <em>The tree is beautiful.</em></li>
+  <li>Tense applies to <code>s</code>: <code>Mi né s na nésa.</code> — <em>I was in the house.</em> — <code>Mi wé s.</code> — <em>I will be.</em></li>
+  <li>Negation: <code>un</code> before <code>s</code>: <code>Mi un s esa.</code> — <em>I am not tired.</em></li>
+  <li>3 sg subjects use <code>s</code> unchanged: <code>Nivo s koma.</code> — <em>He is in pain.</em></li>
+  <li>Tag questions: Informal uses <code>koro?</code> (<code>Siva s gavo, koro?</code>); Formal states a short declarative with <code>kvo</code>: <code>Siva s gavo. Kvo un?</code> — or simply no tag. Formal writing SHOULD avoid tags entirely.</li>
+</ul>
+<h2>6.10 Existential <code>esto</code></h2>
+<p><code>esto</code> = <em>there is / there are</em> (from <code>esera</code> = being):</p>
+<ul>
+  <li><code>Esto o loma ra lé nésa.</code> — <em>There is a tree near the house.</em></li>
+  <li><code>Un esto o misi na lé tiva.</code> — <em>There is no one in the room.</em></li>
+  <li><code>Esto misu na lé méra.</code> — <em>There are people at the sea.</em> (plural is on the subject noun, never on <code>esto</code>)</li>
+  <li>Negation is <code>un esto</code>, never <code>zéra esto</code>.</li>
+</ul>
+<h2>6.11 Informal irregular forms</h2>
+<p>Informal speech memorises high-frequency pasts as whole chunks, bypassing <code>né</code>:</p>
+<table>
+<thead><tr><th>Standard</th><th>Informal</th><th>Gloss</th></tr></thead>
+<tbody>
+<tr><td><code>Mi né s.</code></td><td><code>Mi rá.</code></td><td>I was</td></tr>
+<tr><td><code>Mi né diva.</code></td><td><code>Mi dá.</code></td><td>I did</td></tr>
+<tr><td><code>Mi né gai.</code></td><td><code>Mi víra.</code></td><td>I went</td></tr>
+</tbody></table>
+<ul>
+  <li>These forms are <strong>Informal register only</strong> (§23). Standard, Formal, and Technical texts MUST use <code>né</code>.</li>
+  <li>They compose with aspect: <code>Mi rá s gai-va.</code> — <em>I was going.</em> — <code>Mis dá jála lérn.</code> — <em>We began to learn.</em></li>
+  <li><code>rá</code>, <code>dá</code> are accent-pair words (§1.5.4): <code>ra</code> <em>near</em> vs <code>rá</code> <em>was</em>, <code>da</code> <em>if</em> vs <code>dá</code> <em>did</em>; spelling MUST be exact.</li>
+  <li>Dictionary note: <code>víra</code> carries both the irregular-past gloss and the unrelated lexical senses <em>green / life</em> (§26.4 homographs).</li>
+</ul>
+<h2>6.12 Verb inventory notes (informative)</h2>
+<p>Light and support verbs keep their literal meanings: <code>diva</code> <em>do/make</em>, <code>gai</code> <em>go</em>,</p>
+<p><code>vóta</code> <em>finish</em>, <code>jála</code> <em>begin</em>. A verb used with a borrowed noun (<code>programa diva</code>)</p>
+<p>is still <code>diva</code> — no support-verb inflection differences exist.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

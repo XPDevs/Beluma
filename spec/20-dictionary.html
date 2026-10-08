@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§20 Dictionary Structure — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§20 Dictionary Structure — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§20 Dictionary Structure — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong> The dictionary is a single plain-text file,</p>
+<p><code>lexicon/h.txt</code>. This section defines its format, fields, tags, and versioning.</p>
+<h2>20.1 File format</h2>
+<p>The dictionary is UTF-8, one entry per line, fields separated by <code> = </code>:</p>
+<pre><code>
+kéma = know / know-how [noun] {standard} # teaches
+</code></pre>
+<p>Formal grammar: <code>head = glosses [class] {register} # notes</code>.</p>
+<ul>
+  <li><strong>head</strong> — the citation form, lowercase, alphabet-legal (§01), one word.</li>
+  <li><strong>glosses</strong> — English senses, separated by <code> / </code>.</li>
+  <li><strong><code>[class]</code></strong> — grammatical class tag (optional but recommended).</li>
+  <li><strong><code>{register}</code></strong> — register tag (optional; default Standard).</li>
+  <li><strong><code># notes</code></strong> — usage note, example, or inflection (optional).</li>
+</ul>
+<h2>20.2 Class tags</h2>
+<table>
+<thead><tr><th>Tag</th><th>Meaning</th><th>Tag</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><code>[noun]</code></td><td>substantive</td><td><code>[adj]</code></td><td>adjective</td></tr>
+<tr><td><code>[verb]</code></td><td>verb</td><td><code>[adv]</code></td><td>adverb</td></tr>
+<tr><td><code>[pron]</code></td><td>pronoun</td><td><code>[prep]</code></td><td>preposition</td></tr>
+<tr><td><code>[conj]</code></td><td>conjunction</td><td><code>[num]</code></td><td>numeral</td></tr>
+<tr><td><code>[part]</code></td><td>particle</td><td><code>[interj]</code></td><td>interjection</td></tr>
+<tr><td><code>[affix]</code></td><td>bound morpheme</td><td><code>[name]</code></td><td>proper noun</td></tr>
+</tbody></table>
+<h2>20.3 Register tags</h2>
+<p><code>{standard}</code> (default), <code>{formal}</code>, <code>{informal}</code>, <code>{technical}</code>, <code>{literary}</code>,</p>
+<p><code>{colloq}</code>, <code>{archaic}</code>. A definition may carry more than one, e.g.</p>
+<p><code>{standard,technical}</code>. See §23.1.</p>
+<h2>20.4 Field blocks</h2>
+<p>Sections are introduced by <code># --- name ---</code> comments:</p>
+<table>
+<thead><tr><th>Block</th><th>Content</th></tr></thead>
+<tbody>
+<tr><td>core</td><td>function words, pronouns, particles</td></tr>
+<tr><td>core-added</td><td>regular derivations and number words</td></tr>
+<tr><td>domain: …</td><td>24 domain sets (§15.13)</td></tr>
+<tr><td>units/science</td><td>§17</td></tr>
+<tr><td>gov/law</td><td>§18</td></tr>
+<tr><td>education/culture</td><td>§19</td></tr>
+<tr><td>notation</td><td>meta-linguistic and punctuation names</td></tr>
+</tbody></table>
+<p>Block comments are documentation only; the loader ignores them.</p>
+<h2>20.5 Derived forms and the head principle</h2>
+<p>Only <strong>heads</strong> are listed. Regular derivations (`-la -ji -lé -os -an -s -as</p>
+<p>-é<code>…) and compounds are <strong>not</strong> listed; the parser and </code>tools/grow.py` generate</p>
+<p>them from §15 rules. This keeps the file at ~2,200 heads while licensing</p>
+<p>hundreds of thousands of words. A derived form is listed <strong>only</strong> if its</p>
+<p>meaning is idiomatic, not compositional (e.g. <code>kéma</code> <em>know</em>, but <code>kémor</code></p>
+<p><em>teacher</em> is listed because the agent sense is conventionalized).</p>
+<h2>20.6 Required metadata header</h2>
+<p>The first lines of <code>h.txt</code> are:</p>
+<pre><code>
+# Beluma Lexicon
+# VTXT 4.0
+# format: head = glosses [class] {register} # notes
+</code></pre>
+<p>The <strong>VTXT</strong> line is the dictionary version and MUST match §15.12. Tools read</p>
+<p>it to detect breaking changes.</p>
+<h2>20.7 Validation rules</h2>
+<p>Every submission is checked by <code>tools/validate_dict.py</code>, which enforces:</p>
+<ol>
+  <li>alphabet legality (§01.2);</li>
+  <li>onset/coda phonotactics (§01.4);</li>
+  <li>accent placement = penult (§01.5), except registered accent pairs;</li>
+  <li>no exact duplicate heads;</li>
+  <li>well-formed line syntax.</li>
+</ol>
+<p>Accent-pair spelling collisions are downgraded to <strong>warnings</strong> and recorded in</p>
+<p>the registry (§26.4). Any <strong>error</strong> blocks a VTXT release.</p>
+<h2>20.8 Derived artifacts</h2>
+<p>The dictionary generates:</p>
+<ul>
+  <li><code>site/dictionary.html</code> — searchable web list;</li>
+  <li><code>library/lexicon.html</code> — browsable reference;</li>
+  <li><code>spec/20-dictionary.md</code> statistics (head count, blocks, tag counts);</li>
+  <li>engine word-data for <code>engine/beluma.js</code>.</li>
+</ul>
+<p>None of these are hand-edited; all are rebuilt by <code>tools/build_vocab.py</code>.</p>
+<h2>20.9 Current statistics</h2>
+<table>
+<thead><tr><th>Metric</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Heads</td><td>~2,191</td></tr>
+<tr><td>Blocks</td><td>core, core-added, 24 domains, units/science, gov/law, education/culture, notation</td></tr>
+<tr><td>VTXT</td><td>4.0</td></tr>
+<tr><td>Rebuild tool</td><td><code>tools/build_vocab.py</code> (to be run on every release)</td></tr>
+</tbody></table>
+<h2>20.10 Adding an entry</h2>
+<ol>
+  <li>Confirm the word is a <strong>head</strong> (§20.5), alphabet-legal, and not a duplicate.</li>
+  <li>Write the line in <code>h.txt</code> in the right block.</li>
+  <li>Run <code>tools/validate_dict.py</code> — must be 0 errors.</li>
+  <li>Run <code>tools/check_spec_words.py</code> if the entry is used in <code>spec/</code>.</li>
+  <li>Bump VTXT if the change is breaking (§15.12); note it in <code>canon/</code>.</li>
+</ol>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

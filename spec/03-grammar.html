@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§03 Grammar: Sentence Structure — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§03 Grammar: Sentence Structure — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§03 Grammar: Sentence Structure — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong> Beluma is analytic and SVO: order carries the grammar,</p>
+<p>inflection carries nothing.</p>
+<h2>3.1 Clause structure</h2>
+<p>The canonical clause is the slot pipeline below. Slots are written in fixed order;</p>
+<p>a slot that is empty is simply absent — no filler words appear.</p>
+<table>
+<thead><tr><th>#</th><th>Slot</th><th>Filled by</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>0</td><td>Topic</td><td>noun phrase + <code>ia</code></td><td>optional, §3.3</td></tr>
+<tr><td>1</td><td>Subject</td><td>noun phrase / pronoun</td><td>required in Formal, droppable §04</td></tr>
+<tr><td>2</td><td>Time adverb</td><td>time word or PP</td><td><code>safa</code>, <code>na túo vora</code></td></tr>
+<tr><td>3</td><td>Negation</td><td><code>un</code></td><td>§08</td></tr>
+<tr><td>4</td><td>Tense</td><td>(none) / <code>né</code> / <code>wé</code> / <code>wés</code></td><td>§06</td></tr>
+<tr><td>5</td><td>Aspect / modal</td><td><code>vóta</code> <code>jála</code> <code>véta</code> / <code>kima</code> <code>gida</code> …</td><td>§06</td></tr>
+<tr><td>6</td><td>Verb</td><td>bare verb</td><td>never inflected</td></tr>
+<tr><td>7</td><td>Object</td><td>noun phrase</td><td></td></tr>
+<tr><td>8</td><td>Prepositional phrases</td><td>PPs in time &gt; place order</td><td>§11</td></tr>
+<tr><td>9</td><td>Manner</td><td>adjective + <code>-lé</code></td><td>§10</td></tr>
+</tbody></table>
+<pre><code>
+[ia TOPIC] SUBJECT (TIME) un (né|wé|wés) (ASPECT|MODAL) VERB (OBJECT) (PP …) (MANNER-lé)
+</code></pre>
+<p>Examples:</p>
+<ul>
+  <li><code>Mi né féra fura.</code> — <em>I cut the fruit.</em></li>
+  <li><code>Mi un né féra fura.</code> — <em>I did not cut the fruit.</em> (<code>un</code> before <code>né</code>)</li>
+  <li><code>Siva wé gai po nésa.</code> — <em>She will go home.</em> (time &gt; place)</li>
+  <li><code>Lé fira hura vévlo gavo-lé.</code> — <em>The bird flies very well.</em></li>
+</ul>
+<h2>3.2 The noun phrase</h2>
+<p>Internal order, outermost first:</p>
+<pre><code>
+DEMONSTRATIVE  POSS(-la)  NUMERAL  ADJECTIVE  NOUN  (RELATIVE CLAUSE)
+</code></pre>
+<ul>
+  <li>Demonstratives: <code>eka</code> this (near speaker), <code>oka</code> that (near listener), <code>ta</code> that (far); <code>ta</code> doubles as relative "that" (§3.5).</li>
+  <li>Articles <code>lé</code> (definite) and <code>o</code> (indefinite) sit <strong>before</strong> the demonstrative when both appear: <code>lé eka loma</code> <em>this tree (known)</em>; <code>o eka loma</code> *this tree (first mention)*. Articles are optional but normal in Standard and Formal.</li>
+  <li>Order examples: - <code>mi-la túo béla loma</code> — <em>my two beautiful trees</em> - <code>oka nira fira</code> — <em>that small bird</em> - <code>o susa sulo keran</code> — <em>a strongest man</em> (attic: <code>susa</code> + noun = "the strongest of the group" when definite: <code>lé susa sulo keran</code>).</li>
+</ul>
+<h2>3.3 Topic fronting</h2>
+<p><code>ia</code> fronting moves the most important information to slot 0 and is followed by a</p>
+<p>comma. It is normal in Informal and permitted in Standard; Formal prefers plain SVO.</p>
+<ul>
+  <li>Standard: <code>Mi né féra fura.</code> — <em>I cut the fruit.</em></li>
+  <li>Informal: <code>Fura ia, mi né féra.</code> — <em>The fruit, I cut it.</em></li>
+</ul>
+<p>Only one <code>ia</code> topic per clause. The rest of the pipeline is unchanged.</p>
+<h2>3.4 Coordination</h2>
+<ul>
+  <li><code>unas</code> <em>and</em>, <code>ora</code> <em>or</em>, <code>néka</code> <em>but</em> join words, phrases, and clauses at the same level; they sit between the elements, never sentence-initially in Formal (use <code>néka</code> clause-initially only in Standard/Informal; Formal starts a new sentence or uses <code>tamen</code>, §12).</li>
+  <li>Before the last element of a list of three or more: <code>a, b unas c</code>.</li>
+  <li>Coordinated subjects take a singular predicate if the items form one unit: <code>Méra unas nela s nula.</code> — <em>Sea and water are cold</em> (one body of water).</li>
+</ul>
+<h2>3.5 Relative clauses</h2>
+<p>A relative clause is placed <strong>directly after its noun</strong>, and keeps perfectly normal</p>
+<p>SVO order — nothing moves to the front.</p>
+<table>
+<thead><tr><th>Word</th><th>Role</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>ka</code></td><td>subject relative (<em>who/which</em>)</td><td><code>lé misi ka s unréva</code> — <em>the person who is sad</em></td></tr>
+<tr><td><code>ta</code></td><td>object relative (<em>whom/that</em>)</td><td><code>lé fura ta mi né féra</code> — <em>the fruit that I cut</em></td></tr>
+<tr><td><code>ka-la</code></td><td>possessive (<em>whose</em>)</td><td><code>lé keran ka-la lavo</code> — <em>the man whose dog</em></td></tr>
+</tbody></table>
+<ul>
+  <li>Non-restrictive relatives are set off with commas: <code>Siva, ka mi léva, s nira.</code> — <em>Siva, whom I love, is small.</em></li>
+  <li>Nesting is allowed but a Formal text SHOULD keep to one level: a second relative may instead start a new sentence.</li>
+  <li>The relative <code>ka</code> is a different word from the question word <code>kvasi</code> (§07) — English uses <em>who</em> for both; Beluma keeps them apart.</li>
+  <li><code>ta</code> is also the demonstrative <em>that</em>; the noun it attaches to decides the reading.</li>
+</ul>
+<h2>3.6 Sentence types</h2>
+<table>
+<thead><tr><th>Type</th><th>Marking</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Declarative</td><td>statement, final <code>dota</code></td><td><code>Mi gai po nésa.</code></td></tr>
+<tr><td>Interrogative</td><td>fronted <code>kvo</code> or wh-word, <code>kwamorka</code></td><td>§07</td></tr>
+<tr><td>Imperative</td><td>bare verb, (exclamative)</td><td><code>Gai!</code> <em>Go!</em> — negative: <code>du gai!</code> §08</td></tr>
+<tr><td>Exclamative</td><td>statement + <code>fimorka</code></td><td><code>Tu s vévlo gavo!</code> — <em>You are very good!</em></td></tr>
+</tbody></table>
+<h2>3.7 Word order variation (informative)</h2>
+<p>Focus commonly lands clause-final (slot 9's position or the object's) — a focused</p>
+<p>object may move after the PPs, and contrastive topics use <code>ia</code> (§3.3). Questions</p>
+<p>never invert subject and verb (§07). Passive reorders to <code>s + V-ké</code> with the agent</p>
+<p>in a <code>li</code> PP (§06).</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

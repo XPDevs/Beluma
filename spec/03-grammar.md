@@ -10,7 +10,7 @@ a slot that is empty is simply absent — no filler words appear.
 
 | # | Slot | Filled by | Notes |
 | --- | --- | --- | --- |
-| 0 | Topic | noun phrase + `ya` | optional, §3.3 |
+| 0 | Topic | noun phrase + `ia` | optional, §3.3 |
 | 1 | Subject | noun phrase / pronoun | required in Formal, droppable §04 |
 | 2 | Time adverb | time word or PP | `safa`, `na túo vora` |
 | 3 | Negation | `un` | §08 |
@@ -22,7 +22,7 @@ a slot that is empty is simply absent — no filler words appear.
 | 9 | Manner | adjective + `-lé` | §10 |
 
 ```
-[ya TOPIC] SUBJECT (TIME) un (né|wé|wés) (ASPECT|MODAL) VERB (OBJECT) (PP …) (MANNER-lé)
+[ia TOPIC] SUBJECT (TIME) un (né|wé|wés) (ASPECT|MODAL) VERB (OBJECT) (PP …) (MANNER-lé)
 ```
 
 Examples:
@@ -53,13 +53,13 @@ DEMONSTRATIVE  POSS(-la)  NUMERAL  ADJECTIVE  NOUN  (RELATIVE CLAUSE)
 
 ## 3.3 Topic fronting
 
-`ya` fronting moves the most important information to slot 0 and is followed by a
+`ia` fronting moves the most important information to slot 0 and is followed by a
 comma. It is normal in Informal and permitted in Standard; Formal prefers plain SVO.
 
 - Standard: `Mi né féra fura.` — *I cut the fruit.*
-- Informal: `Fura ya, mi né féra.` — *The fruit, I cut it.*
+- Informal: `Fura ia, mi né féra.` — *The fruit, I cut it.*
 
-Only one `ya` topic per clause. The rest of the pipeline is unchanged.
+Only one `ia` topic per clause. The rest of the pipeline is unchanged.
 
 ## 3.4 Coordination
 
@@ -102,6 +102,6 @@ SVO order — nothing moves to the front.
 ## 3.7 Word order variation (informative)
 
 Focus commonly lands clause-final (slot 9's position or the object's) — a focused
-object may move after the PPs, and contrastive topics use `ya` (§3.3). Questions
+object may move after the PPs, and contrastive topics use `ia` (§3.3). Questions
 never invert subject and verb (§07). Passive reorders to `s + V-ké` with the agent
 in a `li` PP (§06).

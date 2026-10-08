@@ -62,20 +62,22 @@ Beluma syllables have the shape **(C)V(C)**: an optional single consonant onset,
 mandatory vowel nucleus, an optional single consonant coda.
 
 **Onsets.** A syllable may begin with a single consonant or with one of these
-attested clusters:
+clusters:
 
-> `pr tr br dr fr kr gr pl sp kv kw`
+> `pr tr br dr fr kr gr pl kl gl bl fl sl vl sp st sk kv kw ps sf`
 
-- New coinages SHOULD use only `pr br tr dr fr kr gr pl kv kw` (`sp` occurs in
-  established words such as `spira` and is otherwise reserved for loans).
-- Clusters such as `bl gl fl sl st sm sn` do not occur and MUST NOT be created.
+- New coinages SHOULD use a single consonant, or one of the core clusters
+  `pr br tr dr fr kr gr pl kl st sk sp` (`sp`, `ps`, `sf`, `sl`, `vl` occur mainly
+  in established words and loans such as `spira`, `stelo`, `kristalo`).
+- Clusters such as `sm sn` and any three-consonant onset MUST NOT be created.
+- The abbreviations `dn`/`rn` occur only in the scientific names `DNA`/`RNA`.
 
 **Codas.** A syllable may end with a single consonant. Attested codas, by frequency:
 
-> `s n r l k t f d p x`
+> `s n r l m k t f d p x`
 
-- The productive codas in native words are **`s`** (plural, §05), **`n r l k`**,
-  and **`t`** as realised by the suffix `-ét` (§15.5).
+- The productive codas in native words are **`s`** (plural, §05), **`n r l m k`**,
+  and **`t`** as realised by the suffix `-ét` (§15.2.2).
 - Codas `f d p x` occur only in established roots and digit roots (`af`, `nof`,
   `rip`, `hurox`, `sep`, `nof`). New coinages MUST NOT end in `f d p x`.
 - The preferred shape of a new root is open: `CV`, `CVV`, or `CVCV`.

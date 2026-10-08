@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§01 Phonology — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§01 Phonology — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§01 Phonology — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong> Beluma has a one-to-one orthography: every letter represents</p>
+<p>exactly one sound, and every sound is written with exactly one letter. There are no</p>
+<p>silent letters, no alternative spellings, and no spelling pronunciations.</p>
+<h2>1.1 Overview</h2>
+<ul>
+  <li>23 letters, 23 phonemes: 5 vowels and 18 consonants (§1.2, §1.3).</li>
+  <li>Every word is pronounced as written; every word is written as pronounced, up to the acute accent (§1.5).</li>
+  <li>Stress is fixed by rule — it never distinguishes words (§1.5).</li>
+</ul>
+<h2>1.2 Vowels</h2>
+<table>
+<thead><tr><th>Letter</th><th>IPA</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>a</code></td><td>/a/</td><td>open central, never reduced</td></tr>
+<tr><td><code>e</code></td><td>/e/</td><td>mid front</td></tr>
+<tr><td><code>i</code></td><td>/i/</td><td>close front</td></tr>
+<tr><td><code>o</code></td><td>/o/</td><td>mid back</td></tr>
+<tr><td><code>u</code></td><td>/u/</td><td>close back</td></tr>
+</tbody></table>
+<ul>
+  <li>No vowel length: <code>mala</code> /ma-la/ — both vowels short.</li>
+  <li>No diphthongs: adjacent vowels in different syllables (hiatus), e.g. <code>spira</code> /spi-ra/, <code>huroxan</code> /hu-ro-xan/. In rapid informal speech an off-glide [j] or [w] may appear between adjacent vowels (<code>spira</code> ≈ [spjra]) — this is <strong>informative</strong>, not required, and never changes the spelling.</li>
+  <li>No schwa and no unstressed reduction: every vowel is full in every register.</li>
+</ul>
+<h2>1.3 Consonants</h2>
+<table>
+<thead><tr><th>Letter</th><th>IPA</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>b</code></td><td>/b/</td><td></td></tr>
+<tr><td><code>d</code></td><td>/d/</td><td></td></tr>
+<tr><td><code>f</code></td><td>/f/</td><td></td></tr>
+<tr><td><code>g</code></td><td>/ɡ/</td><td>always hard; never /dʒ/</td></tr>
+<tr><td><code>h</code></td><td>/h/</td><td>always pronounced, never silent</td></tr>
+<tr><td><code>j</code></td><td>/j/</td><td>as English <em>y</em> in <em>yes</em>; never /dʒ/</td></tr>
+<tr><td><code>k</code></td><td>/k/</td><td>always hard</td></tr>
+<tr><td><code>l</code></td><td>/l/</td><td></td></tr>
+<tr><td><code>m</code></td><td>/m/</td><td></td></tr>
+<tr><td><code>n</code></td><td>/n/</td><td></td></tr>
+<tr><td><code>p</code></td><td>/p/</td><td></td></tr>
+<tr><td><code>r</code></td><td>/r/</td><td>alveolar trill; a tap [ɾ] in rapid speech is acceptable</td></tr>
+<tr><td><code>s</code></td><td>/s/</td><td>always voiceless; never /z/</td></tr>
+<tr><td><code>t</code></td><td>/t/</td><td></td></tr>
+<tr><td><code>v</code></td><td>/v/</td><td></td></tr>
+<tr><td><code>w</code></td><td>/w/</td><td></td></tr>
+<tr><td><code>z</code></td><td>/z/</td><td></td></tr>
+<tr><td><code>x</code></td><td>/ks/</td><td>always /ks/, in every position (<code>hurox</code> /hu-roks/)</td></tr>
+</tbody></table>
+<ul>
+  <li>There is no <code>c</code>, <code>q</code>, or <code>y</code> in the alphabet (§2.1). Sounds /k/ and /ɡ/ before front vowels are still written <code>k</code> and <code>g</code>; the approximant is written <code>j</code>.</li>
+  <li>The letters <code>c</code>, <code>q</code>, <code>y</code> may appear only inside quoted English or in loanwords, which MUST be respelled on entry (§15.6).</li>
+</ul>
+<h2>1.4 Syllable structure</h2>
+<p>Beluma syllables have the shape <strong>(C)V(C)</strong>: an optional single consonant onset, a</p>
+<p>mandatory vowel nucleus, an optional single consonant coda.</p>
+<p><strong>Onsets.</strong> A syllable may begin with a single consonant or with one of these</p>
+<p>clusters:</p>
+<blockquote><code>pr tr br dr fr kr gr pl kl gl bl fl sl vl sp st sk kv kw ps sf</code></blockquote>
+<ul>
+  <li>New coinages SHOULD use a single consonant, or one of the core clusters <code>pr br tr dr fr kr gr pl kl st sk sp</code> (<code>sp</code>, <code>ps</code>, <code>sf</code>, <code>sl</code>, <code>vl</code> occur mainly in established words and loans such as <code>spira</code>, <code>stelo</code>, <code>kristalo</code>).</li>
+  <li>Clusters such as <code>sm sn</code> and any three-consonant onset MUST NOT be created.</li>
+  <li>The abbreviations <code>dn</code>/<code>rn</code> occur only in the scientific names <code>DNA</code>/<code>RNA</code>.</li>
+</ul>
+<p><strong>Codas.</strong> A syllable may end with a single consonant. Attested codas, by frequency:</p>
+<blockquote><code>s n r l m k t f d p x</code></blockquote>
+<ul>
+  <li>The productive codas in native words are <strong><code>s</code></strong> (plural, §05), <strong><code>n r l m k</code></strong>, and <strong><code>t</code></strong> as realised by the suffix <code>-ét</code> (§15.2.2).</li>
+  <li>Codas <code>f d p x</code> occur only in established roots and digit roots (<code>af</code>, <code>nof</code>, <code>rip</code>, <code>hurox</code>, <code>sep</code>, <code>nof</code>). New coinages MUST NOT end in <code>f d p x</code>.</li>
+  <li>The preferred shape of a new root is open: <code>CV</code>, <code>CVV</code>, or <code>CVCV</code>.</li>
+</ul>
+<p><strong>Word shapes.</strong> Approximately 85% of dictionary entries end in a vowel. Closed</p>
+<p>monosyllables (<code>un</code>, <code>du</code>, <code>s</code>, <code>ét</code>, <code>af</code>) are overwhelmingly function words.</p>
+<h2>1.5 Stress and the acute accent</h2>
+<ol>
+  <li><strong>Stress falls on the penultimate syllable of the whole word</strong>, counting across compound hyphens: <code>beluma</code> /be-LU-ma/, <code>tuma-pira</code> /tu-ma-PI-ra/, <code>kora-vésa</code> /ko-ra-VÉ-sa/. Monosyllables are stressed on their only syllable.</li>
+  <li>Stress is completely predictable: <strong>it never distinguishes words</strong>. Two entries that differ only in accent (§26.4) are homophones in speech; the accent is a spelling distinction only.</li>
+  <li>The <strong>acute accent</strong> (<code>á é í ó ú</code>) marks the stressed (penultimate) syllable: <code>méra</code>, <code>kvín</code>, <code>fóra</code>.</li>
+  <li>Writing the accent is <strong>OPTIONAL</strong> in all registers except: - <strong>Accent-pair words</strong> (§26.4): where two dictionary entries differ only by an accent, both entries MUST be written exactly as the dictionary spells them (<code>loma</code> = tree, <code>lóma</code> = look; <code>ra</code> = near, <code>rá</code> = was). Dropping or adding an accent on such a word produces a different word. - The dictionary, teaching materials, and poetry SHOULD mark all penultimate syllables.</li>
+  <li>The accent is written on a monosyllable only in accent-pair entries (<code>rá</code>, <code>dá</code>).</li>
+  <li>There is no other use of diacritics: no cedillas, tildes, diaereses, or circumflexes exist in Beluma.</li>
+</ol>
+<p><strong>Transitional rule:</strong> at VTXT 4.0 the accent-pair registry (§26.4) is being reduced</p>
+<p>by respelling; until a pair is respelled, rule 4 applies to it.</p>
+<h2>1.6 Phoneme inventory summary</h2>
+<pre><code>
+Vowels:     a  e  i  o  u                          (5)
+Consonants: b  d  f  g  h  j  k  l  m  n  p  r  s  t  v  w  z  x   (18)
+Total:      23 phonemes / 23 letters
+</code></pre>
+<h2>1.7 Connected speech (informative)</h2>
+<ul>
+  <li>Hiatus glides (§1.2) appear in fast speech.</li>
+  <li>A final nasal may assimilate before a following consonant in rapid speech; the spelling never changes.</li>
+  <li>Function words (<code>s</code>, <code>un</code>, <code>né</code>, <code>wé</code>) are unstressed but retain their full vowel.</li>
+</ul>
+<h2>1.8 Prosody (informative)</h2>
+<ul>
+  <li>Declaratives fall at the end; yes/no questions (<code>kvo</code>) rise; content questions fall, as in most languages.</li>
+  <li>Contrastive focus is marked by moving the focused element to clause end or by contrastive stress on the penult — never by a spelling change.</li>
+</ul>
+<h2>1.9 Phonotactics for new words (normative)</h2>
+<p>A coinage (§15) MUST satisfy all of the following:</p>
+<ol>
+  <li>Every syllable is (C)V(C) with an onset from §1.4.</li>
+  <li>Stress falls on the penult; if that is impossible with the intended morphology, the morphology is wrong — change the word, do not add an exceptional accent.</li>
+  <li>The word does not differ from an existing entry only by accent, only by plural marking, or by reduplication that collides with an existing reduplicated form (§15.7).</li>
+  <li>The word is not a near-homophone of an existing entry (same syllable count, same stress, ≥2 of 3 phonemes in common in the same positions) unless it is a deliberate transparent compound.</li>
+  <li>Vowel sequences respect vowel harmony avoidance: no more than two different adjacent unaccented vowels in a row beyond what existing loans show.</li>
+  <li>Letter names are a meta-linguistic exception: consonants are named <code>C+a</code> (<code>ba da fa …</code>), vowels are named by themselves, and <code>x</code> is named <code>ksa</code> — the only word-initial <code>ks</code> in the language, permitted because letter names are cited in isolation.</li>
+</ol>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

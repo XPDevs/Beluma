@@ -1,16 +1,19 @@
-VTXT=3.9
-# Beluma Core Dictionary v3.4
-# Format: beluma-word = English gloss / alternative gloss
-# Lines beginning with '#' are comments.
-# Morphology is generative: the translator derives plurals, participles,
-# tenses, compounds, and derived words from the roots listed here.
-#--------------------------------------------------------------
-# PRONOUNS
+# PHASE 1 (VTXT 3.2): COMPLETE PRONOUN SYSTEM & CORRELATIVES
+# PHASE 2 (VTXT 3.3): VERB SYSTEM — ASPECT, VOICE, MODEL WORDS, CONDITIONALS
+# VTXT 3.4 · Phase 3 seed corpus (canon/06)
+# VTXT 3.5 · Phase 4 seed corpus (canon/07)
+# VTXT 3.6 · Education field (canon/08)
+# VTXT 3.7 · Examination field (canon/08)
+# VTXT 3.8 · Phase 6 society & politeness (canon/09)
+# VTXT 3.9 · Phase 6 folk-speech catches (corpus audit)
+# Beluma dictionary - see spec/20-dictionary.md
+# VTXT 4.0 - Phase 3 lexicon expansion (2,000+ entries): domains, derivation, loans
+VTXT = 4.0
 mi = I / me
 mu = me (object)
 tu = you
 nivo = he / him
-siva = she / her
+siva = she / her / voice / sound
 ét = it
 mis = we / us
 tur = you all (plural)
@@ -24,16 +27,10 @@ siva-la = her / hers
 mis-la = our / ours
 tur-la = yours all (plural possessive)
 misu-la = their / theirs
-
-#--------------------------------------------------------------
-# ARTICLES & COPULA
 lé = the
 o = a / an
 s = is / am / are / be
 s-va = being
-
-#--------------------------------------------------------------
-# TENSE, NEGATION & MOOD PARTICLES
 né = past tense marker (did / was)
 wé = future tense marker (will / shall)
 wés = about to / imminent
@@ -47,10 +44,7 @@ sud = should
 unsud = shouldn't / should not
 néma = may / permitted
 da-va = would / could / might
-
-#--------------------------------------------------------------
-# QUESTION WORDS
-kvo = question marker (yes/no question)
+kvo = question marker (yes / no question)
 kwa = what
 kvasi = who
 kwaras = where
@@ -58,9 +52,6 @@ kvado = when
 kvaso = why
 havi = how
 kva = which / that
-
-#--------------------------------------------------------------
-# PREPOSITIONS
 na = in / at
 po = to / toward
 dé = from
@@ -70,7 +61,7 @@ fao = for / in order to
 vél = with
 ra = near / next to
 tera = through
-cíva = around
+sirka = around
 trima = between
 li = by / by means of (passive agent)
 dé-miva = away from
@@ -78,9 +69,6 @@ po-miva = toward
 héna-su = in front of
 un-héna = behind
 ra-tésa = beside
-
-#--------------------------------------------------------------
-# CONJUNCTIONS
 unas = and
 ora = or
 néka = but / however
@@ -89,26 +77,20 @@ da = if
 tóla = then
 ta = that / which
 béra = although / even though
-sunés = therefore / so
-
-#--------------------------------------------------------------
-# COMPARISON & QUANTITY
+súnes = therefore / so
 mésa = more
 nisa = less
 susa = most
 ban = than
 vévlo = very
-mavé = much / many
-mavé-sula = too much / too many
+máve = much / many
+máve-sula = too much / too many
 nira-vévlo = slightly
 fama-zira = enough
 véta = every / each
 véta-mída = any
 gola = best
 un-gola = worst
-
-#--------------------------------------------------------------
-# GREETINGS & COURTESY
 sala = hello / hi
 ravi = goodbye / farewell
 kala = welcome / you're welcome
@@ -123,9 +105,6 @@ zira = fine / okay / neutrality
 sofavi = good morning
 safavi = good evening
 noitara = good night / sleep well
-
-#--------------------------------------------------------------
-# TIME
 diva = day / do / make
 divas = days
 noita = night
@@ -137,7 +116,7 @@ safa = yesterday
 sova = tomorrow / speak / talk
 soma = week / sleep
 somas = weeks
-mava = month / mother
+mava = month / mother / mom
 mavas = months
 suso = year
 vora = hour / river
@@ -146,19 +125,16 @@ mída = minute
 mídas = minutes
 séli = second
 sélis = seconds
-sumés = time / duration
-navás = calendar / date
+súmes = time / duration
+návas = calendar / date
 spira = spring
 pira = tool / implement / device
-summér = summer
+súmmer = summer
 auta = autumn / fall
 winta = winter
 fala = sickness / illness
 soma-fala = insomnia / sleep sickness
-
-#--------------------------------------------------------------
-# NATURE & WORLD
-méra = sea / ocean
+méra = sea / ocean / create / art
 néla = water
 néla-sula = ocean / great water
 néla-sula-nira = lake
@@ -170,13 +146,13 @@ luma = light / shine / lamp / understand / realise
 ruma = glow / light
 lumaro = flashlight / torch
 féna = fire / flame
-liso = stone / rock / hard
+liso = stone / rock / hard / solid
 rova = wood / timber
-tira = metal / clean
+tira = metal / clean / bright
 múna = mountain / stone
 téra = earth / land / ground
 sána = desert / dry land
-véné = river / current / flow
+véne = river / current / flow
 vénos = rivers / currents
 loma = tree / plant / green
 lomas = trees
@@ -206,23 +182,20 @@ ralis = roads
 róma = road / way / stop
 sivo = cloud
 sivos = clouds
-
-#--------------------------------------------------------------
-# PEOPLE & SOCIETY
 misi = person / child
-misés = people / persons
+míses = people / persons
 bino = boy
 gino = girl
 misi-kivor = user / member
 kivor = worker / employee
 kémor = teacher / knower
-dovés = doctor / healer
+dóves = doctor / healer
 dovésa = medicine / healing
 hulor = leader / chief / ruler
 kína = king / ruler
 nésor = guard / protector
 tésor = writer
-télora = write / to write
+telóra = write / to write
 méro = artist / creator
 firo-sora = fisher / sailor
 krosa = friend
@@ -231,7 +204,6 @@ fravo = family friend
 namo = family / name
 namos = names / families
 namoor = head of family
-mava = mother / mom
 pava = father
 movo = parent
 vava = baby / infant
@@ -243,15 +215,12 @@ lino = son / dolphin
 lini = child / kid
 tavoa = grandfather
 tavina = grandmother
-cavo = cousin
+kavo = cousin
 lava = aunt
 havo = husband
 hava = wife
 ravo = relative
 javo = ancestor / jellyfish
-
-#--------------------------------------------------------------
-# HOME & OBJECTS
 nésa = home / house
 nésas = homes
 tura = door
@@ -292,7 +261,7 @@ vosa = body / flesh
 tésa-vosa = clothing
 tésa-kora = shirt
 tésa-misa = trousers
-tésa-vima = shoes
+tésa-vima = shoes / sew
 tésa-kúna = hat
 fura-tésa = bread
 vosa-fura = meat
@@ -307,8 +276,8 @@ tuma-pira = finger
 tuma-vima = toe
 vora-misa = leg
 lóma-fura = stomach / belly
-kúna-sulo = brain / mind
-tuma-sulo = courage
+kúna-sulo = brain / mind / intelligence
+tuma-sulo = courage / bravery
 gúndo = blood
 féma-pira = spoon / eating tool
 féra-pira = knife / cutting tool
@@ -332,26 +301,19 @@ luma-saro = flashlight
 néla-pira = hose
 loma-féra = saw
 luma-kora = battery / power cell
-
-#--------------------------------------------------------------
-# ANIMALS
-# (root = animal; regular suffixes: -s plural, -as plural after consonant,
-#  -ét young, -os group, -an habitat, -or keeper, -ik like)
 fira = bird
 firas = birds
 lavo = dog
 lavos = dogs
-lavoét = puppy
+lávoet = puppy
 lunos = cat
-lunosét = kitten
-lino = dolphin / son
+lunóset = kitten
 mélo = fish
 guo = turtle
 salo = shark
 némo = whale
 pémo = squid / octopus
-javo = jellyfish / ancestor
-koro = bear
+koro = bear / really? / is that so? / active listening
 puro = monkey
 rava = elephant
 savi = cow
@@ -389,9 +351,6 @@ lami = flying insect / gnat / midge
 natno = bat
 rip = worm
 kava = hedgehog
-
-#--------------------------------------------------------------
-# ANIMAL GROUPS, YOUNG & PLACES (notable, non-regular only)
 lavoos = pack of dogs
 lunosos = colony of cats
 linoos = pod of dolphins
@@ -402,7 +361,7 @@ huloos = pride of lions
 huroxos = pride of griffins
 dravosos = brood of dragons
 savirosos = herd of unicorns
-sélovos = pack of wolves
+selóvos = pack of wolves
 koroos = family of bears
 timaos = streak of tigers
 turoos = herd of horses
@@ -434,27 +393,8 @@ turoor = horse trainer
 sélvoor = wolf trainer
 ravaor = elephant keeper
 lavor = dog trainer
-
-#--------------------------------------------------------------
-# BODY & HEALTH
-kúna = head
-kuma = mouth / hole
-sóva = nose / scent organ
-fola = hair / fur
-nila = skin / surface
-nima = hand
-vima = foot / walk
-vora-misa = leg
-tuma-pira = finger
-tuma-vima = toe
-lóma-fura = stomach / belly
-kúna-sulo = brain / mind / intelligence
-tuma-sulo = courage / bravery
-siva = voice / sound / she
 síra = hear / ear / listen
 misa = stand / stay
-vosa = body / flesh
-gúndo = blood
 réva-sula = joy / happiness
 unréva-sula = depression
 troma = fear / dread
@@ -464,8 +404,8 @@ kéras = minds / souls
 kéro-sula = wisdom
 kéro-nira = idea
 nila-bira = secret
-sumés-néna = history
-sumés-unné = future / prophecy
+súmes-néna = history
+súmes-únne = future / prophecy
 éza = health / healing
 ézor = healer
 ésa = tired / weary
@@ -473,25 +413,18 @@ féni = feeling
 fénis = feelings
 séna = sense / smell / scent
 tuma = touch / feel / heart / courage
-
-#--------------------------------------------------------------
-# ACTIONS & STATES (root = bare present form)
 dova = bring / deliver
 géva = give
 gai = go
 féma = eat
 néva = drink / snow
-soma = sleep / week
-diva = do / make / day
 héna = see / watch
-sova = speak / talk / tomorrow
 téla = tell / say
 sa = say / said
 kéma = know / understand
 kéma-néna = believe / know-it-is-true
 kéma-vas = understanding
 kéma-néra = proof / verification
-síra = hear / listen
 lóma = look / inside
 lósa = take
 vása = put / place
@@ -504,7 +437,7 @@ tora-sa = attack
 zanva = defend
 ré-dora = unlock
 kéla = key / unlock / useful
-kéla-kísa = login / open-enter
+kéla-kísa = login / open-enter / sign in
 jiva = jump / act
 jésa = sit / rest
 níva = sing
@@ -512,7 +445,6 @@ rúna = dance
 túsa = cook
 vira = run / fast / wind / gossip / spread news
 hura = fly / glide / wow
-róma = stop / road / way
 móra = count / number
 kísa = enter
 lísa = exit / leave / go away
@@ -529,7 +461,7 @@ róla = follow
 tína = change
 vóta = finish / end
 jála = begin / start
-lóra = show / display
+lóra = show / display / long / tall
 zúra = push
 púma = pull
 dávo = allow / permit
@@ -546,17 +478,15 @@ triva = try / test
 kosa = call / converse / conversation
 kosas = conversations
 kosa-tés = message / text
-kosa-tésa = chat / message text
+kosa-tésa = chat / message text / message / chat text
 sova-tésa = speech / contract
 déra = read / decode
 déra-va = reading
-méra = create / art
 sola = play / fun
 sola-va = playing
 niva = swim / grow
 nava = wash / clean
 féna-nira = cook on fire
-tésa-vima = sew
 luma-dora = turn on / switch on
 luma-tésa = turn off
 gava = money / wealth
@@ -570,10 +500,6 @@ kiva-mésa = expensive / high cost
 ríva = hope
 sota = story / tale
 sotas = stories / tales
-
-
-#--------------------------------------------------------------
-# DESCRIPTORS (adjectives & adverbs)
 béla = beautiful / lovely
 préto = pretty
 gavo = good / well
@@ -582,11 +508,10 @@ un-gavo = bad / not good
 vévlo-gavo = excellent
 réva = happy / glad
 unréva = sad / unhappy
-sulo = strong / powerful
+sulo = strong / powerful / dark / massive
 un-sulo = weak
 nira = small / little / light / new / young
 sulo-nira = tiny
-lóra = long / tall
 jora = slow
 un-jora = fast
 vira-lé = quickly / swiftly
@@ -600,55 +525,42 @@ hul-sula = evil / great bad
 frola = foolish / silly
 linta = stupid
 bira = thing / object
-liso = hard / solid / stone
 un-liso = soft / flexible
 túra = smooth / even
 náva = rough / coarse
-tira = clean / bright / metal
 un-tira = dirty
 sora = salty / salt / wait
 méla = honey / sweet
-suné = clear / obvious
-unné = unclear / vague / wrong
+súne = clear / obvious
+únne = unclear / vague / wrong
 néna = true / truth / clear
 unnéna = lie / false / unclear
 vorna = right / correct
 rona = wrong / mistaken
 vi = alive / lively
 sula = big / great / soul / spirit
-sulo = strong / dark / massive
 mida = medium / middle
-silé = silent / quiet
+síle = silent / quiet
 luma-sula = bright / shining
 luma-nira = dim / faint
-kafé = warm
-finé = hot
-nula = cold / foggy
-
-#--------------------------------------------------------------
-# COLOURS
+káfe = warm
+fíne = hot
 bélu = colour
 bélu-nira = white
 bélu-sula = black
 lára = blue
 lára-nira = light blue
 lára-sulo = dark blue
-víra = green / life
 saru = yellow
 saru-nira = gold
 saru-féna = sunlight
-fénura = orange
-rina = red / flower / feel / blush / compliment
+fenúra = orange
 rina-nira = pink
 fólo = purple
 liso-nira = gray
 liso-sulo = silver
-loma-sulo = brown
 hulo-nira = cyan
 hulo-sula = navy
-
-#--------------------------------------------------------------
-# NUMBERS (classic counting system)
 zéra = zero / nothing
 ona = one
 tuo = two
@@ -661,10 +573,10 @@ oita = eight
 noa = nine
 diza = ten
 unésa = eleven
-duésa = twelve
+dúésa = twelve
 trésa = thirteen
-quésa = fourteen
-quinsa = fifteen
+késa = fourteen
+kinsa = fifteen
 séza = sixteen
 diza-é-sita = seventeen
 diza-é-oita = eighteen
@@ -677,12 +589,11 @@ sixga = sixty
 sitga = seventy
 oitga = eighty
 noga = ninety
-cénta = hundred
-mila = thousand
+senta = hundred
+mila = thousand / my / mine (fused from mi la)
 miliona = million
-# formal "digit" roots (read-outs, clocks, maths)
 zer = zero-digit
-uné = one-digit
+úne = one-digit
 di = two-digit
 tri = three-digit
 kvar = four-digit
@@ -692,20 +603,14 @@ sep = seven-digit
 ok = eight-digit
 nof = nine-digit
 dek = ten-digit
-# ordinals (suffix -ji)
 onaji = first
 tuoji = second
 troji = third
-fóraji = fourth
+foráji = fourth
 dizaji = tenth
-
-#--------------------------------------------------------------
-# TECHNOLOGY & DIGITAL
 jéra-tésas = menu / navigation
 jiva-mota = link / hyperlink
 tína-kivas = settings / configuration
-kéla-kísa = login / sign in
-misi-kivor = user / member
 dova-un-su = download
 dova-su = upload
 lóma-pira = search / find / lookup tool
@@ -718,10 +623,8 @@ néla-tira = stream / data flow
 siva-nélo = speaker / sound water
 véla-tésa = webpage / page
 kiva-nira = gadget / small tool
-luma-kora = battery / power cell
 kima-nélo = energy / current
 jéra-pira = search path
-kosa-tésa = message / chat text
 tefona = phone / telephone
 komputa = computer / machine
 mota = word / text
@@ -735,120 +638,48 @@ kwamorka = question mark
 fimorka = exclamation mark
 mota-sulo = paragraph
 sulo-néna = law / rule
-sulo-unné = crime / against the law
-kivé = internet / network
+sulo-únne = crime / against the law
+kíve = internet / network
 siva-sóva = audio book / voice book
-linya = line / row
+linia = line / row
 ilino = icon / small picture
-
-#--------------------------------------------------------------
-# DERIVATIONAL AFFIXES (for reference in dictionary)
-# un-  = not / negation prefix
-# ni-  = semantic opposite prefix
-# ré-  = again / repetition prefix
-# -s   = plural (after vowel)
-# -as  = plural (after consonant)
-# -ét  = young / offspring (diminutive)
-# -nira = small (diminutive)
-# -sula = great / augmentative
-# -os  = group / collective
-# -an  = habitat / natural place
-# -lek = built place / location
-# -or  = agent / doer
-# -ik  = like / resembling (adjective)
-# -la  = of / belonging to (genitive)
-# -lé  = adverb of manner
-# -va  = present participle / ongoing action
-# -ji  = ordinal suffix
-# -pira = tool for (e.g. féma-pira = spoon, eating tool)
-# -tavi = platform for (e.g. kiva-tavi = desk)
-
-#--------------------------------------------------------------
-# COMMON PHRASES
 sala mi-la = hello my friend / hi there
 havi tu s = how are you
 mi s zira = I am fine / I'm okay
-kék nako = yes thanks
+kek náko = yes thanks
 kala nésa = welcome home
-mi né léva tu = I loved you
+mi ne levá tu = I loved you
 tu s béla = you are beautiful
-mi kéma ta = I understand that
-mi un kéma ta = I don't understand that
-sova wé gavo = until tomorrow / tomorrow will be good
+mi kemá ta = I understand that
+mi un kemá ta = I don't understand that
+sova we gávo = until tomorrow / tomorrow will be good
 mila nésa = my house / my home (colloquial fusion of mi-la nésa)
-mila nésana = at my home / my home (colloquial fusion of mi-la nésana)
-
-#--------------------------------------------------------------
-# NATURAL LANGUAGE EVOLUTION: COLLOQUIAL FUSIONS
-# In rapid speech, high-frequency phrases fuse together.
-# These are fossilised forms that bypass regular compounding rules.
-nésana = at home / in the house (fused from nésa na)
-# NOTE: mila (fused "my/mine") is a HOMONYM of mila = thousand (line 681).
-# The glosser keeps "thousand"; speakers read the fusion from context.
-mila = my / mine (fused from mi la)
+mila nesána = at my home / my home (colloquial fusion of mi-la nésana)
+nesána = at home / in the house (fused from nésa na)
 wégai = will go / am going (fused from wé gai)
-wéfema = will eat (fused from wé féma)
+weféma = will eat (fused from wé féma)
 nés = was / were (fused from né s)
 po-nésa = homeward / towards home (fused from po nésa)
-
-
-#--------------------------------------------------------------
-# NATURAL LANGUAGE EVOLUTION: IRREGULAR VERBS (SUPPLETION)
-# The most common verbs become irregular over time because they
-# are memorised as whole chunks rather than constructed on the fly.
 vára = went (irregular past of gai)
-# NOTE: rá (was/were) and dá (did/made) are HOMONYMS — rá = near (line 71) and
-# da = if (line 88) already occupy these forms. The glosser keeps the older,
-# dictionary-first sense; speakers disambiguate by context, exactly as with
-# "seal" (animal) vs "seal" (to close) in English.
 rá = was / were (irregular past of s)
 dá = did / made (irregular past of diva)
-
-
-#--------------------------------------------------------------
-# NATURAL LANGUAGE EVOLUTION: PRAGMATICS & DISCOURSE MARKERS
-# Real conversations are full of hesitation, emphasis, and padding.
 evi = well... / um / hesitation
-# NOTE: koro (discourse marker) is a HOMONYM of koro = bear (line 354).
-# The glosser keeps "bear"; listeners read the particle from intonation.
-koro = really? / is that so? / active listening
 maka = actually / in fact / to correct a misconception
-ya = topic marker (As for... / regarding...)
-
-
-#--------------------------------------------------------------
-# NATURAL LANGUAGE EVOLUTION: IDIOMS & COLLOCATIONS
-# These phrases have fixed meanings that differ from literal translation.
-# Speakers learn these as chunks, not word-by-word. All are real dictionary
-# entries: the translator resolves them as single units, while the "lit."
-# notes keep the folk etymology visible to learners.
-# Supporting roots used by the idioms (added so they decompose literally):
+ia = topic marker (As for... / regarding...)
 nil = surface / top / outer layer
 méra-nako = thank you very much / many thanks (lit. sea of thanks)
 luma-kúna = dizzy / confused (lit. light head)
 nula-vosa = goosebumps / fear (lit. cold flesh)
 un-tira-nil = dirty / messy (lit. not-clean surface)
 vira-va-néla = flowing water / river (lit. running-water)
-
-#--------------------------------------------------------------
-# NATURAL LANGUAGE EVOLUTION: RELATIVE CLAUSES & HIGHER DOMAINS
-# Relative pronouns. "ka" opens a relative clause right after a noun
-# (subject relative: "le misi ka s unréva" = the person who is sad).
-# Object relatives reuse "ta" (the same "that" as the demonstrative,
-# exactly like English). Possessive relative is "ka-la" (whose).
 ka = who / which / that (relative pronoun)
 ka-la = whose / of whom
 keran = man / adult male person
 rusa = run / sprint / flee / hurry
-
-# Compounding roots and exemplar coinages (modifier + head combine freely,
-# specifiers such as -nira come last; established words are listed as chunks).
 kiva = work / job / labor / task
 kiva-siva-nira = phone / smartphone (small voice-work device)
 kosa-tavi-nira = cell phone / mobile (small call-platform)
 néla-fura-pira = watering can (water-fruit-tool)
-
-# ACADEMIC / LOGICAL
 logika = logic / reason / rationality
 tema = theme / topic / subject
 moda = manner / method / way
@@ -860,22 +691,16 @@ ekse = therefore / thus / so
 kausa = because / cause / reason why
 kondise = condition / provision
 seke = then / consequently / next
-
-# LAW / JUSTICE
 jura = law / right / justice
 krima = crime / offense / wrong act
 dika = judge / court / tribunal
 testi = witness / testimony
 fina = fine / penalty / charge
 konta = contract / agreement / deal
-
-# MEDICINE / HEALTH
 dorta = doctor / physician / healer
 meda = medicine / remedy / cure
 koma = pain / ache / hurt
 vata = wound / injury / harm
-
-# OFFICE / GOVERNMENT / MONEY
 ofisa = office / bureau / department
 duta = tax / duty / fee
 velta = state / government / authority
@@ -884,9 +709,6 @@ mone = money / currency / coin (loanword)
 jokumenta = document / official paper
 pasa = pass / permit / license
 konto = bank account / record / dossier
-#--------------------------------------------------------------
-# PHASE 1 (VTXT 3.2): COMPLETE PRONOUN SYSTEM & CORRELATIVES
-# canon/02-pronouns.md, canon/03-word-order.md, canon/01-articles.md
 mis-vel-tu = we (all, including you / inclusive we)
 mis-de-tu = we (not you / exclusive we)
 miro = they (singular, gender-neutral person) / singular they
@@ -908,8 +730,6 @@ sova-nela = language / speech-stream
 sova-nela-nira = dialect
 beluma = Beluma (the language)
 tur-sula = great you / royal or literary formal address
-
-# Two-way reflexive pairs (canon/02 §4)
 mi hasa = myself
 tu hasa = yourself
 nivo hasa = himself
@@ -918,21 +738,13 @@ et hasa = itself
 mis hasa = ourselves
 tur hasa = yourselves
 misu hasa = themselves
-ona-ona = each other / one another
-
-#--------------------------------------------------------------
-# PHASE 2 (VTXT 3.3): VERB SYSTEM — ASPECT, VOICE, MODEL WORDS, CONDITIONALS
-# canon/04-verbs.md, canon/05-clauses.md
 vento = perhaps / maybe / possibly
 duna = while / during
 esto = there is / there are / to exist
-# past-participle exemplars (suffix -ke is generative; these seed the glosser)
 fema-ke = eaten
 gai-ke = gone / departed
 dora-ke = opened
-# nuance: mild obligation (small must)
 gida-nira = ought to / should (mild must)
-# VTXT 3.4 · Phase 3 seed corpus (canon/06)
 planeta = planet (loanword)
 kometa = comet (loanword)
 galaksia = galaxy (loanword)
@@ -988,7 +800,7 @@ fota-tavi = keyboard (letter-table)
 muso = computer mouse (loanword)
 lóra-tésa = screen / display (show-surface)
 kéla-mota = password (key-word)
-kivé-kosa = online talk / net chat (internet-conversation)
+kíve-kosa = online talk / net chat (internet-conversation)
 ekonomia = economy / economics (loanword)
 kosta = price / cost (loanword)
 ziva-gava = profit (won money)
@@ -1012,7 +824,7 @@ bota-os = election (ballot-gathering)
 velta-hulor = president (state-leader)
 velta-misi = citizen (state-person)
 jura-tésor = legislator (law-writer)
-misés-jura = human rights (people-rights)
+míses-jura = human rights (people-rights)
 prisona = prison (loanword)
 dika-sa = verdict (judge-says)
 fina-sulo = punishment (great penalty)
@@ -1041,12 +853,12 @@ fala-kéma = diagnosis (knowing-the-sickness)
 éza-kiva = treatment (healing-work)
 vosa-féra = surgery (body-cut)
 koma-meda = painkiller (pain-medicine)
-finé-fala = fever (hot-sickness)
+fíne-fala = fever (hot-sickness)
 vata-liso = scar (wound-stone)
 vosa-zanva = immune system (body-defense)
 zanva-meda = vaccine (defense-medicine)
 víra-koda = DNA / gene (life-code)
-sélula = cell, biology (loanword)
+selúla = cell, biology (loanword)
 meda-nésa = pharmacy (medicine-house)
 lini-kula = pregnant (child-heavy)
 troma-sula = panic (great fear)
@@ -1107,20 +919,19 @@ kúna-nélo = drunk / tipsy (head-liquid slang)
 krosa-sola = hang out (friend-play)
 gavo-nélo = for real / legit (good-stream slang)
 brovo-sala = hey bro (brother-greeting)
-# VTXT 3.5 · Phase 4 seed corpus (canon/07)
-su lé kúna = exactly right / on the nose (idiom, colloquial)
+su le kúna = exactly right / on the nose (idiom, colloquial)
 luma liso = to spot a flaw / realize a mistake (idiom, formal)
-un héna gava = to be penniless (idiom, colloquial)
+un hena gáva = to be penniless (idiom, colloquial)
 sula soma = to be at rest / deep dream (idiom, literary)
-lé kora = the heart of the matter (idiom, formal)
-héna léva = to fall in love (idiom, colloquial)
+le kóra = the heart of the matter (idiom, formal)
+hena léva = to fall in love (idiom, colloquial)
 nula kúna = calm / level-headed (idiom)
 tura nima = a helping hand (idiom, colloquial)
 vira-soma = a busy week (idiom, colloquial)
 koma kora = heartache (idiom, literary)
 gava-néla = worthless (idiom, colloquial)
 zava-sula = an outstanding person (idiom, formal)
-róma siva = to hold your tongue (idiom, colloquial)
+roma síva = to hold your tongue (idiom, colloquial)
 dora kéla = breakthrough / the solution (idiom, formal)
 fura-sula = feast / banquet (great food)
 méla-fura = dessert (honey-food)
@@ -1172,12 +983,11 @@ sava-sula = the elders / kin-circle (great siblings)
 kíra-namo = in-laws / kindness-family (gentle family)
 tavina-sula = great-grandmother
 movo-nira = step-parent / a new parent
-sumés-nira = a moment (small duration)
-navás-nira = almanac (small calendar)
+súmes-nira = a moment (small duration)
+návas-nira = almanac (small calendar)
 sova-vavi = tomorrow morning
 safa-vo = yesterday evening
 saro-noita = starlit night (stars at night)
-# VTXT 3.6 · Education field (canon/08)
 kéma-nésa = school / place of learning (knowledge-house)
 livo = lesson / class period
 léro = to learn
@@ -1190,7 +1000,6 @@ kéma-tésa = diploma / certificate (knowledge-cloth)
 livo-tiva = classroom (lesson-room)
 léro-nira = beginner (small learner)
 vésa-sova = essay / composition (build-speech)
-# VTXT 3.7 · Examination field (canon/08)
 lóva = to read (root)
 lóva-sova = reading / a reading (read-speech)
 sova-kéma = grammar (speech-knowledge)
@@ -1198,7 +1007,6 @@ dis = across / over / through
 dis-sova = translation (speech carried across)
 héna-sova = listening / attending speech (watch-speech)
 sova-tiva = speaking test / oral (speech-room)
-# VTXT 3.8 · Phase 6 society & politeness (canon/09)
 gavo-sova = greeting / hello (good speech)
 gai-gavo = farewell / goodbye (go well)
 gavo-gai = welcome (a good coming)
@@ -1224,16 +1032,1287 @@ sova-os = town meeting / assembly (speech-group)
 kéla-namo = family heirloom (the family's key)
 véta-namo = the commons / shared goods (all-family)
 véta-sova = the news / what everyone says (all-speech)
-réva-sumés = festival / holiday (joy-time)
+réva-súmes = festival / holiday (joy-time)
 réva-fura = the celebration feast (joy-food)
 véta-fura = harvest / the year's crops (all-food)
 nira-suso = new year (new year)
 sova-níra = accent / small local way of speaking (small speech)
 nésa-sova = home speech / in-group idiom (house-speech)
 velta-sova = official speech (state-speech)
-# VTXT 3.9 · Phase 6 folk-speech catches (corpus audit)
 luno = cat / a cat (root; plural lunos already in the corpus)
-célo = hill
+kolina = hill
 ké = yeah / yes (casual; clipped kék)
 ké dus = yes, indeed / of course (idiom, colloquial)
 
+# --- core-added ---
+vena = come / arrive
+gaina = go and come / commute
+subto = often / frequently
+sempto = always / ever
+nento = never / at no time
+kaito = sometimes / occasionally
+kusto = usually / normally
+onota = once (one time)
+doto = twice (two times)
+biliona = billion (loanword)
+triliona = trillion (loanword)
+preskawe = almost / nearly
+nur = only / just
+ankore = still / yet
+seke-anke = nevertheless / still
+almenawe = at least
+sufite = enough
+tiel = so / thus / in that way
+kiale = therefore / for that reason
+ekzemple = for example
+alie = otherwise / else
+finage = finally / at last
+unuage = firstly
+due = secondly
+lasta = last / final
+sama = same
+alia = other / another
+tuta = whole / entire
+nurunu = the only one
+kelka = some / a few
+malmulta = few / little
+nun = now
+tiam = then / at that time
+foje = once / on an occasion
+
+# --- computing ---
+komputilo = computer (compute-tool)
+retnodo = network node
+reto = net / network / web
+retaro = internet / the net (net-collective)
+retejo = website
+retpajo = web page
+retumilo = browser (net-roam-tool)
+spamo = spam
+dosiero = file (dossier)
+datumaro = database (data-collective)
+datumujo = data container / directory
+bitaro = bit / binary digit
+bito = bit
+bajto = byte
+kerno = kernel / core
+programaro = software / program-collective
+aparataro = hardware
+kodilo = code / codebase
+kompililo = compiler
+interpretilo = interpreter
+aplikajo = application / app
+argumento = argument (of a function)
+variablo = variable
+konstanto = constant
+tabelo = array / table
+listo = list
+ordigo = sorting / ordering
+serso = search
+sersilo = search engine
+indekso = index
+datumbazo = database (formal)
+kondiso = condition
+buklo = loop
+rekursio = recursion
+stako = stack
+memoro = memory
+kasmemoro = cache (hidden memory)
+fadeno = thread
+graveto = gadget / device
+roboto = robot
+automato = automaton
+sensilo = sensor (sense-tool)
+aktuario = actuator
+servilo = server
+kliento = client
+retpunkto = endpoint / host
+protokolo = protocol
+adreso = address
+domajno = domain
+posto = mail / email
+retposto = email
+retpostadreso = email address
+salutvorto = password (greeting-word→login word)
+salutnomo = username
+uzanto = user
+administranto = administrator
+permeso = permission
+sekurigo = encryption
+sifrado = cipher / encoding
+malsifrado = decryption
+pasvorto = password (formal)
+programado = programming
+programlingvo = programming language
+algoritmo = algorithm
+strukturo = structure
+objekto = object
+klaso = class
+metodo = method
+heredajo = inheritance
+modulo = module
+biblioteko = library
+pakajo = package
+versio = version
+eldono = release / edition
+jisdatigo = update / upgrade
+eraro = error
+testado = testing
+surdosiero = debug log
+komento = comment
+varianto = variant
+konduto = behavior
+fenestro = window
+butono = button
+menuo = menu
+kursoro = cursor
+tabulo = keyboard
+klavaro = keyboard (key-collective)
+ekrano = screen
+monitoro = monitor
+printilo = printer
+skanilo = scanner
+disko = disk
+diskilo = drive
+memorilo = storage device / memory chip
+fulmdisko = flash drive (lightning disk)
+nubo = cloud (storage / service)
+nubservilo = cloud server
+servado = hosting / service
+reto-reto = internetwork / internet
+sendrata = wireless
+kablo = cable
+modemo = modem
+enkursigilo = router (director)
+enkursigo = routing
+amaskomunikilo = mass media
+
+# --- ai ---
+inteligento = intelligence
+masinlernado = machine learning
+lernado = learning
+datumo = data / datum
+modelo = model
+neurono = neuron
+tavolo = layer
+peso = weight
+biaso = bias
+trejnado = training
+trejni = to train
+konfirmo = validation
+regreso = regression
+klasifiko = classification
+klastro = cluster
+klastrado = clustering
+prognozo = prediction
+prognozi = to predict
+genro = gender / genre
+etike = labelled
+etikedado = labelling
+venko = victory / win
+sento = feeling / sentiment
+tradukilo = translator
+parolrekono = speech recognition
+bildrekono = image recognition
+vizio = vision / sight system
+autonoma = autonomous
+roboto-brako = robot arm
+spertosistemo = expert system
+rezonado = reasoning
+masintraduko = machine translation
+generado = generation
+generi = to generate
+lingvomodelo = language model
+prompto = prompt
+respondo = response
+aljustigo = tuning / adjustment
+rekompenso = reward
+optimumigo = optimization
+heuristiko = heuristic
+datumetiko = data ethics
+automatigo = automation
+automatigi = to automate
+senpilota = pilotless / unmanned
+masinvido = machine vision
+
+# --- science-general ---
+esploro = research
+esplori = to research
+eksperimento = experiment
+mezuro = measurement
+mezuri = to measure
+observo = observation
+observi = to observe
+hipotezo = hypothesis
+teorio = theory
+lejo = law (of nature)
+pruvo = proof / evidence
+pruvi = to prove
+kauzo = cause
+efiko = effect
+rezulto = result
+kvalito = quality
+kvanto = quantity
+energio = energy
+materio = matter
+maso = mass
+forto = force
+movado = motion
+rapido = speed / velocity
+ondo = wave
+partiklo = particle
+atomo = atom
+molekulo = molecule
+kristalo = crystal
+solido = solid
+likvo = liquid
+gaso = gas
+plasmao = plasma
+temperaturo = temperature
+premo = pressure
+denso = density
+volumeno = volume
+pezo = weight / heaviness
+gravito = gravity
+frotado = friction
+
+# --- physics ---
+fiziko = physics
+fizikisto = physicist
+mekaniko = mechanics
+dinamiko = dynamics
+termodinamiko = thermodynamics
+elektro = electricity
+elektra = electric
+magneto = magnetism
+lumo = light
+optiko = optics
+sono = sound
+akustiko = acoustics
+ondo-longo = wavelength
+amplitudo = amplitude
+spektro = spectrum
+radiajo = radiation
+radioaktiva = radioactive
+nukleo = nucleus
+elektrono = electron
+protono = protono
+neutrono = neutron
+kvantumo = quantum
+atomkerno = atomic nucleus
+konduktilo = conductor
+izolilo = insulator
+rezistilo = resistor
+baterio = battery
+kurento = current
+tensio = voltage
+kampo = field
+
+# --- chemistry ---
+kemio = chemistry
+kemiisto = chemist
+elemento = element
+kompundajo = compound
+miksajo = mixture
+solvajo = solution
+bazo = base (alkali)
+oksido = oxide
+jono = ion
+katalizilo = catalyst
+sintezo = synthesis
+analizo = analysis
+hidrogeno = hydrogen
+oksigeno = oxygen
+karbono = carbon
+nitrogeno = nitrogen
+natrio = sodium
+kalio = potassium
+fero = iron
+kupro = copper
+oro = gold
+arjento = silver
+zinko = zinc
+plumbo = lead
+hidrokarbido = hydrocarbon
+biokemio = biochemistry
+polimero = polymer
+plasto = plastic
+fibro = fibre
+
+# --- biology ---
+biologio = biology
+biologo = biologist
+selo = cell
+selmembrano = cell membrane
+gene = gene
+genomo = genome
+DNA = DNA
+RNA = RNA
+proteino = protein
+enzimo = enzyme
+bakterio = bacterium
+viruso = virus
+fungo = fungus
+planto = plant
+besto = animal
+mamulo = mammal
+birdo = bird
+fiso = fish
+insekto = insect
+reptilio = reptile
+amfibio = amphibian
+ekosistemo = ecosystem
+biomo = biome
+evoluo = evolution
+heredado = heredity
+fotosintezo = photosynthesis
+spirado = respiration
+sango = blood
+nervo = nerve
+pulmo = lung
+hepato = liver
+reno = kidney
+muskolo = muscle
+osto = bone
+hauto = skin
+okulo = eye
+orelo = ear
+nazo = nose
+
+# --- medicine ---
+flegistino = nurse
+hospitalo = hospital
+kliniko = clinic
+diagnozo = diagnosis
+simptomo = symptom
+malsano = illness / disease
+infekto = infection
+epidemio = epidemic
+pandemio = pandemic
+antisepso = antisepsis
+kirurgio = surgery
+kirurgo = surgeon
+anestezio = anaesthesia
+medikamento = medication
+pilolo = pill
+injekto = injection
+dozo = dose
+terapio = therapy
+flegado = nursing / care
+febro = fever
+tuso = cough
+malvarmumo = cold (illness)
+gripo = flu
+alergio = allergy
+astmo = asthma
+diabeto = diabetes
+tumoro = tumour
+vundo = wound
+brulo = burn
+inflamo = inflammation
+doloro = pain
+sangopremo = blood pressure
+anatomio = anatomy
+fiziologio = physiology
+psikiatrio = psychiatry
+pediatrio = paediatrics
+dentisto = dentist
+okulisto = ophthalmologist
+apoteko = pharmacy
+
+# --- mathematics ---
+matematiko = mathematics
+matematikisto = mathematician
+nombro = number
+nombra = numerical
+entjero = integer
+sumo = sum
+produto = product
+resto = remainder
+aldono = addition
+subtraho = subtraction
+multipliko = multiplication
+divido = division
+nekonato = unknown (variable)
+grafikajo = graph
+bildo = image / figure
+geometrio = geometry
+punkto = point
+linio = line
+ebeno = plane
+angulo = angle
+triangulo = triangle
+kvadrato = square
+rektangulo = rectangle
+sfero = sphere
+kubo = cube
+konuso = cone
+diagonalo = diagonal
+radiuso = radius
+diametro = diameter
+perimetro = perimeter
+areo = area
+algebro = algebra
+vektoro = vector
+skalaro = scalar
+kalkulo = calculus
+derivajo = derivative
+integralo = integral
+limo = limit
+probablo = probability
+statistiko = statistics
+meznombro = average / mean
+mediano = median
+disperso = variance
+
+# --- law ---
+juro = law / right
+tribunalo = court / tribunal
+jujisto = judge
+advokato = lawyer / advocate
+prokuroro = prosecutor
+akuzito = defendant
+atestanto = witness
+verdikto = verdict
+puno = punishment / penalty
+monpuno = fine
+malliberejo = prison
+kondamno = sentence / conviction
+kontrakto = contract
+interkonsento = agreement
+proprieto = property
+posedo = possession
+testamento = will / testament
+edzijo = marriage
+rajto = right / entitlement
+devo = duty / obligation
+kulpo = guilt / fault
+krimo = crime
+stelo = theft
+rabo = robbery
+fraudo = fraud
+murdo = murder
+perforto = violence
+korupto = corruption
+atestado = testimony
+pruvaro = evidence
+juristo = jurist
+lejprojekto = bill / draft law
+parlamento = parliament
+
+# --- government ---
+registaro = government
+stato = state
+respubliko = republic
+monarkio = monarchy
+demokratio = democracy
+prezidento = president
+sefministro = prime minister
+ministro = minister
+senato = senate
+konsilio = council
+deputito = deputy / representative
+baloto = election
+baloti = to vote
+vosdono = vote
+kandidato = candidate
+partio = party
+politiko = politics
+politikisto = politician
+diplomatio = diplomacy
+diplomato = diplomat
+ambasado = embassy
+ambasadoro = ambassador
+traktato = treaty
+pasporto = passport
+vizo = visa
+imposto = tax
+bujeto = budget
+ministrejo = ministry
+gubernio = governorship / province
+regiono = region
+distrikto = district
+urbo = city
+urbestro = mayor
+komunumo = community / municipality
+
+# --- military ---
+milito = war
+armeo = army
+mararmeo = navy
+aerarmeo = air force
+militisto = soldier
+generalo = general
+serjento = sergeant
+roto = squad / troop
+regimento = regiment
+bataliono = battalion
+armilo = weapon
+pafilo = gun / firearm
+kanono = cannon
+bombo = bomb
+grenado = grenade
+misilo = missile
+tanko = tank
+kiraso = armour / battleship
+kirassipo = battleship
+submarsipo = submarine
+aviadilo = aircraft
+sasaviadilo = fighter jet
+bombaviadilo = bomber
+defendo = defence
+atako = attack
+ofensivo = offensive
+strategio = strategy
+taktiko = tactics
+manovro = manoeuvre
+spionado = espionage
+spiono = spy
+soldato = soldier
+militbazo = military base
+kartuso = cartridge
+kuglo = bullet
+
+# --- sports ---
+sporto = sport
+atletiko = athletics
+futbalo = football / soccer
+basketbalo = basketball
+volejbalo = volleyball
+teniso = tennis
+najado = swimming
+kurado = running
+skermado = fencing
+boksado = boxing
+lukto = wrestling
+halterlevo = weightlifting
+gimnastiko = gymnastics
+sketado = skating
+skiado = skiing
+golfo = golf
+handbalo = handball
+tabloteniso = table tennis
+sako = chess
+lotludo = lottery
+konkurso = competition
+sampionado = championship
+matso = match
+turniro = tournament
+teamo = team
+ludanto = player
+trejnisto = coach
+arbitro = referee
+golo = goal
+poento = point / score
+medalo = medal
+trofeo = trophy
+rekordo = record
+stadiono = stadium
+gimnastikejo = gymnasium
+najejo = swimming pool
+
+# --- entertainment ---
+amuzo = entertainment / amusement
+amuzi = to entertain
+filmo = film / movie
+kino = cinema
+teatro = theatre
+aktoro = actor
+aktorino = actress
+rejisoro = director
+rolo = role
+televido = television
+programo = programme / show
+serio = series
+epizodo = episode
+kanalo = channel
+muziko = music
+muzikisto = musician
+kantisto = singer
+kanto = song
+kanti = to sing
+orkestro = orchestra
+gitaro = guitar
+piano = piano
+violono = violin
+tamburo = drum
+bildstrio = comic strip
+bildolibro = picture book
+romano = novel
+poezio = poetry
+poeto = poet
+rakonto = story / narrative
+fabelo = fairy tale
+verko = work (of art)
+arto = art
+artisto = artist
+pentrajo = painting
+skulptajo = sculpture
+muzeo = museum
+festivalo = festival
+spektaklo = spectacle / show
+publiko = audience / public
+admiranto = fan
+
+# --- business ---
+firmao = company / firm
+entrepreno = enterprise / business
+industrio = industry
+fabriko = factory
+produktado = production
+produkto = product
+servo = service
+varo = goods / ware
+merkato = market
+butiko = shop / store
+vendisto = seller / vendor
+asetanto = buyer
+prezo = price
+kosto = cost
+profito = profit
+perdo = loss
+investo = investment
+investanto = investor
+kapitalo = capital
+dividendo = dividend
+bankroto = bankroto
+kontado = accounting
+kontisto = accountant
+fakturo = invoice
+konkuro = competition
+merkatajo = marketing
+reklamo = advertisement
+marko = brand / mark
+logo = logo
+entreprenisto = entrepreneur
+livero = delivery
+provizo = supply
+postulo = demand
+enspezo = revenue / income
+elspezo = expense
+salajro = salary / wage
+bonuso = bonus
+laborposteno = job / position
+dungito = employee
+dunganto = employer
+sindikato = trade union
+kariero = career
+laboro = work / labour
+labori = to work
+okupo = occupation
+profesio = profession
+
+# --- finance ---
+mono = money
+monero = coin
+bileto = banknote / bill
+valuto = currency
+kurzo = exchange rate
+banko = bank
+bankisto = banker
+depono = deposit
+prunto = loan
+kredito = credit
+debeto = debit
+suldo = debt
+suldanto = debtor
+kreditoro = creditor
+interezo = interest
+hipoteko = mortgage
+asekuro = insurance
+penso = pension
+investado = investing
+borso = stock exchange
+valspapero = security / bond
+risiko = risk
+anhelo = asset
+pago = payment
+pagigi = to pay
+transpago = transfer
+rangigo = rating
+riso = wealth
+malriso = poverty
+budgeto = budget
+
+# --- astronomy ---
+astronomio = astronomy
+astronomo = astronomer
+universo = universe
+kosmo = cosmos / space
+galaksio = galaxy
+planedo = planet
+asteroido = asteroid
+kometo = comet
+meteoro = meteor
+meteorito = meteorite
+nebulo = nebula
+teleskopo = telescope
+observatorio = observatory
+orbito = orbit
+orbiti = to orbit
+lumsemojaro = light-year
+kosmosipo = spaceship
+rabto = rover
+satelito = satellite
+sondilo = probe
+lanso = launch
+lansi = to launch
+astronauto = astronaut
+kosmokostumo = spacesuit
+sunrego = solar system (sun-realm)
+supernovao = supernova
+pulsaro = pulsar
+kvasaro = quasar
+zodiako = zodiac
+
+# --- geography ---
+geografio = geography
+kontinento = continent
+maro = sea
+lago = lake
+rivero = river
+montaro = mountain range
+monto = mountain
+vulkano = volcano
+valo = valley
+ebenajo = plain
+dezerto = desert
+arbaro = forest
+jangalo = jungle
+savano = savanna
+stepo = steppe
+tundro = tundra
+insulo = island
+duoninsulo = peninsula
+marbordo = coast
+strando = beach
+rifo = reef
+klimato = climate
+vetero = weather
+tajdo = tide
+sismo = earthquake
+inundo = flood
+sekego = drought
+mapo = map
+atlaso = atlas
+lando = country / land
+sefurbo = capital
+lojantaro = population
+
+# --- religion ---
+religio = religion
+dio = god
+diino = goddess
+diajo = deity
+kredo = belief / faith
+kredi = to believe
+prejo = prayer
+preji = to pray
+templo = temple
+prejejo = church / house of worship
+moskeo = mosque
+sinagogo = synagogue
+sankta = holy / sacred
+profeto = prophet
+pastro = priest
+monako = monk
+monakino = nun
+ritualo = ritual
+ofero = offering / sacrifice
+anjelo = angel
+spirito = spirit / soul
+animo = soul
+paradizo = paradise
+infero = hell
+miraklo = miracle
+beno = blessing
+beni = to bless
+peko = sin
+pekado = sinning
+savo = salvation
+resurekto = resurrection
+meditado = meditation
+mediti = to meditate
+dogmo = dogma
+teologio = theology
+ateismo = atheism
+agnostikismo = agnosticism
+spirituala = spiritual
+
+# --- philosophy ---
+filozofio = philosophy
+filozofo = philosopher
+logiko = logic
+etiko = ethics
+estetiko = aesthetics
+metafiziko = metaphysics
+epistemologio = epistemology
+ontologio = ontology
+dialektiko = dialectics
+ideo = idea
+vero = truth
+opinio = opinion
+dubo = doubt
+sophismo = sophistry
+paradokso = paradox
+silogismo = syllogism
+premiso = premise
+konkludo = conclusion
+kategorio = category
+ekzisto = existence
+destino = fate / destiny
+bono = good
+malbono = evil
+virto = virtue
+valoro = value
+
+# --- psychology ---
+psikologio = psychology
+psikologo = psychologist
+mensoo = mind / psyche
+atento = attention
+humoro = mood
+instinko = instinct
+motivado = motivation
+karaktero = character
+memoro-trejnado = memory training
+konsilado = counselling
+angoro = anxiety
+deprimo = depression
+streso = stress
+timo = fear
+kolero = anger
+jojo = joy
+maljojo = sadness
+amo = love
+malamo = hatred
+empatio = empathy
+memfido = self-confidence
+memestimo = self-esteem
+neurozo = neurosis
+psikozo = psychosis
+traumato = trauma
+sonjo = dream
+
+# --- linguistics ---
+lingvistiko = linguistics
+lingvisto = linguist
+lingvo = language
+fonetiko = phonetics
+fonologio = phonology
+morfologio = morphology
+sintakso = syntax
+semantiko = semantics
+pragmatiko = pragmatics
+vortaro = vocabulary / dictionary
+gramatiko = grammar
+leksiko = lexis
+dialekto = dialect
+idiomo = idiom
+frazo = phrase
+vorto = word
+silabo = syllable
+vokalo = vowel
+konsonanto = consonant
+radiko = root
+afikso = affix
+prefikso = prefix
+sufikso = suffix
+kunmetajo = compound
+subjekto = subject
+predikato = predicate
+pronomo = pronoun
+verbo = verb
+adjektivo = adjective
+adverbo = adverb
+tempo = tense
+kazo = case
+traduko = translation
+signifo = meaning
+
+# --- internet-culture ---
+retkulturo = internet culture
+afiso = post
+afisi = to post
+komenti = to comment
+satato = like / favourite
+sati = to like
+abonanto = follower / subscriber
+aboni = to subscribe
+amiko = friend
+amikoj = friends
+sekvanto = follower
+sekvi = to follow
+kunhavigo = share / sharing
+kunhavigi = to share
+virajo = viral post
+memeo = meme
+blogo = blog
+vlogo = vlog
+podkasto = podcast
+elsendo = stream / broadcast
+elsendi = to broadcast
+kanalo-afiso = channel post
+novajo = news
+retnovajo = online news
+kasnomo = pseudonym
+trolo = troll
+trolado = trolling
+
+# --- cybersecurity ---
+atakanto = attacker
+hakisto = hacker
+hakado = hacking
+vermo = worm
+trojano = trojan
+fajrosirmilo = firewall
+slosilo = key / encryption key
+dufaktora = two-factor
+autentigo = authentication
+permesilo = permission / token
+ekspluato = exploit
+korektajo = patch / fix
+riskotakso = risk assessment
+anonimigo = anonymization
+kaptajkontrolo = access control
+
+# --- engineering ---
+injenierado = engineering
+injeniero = engineer
+masino = machine
+motoro = motor
+turbino = turbine
+pumpilo = pump
+generatoro = generator
+konstruajo = structure / building
+ponto = bridge
+tunelo = tunnel
+digo = dam
+vojo = road
+fervojo = railway
+autovojo = highway
+viadukto = viaduct
+materialo = material
+alojajo = alloy
+betono = concrete
+stalo = steel
+lumbo = lumber / timber
+izolado = insulation
+lubrikado = lubrication
+ripezo = repair
+munti = to assemble
+muntado = assembly
+prototipo = prototype
+projekto = project
+plano = plan / blueprint
+skizo = sketch
+diagramo = diagram
+
+# --- education ---
+eduko = education
+lernejo = school
+universitato = university
+fakultato = faculty
+studento = student
+lernanto = pupil
+profesoro = professor
+instruisto = teacher
+kurso = course
+studado = study
+studo = study / studies
+ekzameno = exam
+testo = test
+noto = grade / mark
+diplomo = diploma
+atesto = certificate
+bakalauro = bachelor
+magistro = master's degree
+doktoro = doctorate
+tezo = thesis
+sefartikolo = textbook
+lernolibro = textbook
+kajero = notebook
+plumo = pen
+krajono = pencil
+glisilo = slide
+ferio = holiday / vacation
+semestro = semester
+jaro = year
+kono = knowledge
+kapablo = ability / skill
+talento = talent
+
+# --- time: weekdays, months, clock (spec §14) ---
+soma-ona = Monday (week-day one)
+soma-tuo = Tuesday
+soma-tro = Wednesday
+soma-fóra = Thursday
+soma-kvín = Friday
+soma-sixa = Saturday
+soma-sita = Sunday
+mava-ona = January (month one)
+mava-tuo = February
+mava-tro = March
+mava-fóra = April
+mava-kvín = May
+mava-sixa = June
+mava-sita = July
+mava-oita = August
+mava-noa = September
+mava-diza = October
+mava-unésa = November
+mava-dósa = December
+vora-pira = clock / watch (time tool)
+dúva = date (calendar day)
+
+# --- function words (spec §10-§14) ---
+ante = before / in front of
+de-ante = from before
+dum = during / while
+kom = as / like / when
+por = for / in order to
+pro = because of / on account of
+tra = through
+pre = past / by / beyond
+sen = without
+kontra = against
+inter = between / among
+na-inter = in between
+for = away / forth
+heme = home / homeward
+kie = where
+nerva = soon
+ninva = new / fresh
+sende = outside
+subo = under / below / down
+punto = decimal point
+duon = half
+suro = last year / a year ago
+
+# --- core-added ---
+ia-ne = already / by now
+siu = every / all
+neniu = nobody / no one
+io = something
+nenio = nothing
+sio = everything
+tie = there
+sie = everywhere
+siam = always (temporal)
+
+# --- computing ---
+anonko = app / software title
+funkkio = function
+viko = queue / row
+viko-memoro = queue memory
+prokezilo = processor / CPU
+prokezo = process
+sekureko = security / safety
+kimo = bug (insect→defect, colloquial)
+interfako = interface
+uzintersurfako = user interface (UI)
+datumkentro = data centre
+
+# --- ai ---
+skiaro = knowledge base
+instrukkio = instruction
+kelo = goal / objective
+
+# --- science-general ---
+skienko = science / knowledge-system
+skienka = scientific
+skienkisto = scientist
+akkelo = acceleration
+
+# --- physics ---
+frekvenko = frequency
+relativeko = relativity
+prinkipo = principle
+kirkvito = circuit
+
+# --- chemistry ---
+akido = acid
+reakkio = reaction
+kalkio = calcium
+
+# --- biology ---
+spekio = species
+mutakio = mutation
+kerbo = brain
+
+# --- medicine ---
+medikino = medicine
+kurakisto = doctor / physician
+kurakado = treatment
+vakkino = vaccine
+imuneko = immunity
+rekepto = prescription
+kankero = cancer
+frakturo = fracture
+korfrekvenko = heart rate
+
+# --- mathematics ---
+frakkio = fraction
+dekimalo = decimal
+prokento = percent
+diferenko = difference
+kvokiento = quotient
+ekvakio = equation
+kirklo = circle
+kilindro = cylinder
+matriko = matrix
+korelakio = correlation
+
+# --- law ---
+konstitukio = constitution
+juroprokeso = trial / lawsuit
+prokeso = process / trial
+apelakio = appeal
+divorko = divorce
+respondeko = responsibility
+
+# --- government ---
+nakio = nation
+kivito = citizenship
+kivitano = citizen
+fiskaleko = fiscal policy
+administrakio = administration
+provinko = province
+
+# --- military ---
+ofikiro = officer
+operako = operation
+
+# --- sports ---
+bikiklado = cycling
+rugbi = rugby / (loan)
+
+# --- entertainment ---
+skenaro = screenplay
+skeno = scene
+konkerto = concert
+danko = dance
+dankisto = dancer
+ekspozikio = exhibition
+
+# --- business ---
+komerko = commerce / trade
+akkio = share / stock
+akkiaro = stock portfolio
+kvitanko = receipt
+subvenkio = subsidy
+negokado = negotiation
+negoki = to negotiate
+
+# --- finance ---
+finanko = finance
+finanka = financial
+inflakio = inflation
+deflakio = deflation
+rekesio = recession
+
+# --- astronomy ---
+kosmostakio = space station
+konstelakio = constellation
+eklipse = eclipse
+
+# --- geography ---
+okeano = ocean
+glakiejo = glacier
+kunamo = tsunami
+
+# --- religion ---
+keremonio = ceremony
+
+# --- philosophy ---
+konkepto = concept
+konskio = consciousness
+rakio = reason
+skio = knowledge
+esenkajo = essence
+libereko = freedom / liberty
+
+# --- psychology ---
+subkonskio = subconscious
+perkepto = perception
+emokio = emotion
+personeko = personality
+halukino = hallucination
+
+# --- linguistics ---
+akkento = stress / accent
+prepozikio = preposition
+konjunkkio = conjunction
+
+# --- internet-culture ---
+tendenko = trend
+anonimeko = anonymity
+kifer-spuro = digital footprint
+
+# --- cybersecurity ---
+kibersekureko = cybersecurity
+kifro = cipher / digit
+vundebleko = vulnerability
+retsekureko = network security
+
+# --- engineering ---
+toleranko = tolerance
+prekizeko = precision
+
+# --- education ---
+lekiono = lesson
+disertakio = dissertation
+
+# --- derivation/loan examples (spec §15) ---
+fosa = fuse / melt together / merge
+foto = photo / photograph
+muzika = music
+telefona = telephone / phone
+vista = view / sight / outlook
+
+# --- function words (spec §10-§14) ---
+éne = one (digit form 1) / digit one
+zóna-vora = time zone (spec §14)
+
+# --- units, science, gov, tech terms (spec §16-§19) ---
+akselo = acceleration
+ampera = ampere
+fuksio = function
+grado = degree / grade
+grama = gram
+hertza = hertz
+jula = joule
+kandela = candela
+kelvina = kelvin
+kilograma = kilogram
+litra = litre
+métra = metre
+mola = mole (unit)
+njutona = newton
+paskala = pascal
+presize = precisely
+sienko = science
+spesio = species
+saro-sienko = astronomy
+nova-kéma = discovery / new knowledge
+matematika-kéma = mathematics (subject)
+baza-nása = primary school
+apelasio = appeal
+sivitano = citizen / civilian
+konstitusio = constitution
+ofisiro = officer
+rajto-deklaro = bill of rights
+kosmostasio = space station
+kosmopordo = spaceport
+raketo = rocket
+uzanto-nomo = username
+lora-redaktilo = image editor
+datum-tipo = data type
+simo = bug / glitch (colloquial)
+lesiono = lesson
+ekspozisio = exhibition
+kafe = coffee
+susi = sushi
+nja = no (colloquial) {colloq}
+baza = basic (adj)
+garda = protect / guard (verb)

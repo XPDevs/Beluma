@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§13 Numbers — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§13 Numbers — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§13 Numbers — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong></p>
+<h2>13.1 Cardinal numbers (Standard)</h2>
+<table>
+<thead><tr><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead>
+<tbody>
+<tr><td><code>zéra</code></td><td><code>ona</code></td><td><code>tuo</code></td><td><code>tro</code></td><td><code>fóra</code></td><td><code>kvín</code></td><td><code>sixa</code></td><td><code>sita</code></td><td><code>oita</code></td><td><code>noa</code></td></tr>
+</tbody></table>
+<table>
+<thead><tr><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th></tr></thead>
+<tbody>
+<tr><td><code>diza</code></td><td><code>unésa</code></td><td><code>dúésa</code></td><td><code>trésa</code></td><td><code>késa</code></td><td><code>kinsa</code></td><td><code>séza</code></td><td><code>diza-é-sita</code></td><td><code>diza-é-oita</code></td><td><code>diza-é-noa</code></td></tr>
+</tbody></table>
+<p><strong>Tens:</strong> <code>vinta</code> 20, <code>triga</code> 30, <code>forga</code> 40, <code>livga</code> 50, <code>sixga</code> 60, <code>sitga</code> 70,</p>
+<p><code>oitga</code> 80, <code>noga</code> 90.</p>
+<p><strong>Hundreds and above:</strong> <code>senta</code> 100, <code>mila</code> 1,000, <code>miliona</code> 10⁶, <code>biliona</code> 10⁹,</p>
+<p><code>triliona</code> 10¹².</p>
+<ul>
+  <li>11–16 are single words (irregular but fixed); 17–19 are built <code>diza-é-X</code> (ten-and-X).</li>
+  <li>21 = <code>vinta-ona</code>, 35 = <code>triga-kvín</code>, 47 = <code>forga-diza-é-sita</code>.</li>
+  <li>100 = <code>senta</code>; 250 = <code>tuo senta livga</code>; 1,001 = <code>mila e ona</code> (with <code>e</code> between scale groups).</li>
+  <li>Compound tens and units are hyphenated; larger elements are separate words.</li>
+</ul>
+<h2>13.2 Decimal numbers (Technical)</h2>
+<p>For reading digit strings — phone numbers, codes, IDs, and arithmetic — the</p>
+<p><strong>digit-form</strong> is used. It is a separate set of short roots (§23.4):</p>
+<table>
+<thead><tr><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr></thead>
+<tbody>
+<tr><td><code>zer</code></td><td><code>éne</code></td><td><code>di</code></td><td><code>tri</code></td><td><code>kvar</code></td><td><code>kvin</code></td><td><code>sis</code></td><td><code>sep</code></td><td><code>ok</code></td><td><code>nof</code></td><td><code>dek</code></td></tr>
+</tbody></table>
+<ul>
+  <li>A number read digit by digit: <code>éne-di-tri</code> = "1-2-3".</li>
+  <li>Arabic numerals are written in Technical texts (§2.4) and read with digit-forms.</li>
+  <li>The decimal separator is said <code>punto</code>: <code>tro punto kvin</code> = 3.5.</li>
+</ul>
+<h2>13.3 Ordinals</h2>
+<p>Add <strong><code>-ji</code></strong> to the cardinal: <code>onaji</code> 1st, <code>tuoji</code> 2nd, <code>troji</code> 3rd,</p>
+<p><code>dizaji</code> 10th, <code>vintaji</code> 20th. Hyphenated cardinals take <code>-ji</code> on the last</p>
+<p>element: <code>triga-kvín-ji</code> 35th. Ordinals are adjectives (§09).</p>
+<h2>13.4 Fractions and parts</h2>
+<p><code>parta</code> <em>part/fraction</em>; <code>duon</code> <em>half</em> (§13). A fraction is <code>CARDINAL + -parta</code>:</p>
+<p><code>troparta</code> <em>a third</em>, <code>kvínparta</code> <em>a fifth</em>. General: <code>X / Y</code> = <code>X parta ze Y</code></p>
+<p>(<em>X parts of Y</em>). Decimal fractions use <code>punto</code> (§13.2).</p>
+<h2>13.5 Percent, arithmetic, and signs</h2>
+<table>
+<thead><tr><th>Operation</th><th>Beluma</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>percent</td><td><code>porsenta</code></td><td><code>triga porsenta</code> 30%</td></tr>
+<tr><td>add</td><td><code>ada</code></td><td><code>tuo ada tro s kvín</code> 2 + 3 = 5</td></tr>
+<tr><td>subtract</td><td><code>subta</code></td><td><code>kvín subta tuo s tro</code> 5 − 2 = 3</td></tr>
+<tr><td>multiply</td><td><code>multa</code></td><td><code>tuo multa tro s sixa</code> 2 × 3 = 6</td></tr>
+<tr><td>divide</td><td><code>divita</code></td><td><code>sixa divita tuo s tro</code> 6 ÷ 2 = 3</td></tr>
+<tr><td>equals</td><td><code>ekva</code> / <code>s</code></td><td><code>X ekva Y</code></td></tr>
+<tr><td>negative</td><td><code>un-</code></td><td><code>un-kvín</code> −5</td></tr>
+<tr><td>plus / minus sign</td><td><code>mésa-morka</code> / <code>mísa-morka</code></td><td>written <code>+</code> / <code>−</code></td></tr>
+</tbody></table>
+<p>The copula <code>s</code> may serve as "equals": <code>tuo ada tro s kvín</code>.</p>
+<h2>13.6 Counting and measurement</h2>
+<p>A counted noun follows the numeral; plural is optional after numbers (§5.2):</p>
+<p><code>tres lunos</code> or <code>tre luno</code> <em>three cats</em>. Measurement uses a <strong>number + unit</strong></p>
+<p>phrase (§17): <code>kvín métra</code> <em>five metres</em>, <code>diza grado</code> <em>ten degrees</em>. Units are</p>
+<p>registered nouns (§17.4).</p>
+<h2>13.7 Negation and approximation</h2>
+<p><code>zéra</code> is also the negative quantifier <em>none</em> (§08): <code>Zéra luno esto.</code> *There is</p>
+<p>no cat.<em> Approximation uses <code>sirka</code> </em>about<em> (<code>sirka vinta</code> </em>about twenty*),</p>
+<p><code>mésa ban</code> (<em>more than</em>), <code>mísa ban</code> (<em>less than</em>), and <code>preskawe</code> <em>nearly</em>.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>
