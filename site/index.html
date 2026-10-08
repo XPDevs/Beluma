@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lía Beluma — a complete constructed language | XPDevs</title>
+    <style>
+        :root {
+            --primary: #1a252f;
+            --accent: #3498db;
+            --bg: #f4f7f6;
+            --card: #ffffff;
+            --text: #2c3e50;
+            --muted: #7f8c8d;
+            --radius: 22px;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+            margin: 0;
+        }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 22px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; top: 0; z-index: 1000;
+            border-bottom: 5px solid var(--accent);
+        }
+        header .brand { font-size: 1.4rem; font-weight: 800; }
+        header .nav a {
+            color: white; text-decoration: none; margin-left: 18px; font-weight: 600; opacity: 0.9;
+        }
+        header .nav a:hover { opacity: 1; text-decoration: underline; }
+        main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .hero {
+            background: var(--card); padding: 60px 50px; border-radius: var(--radius);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.06); margin-bottom: 40px; text-align: center;
+        }
+        .hero h1 { font-size: 3rem; margin: 0 0 10px; color: var(--primary); }
+        .hero .sub { color: var(--muted); font-size: 1.1rem; }
+        .hero .letters-banner { margin: 30px auto 20px; font-size: 2.2rem; color: var(--accent); letter-spacing: 6px; }
+        .cta a {
+            display: inline-block; margin: 10px; padding: 14px 28px; border-radius: 30px;
+            text-decoration: none; font-weight: 700;
+        }
+        .cta .primary { background: var(--accent); color: white; }
+        .cta .ghost { border: 2px solid var(--accent); color: var(--accent); }
+        section.card {
+            background: var(--card); padding: 45px 50px; border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 36px;
+        }
+        h2 {
+            border-bottom: 4px solid var(--accent); padding-bottom: 12px; margin: 0 0 24px;
+            color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-size: 1.3rem;
+        }
+        h3 { color: var(--primary); margin-top: 34px; border-left: 6px solid var(--accent); padding-left: 14px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+        th, td { padding: 10px 12px; border-bottom: 1px solid #eee; text-align: left; }
+        th { background: #f6fafc; color: var(--primary); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; }
+        td:first-child { font-weight: 700; color: var(--accent); }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+        code { background: #eef4f8; padding: 2px 7px; border-radius: 6px; color: #1d6fb8; }
+        .example { background: #f2f9ff; border-left: 6px solid var(--accent); padding: 16px 20px; border-radius: 12px; margin: 14px 0; }
+        .example .be { font-weight: 800; color: var(--primary); font-size: 1.1rem; }
+        .info { background: #fdfaf0; border-left: 6px solid #e6c229; padding: 16px 20px; border-radius: 12px; margin: 20px 0; }
+        footer { text-align: center; padding: 50px 20px; color: var(--muted); }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand">Lía Beluma</div>
+    <div class="nav">
+        <a href="index.html">Overview</a>
+        <a href="grammar.html">Grammar</a>
+        <a href="lessons.html">Course</a>
+        <a href="translator.html">Translator</a>
+    </div>
+</header>
+
+<main>
+
+    <div class="hero">
+        <h1>Lía Beluma</h1>
+        <div class="letters-banner">a&nbsp;b&nbsp;d&nbsp;e&nbsp;f&nbsp;g&nbsp;h&nbsp;i&nbsp;j&nbsp;k&nbsp;l&nbsp;m&nbsp;n&nbsp;o&nbsp;p&nbsp;r&nbsp;s&nbsp;t&nbsp;u&nbsp;v&nbsp;w&nbsp;z&nbsp;x</div>
+        <p class="sub">A complete, learnable constructed language — with real phonology, regular grammar, and a growing lexicon readers can extend. Read it. Write it. Speak it.</p>
+        <div class="cta">
+            <a class="primary" href="lessons.html">Start learning</a>
+            <a class="ghost" href="../course/README.html">Full 40-lesson course</a>
+            <a class="ghost" href="translator.html">Open translator</a>
+        </div>
+    </div>
+
+    <section class="card">
+        <h2>Learn Beluma (in your browser)</h2>
+        <p>Learn step by step, just like Duolingo — but all in your browser, no download, and fully dictionary-locked.</p>
+        <div class="grid-3">
+            <div>
+                <h3>Beginner path</h3>
+                <ul>
+                    <li><a href="lessons.html">Quick taster</a> — 8 short lessons</li>
+                    <li><a href="../course/book-01.html">Book 01 (A1)</a> — first 10 lessons</li>
+                    <li><a href="../course/book-02.html">Book 02 (A2)</a> — next 10</li>
+                    <li><a href="../course/book-03.html">Book 03 (B1)</a> — next 10</li>
+                    <li><a href="../course/book-04.html">Book 04 (B1+)</a> — final 10 with reading</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Practice</h3>
+                <ul>
+                    <li><a href="translator.html">Translator + word analysis</a></li>
+                    <li><a href="../library/dialogues.html">Dialogue bank</a> — role-plays</li>
+                    <li><a href="../library/corpus/README.html">Native-speaker corpus</a> — B1+ reading</li>
+                    <li><a href="../library/if/if-01-the-key.html">Interactive fiction (IF-01)</a></li>
+                    <li><a href="../exams/README.html">Certifications (A1–C2)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Reference</h3>
+                <ul>
+                    <li><a href="grammar.html">Grammar reference</a></li>
+                    <li><a href="../canon/01-articles.html">Canon</a> — complete specs</li>
+                    <li><a href="../library/sova-nela/issue-01.html">Sova-Néla newspaper</a></li>
+                    <li><a href="../library/story/episode-01-le-kela.html">Story: Lé Kéla</a></li>
+                    <li><a href="../library/poetry/README.html">Poetry</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>The sounds of Beluma</h2>
+        <p>Beluma has 18 consonants and 5 vowels. The letters are always pronounced the same way.</p>
+        <div class="grid-2">
+            <div>
+                <h3>Consonants</h3>
+                <table>
+                    <tr><th>Letter</th><th>Sound (IPA)</th><th>Like in English</th></tr>
+                    <tr><td>b d f g h j k l m n p r s t v w z</td><td>/b d f g h j k l m n p r s t v w z/</td><td>as written; <code>j</code> = *y*es, <code>r</code> rolled, <code>w</code> = *w*et, <code>x</code> = k+s</td></tr>
+                </table>
+            </div>
+            <div>
+                <h3>Vowels &amp; stress</h3>
+                <table>
+                    <tr><th>Letter</th><th>Sound (IPA)</th><th>Like in</th></tr>
+                    <tr><td>a</td><td>/a/</td><td>f<em>a</em>ther</td></tr>
+                    <tr><td>e</td><td>/e/</td><td>b<em>e</em>d</td></tr>
+                    <tr><td>i</td><td>/i/</td><td>s<em>ee</em></td></tr>
+                    <tr><td>o</td><td>/o/</td><td>f<em>or</em></td></tr>
+                    <tr><td>u</td><td>/u/</td><td>f<em>oo</em>d</td></tr>
+                </table>
+                <div class="info">The acute accent (<code>béla</code>) marks the stressed vowel. The stress never moves when suffixes are added: <code>béla</code> + <code>-s</code> = <code>bélas</code>.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Word-building</h2>
+        <p>Beluma is designed to be <strong>extended by its speakers</strong>. Combine roots head-first and the engine understands the new word automatically — even when it has never been written down before.</p>
+        <div class="grid-2">
+            <div>
+                <h3>Roots are raw material</h3>
+                <ul>
+                    <li><code>néla</code> = water, <code>sula</code> = big → <code>nela-sula</code> = ocean</li>
+                    <li><code>féma</code> = eat, <code>pira</code> = tool → <code>fema-pira</code> = spoon</li>
+                    <li><code>fira</code> = bird, <code>-nira</code> = small → <code>fira-nira</code> = small bird</li>
+                    <li><code>luma</code> = light, <code>saro</code> = star → <code>luma-saro</code> = flashlight</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Any new word is real</h3>
+                <p>Type an unlisted compound — <code>nela-fura-pira</code> (water-fruit-tool = watering can) — and the translator analyses it root by root. Coin it, use it, and it belongs in the dictionary the same day. That is how real languages grow.</p>
+                <div class="example"><div class="be">fura-nira-s s gavo.</div>Small fruits are good.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Grammar at a glance</h2>
+        <div class="grid-2">
+            <div>
+                <h3>Word order</h3>
+                <p>Subject – Verb – Object, like English:</p>
+                <div class="example"><div class="be">Mi leva tu.</div>I love you.</div>
+                <p><strong>Adjectives come first:</strong> <code>béla lomas</code> = beautiful trees.</p>
+                <p><strong>Possessors come first:</strong> <code>mi-la nésa</code> = my house.</p>
+                <p><strong>Prepositions:</strong> <code>na</code> (in), <code>po</code> (to), <code>dé</code> (from), <code>vél</code> (with).</p>
+            </div>
+            <div>
+                <h3>Pronouns</h3>
+                <table>
+                    <tr><th>Beluma</th><th>English</th></tr>
+                    <tr><td>mi</td><td>I / me</td></tr>
+                    <tr><td>tu</td><td>you</td></tr>
+                    <tr><td>nivo / siva</td><td>he / she</td></tr>
+                    <tr><td>ét</td><td>it</td></tr>
+                    <tr><td>mis / tur / misu</td><td>we / you all / they</td></tr>
+                </table>
+                <p>Possessives: add <code>-la</code> — <code>mi-la</code> my, <code>tu-la</code> your…</p>
+            </div>
+        </div>
+        <div class="grid-2">
+            <div>
+                <h3>Tense &amp; negation</h3>
+                <table>
+                    <tr><th>Marking</th><th>Meaning</th></tr>
+                    <tr><td>(nothing)</td><td>present</td></tr>
+                    <tr><td>né + verb</td><td>past (I né féma = I ate)</td></tr>
+                    <tr><td>wé + verb</td><td>future (wé gai = will go)</td></tr>
+                    <tr><td>un + verb</td><td>not (un kéma = don't know)</td></tr>
+                    <tr><td>du + verb</td><td>Don't! (du gai = don't go)</td></tr>
+                    <tr><td>kvo + sentence</td><td>yes/no question</td></tr>
+                </table>
+            </div>
+            <div>
+                <h3>Derivation (make new words)</h3>
+                <table>
+                    <tr><th>Affix</th><th>Job</th><th>Example</th></tr>
+                    <tr><td>-s / -as</td><td>plural</td><td>loma → lomas</td></tr>
+                    <tr><td>-ét</td><td>young</td><td>lavoét = puppy</td></tr>
+                    <tr><td>-os</td><td>group</td><td>firaos = flock</td></tr>
+                    <tr><td>-or</td><td>doer</td><td>kémor = teacher</td></tr>
+                    <tr><td>-la</td><td>of</td><td>siva-la = her</td></tr>
+                    <tr><td>-lé</td><td>adverb</td><td>gavo-lé = well</td></tr>
+                    <tr><td>-va</td><td>doing</td><td>sola-va = playing</td></tr>
+                    <tr><td>un-</td><td>not</td><td>un-kula = easy</td></tr>
+                    <tr><td>ré-</td><td>again</td><td>ré-dora = re-open</td></tr>
+                    <tr><td>ni-</td><td>opposite</td><td>ni-kema = misunderstand</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Numbers</h2>
+        <div class="grid-3">
+            <div>
+                <table>
+                    <tr><td>zéra</td><td>0</td></tr>
+                    <tr><td>ona</td><td>1</td></tr>
+                    <tr><td>tuo</td><td>2</td></tr>
+                    <tr><td>tro</td><td>3</td></tr>
+                    <tr><td>fóra</td><td>4</td></tr>
+                    <tr><td>kvín</td><td>5</td></tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr><td>sixa</td><td>6</td></tr>
+                    <tr><td>sita</td><td>7</td></tr>
+                    <tr><td>oita</td><td>8</td></tr>
+                    <tr><td>noa</td><td>9</td></tr>
+                    <tr><td>diza</td><td>10</td></tr>
+                    <tr><td>vinta</td><td>20</td></tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr><td>cénta</td><td>100</td></tr>
+                    <tr><td>mila</td><td>1,000</td></tr>
+                    <tr><td>miliona</td><td>1,000,000</td></tr>
+                    <tr><td>-ji</td><td>ordinal (onaji = first)</td></tr>
+                </table>
+            </div>
+        </div>
+        <p>Compounds: <code>vinta-é-kvín</code> = 25. A second “digit” system (<code>di tri kvar…</code>) is used on clocks and readouts — the same trick Japanese has for <em>ichi, ni, san</em>.</p>
+    </section>
+
+    <section class="card">
+        <h2>Say something</h2>
+        <div class="example"><div class="be">Sala! Havi tu s?</div>Hello! How are you?</div>
+        <div class="example"><div class="be">Mi s réva. Mi né féma fura.</div>I'm happy. I ate fruit.</div>
+        <div class="example"><div class="be">Lé fira wé hura na lé hula.</div>The bird will fly in the sky.</div>
+        <div class="example"><div class="be">Kvo tu gai po nésa?</div>Are you going home?</div>
+        <div class="example"><div class="be">du gai! Du lísa.</div>Don't go! Leave.</div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Lía Beluma v3 · a constructed language by James Turner (XPDevs).</p>
+    <p><a href="grammar.html">Full grammar</a> · <a href="lessons.html">Beginner course</a> · <a href="translator.html">Translator</a></p>
+</footer>
+
+</body>
+</html>

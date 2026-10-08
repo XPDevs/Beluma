@@ -91,13 +91,13 @@ however you like.
 
 You can learn Beluma without downloading anything. Start here:
 
-- **[index.html](index.html)** — Overview of Beluma (what it is, why)
-- **[grammar.html](grammar.html)** — Complete grammar reference
-- **[lessons.html](lessons.html)** — Quick 8-lesson taster (read and practice)
-- **[lessons/README.html](lessons/README.html)** — Full 40-lesson A1→B1 course (books 01–04) with drills and keys
-- **[translator.html](translator.html)** — Interactive translator (Beluma ↔ English) with word analysis
+- **[index.html](site/index.html)** — Overview of Beluma (what it is, why)
+- **[grammar.html](site/grammar.html)** — Complete grammar reference
+- **[lessons.html](site/lessons.html)** — Quick 8-lesson taster (read and practice)
+- **[lessons/README.html](course/README.html)** — Full 40-lesson A1→B1 course (books 01–04) with drills and keys
+- **[translator.html](site/translator.html)** — Interactive translator (Beluma ↔ English) with word analysis
 - **[exams/README.html](exams/README.html)** — Certification (A1–C2) and sample papers
-- **[literature/corpus/README.html](literature/corpus/README.html)** — Native-speaker corpus (B1+ reading band)
-- **[literature/if/if-01-the-key.html](literature/if/if-01-the-key.html)** — Interactive fiction (dictionary-locked)
+- **[literature/corpus/README.html](library/corpus/README.html)** — Native-speaker corpus (B1+ reading band)
+- **[literature/if/if-01-the-key.html](library/if/if-01-the-key.html)** — Interactive fiction (dictionary-locked)
 
 All content is dictionary-locked to VTXT 3.9 and works entirely in the browser. Just open `index.html` in any modern browser to get started.

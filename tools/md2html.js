@@ -10,7 +10,7 @@ const PATH = require("path");
 const root = PATH.join(__dirname, "..");
 const DIRS = process.argv.slice(2).length
   ? process.argv.slice(2).map((d) => PATH.join(root, d))
-  : ["canon", "lessons", "exams", "teacher", "literature"].map(
+  : ["spec", "canon", "course", "exams", "teacher", "library"].map(
       (d) => PATH.join(root, d)
     );
 
@@ -182,7 +182,19 @@ function md2html(md, title) {
   return `<h1>${esc(title)}</h1>\n` + out.join("\n");
 }
 
-const TEMPLATE = (t, body) => `<!DOCTYPE html>
+const TEMPLATE = (t, body, page) => {
+  const rel = (target) =>
+    PATH.relative(PATH.dirname(page), PATH.join(root, target)).split(PATH.sep).join("/");
+  const nav = [
+    ["Overview", "site/index.html"],
+    ["Grammar", "site/grammar.html"],
+    ["Course", "site/lessons.html"],
+    ["Standard", "spec/Beluma-Standard-v1.0.html"],
+    ["Translator", "site/translator.html"],
+  ]
+    .map(([label, target]) => `<a href="${rel(target)}">${label}</a>`)
+    .join("");
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -214,14 +226,15 @@ li{margin:4px 0}
 <body>
 <header>
   <span class="t">${t}</span>
-  <span><a href="../index.html">Overview</a><a href="../grammar.html">Grammar</a><a href="../lessons.html">Course</a><a href="../translator.html">Translator</a></span>
+  <span>${nav}</span>
 </header>
 <main>
 ${body}
-<p class="navhome">Generated from Markdown by <code>tools/md2html.js</code> · Dictionary VTXT 3.7</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.js</code> · Beluma Language Standard v1.0</p>
 </main>
 </body>
 </html>`;
+};
 
 let built = 0;
 const walk = (dir) => {
@@ -237,7 +250,7 @@ const walk = (dir) => {
     const title = titleMatch ? titleMatch[1].trim() : f.replace(/\.md$/, "");
     const body = md2html(md, title);
     const outPath = full.replace(/\.md$/, ".html");
-    FS.writeFileSync(outPath, TEMPLATE(title, body));
+    FS.writeFileSync(outPath, TEMPLATE(title, body, outPath));
     console.log(`✓ ${PATH.relative(root, outPath)}`);
     built++;
   }

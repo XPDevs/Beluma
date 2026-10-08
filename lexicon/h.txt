@@ -1,0 +1,1239 @@
+VTXT=3.9
+# Beluma Core Dictionary v3.4
+# Format: beluma-word = English gloss / alternative gloss
+# Lines beginning with '#' are comments.
+# Morphology is generative: the translator derives plurals, participles,
+# tenses, compounds, and derived words from the roots listed here.
+#--------------------------------------------------------------
+# PRONOUNS
+mi = I / me
+mu = me (object)
+tu = you
+nivo = he / him
+siva = she / her
+ét = it
+mis = we / us
+tur = you all (plural)
+misu = they / them
+hasa = self / oneself
+mi-la = my / mine
+tu-la = your / yours
+nivo-la = his
+siva-la = her / hers
+ét-la = its
+mis-la = our / ours
+tur-la = yours all (plural possessive)
+misu-la = their / theirs
+
+#--------------------------------------------------------------
+# ARTICLES & COPULA
+lé = the
+o = a / an
+s = is / am / are / be
+s-va = being
+
+#--------------------------------------------------------------
+# TENSE, NEGATION & MOOD PARTICLES
+né = past tense marker (did / was)
+wé = future tense marker (will / shall)
+wés = about to / imminent
+un = not / no
+du = don't / do not / negative command marker
+dus = do / does (affirmation particle)
+kima = can / able to / possible
+unkima = cannot / impossible
+gida = must / need / necessity
+sud = should
+unsud = shouldn't / should not
+néma = may / permitted
+da-va = would / could / might
+
+#--------------------------------------------------------------
+# QUESTION WORDS
+kvo = question marker (yes/no question)
+kwa = what
+kvasi = who
+kwaras = where
+kvado = when
+kvaso = why
+havi = how
+kva = which / that
+
+#--------------------------------------------------------------
+# PREPOSITIONS
+na = in / at
+po = to / toward
+dé = from
+su = on / above
+un-su = under / below
+fao = for / in order to
+vél = with
+ra = near / next to
+tera = through
+cíva = around
+trima = between
+li = by / by means of (passive agent)
+dé-miva = away from
+po-miva = toward
+héna-su = in front of
+un-héna = behind
+ra-tésa = beside
+
+#--------------------------------------------------------------
+# CONJUNCTIONS
+unas = and
+ora = or
+néka = but / however
+béza = because
+da = if
+tóla = then
+ta = that / which
+béra = although / even though
+sunés = therefore / so
+
+#--------------------------------------------------------------
+# COMPARISON & QUANTITY
+mésa = more
+nisa = less
+susa = most
+ban = than
+vévlo = very
+mavé = much / many
+mavé-sula = too much / too many
+nira-vévlo = slightly
+fama-zira = enough
+véta = every / each
+véta-mída = any
+gola = best
+un-gola = worst
+
+#--------------------------------------------------------------
+# GREETINGS & COURTESY
+sala = hello / hi
+ravi = goodbye / farewell
+kala = welcome / you're welcome
+kalos = welcome all
+nako = thank / thanks
+nakos = thanks to all / many thanks
+téva = please
+noha = sorry / excuse me
+kék = yes
+non = no
+zira = fine / okay / neutrality
+sofavi = good morning
+safavi = good evening
+noitara = good night / sleep well
+
+#--------------------------------------------------------------
+# TIME
+diva = day / do / make
+divas = days
+noita = night
+vavi = morning
+af = afternoon
+vo = evening
+sofa = today
+safa = yesterday
+sova = tomorrow / speak / talk
+soma = week / sleep
+somas = weeks
+mava = month / mother
+mavas = months
+suso = year
+vora = hour / river
+voras = hours / rivers
+mída = minute
+mídas = minutes
+séli = second
+sélis = seconds
+sumés = time / duration
+navás = calendar / date
+spira = spring
+pira = tool / implement / device
+summér = summer
+auta = autumn / fall
+winta = winter
+fala = sickness / illness
+soma-fala = insomnia / sleep sickness
+
+#--------------------------------------------------------------
+# NATURE & WORLD
+méra = sea / ocean
+néla = water
+néla-sula = ocean / great water
+néla-sula-nira = lake
+hula = sky / air / height
+séra = sun / daylight / gold
+ména = moon / night light
+saro = star / bright
+luma = light / shine / lamp / understand / realise
+ruma = glow / light
+lumaro = flashlight / torch
+féna = fire / flame
+liso = stone / rock / hard
+rova = wood / timber
+tira = metal / clean
+múna = mountain / stone
+téra = earth / land / ground
+sána = desert / dry land
+véné = river / current / flow
+vénos = rivers / currents
+loma = tree / plant / green
+lomas = trees
+loma-nira = bush / shrub
+loma-fola = leaf
+loma-fola-sulo = bark
+loma-fura = vegetable / plant food
+loma-sulo = brown / great forest
+fura = fruit / food / sweet
+fura-nira = berry / small fruit
+fura-sulo = root
+rina = flower / red / feel / blush / compliment
+víra = green / life / growth
+nula = cold / fog / foggy
+nula-sula = ice / great cold
+torva = storm
+torvas = storms
+torva-féna = lightning
+torva-siva = thunder
+víma = rain
+vima = walk / foot
+tava = ground / platform
+tava-vima = path / trail
+jéra = path / journey / long
+rali = road
+ralis = roads
+róma = road / way / stop
+sivo = cloud
+sivos = clouds
+
+#--------------------------------------------------------------
+# PEOPLE & SOCIETY
+misi = person / child
+misés = people / persons
+bino = boy
+gino = girl
+misi-kivor = user / member
+kivor = worker / employee
+kémor = teacher / knower
+dovés = doctor / healer
+dovésa = medicine / healing
+hulor = leader / chief / ruler
+kína = king / ruler
+nésor = guard / protector
+tésor = writer
+télora = write / to write
+méro = artist / creator
+firo-sora = fisher / sailor
+krosa = friend
+krosas = friends
+fravo = family friend
+namo = family / name
+namos = names / families
+namoor = head of family
+mava = mother / mom
+pava = father
+movo = parent
+vava = baby / infant
+sava = sibling
+brovo = brother
+siro = sister
+lina = daughter
+lino = son / dolphin
+lini = child / kid
+tavoa = grandfather
+tavina = grandmother
+cavo = cousin
+lava = aunt
+havo = husband
+hava = wife
+ravo = relative
+javo = ancestor / jellyfish
+
+#--------------------------------------------------------------
+# HOME & OBJECTS
+nésa = home / house
+nésas = homes
+tura = door
+turas = doors
+tiva = room / chamber
+tivas = rooms
+tiva-soma = bedroom
+tiva-fura = kitchen
+tavi = table / platform
+tavi-jésa = chair / sit platform
+kiva-tavi = desk / work platform
+luma-bira = window / light thing
+tésa-bira = book / paper
+kora = chest / box / heart / secret / core
+koras = chests / boxes
+dora = open / opening
+tuma-kora = cushion / pillow
+kora-nira = bucket
+kora-nima = remote control
+un-kora = drawer
+fala-kora = trash bin
+siva-dora = telephone / microphone
+kora-vésa = washing machine
+nélo-kora = sink / basin
+féna-vésa = oven / stove
+féna-tiva = fireplace
+kula = heavy / difficult
+un-kula = light / easy
+fama = full
+un-fama = empty
+tira-méra = mirror
+soma-tavi = bed
+niva-tésa = towel
+soma-tésa = blanket
+tésa = close / cloth / fabric
+tésas = cloths / fabrics
+vosa = body / flesh
+tésa-vosa = clothing
+tésa-kora = shirt
+tésa-misa = trousers
+tésa-vima = shoes
+tésa-kúna = hat
+fura-tésa = bread
+vosa-fura = meat
+kúna = head
+kuma = mouth / opening / hole
+sóva = nose / scent organ
+fola = hair / fur
+nila = skin / surface / empty
+nima = hand
+nimas = hands
+tuma-pira = finger
+tuma-vima = toe
+vora-misa = leg
+lóma-fura = stomach / belly
+kúna-sulo = brain / mind
+tuma-sulo = courage
+gúndo = blood
+féma-pira = spoon / eating tool
+féra-pira = knife / cutting tool
+féra-nima = fork
+féma-pira-tira = toothbrush
+fola-tira = comb / brush
+séna-kora = perfume
+kosa-néva = soap
+gúna = rope / thread
+gúna-sula = wire / cable
+gúna-nira = string
+nila-néva = leather
+féna-sulo = plastic
+nélo-tuma = foam / sponge
+tava-tésa = carpet / mat
+jésa-liso = bench
+tura-kora = fence
+kiva-sula = shovel
+nula-féna = chimney
+luma-saro = flashlight
+néla-pira = hose
+loma-féra = saw
+luma-kora = battery / power cell
+
+#--------------------------------------------------------------
+# ANIMALS
+# (root = animal; regular suffixes: -s plural, -as plural after consonant,
+#  -ét young, -os group, -an habitat, -or keeper, -ik like)
+fira = bird
+firas = birds
+lavo = dog
+lavos = dogs
+lavoét = puppy
+lunos = cat
+lunosét = kitten
+lino = dolphin / son
+mélo = fish
+guo = turtle
+salo = shark
+némo = whale
+pémo = squid / octopus
+javo = jellyfish / ancestor
+koro = bear
+puro = monkey
+rava = elephant
+savi = cow
+sélo = wolf
+tima = tiger
+turo = horse
+véna = camel
+viro = pig
+pula = chicken
+néta = sheep / silly
+sano = goose
+suno = snake
+jumo = rabbit
+kilo = lizard
+mavi = ant
+mavis = ants
+navi = bee
+somi = butterfly
+jami = beetle
+féno = frog
+huro = lion
+hurox = griffin
+dravos = dragon
+saviros = unicorn
+taviros = phoenix
+mira = dove / pigeon / wonderful
+jara = owl
+pavi = fox
+gati = parrot
+fitro = eagle
+naro = crow
+tali = hawk
+sanu = sparrow
+lami = flying insect / gnat / midge
+natno = bat
+rip = worm
+kava = hedgehog
+
+#--------------------------------------------------------------
+# ANIMAL GROUPS, YOUNG & PLACES (notable, non-regular only)
+lavoos = pack of dogs
+lunosos = colony of cats
+linoos = pod of dolphins
+firaos = flock of birds
+méloos = school of fish
+javoos = bloom of jellyfish
+huloos = pride of lions
+huroxos = pride of griffins
+dravosos = brood of dragons
+savirosos = herd of unicorns
+sélovos = pack of wolves
+koroos = family of bears
+timaos = streak of tigers
+turoos = herd of horses
+pulaos = flock of chickens
+sunoos = nest of snakes
+ravaos = herd of elephants
+jumoos = warren of rabbits
+navios = swarm of bees
+somios = flight of butterflies
+mavios = colony of ants
+firaan = nest / bird habitat
+lunoan = cattery / cat place
+navian = beehive
+savian = cowshed / cow place
+turoan = stable / horse place
+sunoan = snake pit
+ravaan = elephant savanna
+timaan = tiger jungle
+jaraan = owl tree
+mavian = anthill
+salan = shark bay
+néloan = fish pond
+huroxan = griffin nest
+dravosan = dragon cave
+savirosan = unicorn forest
+firaor = bird keeper
+navior = beekeeper
+turoor = horse trainer
+sélvoor = wolf trainer
+ravaor = elephant keeper
+lavor = dog trainer
+
+#--------------------------------------------------------------
+# BODY & HEALTH
+kúna = head
+kuma = mouth / hole
+sóva = nose / scent organ
+fola = hair / fur
+nila = skin / surface
+nima = hand
+vima = foot / walk
+vora-misa = leg
+tuma-pira = finger
+tuma-vima = toe
+lóma-fura = stomach / belly
+kúna-sulo = brain / mind / intelligence
+tuma-sulo = courage / bravery
+siva = voice / sound / she
+síra = hear / ear / listen
+misa = stand / stay
+vosa = body / flesh
+gúndo = blood
+réva-sula = joy / happiness
+unréva-sula = depression
+troma = fear / dread
+troma-nira = anxiety
+kéro = mind / soul
+kéras = minds / souls
+kéro-sula = wisdom
+kéro-nira = idea
+nila-bira = secret
+sumés-néna = history
+sumés-unné = future / prophecy
+éza = health / healing
+ézor = healer
+ésa = tired / weary
+féni = feeling
+fénis = feelings
+séna = sense / smell / scent
+tuma = touch / feel / heart / courage
+
+#--------------------------------------------------------------
+# ACTIONS & STATES (root = bare present form)
+dova = bring / deliver
+géva = give
+gai = go
+féma = eat
+néva = drink / snow
+soma = sleep / week
+diva = do / make / day
+héna = see / watch
+sova = speak / talk / tomorrow
+téla = tell / say
+sa = say / said
+kéma = know / understand
+kéma-néna = believe / know-it-is-true
+kéma-vas = understanding
+kéma-néra = proof / verification
+síra = hear / listen
+lóma = look / inside
+lósa = take
+vása = put / place
+vésa = build / write
+féra = cut / slice
+tora = fight / hit
+tora-sula = war / great fight
+tora-kéma = decide
+tora-sa = attack
+zanva = defend
+ré-dora = unlock
+kéla = key / unlock / useful
+kéla-kísa = login / open-enter
+jiva = jump / act
+jésa = sit / rest
+níva = sing
+rúna = dance
+túsa = cook
+vira = run / fast / wind / gossip / spread news
+hura = fly / glide / wow
+róma = stop / road / way
+móra = count / number
+kísa = enter
+lísa = exit / leave / go away
+títa = live / inhabit
+ziva = win
+un-ziva = lose / defeated
+félo = fail
+ráva = help / support
+róva = try / attempt
+vulno = destroy / ruin / wreck
+úrna = create
+níka = send
+róla = follow
+tína = change
+vóta = finish / end
+jála = begin / start
+lóra = show / display
+zúra = push
+púma = pull
+dávo = allow / permit
+dása = force
+tóva = hold / have / possess
+níma = want / desire
+léva = love
+húga = hug / embrace
+ré-kéma = remember
+fóla = forget
+péra = ask / request
+sak = ask / question
+triva = try / test
+kosa = call / converse / conversation
+kosas = conversations
+kosa-tés = message / text
+kosa-tésa = chat / message text
+sova-tésa = speech / contract
+déra = read / decode
+déra-va = reading
+méra = create / art
+sola = play / fun
+sola-va = playing
+niva = swim / grow
+nava = wash / clean
+féna-nira = cook on fire
+tésa-vima = sew
+luma-dora = turn on / switch on
+luma-tésa = turn off
+gava = money / wealth
+gava-pira = buy / purchase
+gava-géva = sell / trade
+riva-gava = bank / treasury
+nésa-gava = shop / store
+hulor-gava = tax / ruler's money
+kiva-nisa = cheap / low cost
+kiva-mésa = expensive / high cost
+ríva = hope
+sota = story / tale
+sotas = stories / tales
+
+
+#--------------------------------------------------------------
+# DESCRIPTORS (adjectives & adverbs)
+béla = beautiful / lovely
+préto = pretty
+gavo = good / well
+gavo-lé = well / nicely
+un-gavo = bad / not good
+vévlo-gavo = excellent
+réva = happy / glad
+unréva = sad / unhappy
+sulo = strong / powerful
+un-sulo = weak
+nira = small / little / light / new / young
+sulo-nira = tiny
+lóra = long / tall
+jora = slow
+un-jora = fast
+vira-lé = quickly / swiftly
+sulo-lé = strongly / powerfully
+kíra = kind / gentle / soft
+krova = angry
+krova-va = anger / rage
+sura = evil / bad
+hul = bad / ill
+hul-sula = evil / great bad
+frola = foolish / silly
+linta = stupid
+bira = thing / object
+liso = hard / solid / stone
+un-liso = soft / flexible
+túra = smooth / even
+náva = rough / coarse
+tira = clean / bright / metal
+un-tira = dirty
+sora = salty / salt / wait
+méla = honey / sweet
+suné = clear / obvious
+unné = unclear / vague / wrong
+néna = true / truth / clear
+unnéna = lie / false / unclear
+vorna = right / correct
+rona = wrong / mistaken
+vi = alive / lively
+sula = big / great / soul / spirit
+sulo = strong / dark / massive
+mida = medium / middle
+silé = silent / quiet
+luma-sula = bright / shining
+luma-nira = dim / faint
+kafé = warm
+finé = hot
+nula = cold / foggy
+
+#--------------------------------------------------------------
+# COLOURS
+bélu = colour
+bélu-nira = white
+bélu-sula = black
+lára = blue
+lára-nira = light blue
+lára-sulo = dark blue
+víra = green / life
+saru = yellow
+saru-nira = gold
+saru-féna = sunlight
+fénura = orange
+rina = red / flower / feel / blush / compliment
+rina-nira = pink
+fólo = purple
+liso-nira = gray
+liso-sulo = silver
+loma-sulo = brown
+hulo-nira = cyan
+hulo-sula = navy
+
+#--------------------------------------------------------------
+# NUMBERS (classic counting system)
+zéra = zero / nothing
+ona = one
+tuo = two
+tro = three
+fóra = four
+kvín = five
+sixa = six
+sita = seven
+oita = eight
+noa = nine
+diza = ten
+unésa = eleven
+duésa = twelve
+trésa = thirteen
+quésa = fourteen
+quinsa = fifteen
+séza = sixteen
+diza-é-sita = seventeen
+diza-é-oita = eighteen
+diza-é-noa = nineteen
+vinta = twenty
+triga = thirty
+forga = forty
+livga = fifty
+sixga = sixty
+sitga = seventy
+oitga = eighty
+noga = ninety
+cénta = hundred
+mila = thousand
+miliona = million
+# formal "digit" roots (read-outs, clocks, maths)
+zer = zero-digit
+uné = one-digit
+di = two-digit
+tri = three-digit
+kvar = four-digit
+kvin = five-digit
+sis = six-digit
+sep = seven-digit
+ok = eight-digit
+nof = nine-digit
+dek = ten-digit
+# ordinals (suffix -ji)
+onaji = first
+tuoji = second
+troji = third
+fóraji = fourth
+dizaji = tenth
+
+#--------------------------------------------------------------
+# TECHNOLOGY & DIGITAL
+jéra-tésas = menu / navigation
+jiva-mota = link / hyperlink
+tína-kivas = settings / configuration
+kéla-kísa = login / sign in
+misi-kivor = user / member
+dova-un-su = download
+dova-su = upload
+lóma-pira = search / find / lookup tool
+nésa-tésa = homepage / home page
+méro-tavi = dashboard / creator platform
+siva-nira = headphones / small ear
+kora-jula = server / hub
+kora-dora = router / network access
+néla-tira = stream / data flow
+siva-nélo = speaker / sound water
+véla-tésa = webpage / page
+kiva-nira = gadget / small tool
+luma-kora = battery / power cell
+kima-nélo = energy / current
+jéra-pira = search path
+kosa-tésa = message / chat text
+tefona = phone / telephone
+komputa = computer / machine
+mota = word / text
+motas = words
+fota = letter / symbol
+fotas = letters / symbols
+morka = punctuation mark
+dota = dot / period
+kama = comma
+kwamorka = question mark
+fimorka = exclamation mark
+mota-sulo = paragraph
+sulo-néna = law / rule
+sulo-unné = crime / against the law
+kivé = internet / network
+siva-sóva = audio book / voice book
+linya = line / row
+ilino = icon / small picture
+
+#--------------------------------------------------------------
+# DERIVATIONAL AFFIXES (for reference in dictionary)
+# un-  = not / negation prefix
+# ni-  = semantic opposite prefix
+# ré-  = again / repetition prefix
+# -s   = plural (after vowel)
+# -as  = plural (after consonant)
+# -ét  = young / offspring (diminutive)
+# -nira = small (diminutive)
+# -sula = great / augmentative
+# -os  = group / collective
+# -an  = habitat / natural place
+# -lek = built place / location
+# -or  = agent / doer
+# -ik  = like / resembling (adjective)
+# -la  = of / belonging to (genitive)
+# -lé  = adverb of manner
+# -va  = present participle / ongoing action
+# -ji  = ordinal suffix
+# -pira = tool for (e.g. féma-pira = spoon, eating tool)
+# -tavi = platform for (e.g. kiva-tavi = desk)
+
+#--------------------------------------------------------------
+# COMMON PHRASES
+sala mi-la = hello my friend / hi there
+havi tu s = how are you
+mi s zira = I am fine / I'm okay
+kék nako = yes thanks
+kala nésa = welcome home
+mi né léva tu = I loved you
+tu s béla = you are beautiful
+mi kéma ta = I understand that
+mi un kéma ta = I don't understand that
+sova wé gavo = until tomorrow / tomorrow will be good
+mila nésa = my house / my home (colloquial fusion of mi-la nésa)
+mila nésana = at my home / my home (colloquial fusion of mi-la nésana)
+
+#--------------------------------------------------------------
+# NATURAL LANGUAGE EVOLUTION: COLLOQUIAL FUSIONS
+# In rapid speech, high-frequency phrases fuse together.
+# These are fossilised forms that bypass regular compounding rules.
+nésana = at home / in the house (fused from nésa na)
+# NOTE: mila (fused "my/mine") is a HOMONYM of mila = thousand (line 681).
+# The glosser keeps "thousand"; speakers read the fusion from context.
+mila = my / mine (fused from mi la)
+wégai = will go / am going (fused from wé gai)
+wéfema = will eat (fused from wé féma)
+nés = was / were (fused from né s)
+po-nésa = homeward / towards home (fused from po nésa)
+
+
+#--------------------------------------------------------------
+# NATURAL LANGUAGE EVOLUTION: IRREGULAR VERBS (SUPPLETION)
+# The most common verbs become irregular over time because they
+# are memorised as whole chunks rather than constructed on the fly.
+vára = went (irregular past of gai)
+# NOTE: rá (was/were) and dá (did/made) are HOMONYMS — rá = near (line 71) and
+# da = if (line 88) already occupy these forms. The glosser keeps the older,
+# dictionary-first sense; speakers disambiguate by context, exactly as with
+# "seal" (animal) vs "seal" (to close) in English.
+rá = was / were (irregular past of s)
+dá = did / made (irregular past of diva)
+
+
+#--------------------------------------------------------------
+# NATURAL LANGUAGE EVOLUTION: PRAGMATICS & DISCOURSE MARKERS
+# Real conversations are full of hesitation, emphasis, and padding.
+evi = well... / um / hesitation
+# NOTE: koro (discourse marker) is a HOMONYM of koro = bear (line 354).
+# The glosser keeps "bear"; listeners read the particle from intonation.
+koro = really? / is that so? / active listening
+maka = actually / in fact / to correct a misconception
+ya = topic marker (As for... / regarding...)
+
+
+#--------------------------------------------------------------
+# NATURAL LANGUAGE EVOLUTION: IDIOMS & COLLOCATIONS
+# These phrases have fixed meanings that differ from literal translation.
+# Speakers learn these as chunks, not word-by-word. All are real dictionary
+# entries: the translator resolves them as single units, while the "lit."
+# notes keep the folk etymology visible to learners.
+# Supporting roots used by the idioms (added so they decompose literally):
+nil = surface / top / outer layer
+méra-nako = thank you very much / many thanks (lit. sea of thanks)
+luma-kúna = dizzy / confused (lit. light head)
+nula-vosa = goosebumps / fear (lit. cold flesh)
+un-tira-nil = dirty / messy (lit. not-clean surface)
+vira-va-néla = flowing water / river (lit. running-water)
+
+#--------------------------------------------------------------
+# NATURAL LANGUAGE EVOLUTION: RELATIVE CLAUSES & HIGHER DOMAINS
+# Relative pronouns. "ka" opens a relative clause right after a noun
+# (subject relative: "le misi ka s unréva" = the person who is sad).
+# Object relatives reuse "ta" (the same "that" as the demonstrative,
+# exactly like English). Possessive relative is "ka-la" (whose).
+ka = who / which / that (relative pronoun)
+ka-la = whose / of whom
+keran = man / adult male person
+rusa = run / sprint / flee / hurry
+
+# Compounding roots and exemplar coinages (modifier + head combine freely,
+# specifiers such as -nira come last; established words are listed as chunks).
+kiva = work / job / labor / task
+kiva-siva-nira = phone / smartphone (small voice-work device)
+kosa-tavi-nira = cell phone / mobile (small call-platform)
+néla-fura-pira = watering can (water-fruit-tool)
+
+# ACADEMIC / LOGICAL
+logika = logic / reason / rationality
+tema = theme / topic / subject
+moda = manner / method / way
+esera = being / existence / essence
+menta = mind / intellect / thought
+vera = truth / true / real
+tamen = however / nevertheless
+ekse = therefore / thus / so
+kausa = because / cause / reason why
+kondise = condition / provision
+seke = then / consequently / next
+
+# LAW / JUSTICE
+jura = law / right / justice
+krima = crime / offense / wrong act
+dika = judge / court / tribunal
+testi = witness / testimony
+fina = fine / penalty / charge
+konta = contract / agreement / deal
+
+# MEDICINE / HEALTH
+dorta = doctor / physician / healer
+meda = medicine / remedy / cure
+koma = pain / ache / hurt
+vata = wound / injury / harm
+
+# OFFICE / GOVERNMENT / MONEY
+ofisa = office / bureau / department
+duta = tax / duty / fee
+velta = state / government / authority
+banka = bank (loanword)
+mone = money / currency / coin (loanword)
+jokumenta = document / official paper
+pasa = pass / permit / license
+konto = bank account / record / dossier
+#--------------------------------------------------------------
+# PHASE 1 (VTXT 3.2): COMPLETE PRONOUN SYSTEM & CORRELATIVES
+# canon/02-pronouns.md, canon/03-word-order.md, canon/01-articles.md
+mis-vel-tu = we (all, including you / inclusive we)
+mis-de-tu = we (not you / exclusive we)
+miro = they (singular, gender-neutral person) / singular they
+zava = one / people / generic person
+ala = any / whichever (free choice)
+eka = this (near speaker)
+oka = that (near listener)
+ona-misi = someone / somebody
+zera-misi = no one / nobody
+ala-misi = anyone / anybody
+veta-misi = everyone / everybody
+ona-bira = something
+zera-bira = nothing
+ala-bira = anything
+veta-bira = everything
+ona-ona = each other / one another
+kvasi-la = whose / of whom (interrogative possessive)
+sova-nela = language / speech-stream
+sova-nela-nira = dialect
+beluma = Beluma (the language)
+tur-sula = great you / royal or literary formal address
+
+# Two-way reflexive pairs (canon/02 §4)
+mi hasa = myself
+tu hasa = yourself
+nivo hasa = himself
+siva hasa = herself
+et hasa = itself
+mis hasa = ourselves
+tur hasa = yourselves
+misu hasa = themselves
+ona-ona = each other / one another
+
+#--------------------------------------------------------------
+# PHASE 2 (VTXT 3.3): VERB SYSTEM — ASPECT, VOICE, MODEL WORDS, CONDITIONALS
+# canon/04-verbs.md, canon/05-clauses.md
+vento = perhaps / maybe / possibly
+duna = while / during
+esto = there is / there are / to exist
+# past-participle exemplars (suffix -ke is generative; these seed the glosser)
+fema-ke = eaten
+gai-ke = gone / departed
+dora-ke = opened
+# nuance: mild obligation (small must)
+gida-nira = ought to / should (mild must)
+# VTXT 3.4 · Phase 3 seed corpus (canon/06)
+planeta = planet (loanword)
+kometa = comet (loanword)
+galaksia = galaxy (loanword)
+kosma = cosmos / universe (loanword)
+orbita = orbit (loanword)
+saro-liso = asteroid (star-stone)
+hula-nula = nebula (sky-fog)
+teleskopa = telescope (loanword)
+saro-kéma = astronomy (star-knowledge)
+saro-kémor = astronomer (star-knower)
+séra-tésa = eclipse (sun-closing)
+ména-nira = moon of a planet / satellite (small moon)
+féna-hura = rocket (fire-flight)
+hula-gai-or = astronaut (sky-goer)
+saro-os = constellation (star group)
+gravita = gravity (loanword)
+matika = mathematics (loanword)
+téra-móra = geometry (earth-measure)
+ada = to add / sum
+subta = to subtract / minus (loanword)
+multa = to multiply
+divita = to divide / divide up
+ekva = equal / equals
+ekva-va = equation
+porsenta = percent (loanword)
+parta = part / fraction
+infinita = infinity (loanword)
+kona = angle
+atoma = atom (loanword)
+molekula = molecule (loanword)
+elementa = chemical element (loanword)
+gaza = gas (loanword)
+néla-gaza = steam / vapor (water-gas)
+likida = liquid (loanword)
+plasma = plasma (loanword)
+masa = mass / matter (loanword)
+magneta = magnet (loanword)
+reaksa = reaction (loanword)
+formula = formula (loanword)
+kimia = chemistry (loanword)
+matera = matter / material (loanword)
+luma-nélo = electricity (light-current)
+aplika = app / application (loanword)
+programa = computer program (loanword)
+data = data (loanword)
+faila = file (loanword)
+kosa-nélo = email (message-stream)
+robota = robot (loanword)
+kero-pira = artificial intelligence (mind-tool)
+koda = code / to code (loanword)
+koda-fala = bug / error in code (code-sickness)
+fota-tavi = keyboard (letter-table)
+muso = computer mouse (loanword)
+lóra-tésa = screen / display (show-surface)
+kéla-mota = password (key-word)
+kivé-kosa = online talk / net chat (internet-conversation)
+ekonomia = economy / economics (loanword)
+kosta = price / cost (loanword)
+ziva-gava = profit (won money)
+un-ziva-gava = loss (lost money)
+debita = debt (loanword)
+presta = loan / to lend (loanword)
+niva-gava = interest (money-growth)
+gava-sula = riches / great wealth (great money)
+un-gava-va = poverty (money-lack)
+kiva-gava = salary / wage (work-money)
+marketa = market (loanword)
+investa = to invest (loanword)
+importa = import (loanword)
+eksporta = export (loanword)
+dika-tiva = courtroom / courthouse (judge-room)
+jura-kivor = lawyer (law-worker)
+nésor-os = police (guard-corps)
+velta-kosa = parliament (state-council)
+bota = ballot / to vote (loanword)
+bota-os = election (ballot-gathering)
+velta-hulor = president (state-leader)
+velta-misi = citizen (state-person)
+jura-tésor = legislator (law-writer)
+misés-jura = human rights (people-rights)
+prisona = prison (loanword)
+dika-sa = verdict (judge-says)
+fina-sulo = punishment (great penalty)
+velta-nésa = capitol / government house (state-house)
+tora-misi = soldier (war-person)
+tora-os = army (war-band)
+tora-pira = weapon (war-tool)
+tora-féra = sword (war-blade)
+zanva-tésa = shield (defense-cloth)
+kúna-tésa = helmet (head-cloth)
+tora-tésa = armor (war-cloth)
+sulo-nésa = castle / fortress (strong-house)
+tora-hulor = commander (war-leader)
+tora-krosa = ally (war-friend)
+un-krosa = enemy (not-friend)
+róma-tora = ceasefire (stop-war)
+hasa-géva = surrender (give-self)
+torva-kora = bomb (storm-box)
+hura-torva = missile (flying storm)
+un-tora = peace (no-war)
+éza-nésa = hospital (healing-house)
+éza-kivor = nurse (healing-worker)
+infekta = infection (loanword)
+fala-séna = symptom (sickness-sign)
+fala-kéma = diagnosis (knowing-the-sickness)
+éza-kiva = treatment (healing-work)
+vosa-féra = surgery (body-cut)
+koma-meda = painkiller (pain-medicine)
+finé-fala = fever (hot-sickness)
+vata-liso = scar (wound-stone)
+vosa-zanva = immune system (body-defense)
+zanva-meda = vaccine (defense-medicine)
+víra-koda = DNA / gene (life-code)
+sélula = cell, biology (loanword)
+meda-nésa = pharmacy (medicine-house)
+lini-kula = pregnant (child-heavy)
+troma-sula = panic (great fear)
+krova-sula = rage (great anger)
+surpriza = surprise (loanword)
+enva = envy / jealousy (loanword)
+mi-sulo = pride (I-am-strong)
+mi-nira = shame / humility (I-am-small)
+ré-koma = regret (again-pain)
+kula-lísa = relief (heavy-leaves)
+sova-nula = boredom (talk gone cold)
+tuma-dora = trust / openness (open-heart)
+kéma-nira = doubt (small knowing)
+kéro-réva = contentment (good mood)
+kéro-soma = serenity (mind-at-rest)
+níva-kivor = singer (song-worker)
+níva-sula = great song / opera (great sing)
+rúna-kivor = dancer (dance-worker)
+rúna-sula = great dance / ballet
+níva-pira = musical instrument (sing-tool)
+sola-séna = rhythm / beat (play-sense)
+siva-nélo-kora = radio (voice-stream-box)
+níva-os = choir (song-group)
+níva-nélo = melody (song-stream)
+léva-níva = love song (love-song)
+sola-bira-nira = ball (small play-thing)
+vira-kiva = running / athletics (run-work)
+sola-tora = sport / competition (play-fight)
+sola-tora-kivor = athlete (sport-worker)
+ziva-sula = victory (great win)
+un-ziva-sula = defeat (great loss)
+sola-misi = player (play-person)
+sola-tava = stadium / playing field (play-ground)
+zampiona = championship (loanword)
+vavi-fura = breakfast (morning-food)
+af-fura = lunch (afternoon-food)
+vo-fura = dinner (evening-food)
+nira-fura = snack (small-food)
+vóta-soma = weekend (end-week)
+nésa-kiva = homework (home-work)
+gava-kora = wallet (money-box)
+víma-tésa = umbrella (rain-cloth)
+néla-kora = kettle / pot (water-box)
+loma-tava = park (tree-ground)
+hula-tava = airport / airfield (sky-ground)
+tréna = train (loanword)
+karo = car (loanword)
+buso = bus (loanword)
+bisikla = bicycle (loanword)
+gava-tiva = ATM / cash machine (money-room)
+haha = laugh (onomatopoeia)
+haha-sula = big laugh / LOL (great laugh)
+gavi = cash / dough (money slang)
+vevo = cool / awesome (slang loanword)
+fren = friend (slang loanword)
+nira-misi = newbie / newcomer (new person)
+kúna-nélo = drunk / tipsy (head-liquid slang)
+krosa-sola = hang out (friend-play)
+gavo-nélo = for real / legit (good-stream slang)
+brovo-sala = hey bro (brother-greeting)
+# VTXT 3.5 · Phase 4 seed corpus (canon/07)
+su lé kúna = exactly right / on the nose (idiom, colloquial)
+luma liso = to spot a flaw / realize a mistake (idiom, formal)
+un héna gava = to be penniless (idiom, colloquial)
+sula soma = to be at rest / deep dream (idiom, literary)
+lé kora = the heart of the matter (idiom, formal)
+héna léva = to fall in love (idiom, colloquial)
+nula kúna = calm / level-headed (idiom)
+tura nima = a helping hand (idiom, colloquial)
+vira-soma = a busy week (idiom, colloquial)
+koma kora = heartache (idiom, literary)
+gava-néla = worthless (idiom, colloquial)
+zava-sula = an outstanding person (idiom, formal)
+róma siva = to hold your tongue (idiom, colloquial)
+dora kéla = breakthrough / the solution (idiom, formal)
+fura-sula = feast / banquet (great food)
+méla-fura = dessert (honey-food)
+néla-néva = a drink / beverage (water-drink)
+túsa-nésa = kitchen (cook-house)
+túsa-tava = stove / cook-top (cook-ground)
+féna-túsa = grill / open fire cooking (fire-cook)
+brena = bread (loanword)
+kéza = cheese (loanword)
+zupa = soup (loanword)
+salata = salad (loanword)
+vóma = to boil / simmer
+sára = to fry / roast
+éja = to bake
+kúna-fura = appetite / craving (head-food)
+loma-sula = forest (great trees)
+rina-sula = rose (great flower)
+víra-loma = evergreen (green-tree)
+fura-loma = fruit tree (food-tree)
+víko = deer
+koli = squirrel
+tóro = bull
+zema = goat
+jeko = duck
+pula-nira = spring chick (small chicken)
+néva-sula = snowstorm (great snow)
+torva-sula = great storm / gale
+néva-víma = sleet (snow-rain)
+fréta = hail
+éla = clear / fair (sky)
+séra-éla = fair weather (sun-clear)
+nula-vavi = foggy morning (fog-morning)
+séra-vavi = sunrise (sun-morning)
+séra-vo = sunset (sun-evening)
+púma-pira = winch / pulley (pull-tool)
+nima-pira = handle / grip (hand-tool)
+kosa-pira = bell (call-tool)
+gúna-kora = spool / coil (rope-box)
+béro = axe
+ramo = hammer
+tuni = nail / peg
+vésa-tava = builder's yard (build-ground)
+zúra-tava = press / workshop bench (push-ground)
+namo-sula = clan / extended family (great family)
+pava-nira = uncle (little father, familiar)
+mava-nira = aunt (little mother, familiar)
+vava-nira = toddler (small baby)
+sava-sula = the elders / kin-circle (great siblings)
+kíra-namo = in-laws / kindness-family (gentle family)
+tavina-sula = great-grandmother
+movo-nira = step-parent / a new parent
+sumés-nira = a moment (small duration)
+navás-nira = almanac (small calendar)
+sova-vavi = tomorrow morning
+safa-vo = yesterday evening
+saro-noita = starlit night (stars at night)
+# VTXT 3.6 · Education field (canon/08)
+kéma-nésa = school / place of learning (knowledge-house)
+livo = lesson / class period
+léro = to learn
+léro-misi = student / learner (learning person)
+kéma-kiva = study / studying (knowledge-work)
+kémor-sula = professor (great teacher)
+sak-sula = exam / examination (great question)
+móra-kéma = grade / mark (count of knowing)
+kéma-tésa = diploma / certificate (knowledge-cloth)
+livo-tiva = classroom (lesson-room)
+léro-nira = beginner (small learner)
+vésa-sova = essay / composition (build-speech)
+# VTXT 3.7 · Examination field (canon/08)
+lóva = to read (root)
+lóva-sova = reading / a reading (read-speech)
+sova-kéma = grammar (speech-knowledge)
+dis = across / over / through
+dis-sova = translation (speech carried across)
+héna-sova = listening / attending speech (watch-speech)
+sova-tiva = speaking test / oral (speech-room)
+# VTXT 3.8 · Phase 6 society & politeness (canon/09)
+gavo-sova = greeting / hello (good speech)
+gai-gavo = farewell / goodbye (go well)
+gavo-gai = welcome (a good coming)
+kíra-sova = civility / polite speech (tender speech)
+un-kíra-sova = rudeness / impoliteness (unkind speech)
+kíra-nima = a courtesy / kind gesture (tender hand)
+nako-sula = heartfelt thanks (great thanks)
+péra-gavo = a polite request / please (kind asking)
+ré-koma-sova = apology / to apologise (regret-speech)
+noha-géva = to forgive (give one's sorry)
+gavo-misi = sir / madam (good person, polite address)
+velta-nira = town (small state)
+kuma-sula = the town's folk / the crowd (folk idiom: the great mouth)
+kuma-tava = the square / town centre (mouth-ground)
+vima-sula = street (great path)
+vima-nira = lane / alley (small path)
+nésa-krosa = neighbour (house-friend)
+nésa-gai = a visit / to visit (house-coming)
+misi-gai = guest / visitor (a person who comes)
+nésa-hulor = host / head of the house (house-leader)
+tava-marketa = market day / fair (ground-market)
+sova-os = town meeting / assembly (speech-group)
+kéla-namo = family heirloom (the family's key)
+véta-namo = the commons / shared goods (all-family)
+véta-sova = the news / what everyone says (all-speech)
+réva-sumés = festival / holiday (joy-time)
+réva-fura = the celebration feast (joy-food)
+véta-fura = harvest / the year's crops (all-food)
+nira-suso = new year (new year)
+sova-níra = accent / small local way of speaking (small speech)
+nésa-sova = home speech / in-group idiom (house-speech)
+velta-sova = official speech (state-speech)
+# VTXT 3.9 · Phase 6 folk-speech catches (corpus audit)
+luno = cat / a cat (root; plural lunos already in the corpus)
+célo = hill
+ké = yeah / yes (casual; clipped kék)
+ké dus = yes, indeed / of course (idiom, colloquial)
+

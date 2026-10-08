@@ -1,0 +1,443 @@
+﻿
+
+    
+    
+    Beluma Grammar Reference | L├¡a Beluma v3
+    
+
+    L├¡a Beluma ÔÇö Grammar Reference
+    OverviewGrammarCourseTranslator
+
+    
+## Beluma Grammar (v3)
+
+    
+A complete reference. Beluma is regular: learn the patterns, not rules-with-exceptions.
+    
+        Contents
+        
+            
+- Sounds & writing
+            
+- Sentence structure
+            
+- Nouns & plurals
+            
+- Pronouns
+            
+- Verbs & tense
+            
+- Adjectives & adverbs
+            
+- Affixes & word-building
+            
+- Prepositions
+            
+- Numbers
+            
+- Questions & negation
+            
+- Function words
+            
+- Formal vs Colloquial Beluma
+            
+- Relative clauses & linking ideas
+        
+    
+
+    
+## 1. Sounds & writing
+
+    
+23 letters: a b d e f g h i j k l m n o p r s t u v w z x. Five vowels with one sound each; the remaining letters are always pronounced the same way.
+    
+        
+| Letter | IPA | Hint | 
+        
+| a e i o u | /a/ /e/ /i/ /o/ /u/ | fa, bed, see, for, food | 
+        
+| j | /j/ | yes | 
+        
+| r | /r/ | rolled r | 
+        
+| x | /ks/ | box | 
+        
+| w | /w/ | wet | 
+        
+| others | as written | b d f g h k l m n p s t v z | 
+    
+    
+The acute accent marks the stressed syllable: b├®la, n├®sa. The accent does not change the sound or the meaning ÔÇö it only tells you where the stress falls. Faster Beluma text often leaves accents out.
+    
+Syllables are open-favouring: ne-sa, bi-no, fura-nela-sula. No bleeding consonant clusters; words flow.
+    Beluma is written with the 23 Latin letters shown above ÔÇö one letter, one sound, in speech or in print. The acute accent (b├®la) is a stress mark only, written to help learners; ordinary text may leave it out and lose nothing but a hint.
+    Accents & homophones. Because an accent only marks stress, an accented word and its unaccented twin sound identical. Placement is not always a matter of the accents "being dropped" ÔÇö Beluma happily lets the same spoken form carry more than one meaning. ra and r├í are the same spoken word, meaning both near and (colloquial) was; da/d├í cover if and did; mila is at once thousand and my; koro is the bear and the interjection really?. Listener and reader pick the sense from context ÔÇö the translator shows every listed sense of a homonym in its analysis panel (e.g. thousand / my).
+
+    
+## 2. Sentence structure
+
+    
+Order is Subject ÔÇô Verb ÔÇô Object, exactly like English:
+    Siva leva mi. ÔÇö She loves me.
+    Mi f├®ma fura. ÔÇö I eat fruit.
+    
+The word le = ÔÇ£theÔÇØ, o = ÔÇ£a/anÔÇØ. They are optional but normal.
+    L├® fira hura. ÔÇö The bird flies.
+    Noun phrases
+    
+Adjectives come before the noun; possessors come before the noun too:
+    r├®va gino ÔÇö a happy girl ┬á┬À┬á b├®la lomas ÔÇö beautiful trees ┬á┬À┬á mi-la n├®sa ÔÇö my house ┬á┬À┬á tu-la lavo ÔÇö your dog
+
+    
+## 3. Nouns & plurals
+
+    
+        
+| Form | Rule | Example | 
+        
+| singular | base word | lavo (dog) | 
+        
+| plural (-s) | add -s after a vowel | lavos (dogs) | 
+        
+| plural (-as) | add -as after a consonant | f├®mas ÔåÆ ÔÇª (roots end in vowels by design) | 
+        
+| possessive | add -la | siva-la (her thing), bino-la (the boy's) | 
+    
+    
+Gender is not grammatical in Beluma. s├®lo = wolf, s├®lo-niva = she-wolf ÔÇö natural gender is marked only when it matters.
+
+    
+## 4. Pronouns
+
+    
+        
+| Beluma | English | 
+        
+| mi | I / me | 
+        
+| mu | me (object), to me | 
+        
+| tu | you (singular) | 
+        
+| nivo | he / him | 
+        
+| siva | she / her | 
+        
+| ├®t | it | 
+        
+| mis | we / us | 
+        
+| tur | you (plural) | 
+        
+| misu | they / them | 
+    
+    
+Possessives add -la: mi-la, tu-la, nivo-la, siva-la, ├®t-la, mis-la, tura-la*, misu-la.
+    
+Emphatic/reflexive: repeat the pronoun ÔÇö mi-la mi (myself).
+    * tura-la is more naturally ÔÇ£your (pl)ÔÇØ, from tur + -la; the dictionary also lists tura-la.
+
+    
+## 5. Verbs & tense
+
+    
+Verbs are never conjugated for person or number. Time is the only thing the verb cares about, and it is marked with a small word that comes before the verb.
+    
+        
+| Marker | Meaning | Example | 
+        
+| (none) | present | mi gai ÔÇö I go / I am going | 
+        
+| n├® | past | mi n├® gai ÔÇö I went | 
+        
+| w├® | future | mi w├® gai ÔÇö I will go | 
+        
+| w├®s | future with ÔÇ£about toÔÇØ | mi w├®s gai ÔÇö I am about to go | 
+        
+| un | negative (not) | mi un k├®ma ÔÇö I don't know | 
+        
+| un + n├®/w├® | negative past/future | mi un n├® gai ÔÇö I did not go | 
+        
+| du | negative command (Don't!) | du gai! ÔÇö Don't go! | 
+        
+| kvo | yes/no question | kvo tu gai? ÔÇö Are you going? | 
+    
+    Mi n├® f├®ma fura. ÔÇö I ate fruit. ┬á┬À┬á L├® fira w├® hura. ÔÇö The bird will fly.
+    
+A verb used without a ÔÇ£nameÔÇØ noun is still a verb. Add -va to make a noun form of a verb (the ÔÇ£doingÔÇØ form): sola-va = playing (as a noun), l├®-tova-va = holding.
+
+    
+## 6. Adjectives & adverbs
+
+    
+Adjectives sit before the noun. Every adjective can act as the noun of that quality: b├®la = beautiful (and: beauty), sulo = strong (and: strength).
+    
+Adverbs are adjectives + -l├®:
+    gavo = good ÔåÆ gavo-l├® = well ┬á┬À┬á r├®va = happy ÔåÆ r├®va-l├® = happily ┬á┬À┬á sulo-l├® = strongly
+    
+Comparison uses mesa (more) and susa (most) before the adjective; ÔÇ£thanÔÇØ is ban:
+    Nivo s mesa sulo ban mi. ÔÇö He is stronger than me.
+
+    
+## 7. Affixes & word-building
+
+    
+Beluma word-building is head-first: the main meaning comes first, specifiers after.
+    
+        
+| Affix | Meaning | Example | 
+        
+| -s / -as | plural | lavos (dogs) | 
+        
+| -la | of / possession | nela-la (water-of) | 
+        
+| -n├®lo | -water, running X | siva-n├®lo (speaking/voice stream) | 
+        
+| -nira | small, mild | luma-nira (little light) | 
+        
+| -├®t | young of | lavo├®t (puppy) | 
+        
+| -os | group, herd | fira-os (flock of birds) | 
+        
+| -an | place, habitat | fira-an (nest) | 
+        
+| -or | doer of | k├®mor (teacher) | 
+        
+| -pira | tool for | f├®ma-pira (spoon) | 
+        
+| -tavi | platform for | kiva-tavi (desk) | 
+        
+| -ik | like, resembling | fira-ik (birdlike) | 
+        
+| -l├® | adverb | gavo-l├® (well) | 
+        
+| -va | doing / -ing noun | sola-va (playing) | 
+        
+| -ji | ordinal | ona-ji (first) | 
+        
+| -sula | great, big, abstract | nela-sula (ocean), k├║na-sula (mind) | 
+        
+| un- | not, lack of | un-kula (easy), un-sulo (weak) | 
+        
+| ni- | opposite / anti- | ni-k├®ma (misunderstand) | 
+        
+| r├®- | again, re- | r├®-dora (re-open) | 
+    
+    Real compounds from the dictionary
+    
+        nela-sula = water + great = ocean ┬á┬À┬á
+        fura-sulo = fruit + great = root ┬á┬À┬á
+        kiva-nira = work + small = gadget ┬á┬À┬á
+        loma-sulo = tree + great = great forest / brown ┬á┬À┬á
+        luma-saro = light + star = flashlight ┬á┬À┬á
+        k├®ro-nira = mind + small = idea
+    
+    Coining new words
+    
+Any two roots can be pressed together to make a new word. This is how Beluma grows: the dictionary is the starting set, not a closed list. A new compound is legal the moment its roots are legal.
+    
+        nela-fura = water + fruit = juice ┬á┬À┬á
+        fira-nira = small bird ┬á┬À┬á
+        luma-pira = light-tool (lamp) ┬á┬À┬á
+        kiva-siva-nira = work + voice + small = phone ┬á┬À┬á
+        n├®la-fura-pira = water + fruit + -pira tool = watering can ┬á┬À┬á
+        kiva-nira ÔÇª make your own
+    
+    
+The translator (translator.html) analyses any root+root compound automatically and shows the word's parts in the analysis panel ÔÇö coin a word, type it, and see it understood. If you keep using one, add it to h.txt so everyone else can too.
+
+    
+## 8. Prepositions
+
+    
+        
+| Word | Meaning | Word | Meaning | 
+        
+| na | in, at | su | on, above | 
+        
+| po | to, toward | un-su | under, below | 
+        
+| d├® | from | ra | near | 
+        
+| v├®l | with | tera | through | 
+        
+| trima | between | un-h├®na | behind | 
+        
+| li | by (doer) | un-h├®na | behind | 
+    
+    L├® fira hura na l├® hula. ÔÇö The bird flies in the sky. ┬á┬À┬á Mi gai po n├®sa. ÔÇö I go home.
+
+    
+## 9. Numbers
+
+    
+        
+| classic | z├®ra 0, ona 1, tuo 2, tro 3, f├│ra 4, kv├¡n 5, sixa 6, sita 7, oita 8, noa 9, diza 10, vinta 20, c├®nta 100, mila 1,000, miliona 1,000,000 | 
+        
+| digit-style | zer, un├®, di, tri, kvar, kvin, sis, sep, ok, nof, dek (used on clocks, maths & readouts) | 
+    
+    
+Tens and hundreds stack head-first: vinta-kv├¡n = 25, c├®nta-tuo-tro = 123. Ordinals add -ji: onaji = first.
+
+    
+## 10. Questions & negation
+
+    
+Yes/no: put kvo at the front.
+    Kvo tu gai po n├®sa? ÔÇö Do you go home? ┬á┬À┬á Yes = k├®k, No = non.
+    
+Wh-words: want = kva (which/what), kvasi (who), kwaras (where), kvado (when), kvaso (why), havi (how). They start the sentence.
+    Kvado tu gai? ÔÇö When do you go? ┬á┬À┬á Kvasi s ta? ÔÇö Who is that?
+    
+Negation: un before the verb makes it negative; du makes a command negative.
+    Mi un k├®ma ta. ÔÇö I don't know that. ┬á┬À┬á un + r├®va = un-r├®va (sad).
+
+    
+## 11. Function words
+
+    
+        
+| Beluma | English | 
+        
+| unas | and | 
+        
+| ora | or | 
+        
+| neka | but | 
+        
+| tola | then | 
+        
+| ta | that | 
+        
+| ban | than | 
+        
+| kima / unkima | can / cannot | 
+        
+| gida | must | 
+        
+| v├®vlo | very | 
+        
+| sala / ravi | hello / goodbye | 
+        
+| nako | thanks ┬á┬À┬á teva | please | 
+    
+
+    
+## 12. Formal vs Colloquial Beluma
+
+    
+Beluma has two registers, like many natural languages. Both are correct ÔÇö you choose based on context.
+    
+        Formal Beluma (writing, speeches, education):
+        Words kept separate: mi-la n├®sa na ┬á┬À┬á
+        Regular tense markers: n├® gai, n├® s ┬á┬À┬á
+        Full sentences, careful pronunciation.
+    
+    
+        Colloquial Beluma (daily speech, friends, family):
+        Fused words: mila n├®sana ┬á┬À┬á
+        Irregular high-frequency verbs: v├íra, r├í, d├í ┬á┬À┬á
+        Contractions, faster speech, discourse markers (evi, koro, maka).
+    
+    
+What follows shows how the colloquial register behaves in detail.
+
+    Fused words (Grammaticalisation)
+    
+In rapid speech, small words stick together. You will often hear natives say:
+    
+        n├®sana (at home) instead of n├®sa na ┬á┬À┬á
+        mila (my) instead of mi la ┬á┬À┬á
+        w├®gai (will go) instead of w├® gai
+    
+    
+These are perfectly correct in spoken Beluma, though formal writing keeps the words separate.
+
+    Irregular high-frequency verbs
+    
+The most commonly used verbs have developed irregular past tenses because speakers memorise them as single chunks rather than building them with the n├® marker:
+    
+        gai (to go) ÔåÆ v├íra (went) ┬á┬À┬á
+        s (to be) ÔåÆ r├í (was/were) ┬á┬À┬á
+        diva (to do/make) ÔåÆ d├í (did/made)
+    
+
+    Topic marking & flexible word order
+    
+While the formal rule is Subject-Verb-Object, speakers use the particle ya to move the most important information to the front of the sentence for emphasis:
+    
+        Formal: Mi n├® f├®ma fura. (I ate fruit.) ┬á┬À┬á
+        Colloquial: Fura ya, mi n├® f├®ma. (The fruit, I ate it.)
+    
+
+    Discourse markers
+    
+Conversations include padding and hesitation, just like any natural language:
+    
+        evi = well... / um (used when thinking) ┬á┬À┬á
+        koro = really? / is that so? (used to show you are listening) ┬á┬À┬á
+        maka = actually / in fact (used to politely correct someone)
+    
+
+    Idioms & collocations
+    
+Much of colloquial Beluma is spoken in fixed chunks that no longer decompose literally (see the idioms at the end of h.txt):
+    
+        m├®ra-nako = thanks very much (lit. sea of thanks) ┬á┬À┬á
+        luma-k├║na = dizzy (lit. light head) ┬á┬À┬á
+        nula-vosa = goosebumps (lit. cold flesh) ┬á┬À┬á
+        tuma-sulo = courage (lit. heart-great)
+    
+
+    
+## 13. Relative clauses & linking ideas
+
+    
+Relative clauses let one sentence carry another. Beluma opens them right after the noun, and the clause keeps perfectly normal SVO order ÔÇö nothing moves to the front:
+    
+        
+- ka = who / which / that ÔÇö subject relative (the noun is doing the action)
+        
+- ta = that / which ÔÇö object relative (the noun is the object of the clause); this is the same word as the demonstrative ÔÇ£thatÔÇØ, exactly like English
+        
+- ka-la = whose ÔÇö possessive relative (lit. of-who)
+    
+    
+        L├® misi ka s unr├®va. ÔÇö The person who is sad.
+    
+    
+        L├® fura ta mi n├® f├®ma. ÔÇö The fruit that I ate.
+    
+    
+        L├® keran ka-la lavo n├® rusa s unr├®va. ÔÇö The man whose dog ran away is sad.
+    
+    
+Note: the question word is a separate, older root ÔÇö kvasi = who? (Kvasi s ta? ÔÇö Who is that?). The relative word ka means ÔÇ£who/whichÔÇØ only inside an added clause. Beluma thus tells the two jobs apart, even though English uses the same word for both.
+
+    Linking ideas
+    
+Sentences join up with plain function words ÔÇö no rearrangement needed:
+    
+        kausa = because (Mi s esa, kausa mi n├® rusa. ÔÇö I am tired because I ran.) ┬á┬À┬á
+        ekse = therefore (Mi s esa, ekse mi we gai n├®sa. ÔÇö I am tired, therefore I will go home.) ┬á┬À┬á
+        tamen = however (L├® n├®la s nula, tamen mi we n├®va. ÔÇö The water is cold, however I will drink.) ┬á┬À┬á
+        seke = then / next ┬á┬À┬á
+        kondise = under the condition that
+    
+
+    
+Continue with the beginner course for a guided path, or open the translator and start experimenting.
+    
+Canon documents (Phase 1ÔÇô2, VTXT 3.3) extend this
+        reference: pronouns & correlatives (canon 02),
+        word order (canon 03), articles
+        (canon 01), the verb system ÔÇö tense, aspect,
+        passive, modals (canon 04) ÔÇö clauses &
+        conditionals (canon 05), the coining /
+        loanword framework (canon 06), and the
+        register/style guide (canon 07), and the
+        education & examination program (canon 08).
+        Source is Markdown
+        under canon/; the master roadmap is ROADMAP.md.
+
+
