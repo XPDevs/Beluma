@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§24 Validation, Conformance, and Change Control — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§24 Validation, Conformance, and Change Control — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§24 Validation, Conformance, and Change Control — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong></p>
+<h2>24.1 Purpose</h2>
+<p>This section defines what it means for a text, dictionary, or tool to</p>
+<p><strong>conform</strong> to Beluma Standard v1.0, and how the standard changes.</p>
+<h2>24.2 Conformance levels</h2>
+<table>
+<thead><tr><th>Level</th><th>Requirement</th></tr></thead>
+<tbody>
+<tr><td><strong>C0 — Phonological</strong></td><td>Text uses only legal letters (§01.2) and legal onset/coda clusters (§01.4).</td></tr>
+<tr><td><strong>C1 — Morphological</strong></td><td>Every word parses by §15 derivation/compounding rules.</td></tr>
+<tr><td><strong>C2 — Grammatical</strong></td><td>Sentences follow §03–§14 clause and phrase structure.</td></tr>
+<tr><td><strong>C3 — Lexical</strong></td><td>Every head is in <code>h.txt</code> at the declared VTXT.</td></tr>
+<tr><td><strong>C4 — Stylistic</strong></td><td>Register is consistent and appropriate (§23.1).</td></tr>
+</tbody></table>
+<p>A <strong>Standard-conformant</strong> text is C0–C4. A <strong>Technical/Formal</strong> text adds the</p>
+<p>rules of §23.2/§23.3.</p>
+<h2>24.3 Normative vs informative status</h2>
+<p>Each section header states its status. <strong>Normative</strong> material defines the</p>
+<p>language; <strong>Informative</strong> material illustrates or lists vocabulary. Where a</p>
+<p>word list and a rule conflict, the rule wins and the list is corrected.</p>
+<h2>24.4 Automated checks</h2>
+<table>
+<thead><tr><th>Check</th><th>Tool</th><th>Gate</th></tr></thead>
+<tbody>
+<tr><td>dictionary format/alphabet/phonotactics</td><td><code>tools/validate_dict.py</code></td><td>0 errors</td></tr>
+<tr><td>spec tokens exist</td><td><code>tools/check_spec_words.py</code></td><td>0 unknown</td></tr>
+<tr><td>internal links resolve</td><td><code>tools/check_links.py</code></td><td>0 broken</td></tr>
+<tr><td>example texts conform</td><td><code>tools/check_text.py</code></td><td>0 unknown</td></tr>
+<tr><td>derivation capacity</td><td><code>tools/grow.py</code></td><td>≥ 250,000</td></tr>
+</tbody></table>
+<p>All gates must pass before a standard release is tagged.</p>
+<h2>24.5 Versioning (VTXT)</h2>
+<p>The version format is <code>MAJOR.MINOR</code>:</p>
+<ul>
+  <li><strong>MAJOR</strong> — breaking change (alphabet, phonotactics, core grammar, removing a head used normatively).</li>
+  <li><strong>MINOR</strong> — additive change (new heads, new optional patterns).</li>
+</ul>
+<p>Ahead-of-release changes live in <code>canon/</code> as dated notes; the released standard</p>
+<p>lives in <code>spec/Beluma-Standard-v1.0.md</code>.</p>
+<h2>24.6 Change control</h2>
+<ol>
+  <li><strong>Propose</strong> — write the change and rationale under <code>canon/</code>.</li>
+  <li><strong>Analyze</strong> — list affected heads, texts, and tools; run all §24.4 checks.</li>
+  <li><strong>Trial</strong> — apply to a branch of the dictionary; re-run checks.</li>
+  <li><strong>Ratify</strong> — the Language Academy (§25) approves by simple majority.</li>
+  <li><strong>Release</strong> — bump VTXT, update <code>spec/</code>, rebuild artifacts (§20.8).</li>
+</ol>
+<h2>24.7 Compatibility</h2>
+<ul>
+  <li>Adding heads: backward-compatible (MINOR).</li>
+  <li>Changing a normative rule or deleting a head: requires migration notes and a MAJOR bump.</li>
+  <li>Accent-pair spellings (§26.4) are stable; removing one is a MINOR change.</li>
+</ul>
+<h2>24.8 Error taxonomy</h2>
+<table>
+<thead><tr><th>Code</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>E-ALPHA</td><td>illegal letter</td><td><code>c</code>, <code>q</code>, <code>y</code></td></tr>
+<tr><td>E-CLUS</td><td>illegal onset/coda</td><td><code>-ld</code>, <code>nj-</code> (before v4.0)</td></tr>
+<tr><td>E-ACCENT</td><td>wrong stress position</td><td>stress off the penult</td></tr>
+<tr><td>E-DUP</td><td>duplicate head</td><td><code>vata</code> twice</td></tr>
+<tr><td>E-SYNTAX</td><td>malformed line</td><td>missing <code> = </code></td></tr>
+</tbody></table>
+<p>Errors block release; warnings (§26.4) do not.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

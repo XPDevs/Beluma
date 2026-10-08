@@ -9,7 +9,7 @@ in one of them; mixing is allowed only where §23.3 permits it.
 | --- | --- | --- | --- |
 | **Standard** | general writing, media, teaching | full forms: `mi-la nésa`, regular tenses (`né`, never `rá`) | complete SVO sentences; accents optional (§1.5); articles normal |
 | **Formal** | law, diplomacy, academia, ceremonies | Standard morphology, **no** fusions, no ellipsis | accents **required** on penults; articles always explicit; passive preferred (§6.5); no discourse markers; no tag questions |
-| **Informal** | speech, friends, family, messages | fusions (`mila` my, `nésana` at home, `wégai` will go), irregular pasts (`rá` was, `dá` did, `víra` went) | topic `ya`, dropped subjects/articles, ellipsis, discourse markers (`evi`, `koro`, `maka`), idioms |
+| **Informal** | speech, friends, family, messages | fusions (`mila` my, `nésana` at home, `wégai` will go), irregular pasts (`rá` was, `dá` did, `víra` went) | topic `ia`, dropped subjects/articles, ellipsis, discourse markers (`evi`, `koro`, `maka`), idioms |
 | **Technical** | science, IT, engineering | Standard morphology + digit-style numbers (`zer` … `dek`), respelled loans (§15.5) | definitional sentences, Arabic numerals allowed (§2.4), precise cross-references |
 
 ## 23.2 How the registers differ
@@ -35,7 +35,7 @@ in one of them; mixing is allowed only where §23.3 permits it.
 
 **Syntax.**
 
-- Topic `ya` fronting (§0.3): Informal default, Standard permitted, Formal avoided.
+- Topic `ia` fronting (§0.3): Informal default, Standard permitted, Formal avoided.
 - Subject and article dropping: Informal only (§4.5).
 - Ellipsis (`dota-tro`): Informal only.
 - Passive: Formal/Standard; Informal prefers active or generic `zava` (§6.5).
@@ -59,7 +59,7 @@ in one of them; mixing is allowed only where §23.3 permits it.
 3. A Technical text MAY use Standard sentence furniture but MUST keep digit-style
    numbers and loan spellings internally consistent.
 4. Formal MUST NOT contain any Informal item; a Formal text with `mila`, `rá`,
-   `ya`, or `evi` is non-conformant.
+   `ia`, or `evi` is non-conformant.
 5. Titles, dictionary headwords, and examples in this Standard are **Standard**
    unless labelled otherwise.
 

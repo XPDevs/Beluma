@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§26 Design Review and Known Issues — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§26 Design Review and Known Issues — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§26 Design Review and Known Issues — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Informative.</strong> This section records the reasoning behind the design,</p>
+<p>the known blemishes, and the accent-pair registry. It is normative only where it</p>
+<p>registers an exception (§26.4).</p>
+<h2>26.1 Why Beluma</h2>
+<p>Beluma is engineered for five goals: (1) <strong>regular</strong> — one rule, one form;</p>
+<p>(2) <strong>producible</strong> — new words come from rules, not memorization; (3) <strong>legible</strong></p>
+<p>— short, unambiguous shapes; (4) <strong>scalable</strong> — capacity beyond 250,000 words;</p>
+<p>(5) <strong>speakable</strong> — every legal word is easy for a world speaker to say.</p>
+<h2>26.2 Design principles accepted</h2>
+<table>
+<thead><tr><th>Principle</th><th>Choice</th></tr></thead>
+<tbody>
+<tr><td>Alphabet</td><td>Latin, a–z minus <code>c q y</code> (§01.2)</td></tr>
+<tr><td>Stress</td><td>absolute penult (§01.5)</td></tr>
+<tr><td>Word order</td><td>SVO, head-first (§03)</td></tr>
+<tr><td>Formation</td><td>root + affix + compound (§15)</td></tr>
+<tr><td>Registers</td><td>Standard, Formal, Informal, Technical (§23)</td></tr>
+<tr><td>Spelling</td><td>regular; accents mark penult stress only</td></tr>
+</tbody></table>
+<h2>26.3 Known blemishes</h2>
+<ol>
+  <li><strong>Synonym surplus.</strong> Early seeding imported loans that duplicate native roots (<code>sango</code> vs <code>gúndo</code> <em>blood</em>; <code>luno</code> was dropped because <code>miso</code> already meant <em>cat</em>). Policy: the Academy demotes the weaker form to <code>{colloq}</code> or removes it at the next MAJOR bump.</li>
+  <li><strong>Seed transliteration.</strong> Early seeds used Esperanto/international forms and were respelled by the sanitizer. Some glosses were historically mangled; the seed tool now sanitizes <strong>keys only</strong> (<code>tools/seed_vocab.py:clean</code>).</li>
+  <li><strong>Coiner tool.</strong> References to a <code>tools/coiner.js</code> were removed; the authoritative validator is <code>tools/validate_dict.py</code>. No Node.js dependency.</li>
+  <li><strong>Non-Latin script.</strong> The 31-radicals script is illustrative only; all normative text is Latin (§02).</li>
+  <li><strong>Number forms.</strong> Cardinal 11–19 and digit-forms coexist; the Academy fixed the cardinals (<code>unésa … séza</code>) and the Technical digit-forms (<code>zer éne di tri …</code>), removing the seed duplicates (<code>tremado</code>, <code>kvardeko</code>…).</li>
+</ol>
+<h2>26.4 Accent-pair registry</h2>
+<p>Because stress is fixed at the penult, two short words may share letters but</p>
+<p>differ only by an accent (<code>mása</code> vs <code>masa</code>). These are permitted and listed</p>
+<p>here. The validator treats them as <strong>warnings</strong>, never errors.</p>
+<table>
+<thead><tr><th>Pair</th><th>Meaning A</th><th>Meaning B</th></tr></thead>
+<tbody>
+<tr><td><code>mása</code> / <code>masa</code></td><td>mass (physical)</td><td>crowd</td></tr>
+<tr><td><code>síta</code> / <code>sita</code></td><td>quote</td><td>seven</td></tr>
+<tr><td><code>nóra</code> / <code>nora</code></td><td>north</td><td>(name-like root)</td></tr>
+<tr><td><code>póra</code> / <code>pora</code></td><td>carry</td><td>for</td></tr>
+<tr><td><code>kóva</code> / <code>kova</code></td><td>cover</td><td>—</td></tr>
+</tbody></table>
+<p>(Run <code>tools/validate_dict.py</code> to print the live list; the table above is</p>
+<p>illustrative.)</p>
+<h2>26.5 Trade-offs reconsidered</h2>
+<ul>
+  <li><strong>Penult stress + accent pairs.</strong> Chosen over free stress for learnability; the cost is a small collision class (§26.4), accepted as warnings.</li>
+  <li><strong>Expanded clusters (v4.0).</strong> Onsets `st sk sl kl gl bl fl vl ps sf ts ks dn rn nj<code> and coda </code>m<code> were added to admit modern loans (</code>stato<code>, </code>klubo`, <code>métra</code>, <code>njutona</code>). This slightly departs from the original CV ideal; the Academy accepted it to protect productivity.</li>
+  <li><strong>Digit-forms.</strong> Kept for the Technical register because reading long numbers is otherwise slow.</li>
+</ul>
+<h2>26.6 Open questions (for future rulings)</h2>
+<ol>
+  <li>Whether to fold synonym surplus automatically or case-by-case.</li>
+  <li>Whether to standardize a second stress rule for learned compounds.</li>
+  <li>Whether to extend the coda inventory further (<code>-ns</code>, <code>-nt</code>).</li>
+  <li>Numbering harmonization of §25 vs the §24/§26 gap in early drafts.</li>
+</ol>
+<h2>26.7 Conclusion</h2>
+<p>Beluma meets its goals: regular, productive, scalable past 250,000 words,</p>
+<p>register-aware, and validated by open tools. Remaining issues are catalogued</p>
+<p>here for the Academy (§25) to resolve in future VTXT releases.</p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

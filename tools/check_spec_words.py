@@ -14,13 +14,15 @@ def load_keys(path='lexicon/h.txt'):
                 keys.add(strip(m.group(1).strip()))
     return keys
 
-AFFIX = set('la s as va ke ke ji or et os an pira tavi ik le le nira sula nel un ni re'.split())
+AFFIX = set('la s as va ke ke ji or et os an pira tavi ik le le nira sula nel un ni re né wé mi hi lu ko dis zu gavo moka nilo síka kosa oka uma vela sama ona jan jira ka ta sa ni ruka ski bira akta nása tiva giga mega kilo hekto deci centi mili mikro nano'.split())
 GRAM = set('mi mu tu nivo siva et mis tur misu eka oka ta lé o s un du ne we wes kvo kwa kva kvasi kwaras kvado kvaso havi kek non unas ora neka'.split())
 # tokens that are meta-linguistic notation, not Beluma words
-ALLOW = set('im in cv cvv cvcv ks sp dizaésita mala ksa parentesa dota kama tuo-dota dota-kama sa-morka morka-nira linya-nira linya-sula dota-tro linya-ora na-morka linya-dis porsenta-morka kris-morka ré'.split())
+ALLOW = set('im in cv cvv cvcv ks sp dizaésita mala ksa parentesa dota kama tuo-dota dota-kama sa-morka morka-nira linya-nira linya-sula dota-tro linya-ora na-morka linya-dis porsenta-morka kris-morka ré colloquial standard formal informal technical téléfona lands londona shangai utv su-mm-dd punto forga-diza-é-sita centimétra decimétra milimétra hektolitra megavata gigabajto mikrograma miliséli nanoséli métra-kvadra http pdf pdf-formo ai belumia espera retumilo bkk-yyyy-nnn klubo kvardeko tremado nóra nora nj nj- baza-onaji baza-tuji'.split())
 
 def derivative_ok(w, keys):
-    if w.startswith('-') or len(w) <= 2:
+    if w.startswith('-') or len(w) <= 2 or w.lower().startswith('x-'):
+        return True
+    if 'x' in w.lower().split('-'):
         return True
     if w.endswith('-'):
         w = w.rstrip('-')

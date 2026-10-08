@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§25 The Language Academy — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§25 The Language Academy — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§25 The Language Academy — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative</strong> for composition and procedure; <strong>Informative</strong> for</p>
+<p>historical framing.</p>
+<h2>25.1 Mandate</h2>
+<p>The <strong>Beluma Language Academy</strong> (<code>Beluma Kéma-Kosa</code>, BKK) is the sole</p>
+<p>authority for the Beluma language. It:</p>
+<ul>
+  <li>maintains <code>lexicon/h.txt</code> and the VTXT version;</li>
+  <li>ratifies changes (§24.6);</li>
+  <li>interprets this standard where ambiguous;</li>
+  <li>publishes the dictionary, curriculum, and periodic rulings;</li>
+  <li>promotes the language and supports its worldwide learners.</li>
+</ul>
+<h2>25.2 Bodies</h2>
+<table>
+<thead><tr><th>Body</th><th>Beluma</th><th>Function</th></tr></thead>
+<tbody>
+<tr><td>Assembly</td><td><code>Kosa</code></td><td>ratifies changes by majority</td></tr>
+<tr><td>Lexicon Council</td><td><code>Kéma-Konsilio</code></td><td>admits heads, curates glosses</td></tr>
+<tr><td>Grammar Council</td><td><code>Livo-Konsilio</code></td><td>rules on structure and usage</td></tr>
+<tr><td>Standards Board</td><td><code>Tésa-Konsilio</code></td><td>maintains tools, versions, releases</td></tr>
+<tr><td>Registrar</td><td><code>Kosa-Kivor</code></td><td>keeps records and the canon</td></tr>
+</tbody></table>
+<p>Each council has 5–9 members serving five-year terms; the Assembly has 50</p>
+<p>members elected by registered speakers.</p>
+<h2>25.3 Decisions</h2>
+<ul>
+  <li>Ordinary changes: simple majority of the Assembly, on council recommendation.</li>
+  <li>Breaking changes (§24.5 MAJOR): two-thirds of the Assembly and a one-month public comment period.</li>
+  <li>Emergencies (security, legal need): the Standards Board may issue a provisional ruling valid 90 days, then submitted for ratification.</li>
+</ul>
+<h2>25.4 Rulings</h2>
+<p>A <strong>ruling</strong> is a dated document under <code>canon/</code> that records a decision with its</p>
+<p>rationale and examples. Rulings are numbered <code>BKK-YYYY-NNN</code> and cited like</p>
+<p>precedent. Two examples:</p>
+<ul>
+  <li><code>BKK-2026-001</code> — topic marker respelled <code>ya</code> → <code>ia</code> (letter <code>y</code> banned).</li>
+  <li><code>BKK-2026-002</code> — stress fixed at the penult; accents in <code>h.txt</code> corrected.</li>
+</ul>
+<h2>25.5 Style and purity</h2>
+<p>The Academy judges purity by <strong>producibility</strong>: a word is Beluma if it parses by</p>
+<p>§15, regardless of source. Loans are admitted when international and short, and</p>
+<p>respelled to Beluma phonology (<code>telefona</code>, <code>kafe</code>, <code>susi</code>). Calques are</p>
+<p>discouraged where a built word exists.</p>
+<h2>25.6 Regional and functional variation</h2>
+<p>The Academy recognizes no regional dialects; registers (§23) are functional</p>
+<p>varieties, not regional ones. Pedagogical materials must teach Standard first,</p>
+<p>then registers per §22.</p>
+<h2>25.7 Records and transparency</h2>
+<ul>
+  <li>The dictionary is a plain-text file under version control (§20).</li>
+  <li>Every ruling is public and dated.</li>
+  <li>Tool source (<code>tools/*.py</code>) is open, so any speaker can verify conformance.</li>
+</ul>
+<h2>25.8 Motto</h2>
+<p><code>Kéma sola libera.</code> — <em>Knowledge alone frees.</em></p>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

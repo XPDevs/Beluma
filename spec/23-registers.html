@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>§23 Registers — Beluma Language Standard v1.0 | Lía Beluma</title>
+<style>
+:root{--accent:#9b59b6;--dark:#22142b;--text:#333;--border:#e6dceb}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#faf7fc;color:var(--text);line-height:1.8}
+header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header .t{font-weight:800}
+header a{color:#e6d7ef;text-decoration:none;margin-left:16px;font-weight:600}
+main{max-width:900px;margin:30px auto;padding:0 18px 60px}
+h1{color:var(--dark);border-bottom:4px solid var(--accent);padding-bottom:10px}
+h2{color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-size:1rem;margin-top:42px}
+h3{color:var(--dark)}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f3edf8;color:var(--dark)}
+code{background:#f0e9f4;padding:2px 7px;border-radius:6px;color:#7a3da1}
+pre{background:#22142b;color:#e6d7ef;padding:14px 18px;border-radius:12px;overflow-x:auto}
+pre code{background:none;color:inherit;padding:0}
+blockquote{border-left:5px solid var(--accent);background:#f3edf8;padding:8px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+a{color:var(--accent)}
+li{margin:4px 0}
+.navhome{font-size:.85rem;color:#b8a6c4}
+</style>
+</head>
+<body>
+<header>
+  <span class="t">§23 Registers — Beluma Language Standard v1.0</span>
+  <span><a href="../site/index.html">Overview</a><a href="../site/grammar.html">Grammar</a><a href="../site/lessons.html">Course</a><a href="Beluma-Standard-v1.0.html">Standard</a><a href="../site/translator.html">Translator</a></span>
+</header>
+<main>
+<h1>§23 Registers — Beluma Language Standard v1.0</h1>
+<p>Status: <strong>Normative.</strong> Beluma has four registers. Every conformant text is written</p>
+<p>in one of them; mixing is allowed only where §23.3 permits it.</p>
+<h2>23.1 The four registers</h2>
+<table>
+<thead><tr><th>Register</th><th>Domain</th><th>Morphology</th><th>Syntax &amp; lexicon</th></tr></thead>
+<tbody>
+<tr><td><strong>Standard</strong></td><td>general writing, media, teaching</td><td>full forms: <code>mi-la nésa</code>, regular tenses (<code>né</code>, never <code>rá</code>)</td><td>complete SVO sentences; accents optional (§1.5); articles normal</td></tr>
+<tr><td><strong>Formal</strong></td><td>law, diplomacy, academia, ceremonies</td><td>Standard morphology, <strong>no</strong> fusions, no ellipsis</td><td>accents <strong>required</strong> on penults; articles always explicit; passive preferred (§6.5); no discourse markers; no tag questions</td></tr>
+<tr><td><strong>Informal</strong></td><td>speech, friends, family, messages</td><td>fusions (<code>mila</code> my, <code>nésana</code> at home, <code>wégai</code> will go), irregular pasts (<code>rá</code> was, <code>dá</code> did, <code>víra</code> went)</td><td>topic <code>ia</code>, dropped subjects/articles, ellipsis, discourse markers (<code>evi</code>, <code>koro</code>, <code>maka</code>), idioms</td></tr>
+<tr><td><strong>Technical</strong></td><td>science, IT, engineering</td><td>Standard morphology + digit-style numbers (<code>zer</code> … <code>dek</code>), respelled loans (§15.5)</td><td>definitional sentences, Arabic numerals allowed (§2.4), precise cross-references</td></tr>
+</tbody></table>
+<h2>23.2 How the registers differ</h2>
+<p><strong>Morphology.</strong></p>
+<table>
+<thead><tr><th>Feature</th><th>Standard / Formal</th><th>Informal</th></tr></thead>
+<tbody>
+<tr><td>possession</td><td><code>mi-la nésa</code></td><td><code>mila nésa</code> (fused entry)</td></tr>
+<tr><td>location phrase</td><td><code>nésa na</code></td><td><code>nésana</code> (fused entry)</td></tr>
+<tr><td>future</td><td><code>mi wé gai</code></td><td><code>mi wégai</code> (fused entry)</td></tr>
+<tr><td>past of <code>s</code></td><td><code>mi né s</code></td><td><code>mi rá</code></td></tr>
+<tr><td>past of <code>diva</code></td><td><code>mi né diva</code></td><td><code>mi dá</code></td></tr>
+<tr><td>past of <code>gai</code></td><td><code>mi né gai</code></td><td><code>mi víra</code></td></tr>
+</tbody></table>
+<ul>
+  <li>Fused and irregular forms exist as dictionary entries tagged <code>colloquial</code>. They are <strong>Informal only</strong>: Standard, Formal, and Technical texts MUST NOT use them (except where a fusion is the dictionary's sole spelling — the dictionary tag decides, and §26 lists the transitional cases).</li>
+  <li>Formal additionally requires accents on every penultimate syllable; Standard makes them optional; Informal usually drops them except on accent-pair words (§1.5.4, which are never droppable).</li>
+</ul>
+<p><strong>Syntax.</strong></p>
+<ul>
+  <li>Topic <code>ia</code> fronting (§0.3): Informal default, Standard permitted, Formal avoided.</li>
+  <li>Subject and article dropping: Informal only (§4.5).</li>
+  <li>Ellipsis (<code>dota-tro</code>): Informal only.</li>
+  <li>Passive: Formal/Standard; Informal prefers active or generic <code>zava</code> (§6.5).</li>
+</ul>
+<p><strong>Lexicon.</strong></p>
+<ul>
+  <li>Discourse markers — Informal only: <code>evi</code> <em>well…/um</em>, <code>koro</code> *really?/I'm listening<em>, <code>maka</code> </em>actually/in fact*.</li>
+  <li>Idioms — mostly Informal, fixed and non-compositional: <code>méra-nako</code> *thanks very much<em> (sea-of-thanks), <code>luma-kúna</code> </em>dizzy* (light-head), <code>nula-vosa</code> <em>goosebumps</em> (cold-flesh), <code>tuma-sulo</code> <em>courage</em> (heart-great).</li>
+  <li>Technical loans and digit-style numbers: Technical register only (loans are also fine in Standard once registered — §15.8).</li>
+</ul>
+<h2>23.3 Mixing rules</h2>
+<ol>
+  <li><strong>One register per text.</strong> Texts, exam answers, and corpus entries carry a register tag: <code>[standard]</code>, <code>[formal]</code>, <code>[informal]</code>, <code>[technical]</code>.</li>
+  <li>Quoted speech inside a Formal text may stay Informal if the quotation is marked with <code>sa-morka</code>.</li>
+  <li>A Technical text MAY use Standard sentence furniture but MUST keep digit-style numbers and loan spellings internally consistent.</li>
+  <li>Formal MUST NOT contain any Informal item; a Formal text with <code>mila</code>, <code>rá</code>, <code>ia</code>, or <code>evi</code> is non-conformant.</li>
+  <li>Titles, dictionary headwords, and examples in this Standard are <strong>Standard</strong> unless labelled otherwise.</li>
+</ol>
+<h2>23.4 Literary style</h2>
+<p>Literary prose and poetry are written in Standard or Formal — never Informal —</p>
+<p>and may use the full expressive machinery of those registers: fronting for rhythm,</p>
+<p>relative-clause chains, <code>-lé</code> manner tails, and the poetic license of moving a</p>
+<p>stressed word to clause end (§1.8). Rhyme and meter conventions live with the</p>
+<p>corpus (<code>library/poetry/</code>); nothing in §03–§15 is relaxed for verse.</p>
+<h2>23.5 Register change over time</h2>
+<p>An Informal form enters Standard only by:</p>
+<ol>
+  <li>general attestation in the corpus, and</li>
+  <li>a VTXT bump that re-tags the entry from <code>colloquial</code> to <code>standard</code>, and</li>
+  <li>passing §24 validation.</li>
+</ol>
+<p>Until all three hold, the old tag governs. This is the language's change process:</p>
+<p><strong>usage proposes, the dictionary disposes.</strong></p>
+<h2>23.6 Register of this corpus (informative)</h2>
+<table>
+<thead><tr><th>Material</th><th>Register</th></tr></thead>
+<tbody>
+<tr><td><code>course/</code> lessons, <code>site/</code> documentation</td><td>Standard (examples) / Formal (reference prose)</td></tr>
+<tr><td><code>library/corpus/</code> dialogues</td><td>tagged per text; square-market dialogues are <code>[informal]</code></td></tr>
+<tr><td><code>library/poetry/</code>, <code>library/story/</code></td><td>Standard/Formal</td></tr>
+<tr><td><code>exams/</code></td><td>answers MUST match the question's register tag</td></tr>
+<tr><td><code>canon/</code></td><td>archived pre-1.0 drafts — not register-governed, not normative</td></tr>
+</tbody></table>
+<p class="navhome">Generated from Markdown by <code>tools/md2html.py</code> · Beluma Language Standard v1.0</p>
+</main>
+</body>
+</html>

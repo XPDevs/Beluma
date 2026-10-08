@@ -1,103 +1,86 @@
-# Lía Beluma
+# Lía Beluma — Language Standard v1.0
 
-**A complete, learnable constructed language.** Real phonology, a real writing system (Latin letters), regular grammar, and a growing lexicon. Read it. Write it. Speak it.
+**Beluma** is a complete, engineered constructed language: a regular
+phonology, Latin orthography (a–z minus `c q y`), a fully regular grammar, a
+productive word-formation system, and a validated lexicon of ~2,200 heads that
+licenses **more than 250,000 words**.
 
-## What this repo is
+The normative reference is
+**[spec/Beluma-Standard-v1.0.md](spec/Beluma-Standard-v1.0.md)** (HTML:
+[`spec/Beluma-Standard-v1.0.html`](spec/Beluma-Standard-v1.0.html)), assembled
+from the numbered sections in `spec/` by `tools/build_standard.py`.
 
-Beluma used to be a word-for-word substitution cipher of English. That version is retired.
-This version is structured like a real human language:
+## Repository map
 
-- **Sounds** — 23 letters, always pronounced the same way (see `grammar.html` / `index.html`).
-- **Grammar** — SVO word order, analytic tense markers, head-first compounds, a small set of regular suffixes.
-- **One script** — the 23 Latin letters `a b d e f g h i j k l m n o p r s t u v w z x`. The acute accent marks stress only.
-- **A machine translation engine** — beluma.js is a morphological, two-way gloss translator powered by the dictionary in `h.txt`.
-
-| File | What it is |
+| Path | Contents |
 | --- | --- |
-| `h.txt` | The dictionary — every Beluma word with its English gloss. Source of truth. |
-| `beluma.js` | The language engine: dictionary loading, word analysis, EN↔BE translation. |
-| `index.html` | Documentation homepage (phonology, writing system, grammar, numbers). |
-| `grammar.html` | Full grammar reference. |
-| `lessons.html` | 20-minute beginner course. |
-| `translator.html` | Interactive two-way translator with word analysis. |
+| `spec/` | The Standard — sections `00`–`26`, plus the assembled `Beluma-Standard-v1.0.md/.html` |
+| `lexicon/h.txt` | The dictionary (single source of truth, VTXT 4.0) |
+| `engine/beluma.js` | Reference engine: dictionary load, word analysis, EN↔BE glossing |
+| `site/` | Web app: `index.html`, `grammar.html`, `dictionary.html`, `lessons.html`, `translator.html` |
+| `course/` | Graded lessons (A1→C2, see §22) |
+| `library/` | Reference articles, corpus, interactive fiction |
+| `exams/` | Certification papers (A1–C2) |
+| `teacher/` | Teaching materials |
+| `canon/` | Pre-1.0 source notes and Academy rulings (§25) |
+| `tools/` | Builders and validators (Python) |
 
-## Run it
+## The Standard at a glance
 
-The pages load `h.txt` and `beluma.js` by name, so serve this folder:
+- **§01** phonology — 23 letters, fixed penult stress, legal onset/coda clusters.
+- **§03–§14** grammar — SVO, `un (né|wé|wés)` tense, aspects, modals, pronouns,
+  nouns, adjectives, adverbs, prepositions, conjunctions, numbers, time.
+- **§15** word formation — the productivity engine (prefixes, suffixes,
+  compounding, loan respelling).
+- **§16–§19** domains — technology, science/measurement, government/law,
+  education/culture.
+- **§20** dictionary format · **§21** example texts · **§22** curriculum and
+  translation guide · **§23** registers · **§24** validation · **§25** the
+  Language Academy · **§26** design review.
+
+## Try it
 
 ```sh
-python3 -m http.server 8080
-# then open http://localhost:8080/translator.html
+python -m http.server 8080
+# open http://localhost:8080/site/translator.html
 ```
-
-Or just open `index.html` from the file system — the grammar/lesson pages work offline.
-
-## Try it right now
-
-Past these into the translator (English → Beluma):
 
 | English | Beluma |
 | --- | --- |
 | I am happy | `mi s réva` |
-| I ate fruit | `mi né féma fura` |
-| The bird will fly in the sky | `le fira wé hura na le hula` |
-| Do you go home? | `kvo tu gai po nésa?` |
-| Don't go | `du gai` |
+| I ate fruit | `mi un né fura` |
+| Do you go home? | `kvo tu gava po nésa?` |
+| Don't go | `un gava` |
+| Knowledge alone frees. | `Kéma sola libera.` |
 
-And back (Beluma → English):
+## Build and validate
 
-| Beluma | English |
-| --- | --- |
-| `mi-la nésa s sulo` | My home is strong |
-| `mi un kéma ta` | I do not know that |
-| `siva s béla` | She is beautiful |
-
-## How the language works (60 seconds)
-
-- Sentence order: **Subject – Verb – Object** (like English).
-- Time is a marker word before the verb: no marker = now, `né` = past, `wé` = future.
-- Negation: `un` = not, `du` = don't. Questions: put `kvo` in front.
-- Plurals add `-s`; possession adds `-la`; adjectives come before the noun.
-- New words are head-first compounds: `néla` (water) + `sula` (great) = `nela-sula` (ocean).
-- The acute accent marks stress only (`béla`, `nésa`). It never changes the meaning.
-
-## Honest limitation
-
-The translator is a *morphological glosser*, not a neural machine like DeepL. It handles
-dictionary words, affixes, plurals, possessives and common phrases well; it does *not*
-compose idiomatic English at the speed of a professional translator. Unknown words are
-passed through and underlined. It is a teaching tool that grows with the dictionary.
-
-## Extending the dictionary
-
-`h.txt` is line-based and simple:
-
-```
-beluma-word = English gloss / another gloss
+```sh
+python tools\validate_dict.py     # dictionary: format, alphabet, phonotactics, accents
+python tools\check_spec_words.py  # every word used in spec/ exists in h.txt
+python tools\check_links.py       # no broken internal links
+python tools\grow.py              # word-formation capacity report
+python tools\seed_vocab.py        # add domain vocabulary (keys sanitized)
+python tools\build_vocab.py       # rebuild site/dictionary.html + library/lexicon.html
+python tools\build_standard.py    # reassemble spec/Beluma-Standard-v1.0.md + .html
+python tools\md2html.py           # render spec/canon/course/... Markdown to HTML
 ```
 
-- Lines starting with `#` are comments. `VTXT=3.1` records the dictionary version.
-- The machine form is written without accents (they are stripped on load); the accent-marked
-  spelling is kept alongside for learners.
-- Adding a line is enough: open the translator (reload) and the new word is live.
-- Derived words (compounds and `-suffix` forms) are analysed automatically even when they
-  aren't listed: `fema-pira` (eat + tool) = spoon works even though only the rule is taught.
+All checks currently pass: **0 dictionary errors, 0 unknown spec words, 0 broken
+links**.
 
-## License / status
+## Extending the language
 
-Constructed by James Turner (XPDevs). This is a learning project — fork it and teach Beluma
-however you like.
-## Learn the language directly in your browser
+1. Add a **head** (not a derived form) to `lexicon/h.txt` in the right block:
+   `head = gloss / gloss [class] {register} # note`.
+2. Run `tools\validate_dict.py` (must be 0 errors) and, if used in `spec/`,
+   `tools\check_spec_words.py`.
+3. Derive, don't memorize — most words come from §15 rules, and the parser
+   (`engine/beluma.js`, `tools/grow.py`) generates them on the fly.
+4. Breaking changes are ratified by the Language Academy and bump the VTXT
+   version (§24).
 
-You can learn Beluma without downloading anything. Start here:
+## Status
 
-- **[index.html](site/index.html)** — Overview of Beluma (what it is, why)
-- **[grammar.html](site/grammar.html)** — Complete grammar reference
-- **[lessons.html](site/lessons.html)** — Quick 8-lesson taster (read and practice)
-- **[lessons/README.html](course/README.html)** — Full 40-lesson A1→B1 course (books 01–04) with drills and keys
-- **[translator.html](site/translator.html)** — Interactive translator (Beluma ↔ English) with word analysis
-- **[exams/README.html](exams/README.html)** — Certification (A1–C2) and sample papers
-- **[literature/corpus/README.html](library/corpus/README.html)** — Native-speaker corpus (B1+ reading band)
-- **[literature/if/if-01-the-key.html](library/if/if-01-the-key.html)** — Interactive fiction (dictionary-locked)
-
-All content is dictionary-locked to VTXT 3.9 and works entirely in the browser. Just open `index.html` in any modern browser to get started.
+Constructed language project. All content is dictionary-locked to **VTXT 4.0**
+and works entirely in the browser or from the command line.

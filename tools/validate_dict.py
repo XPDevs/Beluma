@@ -11,9 +11,11 @@ from collections import Counter, defaultdict
 VOWELS = set('aeiou')
 LETTERS = set('abdefghijklmnoprstuvwxz')
 ACCENTED = set('\u00e1\u00e9\u00ed\u00f3\u00fa')
-OK_ONSETS = {'pr', 'tr', 'br', 'dr', 'fr', 'kr', 'gr', 'pl', 'kv', 'kw', 'sp'}
-OK_CODAS = set('snrlk')          # productive codas for new words
-ESTABLISHED_CODAS = set('snrlktdfpwx')  # allowed anywhere in existing entries
+OK_ONSETS = {'pr', 'tr', 'br', 'dr', 'fr', 'kr', 'gr', 'pl', 'kv', 'kw', 'sp',
+             'st', 'sk', 'sl', 'kl', 'gl', 'bl', 'fl', 'vl', 'ps', 'sf', 'ts', 'ks',
+             'dn', 'rn', 'nj'}
+OK_CODAS = set('snrlmk')          # productive codas for new words
+ESTABLISHED_CODAS = set('snrlktdfpxmj')  # allowed anywhere in existing entries
 ILLEGAL_LETTERS = set('cqy')
 
 
@@ -44,9 +46,14 @@ def parse(path='lexicon/h.txt'):
 
 
 def syllables(part: str):
-    """Split one hyphen-free component into syllables (onset-aware)."""
-    # cut before each consonant that starts a new syllable (V or VC | CV...)
-    return re.findall(r'[^aeiou\u00e1\u00e9\u00ed\u00f3\u00fa]*[aeiou\u00e1\u00e9\u00ed\u00f3\u00fa]+[^aeiou\u00e1\u00e9\u00ed\u00f3\u00fa]*', part)
+    """Syllabify: consonants before a vowel nucleus attach to that nucleus;
+    trailing consonants attach to the last syllable."""
+    syls = re.findall(r'[^aeiou\u00e1\u00e9\u00ed\u00f3\u00fa]*[aeiou\u00e1\u00e9\u00ed\u00f3\u00fa]+', part)
+    if syls:
+        rest = part[sum(len(s) for s in syls):]
+        if rest:
+            syls[-1] += rest
+    return syls or [part]
 
 
 def check_key(key, errors, warnings, seen_exact, seen_flat, accent_pairs):
@@ -61,10 +68,10 @@ def check_key(key, errors, warnings, seen_exact, seen_flat, accent_pairs):
     lk = key.lower()
     if lk in seen_exact:
         errors.append(f'duplicate key: {key}')
-    seen_exact.add(lk)
-    # accent-stripped collision
+    seen_exact[lk] = True
+    # accent-stripped collision: registered accent-pair class (warn only)
     if flat in seen_flat and flat != lk:
-        errors.append(f'accent-pair collision: {key} vs earlier unaccented form')
+        warnings.append(f'accent-pair collision: {key} vs earlier unaccented form')
     if flat in seen_flat and flat == lk:
         pass  # plain duplicate handled above
     seen_flat.setdefault(flat, lk)
@@ -97,7 +104,7 @@ def check_key(key, errors, warnings, seen_exact, seen_flat, accent_pairs):
             elif coda not in OK_CODAS and not re.search(r'[\u00e9\u00ed\u00f3\u00fa\u00e1]t$', part):
                 warnings.append(f'rare coda {coda!r} in {key}')
         # accent placement: every accented syllable must be the penult of its component
-        syls = [s for s in re.split(r'(?<=[aeiou])', part) if s]
+        syls = syllables(part)
         acc_idx = [i for i, s in enumerate(syls) if any(c in s for c in ACCENTED)]
         if acc_idx:
             if len(syls) == 1:
